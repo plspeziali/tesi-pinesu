@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  11 AUG 2021 17:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  11 AUG 2021 17:19
 entering extended mode
 **d:/Progetti/Tesi/tesi.tex
 (d:/Progetti/Tesi/tesi.tex
@@ -281,7 +281,7 @@ File: OT1Crimson-TLF.fd 2016/02/19 (autoinst) Font definitions for OT1/Crimson-T
 )
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
 (Font)              scaled to size 12.0pt on input line 36.
- (d:/Progetti\Tesi\tesi.aux)
+ (d:/Progetti\Tesi\tesi.aux (d:/Progetti\Tesi\mainmatter/ch1.aux) (d:/Progetti\Tesi\mainmatter/ch2.aux) (d:/Progetti\Tesi\mainmatter/ch4.aux) (d:/Progetti\Tesi\mainmatter/ch5.aux) (d:/Progetti\Tesi\mainmatter/ch6.aux) (d:/Progetti\Tesi\mainmatter/ch7.aux))
 \openout1 = `tesi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
@@ -415,7 +415,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
 
-<figures/logounipg2021.png, id=3, 523.7166pt x 255.5949pt>
+<figures/logounipg2021.png, id=27, 523.7166pt x 255.5949pt>
 File: figures/logounipg2021.png Graphic file (type png)
 <use figures/logounipg2021.png>
 Package pdftex.def Info: figures/logounipg2021.png  used on input line 71.
@@ -433,28 +433,89 @@ LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
 (Font)              scaled to size 24.88pt on input line 83.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/b/n' will be
 (Font)              scaled to size 24.88pt on input line 83.
- (d:/Progetti\Tesi\tesi.toc)
+ (d:/Progetti\Tesi\tesi.toc
+LaTeX Font Info:    Font shape `OT1/Crimson-TLF/b/n' will be
+(Font)              scaled to size 14.4pt on input line 3.
+)
 \tf@toc=\write4
 \openout4 = `tesi.toc'.
 
  [2
 
-] (d:/Progetti\Tesi\tesi.aux)
+] [3
+
+]
+\openout2 = `mainmatter/ch1.aux'.
+
+
+No file mainmatter/ch1.tex.
+[4
+
+
+
+
+]
+\openout2 = `mainmatter/ch2.aux'.
+
+
+No file mainmatter/ch2.tex.
+[5
+
+
+
+
+]
+\openout2 = `mainmatter/ch4.aux'.
+
+
+No file mainmatter/ch4.tex.
+[6
+
+
+
+
+]
+\openout2 = `mainmatter/ch5.aux'.
+
+
+No file mainmatter/ch5.tex.
+[7
+
+
+
+
+]
+\openout2 = `mainmatter/ch6.aux'.
+
+
+No file mainmatter/ch6.tex.
+[8
+
+
+
+
+]
+\openout2 = `mainmatter/ch7.aux'.
+
+
+No file mainmatter/ch7.tex.
+No file tesi.bbl.
+(d:/Progetti\Tesi\tesi.aux (d:/Progetti\Tesi\mainmatter/ch1.aux) (d:/Progetti\Tesi\mainmatter/ch2.aux) (d:/Progetti\Tesi\mainmatter/ch4.aux) (d:/Progetti\Tesi\mainmatter/ch5.aux) (d:/Progetti\Tesi\mainmatter/ch6.aux) (d:/Progetti\Tesi\mainmatter/ch7.aux))
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 9069EF24484E4F918C85B6F68B65706E;1129.
  ) 
 Here is how much of TeX's memory you used:
- 11848 strings out of 479334
- 185222 string characters out of 2857084
+ 11929 strings out of 479334
+ 186701 string characters out of 2857084
  630972 words of memory out of 3000000
- 29125 multiletter control sequences out of 15000+200000
- 423829 words of font info for 37 fonts, out of 3000000 for 9000
+ 29161 multiletter control sequences out of 15000+200000
+ 426429 words of font info for 38 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,4n,77p,332b,382s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 71i,4n,77p,340b,382s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_wttfgh.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_qrsm2e.enc}<C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Bold.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Italic.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Roman.pfb>
-Output written on d:/Progetti\Tesi\tesi.pdf (3 pages, 317435 bytes).
+Output written on d:/Progetti\Tesi\tesi.pdf (9 pages, 332558 bytes).
 PDF statistics:
- 36 PDF objects out of 1000 (max. 8388607)
- 4 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 96 PDF objects out of 1000 (max. 8388607)
+ 16 named destinations out of 1000 (max. 500000)
+ 54 words of extra memory for PDF output out of 10000 (max. 10000000)
 

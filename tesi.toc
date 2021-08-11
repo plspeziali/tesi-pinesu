@@ -1,2 +1,8 @@
 \babel@toc {italian}{}
 \babel@toc {italian}{}
+\contentsline {part}{I\hspace {1em}Introduzione}{3}{part.1}%
+\contentsline {part}{II\hspace {1em}Concetti Preliminari}{4}{part.2}%
+\contentsline {part}{III\hspace {1em}Il Problema e L'Obiettivo}{5}{part.3}%
+\contentsline {part}{IV\hspace {1em}Il Software PineSU}{6}{part.4}%
+\contentsline {part}{V\hspace {1em}Dimostrazioni d'i 'uso per il fine preposto}{7}{part.5}%
+\contentsline {part}{VI\hspace {1em}Conclusioni e Sviluppi Futuri}{8}{part.6}%
