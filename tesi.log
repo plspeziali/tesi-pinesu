@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  11 AUG 2021 19:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  11 AUG 2021 22:04
 entering extended mode
 **d:/Progetti/Tesi/tesi.tex
 (d:/Progetti/Tesi/tesi.tex
@@ -270,7 +270,7 @@ LaTeX Info: Redefining \ulcshape on input line 41.
 LaTeX Info: Redefining \textsw on input line 47.
 LaTeX Info: Redefining \textssc on input line 48.
 LaTeX Info: Redefining \textulc on input line 49.
-)) (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/latex/pgf-umlcd\pgf-umlcd.sty
+)) (d:/Progetti\Tesi\pgf-umlcd.sty
 Package: pgf-umlcd 2011/10/01 v0.3dev Some LaTeX macros for UML Class Diagrams.
  (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
 \pgfutil@everybye=\toks22
@@ -508,40 +508,42 @@ File: tikzlibraryfit.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \c@umlcdClassAbstractClassNum=\count302
 \c@umlcdClassInterfaceNum=\count303
 \c@umlcdClassSplitPartNum=\count304
+) (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
-LaTeX Font Info:    Trying to load font information for OT1+bch on input line 19.
+LaTeX Font Info:    Trying to load font information for OT1+bch on input line 20.
  (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1bch.fd
 File: ot1bch.fd 2004/10/18 font definitions for OT1/bch.
 )
-LaTeX Font Info:    Trying to load font information for OT1+Crimson-TLF on input line 37.
+LaTeX Font Info:    Trying to load font information for OT1+Crimson-TLF on input line 38.
  (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/latex/crimson\ot1crimson-tlf.fd
 File: OT1Crimson-TLF.fd 2016/02/19 (autoinst) Font definitions for OT1/Crimson-TLF.
 )
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 37.
- (d:/Progetti\Tesi\tesi.aux)
+(Font)              scaled to size 12.0pt on input line 38.
+ (d:/Progetti\Tesi\tesi.aux (d:/Progetti\Tesi\Capitoli/ch1.aux) (d:/Progetti\Tesi\Capitoli/ch2.aux) (d:/Progetti\Tesi\Capitoli/ch4.aux) (d:/Progetti\Tesi\Capitoli/ch5.aux) (d:/Progetti\Tesi\Capitoli/ch6.aux) (d:/Progetti\Tesi\Capitoli/ch7.aux))
 \openout1 = `tesi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Info: Redefining \it@ocap on input line 37.
-LaTeX Info: Redefining \it@ccap on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Info: Redefining \it@ocap on input line 38.
+LaTeX Info: Redefining \it@ccap on input line 38.
 
 
 File italian.ldf warning: 
@@ -549,7 +551,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 37.
+italian.ldf    on input line 38.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -608,7 +610,7 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
 )
-Package hyperref Info: Link coloring OFF on input line 37.
+Package hyperref Info: Link coloring OFF on input line 38.
  (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
@@ -618,9 +620,10 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count311
 )
-LaTeX Info: Redefining \ref on input line 37.
-LaTeX Info: Redefining \pageref on input line 37.
-LaTeX Info: Redefining \nameref on input line 37.
+LaTeX Info: Redefining \ref on input line 38.
+LaTeX Info: Redefining \pageref on input line 38.
+LaTeX Info: Redefining \nameref on input line 38.
+ (d:/Progetti\Tesi\tesi.out) (d:/Progetti\Tesi\tesi.out)
 \@outlinefile=\write4
 \openout4 = `tesi.out'.
 
@@ -629,53 +632,59 @@ Package caption Info: End \AtBeginDocument code.
 \c@mv@tabular=\count312
 \c@mv@boldtabular=\count313
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 44.
+(Font)              scaled to size 17.28pt on input line 45.
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
-(Font)              scaled to size 21.8pt on input line 49.
+(Font)              scaled to size 21.8pt on input line 50.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/b/n' will be
-(Font)              scaled to size 21.8pt on input line 49.
+(Font)              scaled to size 21.8pt on input line 50.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 57.
+(Font)              scaled to size 14.4pt on input line 58.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/it' will be
-(Font)              scaled to size 14.4pt on input line 57.
+(Font)              scaled to size 14.4pt on input line 58.
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--59
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+Underfull \hbox (badness 10000) in paragraph at lines 58--60
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
 
-<figures/logounipg2021.png, id=6, 523.7166pt x 255.5949pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
+
+ []
+
+<figures/logounipg2021.png, id=38, 523.7166pt x 255.5949pt>
 File: figures/logounipg2021.png Graphic file (type png)
 <use figures/logounipg2021.png>
-Package pdftex.def Info: figures/logounipg2021.png  used on input line 72.
+Package pdftex.def Info: figures/logounipg2021.png  used on input line 73.
 (pdftex.def)             Requested size: 209.12683pt x 102.06454pt.
 [1
 
 {C:/Users/Paolo/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <d:/Progetti/Tesi/figures/logounipg2021.png>]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.80 \newpage \thispagestyle{empty} \ \newpage
+l.81 \newpage \thispagestyle{empty} \ \newpage
                                                [1
 
 ]
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
-(Font)              scaled to size 24.88pt on input line 84.
+(Font)              scaled to size 24.88pt on input line 85.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/b/n' will be
-(Font)              scaled to size 24.88pt on input line 84.
+(Font)              scaled to size 24.88pt on input line 85.
+ (d:/Progetti\Tesi\tesi.toc
+LaTeX Font Info:    Font shape `OT1/Crimson-TLF/b/n' will be
+(Font)              scaled to size 14.4pt on input line 3.
+LaTeX Font Info:    Font shape `OT1/Crimson-TLF/b/n' will be
+(Font)              scaled to size 12.0pt on input line 4.
+)
 \tf@toc=\write5
 \openout5 = `tesi.toc'.
 
@@ -687,105 +696,13 @@ LaTeX Font Info:    Font shape `OT1/Crimson-TLF/b/n' will be
 \openout2 = `Capitoli/ch1.aux'.
 
  (d:/Progetti\Tesi\Capitoli/ch1.tex
-LaTeX Font Info:    Font shape `OT1/Crimson-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 15.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/it' will be
-(Font)              scaled to size 12.0pt on input line 15.
-
-
-d:/Progetti\Tesi\Capitoli/ch1.tex:40: Package pgf Error: No shape named `MerkleCalendar ' is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.40 ...}{ InternalCalendar }{2}{InternalCalendar}
-                                                  
-This error message was generated by an \errmessage
-command, so I can't give any explicit help.
-Pretend that you're Hercule Poirot: Examine all clues,
-and deduce the truth by order and method.
-
-
-d:/Progetti\Tesi\Capitoli/ch1.tex:40: Package pgf Error: No shape named `InternalCalendar' is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.40 ...}{ InternalCalendar }{2}{InternalCalendar}
-                                                  
-(That was another \errmessage.)
-
-
-d:/Progetti\Tesi\Capitoli/ch1.tex:40: Package pgf Error: No shape named `InternalCalendar' is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.40 ...}{ InternalCalendar }{2}{InternalCalendar}
-                                                  
-(That was another \errmessage.)
-
-
-d:/Progetti\Tesi\Capitoli/ch1.tex:40: Package pgf Error: No shape named `MerkleCalendar ' is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.40 ...}{ InternalCalendar }{2}{InternalCalendar}
-                                                  
-(That was another \errmessage.)
-
-
-d:/Progetti\Tesi\Capitoli/ch1.tex:41: Package pgf Error: No shape named `InternalCalendar' is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.41 ...ndar}{ LeafCalendar }{0..*}{ LeafCalendar}
-                                                  
-(That was another \errmessage.)
-
-
-d:/Progetti\Tesi\Capitoli/ch1.tex:41: Package pgf Error: No shape named `LeafCalendar' is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.41 ...ndar}{ LeafCalendar }{0..*}{ LeafCalendar}
-                                                  
-(That was another \errmessage.)
-
-
-d:/Progetti\Tesi\Capitoli/ch1.tex:41: Package pgf Error: No shape named `LeafCalendar' is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.41 ...ndar}{ LeafCalendar }{0..*}{ LeafCalendar}
-                                                  
-(That was another \errmessage.)
-
-
-d:/Progetti\Tesi\Capitoli/ch1.tex:41: Package pgf Error: No shape named `InternalCalendar' is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.41 ...ndar}{ LeafCalendar }{0..*}{ LeafCalendar}
-                                                  
-(That was another \errmessage.)
-
+(Font)              scaled to size 12.0pt on input line 21.
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
 )
-Overfull \hbox (404.44719pt too wide) in paragraph at lines 42--91
-[][] 
+Overfull \hbox (2.91034pt too wide) in paragraph at lines 32--92
+[] 
  []
 
 [4
@@ -840,29 +757,32 @@ No file Capitoli/ch6.tex.
 
 
 No file Capitoli/ch7.tex.
-No file tesi.bbl.
-(d:/Progetti\Tesi\tesi.aux (d:/Progetti\Tesi\Capitoli/ch1.aux) (d:/Progetti\Tesi\Capitoli/ch2.aux) (d:/Progetti\Tesi\Capitoli/ch4.aux) (d:/Progetti\Tesi\Capitoli/ch5.aux) (d:/Progetti\Tesi\Capitoli/ch6.aux) (d:/Progetti\Tesi\Capitoli/ch7.aux))
+(d:/Progetti\Tesi\tesi.bbl
+Capitolo 1.
 
-Package rerunfilecheck Warning: File `tesi.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-Package rerunfilecheck Info: Checksums for `tesi.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  E3CB342E455DB01DD699449996B43641;1201.
+) [10
+
+
+
+
+] (d:/Progetti\Tesi\tesi.aux (d:/Progetti\Tesi\Capitoli/ch1.aux) (d:/Progetti\Tesi\Capitoli/ch2.aux) (d:/Progetti\Tesi\Capitoli/ch4.aux) (d:/Progetti\Tesi\Capitoli/ch5.aux) (d:/Progetti\Tesi\Capitoli/ch6.aux) (d:/Progetti\Tesi\Capitoli/ch7.aux))
+Package rerunfilecheck Info: File `tesi.out' has not changed.
+(rerunfilecheck)             Checksum: 21D186DCEECD7CA20283B263EEB3289C;1310.
  ) 
 Here is how much of TeX's memory you used:
- 23580 strings out of 479334
- 450580 string characters out of 2857084
- 842133 words of memory out of 3000000
- 40585 multiletter control sequences out of 15000+200000
- 428646 words of font info for 39 fonts, out of 3000000 for 9000
+ 23742 strings out of 479334
+ 453415 string characters out of 2857084
+ 846555 words of memory out of 3000000
+ 40723 multiletter control sequences out of 15000+200000
+ 431246 words of font info for 40 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,6n,103p,404b,812s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 102i,6n,103p,425b,814s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_wttfgh.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_qrsm2e.enc}<C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Bold.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Italic.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Roman.pfb>
-Output written on d:/Progetti\Tesi\tesi.pdf (10 pages, 335412 bytes).
+Output written on d:/Progetti\Tesi\tesi.pdf (11 pages, 345118 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 118 PDF objects out of 1000 (max. 8388607)
+ 20 named destinations out of 1000 (max. 500000)
+ 82 words of extra memory for PDF output out of 10000 (max. 10000000)
 

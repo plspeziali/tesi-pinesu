@@ -7,3 +7,4 @@
 \contentsline {part}{IV\hspace {1em}Il Software PineSU}{7}{part.4}%
 \contentsline {part}{V\hspace {1em}Dimostrazioni d'uso per il fine preposto}{8}{part.5}%
 \contentsline {part}{VI\hspace {1em}Conclusioni e Sviluppi Futuri}{9}{part.6}%
+\contentsline {chapter}{\numberline {1}Bibliografia}{10}{chapter.1}%

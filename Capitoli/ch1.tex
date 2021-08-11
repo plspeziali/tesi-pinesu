@@ -4,39 +4,29 @@
 \markboth{Abstract}{Abstract}
 
 \begin{tikzpicture}
-    \begin{class}[text width=8cm]{ MerkleCalendar }{0,0}
-    \attribute{- open : InternalCalendar}
-    \attribute{- closed : InternalCalendar}
-    \operation{name(parameter list) : type of value
-    returned}
-    % virtual operation
-    \operation [0]{ name(parameters list) : type of
-    value returned}
+    \begin{class}[text width=9cm]{MerkleCalendar}{0,0}
+        \operation{+ addRegistration(name, hash, date, closed): void}
+        \operation{+ getBSPRoot(hash, oHash, cHash): string}
+        \operation{+ getTrees(name, hash, date, closed): [Array, Array]}
     \end{class}
-\end{tikzpicture}
-
-\begin{tikzpicture}
-    \begin{class}[text width=8cm]{ MerkleCalendar }{0,0}
-        \attribute{- open : InternalCalendar}
+    \begin{class}[text width=8cm]{InternalCalendar}{5,-5}
+        \attribute{- name : string}
+        \attribute{- category : int}
+        \attribute{- parent : InternalCalendar}
+        \attribute{- category : int}
+        \attribute{- hash : string}
+        \operation{name(parameter list) : type of value returned}
+        % virtual operation
+        \operation [0]{ name(parameters list) : type of value returned}
+    \end{class}
+    \begin{class}[text width=8cm]{LeafCalendar}{0,-12}
+        \attribute{- opena : InternalCalendar}
         \attribute{- closed : InternalCalendar}
         \operation{name(parameter list) : type of value returned}
         % virtual operation
         \operation [0]{ name(parameters list) : type of value returned}
     \end{class}
-    \begin{class}[text width=8cm]{ InternalCalendar }{10,0}
-        \attribute{- open : InternalCalendar}
-        \attribute{- closed : InternalCalendar}
-        \operation{name(parameter list) : type of value returned}
-        % virtual operation
-        \operation [0]{ name(parameters list) : type of value returned}
-    \end{class}
-    \begin{class}[text width=8cm]{ LeafCalendar }{20,0}
-        \attribute{- open : InternalCalendar}
-        \attribute{- closed : InternalCalendar}
-        \operation{name(parameter list) : type of value returned}
-        % virtual operation
-        \operation [0]{ name(parameters list) : type of value returned}
-    \end{class}
-    \composition{MerkleCalendar }{ InternalCalendar }{2}{InternalCalendar}
-    \aggregation{InternalCalendar}{ LeafCalendar }{0..*}{ LeafCalendar}
+    \composition{MerkleCalendar}{open, closed}{2}{InternalCalendar};
+    \aggregation{InternalCalendar}{children}{0..*}{LeafCalendar};
+    \selfAssociation{InternalCalendar}{contains}{0,1};
 \end{tikzpicture}
