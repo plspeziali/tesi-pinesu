@@ -352,12 +352,12 @@ node[near end, below]{#3};
 
 % https://tex.stackexchange.com/questions/98021/how-to-extend-pgf-umlcd-with-self-association-connection
 \newcommand{\selfAssociation}[3]{
-\coordinate (a) at ($(#1.north)$);
-\coordinate (b) at ($(#1.north) + (0,1)$);
-\coordinate (d) at ($(#1.east) + (1,0)$);
-\coordinate (e) at ($(#1.east)$);
-\coordinate (t) at ($(#1.east) + (1,1)$);
-\coordinate (c) at ($(d)!(b)!(t)$);
+  \coordinate (a) at ($(#1.north)$);
+  \coordinate (b) at ($(#1.north) + (0,1)$);
+  \coordinate (d) at ($(#1.east) + (1,0)$);
+  \coordinate (e) at ($(#1.east)$);
+  \coordinate (t) at ($(#1.east) + (1,1)$);
+  \coordinate (c) at ($(d)!(b)!(t)$);
   \draw [umlcd style, open diamond-] (a) -- (b)
   node[midway, left]{#2}
   node[midway, right]{#3};
@@ -366,7 +366,7 @@ node[near end, below]{#3};
   \draw [umlcd style,   ->] (d) -- (e)
   %node[midway, above]{#4}
   %node[midway, below]{#5};
-  }
+}
 
 %%% End of pgf-umlcd.sty
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

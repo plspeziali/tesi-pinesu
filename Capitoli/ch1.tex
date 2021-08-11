@@ -4,29 +4,43 @@
 \markboth{Abstract}{Abstract}
 
 \begin{tikzpicture}
-    \begin{class}[text width=9cm]{MerkleCalendar}{0,0}
-        \operation{+ addRegistration(name, hash, date, closed): void}
-        \operation{+ getBSPRoot(hash, oHash, cHash): string}
-        \operation{+ getTrees(name, hash, date, closed): [Array, Array]}
+    \begin{class}[text width=14cm]{MerkleCalendar}{0,0}
+        \attribute{}
+        \operation{+ addRegistration(name: string, hash: string, date: Date, closed: boolean): void}
+        \operation{+ getBSPRoot(hash: string, oHash: string, cHash: string): string}
+        \operation{+ getTrees(): [Array, Array]}
     \end{class}
-    \begin{class}[text width=8cm]{InternalCalendar}{5,-5}
+    \begin{class}[text width=8cm]{InternalCalendar}{4,-4.5}
         \attribute{- name : string}
         \attribute{- category : int}
         \attribute{- parent : InternalCalendar}
         \attribute{- category : int}
         \attribute{- hash : string}
-        \operation{name(parameter list) : type of value returned}
-        % virtual operation
-        \operation [0]{ name(parameters list) : type of value returned}
+        \operation{+ addChild(node: Object) : void}
+        \operation{+ calculateHash() : void}
+        \operation{+ getChildByName(name: string) : Object}
+        \operation{+ findNode(hash: string) : Object}
     \end{class}
-    \begin{class}[text width=8cm]{LeafCalendar}{0,-12}
-        \attribute{- opena : InternalCalendar}
-        \attribute{- closed : InternalCalendar}
-        \operation{name(parameter list) : type of value returned}
-        % virtual operation
-        \operation [0]{ name(parameters list) : type of value returned}
+    \begin{class}[text width=8cm]{LeafCalendar}{2,-12.5}
+        \attribute{- name : string}
+        \attribute{- day : int}
+        \attribute{- hour : InternalCalendar}
+        \attribute{- minute : int}
+        \attribute{- hash : string}
+        \operation{}
     \end{class}
     \composition{MerkleCalendar}{open, closed}{2}{InternalCalendar};
-    \aggregation{InternalCalendar}{children}{0..*}{LeafCalendar};
-    \selfAssociation{InternalCalendar}{contains}{0,1};
+    %\aggregation{InternalCalendar}{children}{0..*}{LeafCalendar};
+    %\aggregation{LeafCalendar}{parent}{0..1}{InternalCalendar};
+    \aggregation{[xshift=2cm] InternalCalendar.south}{0..*}{children}{[xshift=2cm] LeafCalendar.north};
+    \aggregation{[xshift=-2cm] LeafCalendar.north}{0..1}{parent}{[xshift=-2cm] InternalCalendar.south};
+    %\aggregation{[xshift=-2cm] A}{second}{1}{[xshift=-2cm] B.north};
+    \selfAssociation{InternalCalendar}{parent}{0,1};
 \end{tikzpicture}
+
+%#name;
+ %   #day;
+  %  #hour;
+   % #minute;
+   % #hash;
+   % #parent

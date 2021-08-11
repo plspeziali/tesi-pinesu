@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  11 AUG 2021 22:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  11 AUG 2021 22:50
 entering extended mode
 **d:/Progetti/Tesi/tesi.tex
 (d:/Progetti/Tesi/tesi.tex
@@ -696,19 +696,21 @@ LaTeX Font Info:    Font shape `OT1/Crimson-TLF/b/n' will be
 \openout2 = `Capitoli/ch1.aux'.
 
  (d:/Progetti\Tesi\Capitoli/ch1.tex
-LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/it' will be
-(Font)              scaled to size 12.0pt on input line 21.
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-)
-Overfull \hbox (2.91034pt too wide) in paragraph at lines 32--92
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (45.58948pt too wide) in paragraph at lines 39--40
 [] 
  []
 
-[4
+) [4
 
 
-] [5
+]
+Overfull \vbox (8.11896pt too high) has occurred while \output is active []
+
+ [5] [6
 
 
 
@@ -717,7 +719,7 @@ Overfull \hbox (2.91034pt too wide) in paragraph at lines 32--92
 
 
 No file Capitoli/ch2.tex.
-[6
+[7
 
 
 
@@ -727,7 +729,7 @@ No file Capitoli/ch2.tex.
 
 
 No file Capitoli/ch4.tex.
-[7
+[8
 
 
 
@@ -737,7 +739,7 @@ No file Capitoli/ch4.tex.
 
 
 No file Capitoli/ch5.tex.
-[8
+[9
 
 
 
@@ -747,7 +749,7 @@ No file Capitoli/ch5.tex.
 
 
 No file Capitoli/ch6.tex.
-[9
+[10
 
 
 
@@ -762,7 +764,7 @@ Capitolo 1.
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [10
+) [11
 
 
 
@@ -772,17 +774,17 @@ Package rerunfilecheck Info: File `tesi.out' has not changed.
 (rerunfilecheck)             Checksum: 21D186DCEECD7CA20283B263EEB3289C;1310.
  ) 
 Here is how much of TeX's memory you used:
- 23742 strings out of 479334
- 453415 string characters out of 2857084
- 846555 words of memory out of 3000000
+ 23743 strings out of 479334
+ 453436 string characters out of 2857084
+ 847556 words of memory out of 3000000
  40723 multiletter control sequences out of 15000+200000
- 431246 words of font info for 40 fonts, out of 3000000 for 9000
+ 429029 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,6n,103p,425b,814s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 102i,6n,103p,425b,815s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_wttfgh.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_qrsm2e.enc}<C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Bold.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Italic.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Roman.pfb>
-Output written on d:/Progetti\Tesi\tesi.pdf (11 pages, 345118 bytes).
+Output written on d:/Progetti\Tesi\tesi.pdf (12 pages, 343125 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 20 named destinations out of 1000 (max. 500000)
+ 122 PDF objects out of 1000 (max. 8388607)
+ 21 named destinations out of 1000 (max. 500000)
  82 words of extra memory for PDF output out of 10000 (max. 10000000)
 
