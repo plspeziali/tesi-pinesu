@@ -1,0 +1,89 @@
+\documentclass[12pt,a4paper]{report}
+%
+% This LaTeX template has been created by Luca Grilli
+% Based on the following https://en.wikibooks.org/wiki/LaTeX/Title_Creation
+%
+\usepackage[italian]{babel}
+%\usepackage[T1]{fontenc} % Riga da commentare se si compila con PDFLaTeX
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum} % genera testo fittizio
+\usepackage{subcaption}
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage{titlesec}
+\usepackage{crimson}
+
+\fontfamily{bch}\selectfont
+
+
+\titleformat{\chapter}[display]{\Huge\bfseries}{}{0pt}{\thechapter.\ }
+
+\graphicspath{{figures/}}
+%
+%\addtolength{\topmargin}{-.875in} % reduce the default top margin
+%\addtolength{\topmargin}{-2cm} % reduce the default top margin
+%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                %
+%     Begin Docuemnt [start]     %
+%                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Title Page [start]     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Declare new goemetry for the title page only.
+{\Large \noindent Paolo Speziali} \newline
+
+\vspace{1cm}
+
+{\begin{flushleft}
+\fontsize{21.8}{26.16} \selectfont \bfseries \noindent 
+Condividere informazioni \\
+in modo sicuro combinando \\
+Git e Blockchain
+\end{flushleft}}
+
+\vspace{6mm}
+
+{\large \noindent \emph{Relatore}: \vspace{1.0mm}\\ 
+Prof. Luca Grilli \newline}
+
+\vspace{4.4cm}
+
+\noindent Tesi di laurea in Ingegneria Informatica \newline 
+
+\noindent Perugia, Anno Accademico 2020/2021 \newline
+
+\noindent Università degli Studi di Perugia \\
+Corso di laurea triennale in Ingegneria Informatica ed Elettronica \\
+Dipartimento d'Ingegneria
+
+\vspace{1.5cm}
+
+\noindent \includegraphics[width=0.5\textwidth]{figures/logounipg2021.png}
+% Ends the declared geometry for the titlepage
+\restoregeometry
+\end{titlepage}
+\normalfont
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Title Page [end]     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage \thispagestyle{empty} \ \newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Indice [start]     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+%%%%%%%%%%%%%%%%%%%%%%%%
+%     Indice [end]     %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
