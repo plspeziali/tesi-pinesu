@@ -2,7 +2,7 @@
 %
 % This LaTeX template has been created by Luca Grilli
 % Based on the following https://en.wikibooks.org/wiki/LaTeX/Title_Creation
-%
+% 
 \usepackage[italian]{babel}
 %\usepackage[T1]{fontenc} % Riga da commentare se si compila con PDFLaTeX
 \usepackage{geometry}
@@ -14,6 +14,7 @@
 \usepackage[nottoc,numbib]{tocbibind}
 \usepackage{titlesec}
 \usepackage{crimson}
+\usepackage[simplified]{pgf-umlcd}
 
 \fontfamily{bch}\selectfont
 
@@ -87,27 +88,27 @@ Dipartimento d'Ingegneria
 
 \part{Introduzione}
 
-\include{mainmatter/ch1}
+\include{Capitoli/ch1}
 
 \part{Concetti Preliminari}
 
-\include{mainmatter/ch2}
+\include{Capitoli/ch2}
 
 \part{Il Problema e L'Obiettivo}
 
-\include{mainmatter/ch4}
+\include{Capitoli/ch4}
 
 \part{Il Software PineSU}
 
-\include{mainmatter/ch5}
+\include{Capitoli/ch5}
 
-\part{Dimostrazioni d'i 'uso per il fine preposto}
+\part{Dimostrazioni d'uso per il fine preposto}
 
-\include{mainmatter/ch6}
+\include{Capitoli/ch6}
 
 \part{Conclusioni e Sviluppi Futuri}
 
-\include{mainmatter/ch7}
+\include{Capitoli/ch7}
 
 \bibliographystyle{plain}
 \bibliography{bibliografia}

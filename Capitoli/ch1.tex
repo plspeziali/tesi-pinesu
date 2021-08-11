@@ -1,0 +1,42 @@
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+\markboth{Abstract}{Abstract}
+
+\begin{tikzpicture}
+    \begin{class}[text width=8cm]{ MerkleCalendar }{0,0}
+    \attribute{- open : InternalCalendar}
+    \attribute{- closed : InternalCalendar}
+    \operation{name(parameter list) : type of value
+    returned}
+    % virtual operation
+    \operation [0]{ name(parameters list) : type of
+    value returned}
+    \end{class}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+    \begin{class}[text width=8cm]{ MerkleCalendar }{0,0}
+        \attribute{- open : InternalCalendar}
+        \attribute{- closed : InternalCalendar}
+        \operation{name(parameter list) : type of value returned}
+        % virtual operation
+        \operation [0]{ name(parameters list) : type of value returned}
+    \end{class}
+    \begin{class}[text width=8cm]{ InternalCalendar }{10,0}
+        \attribute{- open : InternalCalendar}
+        \attribute{- closed : InternalCalendar}
+        \operation{name(parameter list) : type of value returned}
+        % virtual operation
+        \operation [0]{ name(parameters list) : type of value returned}
+    \end{class}
+    \begin{class}[text width=8cm]{ LeafCalendar }{20,0}
+        \attribute{- open : InternalCalendar}
+        \attribute{- closed : InternalCalendar}
+        \operation{name(parameter list) : type of value returned}
+        % virtual operation
+        \operation [0]{ name(parameters list) : type of value returned}
+    \end{class}
+    \composition{MerkleCalendar }{ InternalCalendar }{2}{InternalCalendar}
+    \aggregation{InternalCalendar}{ LeafCalendar }{0..*}{ LeafCalendar}
+\end{tikzpicture}
