@@ -1,0 +1,55 @@
+
+La concretizzazione della soluzione al problema esposto è l’applicativo \textbf{PineSU}. \\
+PineSU si presenta come un software leggero scritto in Javascript e che sfrutta il runtime Node.js.
+Il software va a considerare gli insiemi di file come delle entità chiamate Storage Unit (SU) in cui
+va ad avvolgere logicamente la repository Git. \\
+Queste Storage Unit sono le singole unità su cui si andrà poi ad effettuare le singole
+operazioni eccetto la registrazione su Blockchain che si svolgerà collettivamente con l’ausilio
+di accumulatori crittografici. \\
+Vedremo infatti che il ciclo di vita di una SU è scandito dai Blockchain Synchronization Point (BSP).
+Quando si decide di andare a registrare il suo stato e la sua presenza sui Blockchain inserendolo,
+tramite dei gruppi di suoi simili chiamati Storage Group, nel grande albero la cui radice verrà
+salvata effettivamente nella catena immutabile.
+
+
+
+\begin{figure}[H]
+    \centering
+    \resizebox{0.8\textwidth}{!}{
+        \begin{tikzpicture}
+            \begin{class}[text width=14cm]{MerkleCalendar}{0,0}
+                \attribute{}
+                \operation{+ addRegistration(name: string, hash: string, date: Date, closed: boolean): void}
+                \operation{+ getBSPRoot(hash: string, oHash: string, cHash: string): string}
+                \operation{+ getTrees(): [Array, Array]}
+            \end{class}
+            \begin{class}[text width=8cm]{InternalCalendar}{4,-4.5}
+                \attribute{- name : string}
+                \attribute{- category : int}
+                \attribute{- parent : InternalCalendar}
+                \attribute{- category : int}
+                \attribute{- hash : string}
+                \operation{+ addChild(node: Object) : void}
+                \operation{+ calculateHash() : void}
+                \operation{+ getChildByName(name: string) : Object}
+                \operation{+ findNode(hash: string) : Object}
+            \end{class}
+            \begin{class}[text width=8cm]{LeafCalendar}{2,-12.5}
+                \attribute{- name : string}
+                \attribute{- day : int}
+                \attribute{- hour : InternalCalendar}
+                \attribute{- minute : int}
+                \attribute{- hash : string}
+                \operation{}
+            \end{class}
+            \composition{MerkleCalendar}{open, closed}{2}{InternalCalendar};
+            %\aggregation{InternalCalendar}{children}{0..*}{LeafCalendar};
+            %\aggregation{LeafCalendar}{parent}{0..1}{InternalCalendar};
+            \aggregation{[xshift=2cm] InternalCalendar.south}{0..*}{children}{[xshift=2cm] LeafCalendar.north};
+            \aggregation{[xshift=-2cm] LeafCalendar.north}{0..1}{parent}{[xshift=-2cm] InternalCalendar.south};
+            %\aggregation{[xshift=-2cm] A}{second}{1}{[xshift=-2cm] B.north};
+            \selfAssociation{InternalCalendar}{parent}{0,1};
+        \end{tikzpicture}
+    }
+    \caption{M1} \label{fig:M1}
+\end{figure}

@@ -15,6 +15,7 @@
 \usepackage{titlesec}
 \usepackage{crimson}
 \usepackage[simplified]{pgf-umlcd}
+\usepackage{float}
 \usetikzlibrary{calc} 
 
 \fontfamily{bch}\selectfont
@@ -87,29 +88,29 @@ Dipartimento d'Ingegneria
 %     Indice [end]     %
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-\part{Introduzione}
+\chapter{Introduzione}
 
 \include{Capitoli/ch1}
 
-\part{Concetti Preliminari}
+\chapter{Concetti Preliminari}
 
 \include{Capitoli/ch2}
 
-\part{Il Problema e L'Obiettivo}
+\chapter{Il Problema e L'Obiettivo}
 
-\include{Capitoli/ch4}
+\include{Capitoli/ch3}
 
-\part{Il Software PineSU}
+\chapter{Il Software PineSU}
+
+\input{Capitoli/ch4}
+
+\chapter{Dimostrazioni d'uso per il fine preposto}
 
 \include{Capitoli/ch5}
 
-\part{Dimostrazioni d'uso per il fine preposto}
+\chapter{Conclusioni e Sviluppi Futuri}
 
 \include{Capitoli/ch6}
-
-\part{Conclusioni e Sviluppi Futuri}
-
-\include{Capitoli/ch7}
 
 \bibliographystyle{plain}
 \bibliography{bibliografia}

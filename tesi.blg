@@ -6,13 +6,11 @@ A level-1 auxiliary file: Capitoli/ch1.aux
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 A level-1 auxiliary file: Capitoli/ch2.aux
 Reallocating 'name_of_file' (item size: 1) to 17 items.
-A level-1 auxiliary file: Capitoli/ch4.aux
+A level-1 auxiliary file: Capitoli/ch3.aux
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 A level-1 auxiliary file: Capitoli/ch5.aux
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 A level-1 auxiliary file: Capitoli/ch6.aux
-Reallocating 'name_of_file' (item size: 1) to 17 items.
-A level-1 auxiliary file: Capitoli/ch7.aux
 Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: plain.bst
 Reallocating 'name_of_file' (item size: 1) to 13 items.
@@ -20,7 +18,7 @@ I found no \citation commands---while reading file tesi.aux
 Database file #1: bibliografia.bib
 You've used 0 entries,
             2118 wiz_defined-function locations,
-            503 strings with 4089 characters,
+            502 strings with 4073 characters,
 and the built_in function-call counts, 18 in all, are:
 = -- 0
 > -- 0
