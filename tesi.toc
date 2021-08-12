@@ -4,6 +4,10 @@
 \contentsline {chapter}{\numberline {2}Concetti Preliminari}{4}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Il Problema e L'Obiettivo}{5}{chapter.3}%
 \contentsline {chapter}{\numberline {4}Il Software PineSU}{6}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Dimostrazioni d'uso per il fine preposto}{8}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusioni e Sviluppi Futuri}{9}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Bibliografia}{10}{chapter.7}%
+\contentsline {section}{\numberline {4.1}Architettura}{6}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Moduli in dettaglio}{8}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}PineSU CLI}{8}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}PineSU BEL}{8}{subsection.4.2.2}%
+\contentsline {chapter}{\numberline {5}Dimostrazioni d'uso\\per il fine preposto}{11}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusioni e Sviluppi Futuri}{12}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Bibliografia}{13}{chapter.7}%
