@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  13 AUG 2021 19:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  13 AUG 2021 22:08
 entering extended mode
 **c:/Users/Paolo/Dropbox/Tesi/tesi.tex
 (c:/Users/Paolo/Dropbox/Tesi/tesi.tex
@@ -730,35 +730,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [7])
 Capitolo 4.
-(c:/Users\Paolo\Dropbox\Tesi\Capitoli/ch4.tex
-LaTeX Font Info:    Trying to load font information for TS1+Crimson-TLF on input line 25.
- (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/latex/crimson\ts1crimson-tlf.fd
-File: TS1Crimson-TLF.fd 2016/02/19 (autoinst) Font definitions for TS1/Crimson-TLF.
-)
-LaTeX Font Info:    Font shape `TS1/Crimson-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 25.
-LaTeX Font Info:    Font shape `OT1/Crimson-TLF/b/it' will be
-(Font)              scaled to size 12.0pt on input line 25.
-LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 25.
-LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 25.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 25.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 25.
-LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 25.
- [8
+(c:/Users\Paolo\Dropbox\Tesi\Capitoli/ch4.tex [8
 
 ]
-<Figures/PineSU-architecture.pdf, id=190, 546.44153pt x 96.7615pt>
-File: Figures/PineSU-architecture.pdf Graphic file (type pdf)
-<use Figures/PineSU-architecture.pdf>
-Package pdftex.def Info: Figures/PineSU-architecture.pdf  used on input line 38.
-(pdftex.def)             Requested size: 409.88681pt x 72.58127pt.
+<Figures/activityDiag.pdf, id=185, 498.76138pt x 292.14847pt>
+File: Figures/activityDiag.pdf Graphic file (type pdf)
+<use Figures/activityDiag.pdf>
+Package pdftex.def Info: Figures/activityDiag.pdf  used on input line 49.
+(pdftex.def)             Requested size: 409.88681pt x 240.09375pt.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 44.
+(Font)              scaled to size 10.95pt on input line 53.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -767,13 +748,50 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[9 <c:/Users/Paolo/Dropbox/Tesi/Figures/PineSU-architecture.pdf>]
+[9 <c:/Users/Paolo/Dropbox/Tesi/Figures/activityDiag.pdf>]
+<Figures/stateDiag.pdf, id=213, 503.58139pt x 209.68336pt>
+File: Figures/stateDiag.pdf Graphic file (type pdf)
+<use Figures/stateDiag.pdf>
+Package pdftex.def Info: Figures/stateDiag.pdf  used on input line 64.
+(pdftex.def)             Requested size: 409.88681pt x 170.67445pt.
+LaTeX Font Info:    Trying to load font information for TS1+Crimson-TLF on input line 77.
+ (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/latex/crimson\ts1crimson-tlf.fd
+File: TS1Crimson-TLF.fd 2016/02/19 (autoinst) Font definitions for TS1/Crimson-TLF.
+)
+LaTeX Font Info:    Font shape `TS1/Crimson-TLF/m/n' will be
+(Font)              scaled to size 12.0pt on input line 77.
+LaTeX Font Info:    Font shape `OT1/Crimson-TLF/b/it' will be
+(Font)              scaled to size 12.0pt on input line 77.
+LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
+(Font)              scaled to size 8.0pt on input line 77.
+LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 77.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 77.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 77.
+LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
+(Font)              scaled to size 7.0pt on input line 77.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[10 <c:/Users/Paolo/Dropbox/Tesi/Figures/stateDiag.pdf>]
+<Figures/PineSU-architecture.pdf, id=261, 546.44153pt x 96.7615pt>
+File: Figures/PineSU-architecture.pdf Graphic file (type pdf)
+<use Figures/PineSU-architecture.pdf>
+Package pdftex.def Info: Figures/PineSU-architecture.pdf  used on input line 90.
+(pdftex.def)             Requested size: 409.88681pt x 72.58127pt.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 51.
-<Figures/menu2x.jpg, id=241, 1343.0175pt x 821.0675pt>
+(Font)              scaled to size 14.4pt on input line 101.
+<Figures/menu2x.jpg, id=263, 1343.0175pt x 821.0675pt>
 File: Figures/menu2x.jpg Graphic file (type jpg)
 <use Figures/menu2x.jpg>
-Package pdftex.def Info: Figures/menu2x.jpg  used on input line 64.
+Package pdftex.def Info: Figures/menu2x.jpg  used on input line 114.
 (pdftex.def)             Requested size: 409.88681pt x 250.58183pt.
 
 
@@ -783,7 +801,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[10 <c:/Users/Paolo/Dropbox/Tesi/Figures/menu2x.jpg>]
+[11 <c:/Users/Paolo/Dropbox/Tesi/Figures/PineSU-architecture.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[12 <c:/Users/Paolo/Dropbox/Tesi/Figures/menu2x.jpg>]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -795,7 +821,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[11]
+[13]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -803,11 +829,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12]
-<Figures/mc1.pdf, id=260, 337.6615pt x 470.43454pt>
+[14]
+<Figures/mc1.pdf, id=327, 337.6615pt x 470.43454pt>
 File: Figures/mc1.pdf Graphic file (type pdf)
 <use Figures/mc1.pdf>
-Package pdftex.def Info: Figures/mc1.pdf  used on input line 148.
+Package pdftex.def Info: Figures/mc1.pdf  used on input line 199.
 (pdftex.def)             Requested size: 209.12683pt x 291.35773pt.
 
 
@@ -817,7 +843,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[13 <c:/Users/Paolo/Dropbox/Tesi/Figures/mc1.pdf>]
+[15 <c:/Users/Paolo/Dropbox/Tesi/Figures/mc1.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -825,26 +851,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14]
+[16]
 
-LaTeX Warning: Reference `' on page 15 undefined on input line 239.
+LaTeX Warning: Reference `' on page 17 undefined on input line 290.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[15]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[16])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -853,23 +863,39 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [17]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[18])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[19]
 Capitolo 5.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\\' on input line 121.
 
-[18
+[20
 
 ]
 Capitolo 6.
-(c:/Users\Paolo\Dropbox\Tesi\tesi.bbl [19
+(c:/Users\Paolo\Dropbox\Tesi\tesi.bbl [21
 
 ]
 Capitolo 7.
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [20
+) [22
 
 ] (c:/Users\Paolo\Dropbox\Tesi\tesi.aux)
 
@@ -879,17 +905,17 @@ Package rerunfilecheck Info: File `tesi.out' has not changed.
 (rerunfilecheck)             Checksum: D0FF311CD7A1684392F383E53AC0D000;5088.
  ) 
 Here is how much of TeX's memory you used:
- 24130 strings out of 479334
- 458983 string characters out of 2857084
- 857881 words of memory out of 3000000
- 41061 multiletter control sequences out of 15000+200000
+ 24154 strings out of 479334
+ 459462 string characters out of 2857084
+ 856082 words of memory out of 3000000
+ 41076 multiletter control sequences out of 15000+200000
  449575 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,11n,103p,773b,965s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_n3gbj7.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_axwm4k.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_wttfgh.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_qrsm2e.enc}<C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Bold.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-BoldItalic.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Italic.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Roman.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on c:/Users\Paolo\Dropbox\Tesi\tesi.pdf (21 pages, 705657 bytes).
+Output written on c:/Users\Paolo\Dropbox\Tesi\tesi.pdf (23 pages, 771638 bytes).
 PDF statistics:
- 373 PDF objects out of 1000 (max. 8388607)
- 68 named destinations out of 1000 (max. 500000)
- 241 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 442 PDF objects out of 1000 (max. 8388607)
+ 75 named destinations out of 1000 (max. 500000)
+ 251 words of extra memory for PDF output out of 10000 (max. 10000000)
 

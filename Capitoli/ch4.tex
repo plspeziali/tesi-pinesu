@@ -14,8 +14,60 @@ Infine, la root di questo MC sarà salvata nella Blockchain, da qui in poi sarà
 \section{Workflow}
 \label{sec:work}
 
-Nel descrittore di ogni SU è presente anche lo stato di chiusura, una SU è aperta (open) se modificabile e ricalcolabile liberamente, chiusa (closed) se la modifica, il ricalcolo e un’eventuale chiusura successiva non possono essere eseguiti.
-TODO
+PineSU segue una filosofia di workflow che ricalca quella di Git,
+infatti tramite l'applicativo si può operare su singole Storage Unit, ognuna con uno stato potenzialmente
+diverso dall'altra. Ciò fa si che il workflow sia molto legato al ciclo di vita di una singola SU, la quale
+a seconda del suo stato permetterà di fare alcune operazioni anziché altre.
+
+Possiamo vederne una rappresentazione in Fig.~\ref{fi:workflow}, si parte da una directory del nostro file
+system e, tramite PineSU, la si trasforma in una Storage Unit (\emph{Create new Storage Unit}) calcolandone
+anche gli hash in modo da rendere già possibili registrazioni e verifiche.
+Dopo questa operazione potrebbero accadere i tre eventi che seguono: 
+\begin{enumerate}
+    \item Il contenuto della Storage Unit potrebbe venire modificato,
+    a questo punto è necessario, se si vogliono registrare anche i nuovi cambiamenti,
+    andare ad effettuare un ricalcolo (\emph{Update SU}), dopo di ciò
+    si torna alla possibilità dei tre eventi;
+    \item Potremmo scegliere di chiudere la nostra Storage Unit,
+    una SU è aperta (\textbf{Open}) se modificabile e ricalcolabile liberamente,
+    chiusa (\textbf{Closed}) se la modifica, il ricalcolo e un’eventuale chiusura
+    successiva non possono essere eseguiti, dopo la chiusura potranno essere eseguite
+    in pratica le stesse operazioni eccetto, ovviamente, quella del ricalcolo;
+    \item Potremmo scegliere di sincronizzare la SU nella blockchain,
+    questo avviene in realtà tramite due fasi che vedremo in seguito, tuttavia
+    questa scelta ci permette in seguito di eseguire qualsiasi operazione lo stesso,
+    eccetto il ricalcolo nell'eventualità che questa SU sia stata chiusa precedentemente.
+\end{enumerate}
+
+Una volta che una SU è stata registrata nella blockchain o chiusa si aprono altre
+due possibili azioni da poter compiere: la verifica d'integrità, sia offline che online,
+l'esportazione di sottoinsiemi di file dalla SU, tutti muniti con i dati necessari per
+effettuare verifiche d'integrità da parte di terzi anche senza disporre dell'intera SU.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.98\textwidth]{Figures/activityDiag}
+    \caption{\small{
+    Workflow dell'applicativo sotto forma di Activity Diagram.
+    } % end small
+    } % end caption
+    \label{fi:workflow}
+\end{figure}
+
+\newpage
+
+Possiamo osservare il workflow appena descritto anche in Fig.~\ref{fi:stateDiag}, dove il diagramma degli
+stati di una singola storgae unit riflette le operazioni appena descritte.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.98\textwidth]{Figures/stateDiag}
+    \caption{\small{
+    Ciclo di vita di una Storage Unit sotto forma di State Diagram.
+    } % end small
+    } % end caption
+    \label{fi:stateDiag}
+\end{figure}
 
 \section {Architettura}
 \indent
@@ -44,8 +96,6 @@ con la blockchain Ethereum, possiamo descrivere la sua architettura come in Fig.
     } % end caption
     \label{fi:arch}
 \end{figure}
-\newpage
-
 
 \section{Moduli in dettaglio}
 \subsection{PineSU CLI}
@@ -77,7 +127,8 @@ Per la prima delle operazioni sopra citate troviamo due librerie, rispettivament
 
 Andiamo ora a vedere le due classi che si occupano di creare e gestire le strutture di memorizzazione che il programma utilizza: \textbf{Files} e \textbf{TreeList}.
 Files si occupa della lettura di file JSON, la lettura dei file di cui andrà letta la stringa hash corrispondente e della scrittura dei file JSON. Questi file JSON corrispondono ai descrittori delle SU (riguardanti la creazione e la registrazione su blockchain), alle informazioni sull’utente utilizzatore e alle strutture degli accumulatori crittografici.
-\\ TreeList si occupa del reperimento delle stringhe di hash e del calcolo dei Merkle Tree binari.
+\newpage
+TreeList si occupa del reperimento delle stringhe di hash e del calcolo dei Merkle Tree binari.
 Essi sono fondamentali per varie operazioni che vanno dal calcolo degli hash delle directory al quello della creazione dei tre accumulatori crittografici che andremo ora a descrivere.
 \\ Il primo è il semplice SU Merkle Tree, necessario per il calcolo dell’hash corrispondente alla Storage Unit, che altro non è che un Merkle Tree binario in cui ogni foglia corrisponde a un file o una directory contenuta nella SU. Questo MT verrà utilizzato anche nella fase di esportazione per generare le proof dei file esportati che serviranno per un eventuale controllo d’integrità singolo.
 \\ Il secondo è lo Storage Group, di cui ne esistono due, un \textbf{Open} (OSG) e un \textbf{Closed} (CSG). Si tratta essenzialmente di due MT binari in cui ogni foglia corrisponde all’hash di una Storage Unit \textbf{Staged}, la differenza tra i due alberi è nel loro contenuto, uno contiene le SU Open, l’altro le SU Closed, differenza già discussa nella \autoref{sec:work}. Le root di questi alberi verranno poi salvate all’interno della prossima struttura come foglie.
