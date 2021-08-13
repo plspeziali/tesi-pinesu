@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  13 AUG 2021 16:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  13 AUG 2021 19:39
 entering extended mode
 **c:/Users/Paolo/Dropbox/Tesi/tesi.tex
 (c:/Users/Paolo/Dropbox/Tesi/tesi.tex
@@ -807,7 +807,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <Figures/mc1.pdf, id=260, 337.6615pt x 470.43454pt>
 File: Figures/mc1.pdf Graphic file (type pdf)
 <use Figures/mc1.pdf>
-Package pdftex.def Info: Figures/mc1.pdf  used on input line 145.
+Package pdftex.def Info: Figures/mc1.pdf  used on input line 148.
 (pdftex.def)             Requested size: 209.12683pt x 291.35773pt.
 
 
@@ -819,9 +819,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [13 <c:/Users/Paolo/Dropbox/Tesi/Figures/mc1.pdf>]
 
-LaTeX Warning: Reference `' on page 14 undefined on input line 220.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -829,6 +826,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [14]
+
+LaTeX Warning: Reference `' on page 15 undefined on input line 239.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -879,17 +879,17 @@ Package rerunfilecheck Info: File `tesi.out' has not changed.
 (rerunfilecheck)             Checksum: D0FF311CD7A1684392F383E53AC0D000;5088.
  ) 
 Here is how much of TeX's memory you used:
- 24125 strings out of 479334
- 458948 string characters out of 2857084
+ 24130 strings out of 479334
+ 458983 string characters out of 2857084
  857881 words of memory out of 3000000
- 41060 multiletter control sequences out of 15000+200000
+ 41061 multiletter control sequences out of 15000+200000
  449575 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,11n,103p,773b,965s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_n3gbj7.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_axwm4k.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_wttfgh.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_qrsm2e.enc}<C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Bold.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-BoldItalic.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Italic.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Roman.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on c:/Users\Paolo\Dropbox\Tesi\tesi.pdf (21 pages, 703345 bytes).
+Output written on c:/Users\Paolo\Dropbox\Tesi\tesi.pdf (21 pages, 705657 bytes).
 PDF statistics:
- 368 PDF objects out of 1000 (max. 8388607)
- 64 named destinations out of 1000 (max. 500000)
+ 373 PDF objects out of 1000 (max. 8388607)
+ 68 named destinations out of 1000 (max. 500000)
  241 words of extra memory for PDF output out of 10000 (max. 10000000)
 

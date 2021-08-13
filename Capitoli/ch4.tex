@@ -138,7 +138,10 @@ Possiamo vedere, anche grazie a Fig.~\ref{fi:umlMC}, come questa struttura sia i
 
 \subsection{Excursus sul Merkle Calendar}
 
-In Fig.~\ref{fi:mcIPE} possiamo 
+In Fig.~\ref{fi:mcIPE} possiamo osservare un possibile Markle Calendar.
+Nell'esempio è stato esplorato il mese di Febbraio 2021 e lì troviamo tre BSP:
+esse corrispondono a tre registrazioni della root dell'intero MC su blockchain, ovviamente
+sempre diversa dato che l'hash root si calcola con gli hash delle sue foglie.
 
 \begin{figure}[H]
     \centering
@@ -150,7 +153,23 @@ In Fig.~\ref{fi:mcIPE} possiamo
     \label{fi:mcIPE}
 \end{figure}
 
-\newpage
+Ogni volta che un nuovo BSP viene inserito per la prima volta si avvia la procedura di
+ricalcolo dell'hash di ognuno dei suoi antenati in modo da non dover effettuare il calcolo
+dell'hash di gran parte dell'albero nella fase di reperimento.
+
+Nel momento in cui ognuna di queste tre BSP è stata inserita nell'albero essa era la foglia più
+giovane, ergo se volessimo calcolare la root del MC in una data BSP ci basterebbe non
+considerare tutto ciò che è stato inserito successivamente, andando ad escludere una
+partizione di estrema destra dal sottoalbero radicato in Open (in questo caso).
+
+Ipotizziamo di voler recuperare la MC root nel momento in cui è stata inserita BSP B:
+\begin{enumerate}
+    \item Calcoliamo l'hash di Febbraio tramite l'hash di BSP a e di BSP B;
+    \item Calcoliamo l'hash del 2021 tramite l'hash di Gennaio e il “nuovo” hash di Febbraio;
+    \item Calcoliamo l'hash di Open tramite gli hash del 2019, del 2020 e il “nuovo” hash del 2021;
+    \item Calcoliamo la root del MC tramite l'hash di Closed e il “nuovo” hash di Open, l'hash di Closed nell'istante dell'inserimento di BSP B viene salvato in un descrittore JSON presente in ogni SU registrata con BSP B.
+\end{enumerate}
+Il calcolo di hash tramite altri hash è effettuato tramite dei piccoli Merkle Tree binari “usa e getta”, alla stessa maniera di come calcoliamo l'hash root di uno Storage Group (che andrà a finire nei BSP foglia dei MC).
 
 \subsection{PineSU EC}
 

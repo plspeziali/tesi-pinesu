@@ -16,11 +16,11 @@
 \contentsline {subsection}{\numberline {4.3.5}PineSU GC}{14}{subsection.4.3.5}%
 \contentsline {subsection}{\numberline {4.3.6}PineSU SM}{15}{subsection.4.3.6}%
 \contentsline {section}{\numberline {4.4}Funzionalità}{15}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Creazione di una Storage Unit o Ricalcolo di una Storage Unit pre-esistente}{15}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.1}Creazione di una Storage Unit o Ricalcolo di una Storage Unit pre-esistente}{16}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Staging di una Storage Unit nello Storage Group}{16}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}Registrazione dello Storage Group nella Blockchain}{16}{subsection.4.4.3}%
 \contentsline {subsection}{\numberline {4.4.4}Chiusura di una Storage Unit}{16}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}Esportazione di sottoinsiemi di file da una SU}{16}{subsection.4.4.5}%
+\contentsline {subsection}{\numberline {4.4.5}Esportazione di sottoinsiemi di file da una SU}{17}{subsection.4.4.5}%
 \contentsline {subsection}{\numberline {4.4.6}Controllo di integrità di singoli file esportati da altre SU}{17}{subsection.4.4.6}%
 \contentsline {subsection}{\numberline {4.4.7}Controllo di integrità su una SU}{17}{subsection.4.4.7}%
 \contentsline {chapter}{\numberline {5}Dimostrazioni d'uso\\per il fine preposto}{18}{chapter.5}%
