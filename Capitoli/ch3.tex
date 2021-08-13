@@ -1,0 +1,46 @@
+
+Come già affermato in precedenza il sistema Git,
+nonostante la sua completezza e complessità,
+non fornisce ai suoi fruitori la possibilità di un controllo d’integrità
+sulle repository da esso create e gestite, un’operazione essenziale per
+alcune organizzazioni dove è cruciale che i dati non vengano manomessi o corrotti. \\
+Tali organizzazioni potrebbero aver bisogno di tornare a versioni precedenti
+dei loro documenti con la certezza che essi siano stati ripristinati
+correttamente oppure di trasferire a terzi insiemi e sottoinsiemi
+di file e directory del loro file system facendo si che questi ultimi
+possano in ogni momento controllare l’integrità di ogni singolo documento. \\
+La possibilità di appoggiarsi ad un sistema centralizzato è a questo punto quella
+che offrirebbe una verifica meno sicura: usando dei database le informazioni
+potrebbero essere eliminate o manomesse con maggiore facilità,
+da qui l’idea di appoggiarsi ad una struttura come quella della blockchain (\textbf{TODO}).
+Tutto ciò deve però essere implementato con un occhio di riguardo alla quantità
+di informazioni che verranno salvate su di essa: come sappiamo più byte vogliamo
+memorizzare più la nostra operazione sarà costosa dal punto di vista pecuniario.
+
+\section{L’obiettivo del nostro sistema}
+
+Il sistema progettato ha lo scopo di riuscire a fornire a chi ne usufruisce
+un livello di astrazione aggiuntivo sopra il software Git tramite un’interfaccia
+user-friendly che gli permetta non solo di gestire le sue directory come normali
+\emph{repository} (\textbf{TODO}), ma fornisca anche degli utili strumenti di
+salvataggio di hash su blockchain, esportazione di sottoinsiemi di repository
+e verifica sia di singoli file che di moltitudini.
+Tutto ciò implementato con operazioni più o meno severe, a discrezione dell’utente,
+permettendo anche di impedire il ricalcolo di determinati insiemi di file con controllo
+sullo storico dei \emph{commit} (\textbf{TODO}) o, volendo spendere di più, anche su Blockchain.
+
+\section{La questione della memorizzazione}
+
+Come già menzionato, la quantità di informazioni che andremo a memorizzare
+nella blockchain è direttamente proporzionale alla quantità di denaro che
+spendiamo per effettuare una registrazione.
+Occorre perciò trovare uno stratagemma per poter memorizzare una quantità
+estremamente ridotta di dati che contengano però intrinsecamente una grande
+quantità di informazione. \\
+La soluzione al dilemma arriva sotto forma di accumulatori crittografici (\textbf{TODO}).
+Utilizzeremo delle strutture ad albero in cui le foglie saranno le nostre unità
+informative di interesse e da queste ne ricaveremo una radice unica.
+Ovviamente la loro struttura dovrà essere tale da permetterci di andare a reperire
+informazioni passate e già calcolate in un tempo che sia relativamente ragionevole.
+
+\newpage

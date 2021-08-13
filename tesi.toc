@@ -1,25 +1,28 @@
 \babel@toc {italian}{}
 \babel@toc {italian}{}
-\contentsline {chapter}{\numberline {1}Introduzione}{3}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Concetti Preliminari}{4}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Il Problema e L'Obiettivo}{5}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Il Software PineSU}{6}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Architettura}{6}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Moduli in dettaglio}{8}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}PineSU CLI}{8}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}PineSU BEL}{8}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}PineSU EC}{11}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}PineSU GC}{11}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}PineSU SM}{11}{subsection.4.2.5}%
-\contentsline {section}{\numberline {4.3}Workflow}{11}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Funzionalità}{11}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Creazione di una Storage Unit o Ricalcolo di una Storage Unit pre-esistente}{12}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Staging di una Storage Unit nello Storage Group}{12}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Registrazione dello Storage Group nella Blockchain}{12}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Chiusura di una Storage Unit}{12}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}Esportazione di sottoinsiemi di file da una SU}{13}{subsection.4.4.5}%
-\contentsline {subsection}{\numberline {4.4.6}Controllo di integrità di singoli file esportati da altre SU}{13}{subsection.4.4.6}%
-\contentsline {subsection}{\numberline {4.4.7}Controllo di integrità su una SU}{13}{subsection.4.4.7}%
-\contentsline {chapter}{\numberline {5}Dimostrazioni d'uso\\per il fine preposto}{14}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusioni e Sviluppi Futuri}{15}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Bibliografia}{16}{chapter.7}%
+\contentsline {chapter}{\numberline {1}Introduzione}{4}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Concetti Preliminari}{5}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Il Problema e L'Obiettivo}{6}{chapter.3}%
+\contentsline {section}{\numberline {3.1}L’obiettivo del nostro sistema}{6}{section.3.1}%
+\contentsline {section}{\numberline {3.2}La questione della memorizzazione}{7}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Il Software PineSU}{8}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Workflow}{8}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Architettura}{8}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Moduli in dettaglio}{10}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}PineSU CLI}{10}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}PineSU BEL}{10}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Excursus sul Merkle Calendar}{13}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}PineSU EC}{14}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}PineSU GC}{14}{subsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.3.6}PineSU SM}{15}{subsection.4.3.6}%
+\contentsline {section}{\numberline {4.4}Funzionalità}{15}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Creazione di una Storage Unit o Ricalcolo di una Storage Unit pre-esistente}{15}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Staging di una Storage Unit nello Storage Group}{16}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Registrazione dello Storage Group nella Blockchain}{16}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Chiusura di una Storage Unit}{16}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}Esportazione di sottoinsiemi di file da una SU}{16}{subsection.4.4.5}%
+\contentsline {subsection}{\numberline {4.4.6}Controllo di integrità di singoli file esportati da altre SU}{17}{subsection.4.4.6}%
+\contentsline {subsection}{\numberline {4.4.7}Controllo di integrità su una SU}{17}{subsection.4.4.7}%
+\contentsline {chapter}{\numberline {5}Dimostrazioni d'uso\\per il fine preposto}{18}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusioni e Sviluppi Futuri}{19}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Bibliografia}{20}{chapter.7}%

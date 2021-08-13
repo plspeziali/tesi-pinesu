@@ -1,16 +1,6 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: tesi.aux
-Reallocating 'name_of_file' (item size: 1) to 17 items.
-A level-1 auxiliary file: Capitoli/ch1.aux
-Reallocating 'name_of_file' (item size: 1) to 17 items.
-A level-1 auxiliary file: Capitoli/ch2.aux
-Reallocating 'name_of_file' (item size: 1) to 17 items.
-A level-1 auxiliary file: Capitoli/ch3.aux
-Reallocating 'name_of_file' (item size: 1) to 17 items.
-A level-1 auxiliary file: Capitoli/ch5.aux
-Reallocating 'name_of_file' (item size: 1) to 17 items.
-A level-1 auxiliary file: Capitoli/ch6.aux
 Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: plain.bst
 Reallocating 'name_of_file' (item size: 1) to 13 items.
@@ -18,7 +8,7 @@ I found no \citation commands---while reading file tesi.aux
 Database file #1: bibliografia.bib
 You've used 0 entries,
             2118 wiz_defined-function locations,
-            502 strings with 4073 characters,
+            497 strings with 3993 characters,
 and the built_in function-call counts, 18 in all, are:
 = -- 0
 > -- 0

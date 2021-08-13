@@ -17,7 +17,13 @@
 \usepackage[simplified]{pgf-umlcd}
 \usepackage{float}
 \usepackage{wrapfig,lipsum}
+\usepackage{fancyhdr}
 \usetikzlibrary{calc} 
+\pagestyle{fancy}
+
+\fancyhf{}
+\lhead{\leftmark}
+\cfoot{\thepage}
 
 \fontfamily{bch}\selectfont
 
@@ -41,6 +47,7 @@
 %                                %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+
 \begin{titlepage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -87,22 +94,25 @@ Dipartimento d'Ingegneria
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %     Indice [start]     %
 %%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \tableofcontents
+
 %%%%%%%%%%%%%%%%%%%%%%%%
 %     Indice [end]     %
 %%%%%%%%%%%%%%%%%%%%%%%%
 
+ 
 \chapter{Introduzione}
 
-\include{Capitoli/ch1}
+%\input{Capitoli/ch1}
 
 \chapter{Concetti Preliminari}
 
-\include{Capitoli/ch2}
+%\input{Capitoli/ch2}
 
 \chapter{Il Problema e L'Obiettivo}
 
-\include{Capitoli/ch3}
+\input{Capitoli/ch3}
 
 \chapter{Il Software PineSU}
 
@@ -110,11 +120,11 @@ Dipartimento d'Ingegneria
 
 \chapter{Dimostrazioni d'uso\\per il fine preposto}
 
-\include{Capitoli/ch5}
+%\input{Capitoli/ch5}
 
 \chapter{Conclusioni e Sviluppi Futuri}
 
-\include{Capitoli/ch6}
+%\input{Capitoli/ch6}
 
 \bibliographystyle{plain}
 \bibliography{bibliografia}
