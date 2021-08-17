@@ -28,21 +28,22 @@ Dopo questa operazione potrebbero accadere i tre eventi che seguono:
     a questo punto è necessario, se si vogliono registrare anche i nuovi cambiamenti,
     andare ad effettuare un ricalcolo (\emph{Update SU}), dopo di ciò
     si torna alla possibilità dei tre eventi;
-    \item Potremmo scegliere di chiudere la nostra Storage Unit,
+    \item Potremmo scegliere di chiudere la nostra Storage Unit (\emph{Close Storage Unit}),
     una SU è aperta (\textbf{Open}) se modificabile e ricalcolabile liberamente,
     chiusa (\textbf{Closed}) se la modifica, il ricalcolo e un’eventuale chiusura
     successiva non possono essere eseguiti, dopo la chiusura potranno essere eseguite
     in pratica le stesse operazioni eccetto, ovviamente, quella del ricalcolo;
-    \item Potremmo scegliere di sincronizzare la SU nella blockchain,
+    \item Potremmo scegliere di sincronizzare la SU nella blockchain (\emph{Synchronize with blockchain}),
     questo avviene in realtà tramite due fasi che vedremo in seguito, tuttavia
     questa scelta ci permette in seguito di eseguire qualsiasi operazione lo stesso,
     eccetto il ricalcolo nell'eventualità che questa SU sia stata chiusa precedentemente.
 \end{enumerate}
 
 Una volta che una SU è stata registrata nella blockchain o chiusa si aprono altre
-due possibili azioni da poter compiere: la verifica d'integrità, sia offline che online,
-l'esportazione di sottoinsiemi di file dalla SU, tutti muniti con i dati necessari per
-effettuare verifiche d'integrità da parte di terzi anche senza disporre dell'intera SU.
+due possibili azioni da poter compiere: la verifica d'integrità (\emph{Integrity verification}),
+sia offline che online, l'esportazione di sottoinsiemi di file dalla SU (\emph{Export verifiable (sub)bundle}),
+tutti muniti con i dati necessari per effettuare verifiche d'integrità da parte di terzi
+anche senza disporre dell'intera SU.
 
 \begin{figure}[H]
     \centering
@@ -281,7 +282,7 @@ essa tramite il client Git installato sulla macchina.
 
 \subsection{PineSU SM}
 \label{sub:sm}
-Lo Smart Comtract (\textbf{TODO preliminaries}) di PineSU è necessario
+Lo Smart Comtract (\autoref{sub:smp}) di PineSU è necessario
 per poter effettuare registrazioni “forti”, ovvero andare a salvare su blockchain
 che una determinata SU è stata chiusa in modo da evitare che delle eventuali manomissioni
 cerchino di chiuderla nuovamente (ricordiamo che una SU chiusa implica un'impossibilità di modifica e ricalcolo).

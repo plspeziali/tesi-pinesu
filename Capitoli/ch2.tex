@@ -1,0 +1,119 @@
+Di seguito si introducono alcuni concetti 
+per permettere al lettore di acquisire le nozioni necessarie alla
+corretta fruizione del materiale successivo.
+
+\section{VCS e Git}
+\label{sub:vcs}
+Un \textbf{Version Control System} (o anche VCS) è una tipologia di software per la condivisione,
+il controllo e la tracciabilità dei cambiamenti riguardanti determinati file e directory
+lungo un lasso di tempo e che permette agli utenti di recuperare rapidamente specifiche
+versioni dei loro documenti. Gli insiemi di file e cartelle gestite da questi sistemi
+sono suddivisi in \textbf{repository}, esse vengono trattate l’una isolata dalle altre.
+Spesso si considera una intera directory di lavoro, con il suo contenuto,
+un’unica repository, potendo però scegliere di escludere alcune risorse.
+Un VCS può essere centralizzato o distribuito.
+Nel primo caso è il server centrale che tiene traccia dei cambiamenti e che mantiene e
+distribuisce la versione più recente delle risorse richieste, gli utenti possono gestire
+le loro repository solo attraverso client lightweight che interagiscono con il server
+per riuscire a compiere una qualsiasi operazione.
+Nel secondo caso ogni client ha una copia precisa della repository e del suo storico
+salvata localmente, i server sono coinvolti solo per effettuare sincronizzazioni
+di repository tra i vari client.
+\\ 
+\label{sub:git}
+\textbf{Git}~\cite{git-21} is the most widespread distributed version control system.
+It models every repository as a \emph{sequence of snapshots} (or \emph{stream of snapshots}) of a miniature file system. Whenever a user saves the state of their project (through a \textsf{commit} operation), Git takes a snapshot of all files and folders under version control at that moment, and stores the snapshot in its local database; files that have been modified (since the last commit) are entirely included in the latest snapshot, while every unchanged file is not duplicated, and just a link to the previous identical copy is inserted in the snapshot.
+Every resource in a repository is internally identified by its checksum (SHA-1), and not by its name, which allows Git to efficiently detect changes in files, and makes any undetectable change very unlikely.
+Also, nearly all Git operations only add data to its database, including the file removal operation (\textsf{rm} command). This ensures that any change is reversible, with basically no risk of permanently losing data.
+Every file in a working directory can be in one of two main states: \emph{untracked} or \emph{tracked}.
+An \emph{untracked} file is a file that was never added to the repository or that has been removed from the set of tracked files (\textsf{rm} command).
+A newly created file is therefore in the untracked state.
+All the other files are \emph{tracked} and can in turn be in one of three states: \emph{unmodified} (or \emph{committed}), \emph{modified} and \emph{staged}.
+A tracked file is \emph{unmodified} (or \emph{committed}) when it coincides with its latest version in the local database.
+If any change occurs, the state switches to \emph{modified}.
+An untracked file or a (tracked) modified file gets \emph{staged} if it is explicitly marked by the user to go into the next snapshot with the \textsf{add} command.
+More specifically, the \textsf{add} command adds or updates the target resource in the \emph{staging area} (or \emph{index}) of the repository, which is a special hidden file containing information about what will be included in the next snapshot.
+Basically, the staging area contains all currently tracked files, with a flag for each file that has been modified since the last snapshot.
+A \emph{commit} operation (\textsf{commit} command) creates a new snapshot that incorporates all the changes specified in the staging area, and stores this snapshot in the local database.
+As a result, the staging area will be \emph{cleaned}, i.e. flags indicating modified staged files will be removed, and all the previously (modified) staged files will get committed (i.e. unmodified).
+Git users share information and collaborate with each other through remote repositories on servers, which can be synchronized with their own local repositories.
+Pushing and pulling data to and from remote servers are typical tasks when working on a shared project.
+The main commands to work with remote repositories are: \textsf{clone}, \textsf{fetch}, \textsf{pull} and \textsf{push}.
+The \textsf{clone} command creates a full-fledged working copy of the target repository, including a remote repository somewhere in Internet.
+The \textsf{fetch} command can be used to pull down all the resources from a remote project that are not yet in the (local) working directory, without modifying or merging the current local content with the downloaded data.
+While the \textsf{pull} command is similar to \textsf{fetch}, except that it also tries to automatically merge the downloaded data into the current local content.
+Finally, the \textsf{push} command can be used to push any local commit back up to the server, so as the local and remote projects are in sync.
+
+\section{Blockchain ed Ethereum}
+\label{sub:bc}
+Una \textbf{blockchain} è un registro condiviso e immutabile che facilita il processo di registrazione
+delle transazioni e di tracciamento degli asset in una rete di business. Un asset è un qualsiasi
+elemento avente un valore, esso può essere rintracciato e scambiato su una rete blockchain,
+riducendo i rischi e i costi per tutti gli interessati. Ogni volta che un asset viene registrato e
+ne viene dunque registrata la sua transazione, essa prende la forma di un blocco,
+il nome della tecnologia deriva dal fatto che questo registro è essenzialmente una serie di blocchi
+collegati sequenzialmente in maniera irreversibile, come una catena.
+Gli elementi chiave di una blockchain sono il registro distribuito e accessibile a chiunque faccia
+parte della stessa rete dove le transazioni vengono registrate un’unica volta, dei record immutabili
+che non permettono ad alcun partecipante alla rete di poter essere modificati o manomessi,
+anche in presenza di errori, e infine, anche se assenti da alcune reti come quella Bitcoin,
+la presenza dei cosiddetti \textbf{Smart Contract} \label{sub:smp}, ovvero dei set di regole programmabili che permettono
+anche la creazione di vere e proprie applicazioni che operano
+sul registro leggendo e aggiungendo nuovi blocchi alla catena. \\
+I vantaggi di questa tecnologia sono di certo non trascurabili, soprattutto in tempi
+recenti con l’aumento esponenziale della quantità di transazioni che vengono eseguite
+sia nelle reti pubbliche sia nelle private.
+In un sistema centralizzato abbiamo uno spreco di risorse per la convalida di terze parti
+e per la memorizzazione di record duplicati, aspetti assenti in una rete dotata di blockchain
+dove chiunque è sicuro che nessuna transazione è stata eliminata o manomessa e si fida della
+validità dei dati confidando nel fatto che ogni partecipante ha la copia esatta e sincronizzata
+del registro nella sua macchina.
+Questa tecnologia può sicuramente essere implementata all’interno di un’azienda ed essere privata,
+l’incentivo a mantenere la sua esistenza è il profitto a cui un corretto utilizzo di essa può portare
+con un incremento della produttività e un minore utilizzo di risorse.
+Tuttavia il mantenimento di una blockchain pubblica e accessibile a tutti richiede un incentivo,
+un insieme distribuito di individui deve mettere a disposizione parte della potenza computazionale
+e dell’archivio della propria macchina per permettere a questo registro di esistere
+e alle transazioni di essere eseguite e calcolate correttamente.
+Non a caso la tecnologia della blockchain è nata assieme a quella delle criptovalute:
+essa doveva avere lo scopo di “libro mastro” proprio per Bitcoin, mantenendosi grazie a persone
+disposte a mettere a disposizione il proprio hardware in cambio di un compenso
+proprio  nella criptovaluta della rete.
+\\
+\label{sub:eth}
+Nasce da queste tecnologie il progetto \textbf{Ethereum}, con l’obiettivo di mettere però
+più carne al fuoco: esso trascende il concetto di semplice criptovaluta andando a creare
+una piattaforma decentralizzata per la creazione e la pubblicazione peer-to-peer di Smart Contracts
+in linguaggi di programmazione Turing completi (ovvero capaci di risolvere ogni problema
+che gli si possa presentare): Solidity e Vyper.
+Con Ethereum è quindi possibile andare a creare vere e proprie applicazioni
+con vita propria all’interno della \textbf{Ethereum Virtual Machine},
+ovvero la grande macchina virtuale simulata andando ad unire tutta la potenza computazionale
+messa a disposizione dagli utenti di Ethereum e usando la blockchain come archivio di
+informazioni permanenti. Ovviamente sia la pubblicazione di uno Smart Contract sia la registrazione
+in generale di informazioni sulla blockchain all’interno di reti pubbliche come quella
+thereum ha un costo pecuniario proporzionale alla quantità di informazioni che si andranno a registrare.
+
+\section{Accumulatori crittografici e Merkle Tree}
+\label{sub:mt}
+Merkle trees are a kind of cryptographic accumulator. Cryptographic accumulators allow you to compact arbitrarily many pieces of data into a constant amount of space. In other words, a Merkle tree lets us represent arbitrarily many blocks while only transmitting a single hash across the wire.
+By concatenating the two digests and taking their hash, the root of the hash tree commits to both digests. Think about it: if there were some other way to produce this same root, then that would imply the existence of a hash collision. Hash collisions should be impossible for a strong cryptographic hash function. Thus, the root of this hash tree, known as the Merkle root, must be a unique identifier of this exact tree.
+The Merkle root is therefore an accumulator over all of the original data that was hashed to produce this tree. It also commits to that data in order, since we used string concatenation on the underlying blocks to combine their values.
+We've seen how powerful Merkle trees are for verifying file integrity. But the real power of cryptographic accumulators comes not just in accumulating data, but in then being able to efficiently prove claims about the data.
+Imagine an accumulator as an opaque box full of items. You can't directly look inside this box, but with the magic of cryptography, you can query it in specific ways.
+One of the operations you can perform with a cryptographic accumulator is an inclusion proof. This is a small proof that decisively attests that an item exists in the accumulator.
+Per effettuare una verifica tramite Merkle Proof sono tre gli elementi necessari:
+\begin{enumerate}
+    \item L’elemento (foglia) che vogliamo verificare
+    \item La Merkle Root
+    \item La lista degli hash dei fratelli lungo il cammino dall’elemento alla matrice
+\end{enumerate}
+
+\section{JSON}
+\label{sub:json}
+Il JavaScript Object Notation (\textbf{JSON}) è un semplice formato per lo scambio di dati,
+facile da interpretare e capire sia per i vari linguaggi di programmazione che per gli esseri umani.
+Esso, con le librerie apposite per ogni linguaggio, permette un semplice e rapido scambio
+di dati tra più applicativi e fornisce metodologie per la conversione di oggetti e collezioni
+di dati strutturati in stringhe da salvare in file e viceversa, un’ottima alternativa ai database
+per applicazioni che cercano di sviluppare architetture distribuite.
