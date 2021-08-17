@@ -96,18 +96,29 @@ thereum ha un costo pecuniario proporzionale alla quantità di informazioni che 
 
 \section{Accumulatori crittografici e Merkle Tree}
 \label{sub:mt}
-Merkle trees are a kind of cryptographic accumulator. Cryptographic accumulators allow you to compact arbitrarily many pieces of data into a constant amount of space. In other words, a Merkle tree lets us represent arbitrarily many blocks while only transmitting a single hash across the wire.
-By concatenating the two digests and taking their hash, the root of the hash tree commits to both digests. Think about it: if there were some other way to produce this same root, then that would imply the existence of a hash collision. Hash collisions should be impossible for a strong cryptographic hash function. Thus, the root of this hash tree, known as the Merkle root, must be a unique identifier of this exact tree.
-The Merkle root is therefore an accumulator over all of the original data that was hashed to produce this tree. It also commits to that data in order, since we used string concatenation on the underlying blocks to combine their values.
-We've seen how powerful Merkle trees are for verifying file integrity. But the real power of cryptographic accumulators comes not just in accumulating data, but in then being able to efficiently prove claims about the data.
-Imagine an accumulator as an opaque box full of items. You can't directly look inside this box, but with the magic of cryptography, you can query it in specific ways.
-One of the operations you can perform with a cryptographic accumulator is an inclusion proof. This is a small proof that decisively attests that an item exists in the accumulator.
+I \textbf{Merkle Tree} sono una tipologia di \textbf{accumulatori crittografici}, ovvero strumenti che permettono
+di comprimere molti elementi informativi in una costante di dimensione fissa, in altre parole
+ci permettono di rappresentare più blocchi di dati con un singolo hash.
+Nel particolare, i Merkle Tree, nello specifico quelli binari, sono essenzialmente alberi binari
+in cui ogni foglia corrisponde all'hash di uno dei nostri elementi, risalendo verso la radice ogni
+nodo interno calcolerà il proprio hash concatenando gli hash dei nodi figli, infine si avrà
+una radice (\textbf{Merkle Root} o MR) il cui hash è univoco a quella lista di hash che l'albero
+ha come foglie, in quella sequenza.
+Inoltre, utilizzando degli hash generati con una funzione crittografica “forte”, si ha
+un'assenza di collisioni tra le Merkle Root.
+Perciò sappiamo che, per una determinata sequenza di documenti, anche solo una
+piccola modfica ad un file causerebbe il cambiamento totale della MR.
+Possiamo quindi capire che c'è stato un cambiamento, tuttavia per capire anche
+quale dei documenti è stato cambiato bisogna ricorrere al concetto di \textbf{Merkle Proof}.
 Per effettuare una verifica tramite Merkle Proof sono tre gli elementi necessari:
 \begin{enumerate}
     \item L’elemento (foglia) che vogliamo verificare
     \item La Merkle Root
-    \item La lista degli hash dei fratelli lungo il cammino dall’elemento alla matrice
+    \item La Merkle Proof, ovvero la lista degli hash dei fratelli lungo il cammino dall’elemento alla matrice
 \end{enumerate}
+Andando a svolgere questa verifica su ogni documento riusceremo ad individuare i file modificati come
+quelli per cui non è possibile ricostruire il cammino verso la radice lasciandola inalterata.
+
 
 \section{JSON}
 \label{sub:json}
