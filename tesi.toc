@@ -28,5 +28,9 @@
 \contentsline {subsection}{\numberline {4.4.6}Controllo di integrità di singoli file esportati da altre SU}{22}{subsection.4.4.6}%
 \contentsline {subsection}{\numberline {4.4.7}Controllo di integrità su una SU}{22}{subsection.4.4.7}%
 \contentsline {chapter}{\numberline {5}Dimostrazioni d'uso\\per il fine preposto}{23}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusioni e Sviluppi Futuri}{24}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Bibliografia}{25}{chapter.7}%
+\contentsline {section}{\numberline {5.1}Prima inizializzazione}{23}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Creazione delle Storage Unit}{23}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Staging delle Storage Unit}{27}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Registrazione su Blockchain}{27}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Conclusioni e Sviluppi Futuri}{28}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Bibliografia}{29}{chapter.7}%

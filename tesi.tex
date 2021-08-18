@@ -18,6 +18,17 @@
 \usepackage{float}
 \usepackage{wrapfig,lipsum}
 \usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\include{json-lang}
+
+\lstset{
+    string=[s]{"}{"},
+    stringstyle=\color{blue},
+    comment=[l]{:},
+    commentstyle=\color{black},
+}
+
 \usetikzlibrary{calc} 
 \pagestyle{fancy}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  17 AUG 2021 23:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  18 AUG 2021 12:36
 entering extended mode
 **c:/Users/Paolo/Dropbox/Tesi/tesi.tex
 (c:/Users/Paolo/Dropbox/Tesi/tesi.tex
@@ -533,42 +533,68 @@ Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footer
 \f@nch@O@erf=\skip58
 \f@nch@O@olf=\skip59
 \f@nch@O@orf=\skip60
-) (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarycalc.code.tex
+) (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count307
+\lst@gtempboxa=\box87
+\lst@token=\toks37
+\lst@length=\count308
+\lst@currlwidth=\dimen275
+\lst@column=\count309
+\lst@pos=\count310
+\lst@lostspace=\dimen276
+\lst@width=\dimen277
+\lst@newlines=\count311
+\lst@lineno=\count312
+\lst@maxwidth=\dimen278
+ (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count313
+\lst@skipnumbers=\count314
+\lst@framebox=\box88
+) (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+\@input{json-lang.aux}
+\openout2 = `json-lang.aux'.
+
+(c:/Users\Paolo\Dropbox\Tesi\json-lang.tex) (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
-LaTeX Font Info:    Trying to load font information for OT1+bch on input line 28.
+LaTeX Font Info:    Trying to load font information for OT1+bch on input line 39.
  (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1bch.fd
 File: ot1bch.fd 2004/10/18 font definitions for OT1/bch.
 )
-LaTeX Font Info:    Trying to load font information for OT1+Crimson-TLF on input line 49.
+LaTeX Font Info:    Trying to load font information for OT1+Crimson-TLF on input line 60.
  (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/latex/crimson\ot1crimson-tlf.fd
 File: OT1Crimson-TLF.fd 2016/02/19 (autoinst) Font definitions for OT1/Crimson-TLF.
 )
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 49.
+(Font)              scaled to size 12.0pt on input line 60.
  (c:/Users\Paolo\Dropbox\Tesi\tesi.aux)
 \openout1 = `tesi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Info: Redefining \it@ocap on input line 49.
-LaTeX Info: Redefining \it@ccap on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Info: Redefining \it@ocap on input line 60.
+LaTeX Info: Redefining \it@ccap on input line 60.
 
 
 File italian.ldf warning: 
@@ -576,7 +602,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 49.
+italian.ldf    on input line 60.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -614,22 +640,22 @@ italian.ldf    on input line 49.
 
 (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count307
-\scratchdimen=\dimen275
-\scratchbox=\box87
-\nofMPsegments=\count308
-\nofMParguments=\count309
-\everyMPshowfont=\toks37
-\MPscratchCnt=\count310
-\MPscratchDim=\dimen276
-\MPnumerator=\count311
-\makeMPintoPDFobject=\count312
-\everyMPtoPDFconversion=\toks38
+\scratchcounter=\count315
+\scratchdimen=\dimen279
+\scratchbox=\box89
+\nofMPsegments=\count316
+\nofMParguments=\count317
+\everyMPshowfont=\toks38
+\MPscratchCnt=\count318
+\MPscratchDim=\dimen280
+\MPnumerator=\count319
+\makeMPintoPDFobject=\count320
+\everyMPtoPDFconversion=\toks39
 ) (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 )
-Package hyperref Info: Link coloring OFF on input line 49.
+Package hyperref Info: Link coloring OFF on input line 60.
  (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
@@ -637,49 +663,54 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count313
+\c@section@level=\count321
 )
-LaTeX Info: Redefining \ref on input line 49.
-LaTeX Info: Redefining \pageref on input line 49.
-LaTeX Info: Redefining \nameref on input line 49.
+LaTeX Info: Redefining \ref on input line 60.
+LaTeX Info: Redefining \pageref on input line 60.
+LaTeX Info: Redefining \nameref on input line 60.
  (c:/Users\Paolo\Dropbox\Tesi\tesi.out) (c:/Users\Paolo\Dropbox\Tesi\tesi.out)
 \@outlinefile=\write4
 \openout4 = `tesi.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@mv@tabular=\count314
-\c@mv@boldtabular=\count315
+\c@mv@tabular=\count322
+\c@mv@boldtabular=\count323
+\c@lstlisting=\count324
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 57.
+(Font)              scaled to size 17.28pt on input line 68.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
-(Font)              scaled to size 21.8pt on input line 62.
+(Font)              scaled to size 21.8pt on input line 73.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/b/n' will be
-(Font)              scaled to size 21.8pt on input line 62.
+(Font)              scaled to size 21.8pt on input line 73.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 70.
+(Font)              scaled to size 14.4pt on input line 81.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/it' will be
-(Font)              scaled to size 14.4pt on input line 70.
-<figures/logounipg2021.png, id=126, 523.7166pt x 255.5949pt>
+(Font)              scaled to size 14.4pt on input line 81.
+<figures/logounipg2021.png, id=142, 523.7166pt x 255.5949pt>
 File: figures/logounipg2021.png Graphic file (type png)
 <use figures/logounipg2021.png>
-Package pdftex.def Info: figures/logounipg2021.png  used on input line 85.
+Package pdftex.def Info: figures/logounipg2021.png  used on input line 96.
 (pdftex.def)             Requested size: 209.12683pt x 102.06454pt.
  [1
+
+
+
 
 {C:/Users/Paolo/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <c:/Users/Paolo/Dropbox/Tesi/figures/logounipg2021.png>]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.93 \newpage \thispagestyle{empty} \ \newpage
-                                               [1
+l.104 \newpage \thispagestyle{empty} \ \newpage
+                                                [1
 
 ]
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
-(Font)              scaled to size 24.88pt on input line 98.
+(Font)              scaled to size 24.88pt on input line 109.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/b/n' will be
-(Font)              scaled to size 24.88pt on input line 98.
+(Font)              scaled to size 24.88pt on input line 109.
  (c:/Users\Paolo\Dropbox\Tesi\tesi.toc
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/b/n' will be
 (Font)              scaled to size 12.0pt on input line 3.
@@ -757,7 +788,7 @@ Capitolo 4.
 (c:/Users\Paolo\Dropbox\Tesi\Capitoli/ch4.tex [11
 
 ]
-<Figures/activityDiag.pdf, id=227, 498.76138pt x 292.14847pt>
+<Figures/activityDiag.pdf, id=247, 498.76138pt x 292.14847pt>
 File: Figures/activityDiag.pdf Graphic file (type pdf)
 <use Figures/activityDiag.pdf>
 Package pdftex.def Info: Figures/activityDiag.pdf  used on input line 50.
@@ -773,29 +804,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [12 <c:/Users/Paolo/Dropbox/Tesi/Figures/activityDiag.pdf>]
-<Figures/stateDiag.pdf, id=256, 503.58139pt x 209.68336pt>
+<Figures/stateDiag.pdf, id=276, 503.58139pt x 209.68336pt>
 File: Figures/stateDiag.pdf Graphic file (type pdf)
 <use Figures/stateDiag.pdf>
-Package pdftex.def Info: Figures/stateDiag.pdf  used on input line 65.
+Package pdftex.def Info: Figures/stateDiag.pdf  used on input line 67.
 (pdftex.def)             Requested size: 409.88681pt x 170.67445pt.
-LaTeX Font Info:    Trying to load font information for TS1+Crimson-TLF on input line 78.
+LaTeX Font Info:    Trying to load font information for TS1+Crimson-TLF on input line 80.
  (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/latex/crimson\ts1crimson-tlf.fd
 File: TS1Crimson-TLF.fd 2016/02/19 (autoinst) Font definitions for TS1/Crimson-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/Crimson-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 78.
+(Font)              scaled to size 12.0pt on input line 80.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/b/it' will be
-(Font)              scaled to size 12.0pt on input line 78.
+(Font)              scaled to size 12.0pt on input line 80.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 78.
+(Font)              scaled to size 8.0pt on input line 80.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 78.
+(Font)              scaled to size 10.0pt on input line 80.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 78.
+(Font)              <7> on input line 80.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 78.
+(Font)              <5> on input line 80.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 78.
+(Font)              scaled to size 7.0pt on input line 80.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -805,17 +836,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [13 <c:/Users/Paolo/Dropbox/Tesi/Figures/stateDiag.pdf>]
-<Figures/PineSU-architecture.pdf, id=304, 546.44153pt x 96.7615pt>
+<Figures/PineSU-architecture.pdf, id=324, 546.44153pt x 96.7615pt>
 File: Figures/PineSU-architecture.pdf Graphic file (type pdf)
 <use Figures/PineSU-architecture.pdf>
-Package pdftex.def Info: Figures/PineSU-architecture.pdf  used on input line 91.
+Package pdftex.def Info: Figures/PineSU-architecture.pdf  used on input line 93.
 (pdftex.def)             Requested size: 409.88681pt x 72.58127pt.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 102.
-<Figures/menu2x.jpg, id=306, 1343.0175pt x 821.0675pt>
-File: Figures/menu2x.jpg Graphic file (type jpg)
-<use Figures/menu2x.jpg>
-Package pdftex.def Info: Figures/menu2x.jpg  used on input line 115.
+(Font)              scaled to size 14.4pt on input line 104.
+<Figures/menu.jpg, id=326, 1343.0175pt x 821.0675pt>
+File: Figures/menu.jpg Graphic file (type jpg)
+<use Figures/menu.jpg>
+Package pdftex.def Info: Figures/menu.jpg  used on input line 117.
 (pdftex.def)             Requested size: 409.88681pt x 250.58183pt.
 
 
@@ -833,7 +864,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[15 <c:/Users/Paolo/Dropbox/Tesi/Figures/menu2x.jpg>]
+[15 <c:/Users/Paolo/Dropbox/Tesi/Figures/menu.jpg>]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -854,10 +885,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [17]
-<Figures/mc1.pdf, id=369, 337.6615pt x 470.43454pt>
+<Figures/mc1.pdf, id=389, 337.6615pt x 470.43454pt>
 File: Figures/mc1.pdf Graphic file (type pdf)
 <use Figures/mc1.pdf>
-Package pdftex.def Info: Figures/mc1.pdf  used on input line 200.
+Package pdftex.def Info: Figures/mc1.pdf  used on input line 202.
 (pdftex.def)             Requested size: 209.12683pt x 291.35773pt.
 
 
@@ -877,7 +908,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [19]
 
-LaTeX Warning: Reference `' on page 20 undefined on input line 291.
+LaTeX Warning: Reference `' on page 20 undefined on input line 293.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -906,37 +937,81 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Capitolo 5.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 121.
+(hyperref)                removing `\\' on input line 132.
 
-(c:/Users\Paolo\Dropbox\Tesi\Capitoli/ch5.tex) [23
+(c:/Users\Paolo\Dropbox\Tesi\Capitoli/ch5.tex [23
 
 ]
+<Figures/calculating.png, id=456, 1166.3575pt x 742.775pt>
+File: Figures/calculating.png Graphic file (type png)
+<use Figures/calculating.png>
+Package pdftex.def Info: Figures/calculating.png  used on input line 54.
+(pdftex.def)             Requested size: 376.42575pt x 239.7216pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.05922pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.05922pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-15.05922pt}.
+
+[24]
+<Figures/doneCalculating.png, id=462, 1306.8825pt x 742.775pt>
+File: Figures/doneCalculating.png Graphic file (type png)
+<use Figures/doneCalculating.png>
+Package pdftex.def Info: Figures/doneCalculating.png  used on input line 69.
+(pdftex.def)             Requested size: 376.42575pt x 213.93716pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.05922pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.05922pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-15.05922pt}.
+
+[25 <c:/Users/Paolo/Dropbox/Tesi/Figures/calculating.png> <c:/Users/Paolo/Dropbox/Tesi/Figures/doneCalculating.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.05922pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.05922pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-15.05922pt}.
+
+[26])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.05922pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.05922pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-15.05922pt}.
+
+[27]
 Capitolo 6.
-(c:/Users\Paolo\Dropbox\Tesi\tesi.bbl [24
+(c:/Users\Paolo\Dropbox\Tesi\tesi.bbl [28
 
 ]
 Capitolo 7.
-) [25
+) [29
 
 ] (c:/Users\Paolo\Dropbox\Tesi\tesi.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: E34C725734E36DADEA83426C6C606D18;5707.
+(rerunfilecheck)             Checksum: 2CA226F372CF30F165DBC3BD862FFD1D;6469.
  ) 
 Here is how much of TeX's memory you used:
- 24187 strings out of 479334
- 459916 string characters out of 2857084
- 860432 words of memory out of 3000000
- 41091 multiletter control sequences out of 15000+200000
- 449882 words of font info for 58 fonts, out of 3000000 for 9000
+ 25877 strings out of 479334
+ 482470 string characters out of 2857084
+ 955369 words of memory out of 3000000
+ 42720 multiletter control sequences out of 15000+200000
+ 450051 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,11n,103p,773b,965s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_n3gbj7.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_axwm4k.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_wttfgh.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_qrsm2e.enc}<C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Bold.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-BoldItalic.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Italic.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Roman.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on c:/Users\Paolo\Dropbox\Tesi\tesi.pdf (26 pages, 799871 bytes).
+ 102i,11n,103p,773b,1225s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_n3gbj7.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_axwm4k.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_wttfgh.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_qrsm2e.enc}<C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Bold.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-BoldItalic.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Italic.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Roman.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on c:/Users\Paolo\Dropbox\Tesi\tesi.pdf (30 pages, 1270251 bytes).
 PDF statistics:
- 491 PDF objects out of 1000 (max. 8388607)
- 86 named destinations out of 1000 (max. 500000)
- 283 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 576 PDF objects out of 1000 (max. 8388607)
+ 129 named destinations out of 1000 (max. 500000)
+ 325 words of extra memory for PDF output out of 10000 (max. 10000000)
 
