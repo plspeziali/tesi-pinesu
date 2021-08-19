@@ -178,6 +178,7 @@ l'insuccesso ci verranno comunicati su schermo.
 \newpage
 
 \section{Esportazione di file da una Storage Unit}
+\label{sub:exp}
 Per quanto riguarda l'esportazione di file, andremo ad eseguirla su \emph{secondSample}.
 Essa viene eseguita selezionando i file da esportare con l'apposita interfaccia
 di selezione multipla
@@ -248,3 +249,25 @@ corrispondente al BSP, quello in Open è stato registrato alla \autoref{sub:regb
 in Closed è il BSP generato dalla registrazione della SU appena chiusa.
 
 \section{Verifica d'integrità di file esportati}
+Avevamo esportato, nella \autoref{sub:exp}, un sottoinsieme dei file di \emph{secondSample},
+una Storage Unit che nel frattempo è mutata chiudendosi, cambiando root e finendo in un
+altro sottoalbero di Merkle Calendar, tuttavia l'esportazione era avvenuta quando la SU
+era stata registrata già in blockchain come aperta.
+Dimostriamo come, nonostante tutto, la verifica su blockchain avvenga senza problemi,
+ci basterà infatti posizionarci in una directory arbitraria contenente i file estratti
+dal file ZIP e selezionare \emph{Check files integrity} per farsi che il processo svolga i
+dovuti controlli e ci comunichi a schermo il successo o l'insuccesso.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Figures/verifyFiles}
+    \caption{\small{
+    L'interfaccia di PineSU durante la verifica dei file esportati da \emph{secondSample}.
+    } % end small
+    } % end caption
+    \label{fi:vfil}
+\end{figure}
+
+Vediamo in Fig.~\ref{fi:vfil} come, per ogni file, viene eseguito un controllo sia locale,
+per controllare che non sia stato manomesso, sia remoto, ovvero viene controllato che la SU
+di cui lui sostiene di far parte sia stata registrata in blockchain.

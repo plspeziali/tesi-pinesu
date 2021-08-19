@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  19 AUG 2021 12:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  19 AUG 2021 14:57
 entering extended mode
 **c:/Users/Paolo/Dropbox/Tesi/tesi.tex
 (c:/Users/Paolo/Dropbox/Tesi/tesi.tex
@@ -1003,7 +1003,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <Figures/export.png, id=548, 1166.3575pt x 742.775pt>
 File: Figures/export.png Graphic file (type png)
 <use Figures/export.png>
-Package pdftex.def Info: Figures/export.png  used on input line 186.
+Package pdftex.def Info: Figures/export.png  used on input line 187.
 (pdftex.def)             Requested size: 376.42575pt x 239.7216pt.
 
 
@@ -1014,15 +1014,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-15.05922pt}.
 
 [29 <c:/Users/Paolo/Dropbox/Tesi/Figures/export.png>]
-LaTeX Font Info:    Trying to load font information for OMS+Crimson-TLF on input line 211.
-LaTeX Font Info:    No file OMSCrimson-TLF.fd. on input line 211.
+LaTeX Font Info:    Trying to load font information for OMS+Crimson-TLF on input line 212.
+LaTeX Font Info:    No file OMSCrimson-TLF.fd. on input line 212.
 
 
 LaTeX Font Warning: Font shape `OMS/Crimson-TLF/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 211.
+(Font)              for symbol `textbraceleft' on input line 212.
 
-)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 27.05922pt, for example:
@@ -1031,6 +1030,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-15.05922pt}.
 
 [30]
+<Figures/verifyFiles.png, id=597, 1166.3575pt x 1108.14pt>
+File: Figures/verifyFiles.png Graphic file (type png)
+<use Figures/verifyFiles.png>
+Package pdftex.def Info: Figures/verifyFiles.png  used on input line 263.
+(pdftex.def)             Requested size: 376.42575pt x 357.63873pt.
+LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/it' will be
+(Font)              scaled to size 10.95pt on input line 267.
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 27.05922pt, for example:
@@ -1038,7 +1045,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-15.05922pt}.
 
-[31]
+[31 <c:/Users/Paolo/Dropbox/Tesi/Figures/verifyFiles.png>]
 Capitolo 6.
 (c:/Users\Paolo\Dropbox\Tesi\tesi.bbl [32
 
@@ -1057,17 +1064,17 @@ Package rerunfilecheck Info: File `tesi.out' has not changed.
 (rerunfilecheck)             Checksum: 8D283AADF5EED33E395158355BE32E6B;7482.
  ) 
 Here is how much of TeX's memory you used:
- 25964 strings out of 479334
- 483774 string characters out of 2857084
- 1006628 words of memory out of 3000000
- 42749 multiletter control sequences out of 15000+200000
- 450308 words of font info for 60 fonts, out of 3000000 for 9000
+ 25976 strings out of 479334
+ 484026 string characters out of 2857084
+ 1008819 words of memory out of 3000000
+ 42759 multiletter control sequences out of 15000+200000
+ 452525 words of font info for 61 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,11n,103p,773b,1413s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_n3gbj7.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_axwm4k.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_wttfgh.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_qrsm2e.enc}<C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Bold.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-BoldItalic.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Italic.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Roman.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on c:/Users\Paolo\Dropbox\Tesi\tesi.pdf (34 pages, 2069086 bytes).
+Output written on c:/Users\Paolo\Dropbox\Tesi\tesi.pdf (34 pages, 2404356 bytes).
 PDF statistics:
- 679 PDF objects out of 1000 (max. 8388607)
- 183 named destinations out of 1000 (max. 500000)
- 367 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 683 PDF objects out of 1000 (max. 8388607)
+ 184 named destinations out of 1000 (max. 500000)
+ 372 words of extra memory for PDF output out of 10000 (max. 10000000)
 
