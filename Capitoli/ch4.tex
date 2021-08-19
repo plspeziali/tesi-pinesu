@@ -59,12 +59,19 @@ anche senza disporre dell'intera SU.
 
 Possiamo osservare il workflow appena descritto anche in Fig.~\ref{fi:stateDiag}, dove il diagramma degli
 stati di una singola Storage Unit riflette le operazioni appena descritte.
-Appena creata possiamo infatti riferirsci ad essa come una Storage Unit \textbf{Updated Unsynchronized Open]}
-Qua da chiedere al prof. perché ne va aggiunta una: se la chiudi non è più sincronizzata per forza. 
+Appena creata possiamo infatti riferirsci ad essa come una Storage Unit \textbf{Updated Unsynchronized Open},
+ovvero aperta e non sincronizzata alla blockchain, tuttavia aggiornata in quanto gli hash sono stati calcolati
+sulla situazione corrente dei file contenuti. Sincronizzandola diventa una SU \textbf{Updated Synchronized Open},
+su cui possiamo fare operazioni di verifica ed esportazioni senza cambiare però il suo stato.
+Modificando un file esternamnete, in entrambi gli stato che abbiamo visto, si entra in uno stato da cui si
+può uscire solamente eseguendo un ricalcolo: ovvero \textbf{Not-updated Unsynchronized Open}.
+Una chiusura unita con una registrazione su blockchain fanno diventare la Storage Unit
+\textbf{Updated Synchronized Closed}, uno stato in cui la modifica non è permessa.
+
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.98\textwidth]{Figures/stateDiag}
+    \includegraphics[width=0.98\textwidth]{Figures/stateDiag2}
     \caption{\small{
     Ciclo di vita di una Storage Unit sotto forma di State Diagram.
     } % end small

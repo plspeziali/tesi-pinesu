@@ -1065,11 +1065,11 @@ INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\activityDiag.pdf
 INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\activityDiag.pdf
 INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\activityDiag.pdf
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\tfm\kosch\crimson\Crimson-Roman-tlf-ot1.tfm
-INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\stateDiag.pdf
-INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\stateDiag.pdf
-INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\stateDiag.pdf
-INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\stateDiag.pdf
-INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\stateDiag.pdf
+INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\stateDiag2.pdf
+INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\stateDiag2.pdf
+INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\stateDiag2.pdf
+INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\stateDiag2.pdf
+INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\stateDiag2.pdf
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex\latex\crimson\ts1crimson-tlf.fd
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex\latex\crimson\ts1crimson-tlf.fd
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex\latex\crimson\ts1crimson-tlf.fd
@@ -1110,6 +1110,7 @@ INPUT c:\Users\Paolo\Dropbox\Tesi\Capitoli\ch5.tex
 INPUT c:\Users\Paolo\Dropbox\Tesi\Capitoli\ch5.tex
 INPUT c:\Users\Paolo\Dropbox\Tesi\Capitoli\ch5.tex
 INPUT c:\Users\Paolo\Dropbox\Tesi\Capitoli\ch5.tex
+INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmssbx10.tfm
 INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\calculating.png
 INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\calculating.png
 INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\calculating.png
@@ -1142,7 +1143,7 @@ INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\verifyFiles.png
 INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\verifyFiles.png
 INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\verifyFiles.png
 INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\verifyFiles.png
-INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\tfm\kosch\crimson\Crimson-Italic-tlf-ot1.tfm
+INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss10.tfm
 INPUT c:\Users\Paolo\Dropbox\Tesi\tesi.bbl
 INPUT c:\Users\Paolo\Dropbox\Tesi\tesi.bbl
 INPUT c:\Users\Paolo\Dropbox\Tesi\tesi.bbl
@@ -1162,8 +1163,12 @@ INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\type1\kosch\crimson\Cri
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\type1\kosch\crimson\Crimson-Italic.pfb
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\type1\kosch\crimson\Crimson-Roman.pfb
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\type1\kosch\crimson\Crimson-Roman.pfb
+INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss10.pfb
+INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss10.pfb
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss12.pfb
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss12.pfb
+INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssbx10.pfb
+INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssbx10.pfb
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb

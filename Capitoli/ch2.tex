@@ -4,7 +4,8 @@ corretta fruizione del materiale successivo.
 
 \section{VCS e Git}
 \label{sub:vcs}
-Un \textbf{Version Control System} (o anche VCS) è una tipologia di software per la condivisione,
+Un \textbf{Version Control System} (o anche VCS), in italiano “sistema di controllo di versione”,
+è una tipologia di software per la condivisione,
 il controllo e la tracciabilità dei cambiamenti riguardanti determinati file e directory
 lungo un lasso di tempo e che permette agli utenti di recuperare rapidamente specifiche
 versioni dei loro documenti. Gli insiemi di file e cartelle gestite da questi sistemi
@@ -21,28 +22,51 @@ salvata localmente, i server sono coinvolti solo per effettuare sincronizzazioni
 di repository tra i vari client.
 \\ 
 \label{sub:git}
-\textbf{Git}~\cite{git-21} is the most widespread distributed version control system.
-It models every repository as a \emph{sequence of snapshots} (or \emph{stream of snapshots}) of a miniature file system. Whenever a user saves the state of their project (through a \textsf{commit} operation), Git takes a snapshot of all files and folders under version control at that moment, and stores the snapshot in its local database; files that have been modified (since the last commit) are entirely included in the latest snapshot, while every unchanged file is not duplicated, and just a link to the previous identical copy is inserted in the snapshot.
-Every resource in a repository is internally identified by its checksum (SHA-1), and not by its name, which allows Git to efficiently detect changes in files, and makes any undetectable change very unlikely.
-Also, nearly all Git operations only add data to its database, including the file removal operation (\textsf{rm} command). This ensures that any change is reversible, with basically no risk of permanently losing data.
-Every file in a working directory can be in one of two main states: \emph{untracked} or \emph{tracked}.
-An \emph{untracked} file is a file that was never added to the repository or that has been removed from the set of tracked files (\textsf{rm} command).
-A newly created file is therefore in the untracked state.
-All the other files are \emph{tracked} and can in turn be in one of three states: \emph{unmodified} (or \emph{committed}), \emph{modified} and \emph{staged}.
-A tracked file is \emph{unmodified} (or \emph{committed}) when it coincides with its latest version in the local database.
-If any change occurs, the state switches to \emph{modified}.
-An untracked file or a (tracked) modified file gets \emph{staged} if it is explicitly marked by the user to go into the next snapshot with the \textsf{add} command.
-More specifically, the \textsf{add} command adds or updates the target resource in the \emph{staging area} (or \emph{index}) of the repository, which is a special hidden file containing information about what will be included in the next snapshot.
-Basically, the staging area contains all currently tracked files, with a flag for each file that has been modified since the last snapshot.
-A \emph{commit} operation (\textsf{commit} command) creates a new snapshot that incorporates all the changes specified in the staging area, and stores this snapshot in the local database.
-As a result, the staging area will be \emph{cleaned}, i.e. flags indicating modified staged files will be removed, and all the previously (modified) staged files will get committed (i.e. unmodified).
-Git users share information and collaborate with each other through remote repositories on servers, which can be synchronized with their own local repositories.
-Pushing and pulling data to and from remote servers are typical tasks when working on a shared project.
-The main commands to work with remote repositories are: \textsf{clone}, \textsf{fetch}, \textsf{pull} and \textsf{push}.
-The \textsf{clone} command creates a full-fledged working copy of the target repository, including a remote repository somewhere in Internet.
-The \textsf{fetch} command can be used to pull down all the resources from a remote project that are not yet in the (local) working directory, without modifying or merging the current local content with the downloaded data.
-While the \textsf{pull} command is similar to \textsf{fetch}, except that it also tries to automatically merge the downloaded data into the current local content.
-Finally, the \textsf{push} command can be used to push any local commit back up to the server, so as the local and remote projects are in sync.
+\textbf{Git}~\cite{git-21} è il sistema di controllo di versione distribuito più diffuso al mondo.
+Esso modella ogni repository come una \emph{sequenza} o \emph{flusso di snapshot} (istantanee)
+di un piccolo file system. Ogni volta che un utente salva lo stato del suo progetto
+(tramite l'operazione di \emph{commit}) Git crea uno snapshot di tutti i file e le directory
+sotto controllo di versione in quel momento e la archivia nel suo database locale, ogni
+file modificato dall'ultimo commit viene incluso nell'ultimo snapshot, mentre i file che
+non sono stati modificati non vengono inclusi se non con un collegamento alla loro versione identica
+nel commit precedente, in modo da evitare alcuna duplicazione non necessaria.
+Ogni risorsa in una repository è identificata internamente dal suo checksum (SHA-1) enon dal suo nome,
+questo permette a Git di individuare efficientemente i cambiamenti nei file.
+Inoltre, quasi ogni operazione di Git va ad aggiungere informazioni al suo database, anche se si tratta
+di un'operazione di rimozione, ciò assicura che ogni cambiamento sia reversibile.
+
+Ogni file in una directory assume uno dei questi due stati:
+\emph{untracked} (non tracciato) o \emph{tracked} (tracciato).
+Un file è \emph{untracked} se non è stato mai aggiunto ad una repository o se è stato
+aggiunto ma poi rimosso dalla lista dei file tracciati (comando \textsf{rm}).
+Un file \emph{tracked}, ovvero l'esatto opposto di un \emph{untracked}, può essere a sua volta in tre
+stati: \emph{unmodified} (non modificato o \emph{committed}), \emph{modified} (modificato) e \emph{staged}.
+Un file \emph{tracked} è \emph{unmodified} quando coincide con la sua ultima versione nel database.
+Se qualsiasi cambiamento avviene, diventa \emph{modified}.
+Per diventare \emph{staged} è necessario che l'utente utilizzi su di lui il comando \textsf{add},
+in questo modo esso viene viene inserito (o aggiornato se era già presente) nella \emph{staging area}
+(o \emph{index}) della repository, essa contiene tutti i file tracciati della repository con una flag
+che indica se sono stati modificvati o meno dall'ultimo snapshot.
+L'operazione di \emph{commit} (comando \textsf{commit}) crea un nuovo snapshot che incorpora
+tutti i cambiamenti specificati nella staging area e lo immagazzina nel suo database locale.
+A questo punto la staging area verrà ripulita (\emph{cleaned}).
+Gli utenti Git possono condividere informazioni e collaborare tra di loro tramite repository remote
+su server Git che possono essere sincronizzate con le loro repository locali.
+
+Le operazioni di \emph{pull}, \emph{push}, \emph{clone} e \emph{fetch}
+sono tipiche quando si lavora con repository remote.
+Il comando \textsf{clone} crea una copia esatta di una repository target,
+incluso il suo database di snapshot.
+Il comando \textsf{fetch} permette di scaricare le risorse di un progetto remoto che non sono
+presenti in quello locale, senza però andare a modificare i file già presenti
+applicando eventuali modifiche.
+Il comando \textsf{pull} è simile a \textsf{fetch}, eccetto che tenta di eseguire una fusione
+automatica del file remoto e del file locale applicando a quest'ultimo le modifiche più recenti.
+Infine, il comando \textsf{push} consente di inviare ogni nuovo commit locale al sevrer remoto,
+in modo da mantenerli sincronizzati.
+
+\section{Funzioni di hash}
+\label{sub:hash}
 
 \section{Blockchain ed Ethereum}
 \label{sub:bc}
