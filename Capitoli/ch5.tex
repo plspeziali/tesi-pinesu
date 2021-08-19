@@ -1,8 +1,8 @@
-In questo capitolo andremo a testare l'applicativo mostrando cosa accade nel
+In questo capitolo andremo a testare l’applicativo mostrando cosa accade nel
 file system ogni volta che PineSU esegue una funzione.
 Prenderemo in esame una situazione in cui creeremo due SU, una verrà lasciata aperta,
-l'altra verrà prima registrata aperta, poi chiusa e registrata nuovamente, in questo modo
-riusciremo anche ad osservare i cambiamenti sull'intero Merkle Calendar.
+l’altra verrà prima registrata aperta, poi chiusa e registrata nuovamente, in questo modo
+riusciremo anche ad osservare i cambiamenti sull’intero Merkle Calendar.
 
 \section{Prima inizializzazione}
 
@@ -43,7 +43,7 @@ Dove \textsf{esonero1}, \textsf{esonero2} ed \textsf{esonero3} sono tre subdirec
 In questa directory troviamo anche la presenza di file di diversa natura. \\
 
 
-Per trasformare le directory in Storage Unit posizioniamoci con il terminale all'interno di ognuna,
+Per trasformare le directory in Storage Unit posizioniamoci con il terminale all’interno di ognuna,
 avviamo lo script di avvio di PineSU e selezioniamo la prima opzione (\emph{Create / Recalculate SU}),
 ovviamente il procedimento andrà ripetuto due volte.
 Il processo ci chiederà se inizializzare una repository Git e se escludere alcuni file,
@@ -53,7 +53,7 @@ procederà poi al calcolo dei vari hash.
     \centering
     \includegraphics[width=0.9\textwidth]{Figures/calculating}
     \caption{\small{
-    L'interfaccia di PineSU durante il calcolo.
+    L’interfaccia di PineSU durante il calcolo.
     } % end small
     } % end caption
     \label{fi:calc}
@@ -62,20 +62,20 @@ procederà poi al calcolo dei vari hash.
 
 Una volta finito di calcolare ci verranno fatte domande sulla natura della Storage Unit come il suo nome,
 la repository remota a cui si sincronizza, la sua descrizione, ecc\dots \\
-Finite le domande, l'applicativo ci riporterà al menù principale.
+Finite le domande, l’applicativo ci riporterà al menù principale.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Figures/doneCalculating}
     \caption{\small{
-    L'interfaccia di PineSU appena terminata la fase di creazione.
+    L’interfaccia di PineSU appena terminata la fase di creazione.
     } % end small
     } % end caption
     \label{fi:dcalc}
 \end{figure}
 
 Al termine di entrambe le elaborazioni sulle due directory avremo alcune nuove aggiunte al loro interno:
-una cartella .git (eventualmente, anche un file .gitignore) e un file .pinesu.json, quest'ultimo è
+una cartella .git (eventualmente, anche un file .gitignore) e un file .pinesu.json, quest’ultimo è
 il descrittore JSON in cui sono salvate le informazioni che abbiamo inserito, gli hash calcolati e
 lo stato di chiusura. Ecco, ad esempio, il file JSON di \textsf{sample}:
 
@@ -107,8 +107,8 @@ lo stato di chiusura. Ecco, ad esempio, il file JSON di \textsf{sample}:
 A questo punto vogliamo registrare le nostre Storage Unit aperte nella blockchain, 
 occorre però prima inserirle negli Storage Group
 (in questo caso solo in Open Storage Group).
-Per effettuare questa operazione occorre solo selezionare l'opzione apposita (\emph{Stage SU for Synchronization})
-in entrambe le directory, nella nostra cartella d'installazione verrà 
+Per effettuare questa operazione occorre solo selezionare l’opzione apposita (\emph{Stage SU for Synchronization})
+in entrambe le directory, nella nostra cartella d’installazione verrà 
 aggiornato il file \textsf{merkles/storageGroup.json} con le informazioni delle nostre SU.
 
 \begin{lstlisting}[language=json,firstnumber=1]
@@ -125,24 +125,24 @@ aggiornato il file \textsf{merkles/storageGroup.json} con le informazioni delle 
     "closed": false
   } ]  
 \end{lstlisting}
-Questa è la lista delle foglie con cui calcoleremo l'effettivo Merkle Tree di OSG.
+Questa è la lista delle foglie con cui calcoleremo l’effettivo Merkle Tree di OSG.
 
 \section{Registrazione su Blockchain}
 \label{sub:regbc}
 Per la registrazione non è necessario posizionarsi in una delle directory delle SU
 in quanto quelle da registrare sono già nello Storage Group, ci rimane solo
-da selezionare l'opzione apposita (\emph{Register Staged SUs}) per eseguire
+da selezionare l’opzione apposita (\emph{Register Staged SUs}) per eseguire
 con la registrazione, a questo punto lo Storage Group verrà svuotato
 e verrà popolato, almeno nel sottoalbero Open, il Merkle Calendar con una foglia
-in più e, all'occorrenza, dei nodi interni extra (in caso non fossero state
+in più e, all’occorrenza, dei nodi interni extra (in caso non fossero state
 registrate delle SU in questo mese e anno).
 
 Ovviamente di conseguenza la nuova Merkle Root del Merkle Calendar verrà registrata su
-blockchain Ethereum inserendola in un messaggio scambiato tra i due wallet forniti dall'utente,
-ciò non è visualizzabile dall'utente a meno che non vada nelle directory delle SU registrate 
+blockchain Ethereum inserendola in un messaggio scambiato tra i due wallet forniti dall’utente,
+ciò non è visualizzabile dall’utente a meno che non vada nelle directory delle SU registrate 
 in cui potrà trovare un nuovo file \textsf{.registration.json}, esso conterrà informazioni
 come la root dello Storage Group in cui è stato registrato, la proof per ricostruire tale root,
-l'hash della transazione per recuperarla dalla catena e gli hash dei sottoalberi Open e Closed
+l’hash della transazione per recuperarla dalla catena e gli hash dei sottoalberi Open e Closed
 del MerkleCalendar nel momento in cui è stato registrato.
 \newpage
 \begin{lstlisting}[language=json,firstnumber=1]
@@ -156,21 +156,21 @@ del MerkleCalendar nel momento in cui è stato registrato.
     "cHash": null }  
 \end{lstlisting}
 
-\section{Verifica d'integrità di una Storage Unit}
+\section{Verifica d’integrità di una Storage Unit}
 
 A questo punto ci troveremo ad avere Storage Unit USO (Updated Synchronized Open), ciò
-significa che ha senso sia effettura verifiche d'integrità avvalendoci della blockchain,
+significa che ha senso sia effettura verifiche d’integrità avvalendoci della blockchain,
 sia esportare sottoinsiemi di file da essa in modo che anche chi reperisce tali file sia
 in grado di verificare la loro integrità e la loro registrazione su blockchain.
-La verifica può essere fatta selezionando l'opzione \emph{Check SU integrity}
+La verifica può essere fatta selezionando l’opzione \emph{Check SU integrity}
 mentre ci si trova nella directory della SU da verificare, il successo o
-l'insuccesso ci verranno comunicati su schermo.
+l’insuccesso ci verranno comunicati su schermo.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Figures/verify}
     \caption{\small{
-    L'interfaccia di PineSU appena terminata la fase di verifica con successo.
+    L’interfaccia di PineSU appena terminata la fase di verifica con successo.
     } % end small
     } % end caption
     \label{fi:ver}
@@ -179,14 +179,14 @@ l'insuccesso ci verranno comunicati su schermo.
 
 \section{Esportazione di file da una Storage Unit}
 \label{sub:exp}
-Per quanto riguarda l'esportazione di file, andremo ad eseguirla su \textsf{secondSample}.
-Essa viene eseguita selezionando i file da esportare con l'apposita interfaccia
+Per quanto riguarda l’esportazione di file, andremo ad eseguirla su \textsf{secondSample}.
+Essa viene eseguita selezionando i file da esportare con l’apposita interfaccia
 di selezione multipla
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Figures/export}
     \caption{\small{
-    L'interfaccia di PineSU durante un'esportazione.
+    L’interfaccia di PineSU durante un’esportazione.
     } % end small
     } % end caption
     \label{fi:exp}
@@ -195,16 +195,16 @@ di selezione multipla
 In questo caso siamo andati a selezionare \textsf{esonero2/preesonero2.pdf},
 \textsf{esonero3/preesonero3.tex} e \textsf{esonero1/Immagine.png}, essi verranno inseriti,
 assieme a un file descrittore \textsf{.pifiles.json}, che contiene per ognuno le proof
-per ricostruire l'hash della loro SU a partire dai loro hash, e il file \textsf{.registration.json},
+per ricostruire l’hash della loro SU a partire dai loro hash, e il file \textsf{.registration.json},
 in un file ZIP che verrà salvato nella cartella superiore a quella in cui si trovano.
 
 \section{Chiusura di una Storage Unit}
 Abbiamo già parlato delle implicazioni della chiusura di una Storage Unit, ora descriveremo come
 effettivamente può essere realizzata. Di fatto basta eseguire PineSU nella directory della SU e
-selezionare l'opzione \emph{Close current SU}, con questa opzione verà aggiunto un commit con un
+selezionare l’opzione \emph{Close current SU}, con questa opzione verà aggiunto un commit con un
 messaggio particolare, infatti se proveremo a richiudere la stessa Storage Unit, anche se
 il file \textsf{.pinesu.json} venisse eliminato, tale commit non ci permetterà di richiuderla
-nuovamente. Procediamo con l'esempio chiudendo \textsf{secondSample} e registrandola nuovamente
+nuovamente. Procediamo con l’esempio chiudendo \textsf{secondSample} e registrandola nuovamente
 su blockchain: in questo caso una foglia verrà aggiunta sia a Closed Storage Group che,
 successivamente, al sottoalbero Closed del Merkle Calendar.
 Dopo questa operazioni infatti il Merkle Calendar sarà questo:
@@ -248,21 +248,21 @@ Come possiamo vedere entrambi i sottoalberi hanno due nodi interni (anno e mese)
 corrispondente al BSP, quello in Open è stato registrato alla \autoref{sub:regbc}, mentre quello
 in Closed è il BSP generato dalla registrazione della SU appena chiusa.
 
-\section{Verifica d'integrità di file esportati}
+\section{Verifica d’integrità di file esportati}
 Avevamo esportato, nella \autoref{sub:exp}, un sottoinsieme dei file di \textsf{secondSample},
 una Storage Unit che nel frattempo è mutata chiudendosi, cambiando root e finendo in un
-altro sottoalbero di Merkle Calendar, tuttavia l'esportazione era avvenuta quando la SU
+altro sottoalbero di Merkle Calendar, tuttavia l’esportazione era avvenuta quando la SU
 era stata registrata già in blockchain come aperta.
 Dimostriamo come, nonostante tutto, la verifica su blockchain avvenga senza problemi,
 ci basterà infatti posizionarci in una directory arbitraria contenente i file estratti
 dal file ZIP e selezionare \emph{Check files integrity} per farsi che il processo svolga i
-dovuti controlli e ci comunichi a schermo il successo o l'insuccesso.
+dovuti controlli e ci comunichi a schermo il successo o l’insuccesso.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Figures/verifyFiles}
     \caption{\small{
-    L'interfaccia di PineSU durante la verifica dei file esportati da \textsf{secondSample}.
+    L’interfaccia di PineSU durante la verifica dei file esportati da \textsf{secondSample}.
     } % end small
     } % end caption
     \label{fi:vfil}

@@ -15,8 +15,8 @@ Infine, la root di questo MC sarà salvata nella Blockchain, da qui in poi sarà
 \label{sec:work}
 
 PineSU segue una filosofia di workflow che ricalca quella di Git,
-infatti tramite l'applicativo si può operare su singole Storage Unit, ognuna con uno stato potenzialmente
-diverso dall'altra. Ciò fa si che il workflow sia molto legato al ciclo di vita di una singola SU, la quale
+infatti tramite l’applicativo si può operare su singole Storage Unit, ognuna con uno stato potenzialmente
+diverso dall’altra. Ciò fa si che il workflow sia molto legato al ciclo di vita di una singola SU, la quale
 a seconda del suo stato permetterà di fare alcune operazioni anziché altre.
 
 Possiamo vederne una rappresentazione in Fig.~\ref{fi:workflow}, si parte da una directory del nostro file
@@ -36,20 +36,20 @@ Dopo questa operazione potrebbero accadere i tre eventi che seguono:
     \item Potremmo scegliere di sincronizzare la SU nella blockchain (\emph{Synchronize with blockchain}),
     questo avviene in realtà tramite due fasi che vedremo in seguito, tuttavia
     questa scelta ci permette in seguito di eseguire qualsiasi operazione lo stesso,
-    eccetto il ricalcolo nell'eventualità che questa SU sia stata chiusa precedentemente.
+    eccetto il ricalcolo nell’eventualità che questa SU sia stata chiusa precedentemente.
 \end{enumerate}
 
 Una volta che una SU è stata registrata nella blockchain o chiusa si aprono altre
-due possibili azioni da poter compiere: la verifica d'integrità (\emph{Integrity verification}),
-sia offline che online, l'esportazione di sottoinsiemi di file dalla SU (\emph{Export verifiable (sub)bundle}),
-tutti muniti con i dati necessari per effettuare verifiche d'integrità da parte di terzi
-anche senza disporre dell'intera SU.
+due possibili azioni da poter compiere: la verifica d’integrità (\emph{Integrity verification}),
+sia offline che online, l’esportazione di sottoinsiemi di file dalla SU (\emph{Export verifiable (sub)bundle}),
+tutti muniti con i dati necessari per effettuare verifiche d’integrità da parte di terzi
+anche senza disporre dell’intera SU.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.98\textwidth]{Figures/activityDiag}
     \caption{\small{
-    Workflow dell'applicativo sotto forma di Activity Diagram.
+    Workflow dell’applicativo sotto forma di Activity Diagram.
     } % end small
     } % end caption
     \label{fi:workflow}
@@ -81,17 +81,17 @@ Una chiusura unita con una registrazione su blockchain fanno diventare la Storag
 
 \section {Architettura}
 \indent
-Il sistema va ad interfacciarsi con il client Git e con l’API web3.js per la comunicazione
+Il sistema va ad interfacciarsi con il client Git e con l’API \textsf{web3.js} per la comunicazione
 con la blockchain Ethereum, possiamo descrivere la sua architettura come in Fig.~\ref{fi:arch}, dove troviamo i componenti principali:
 \begin{itemize}
-    \item \emph{PineSU \textbf{CLI} (Command Line Interface)}. L'interazione con PineSU da parte degli utenti avviene attraverso un emulatore di terminale di una macchina avente NodeJS installato\footnote{L'interfaccia si basa sul modulo npm Inquirer.js \url{https://github.com/SBoudrias/Inquirer.js}.}, analogamente a come avviene con Git, tuttavia con un'interazione più guidata. Oltre al permettere l'uso delle normali funzioni di PineSU, questo modulo permette anche l'inserimento di un qualsiasi comando di Git in modo da rendere l'utilizzo diretto di quest'ultimo non necessario durante una tipica sessione di lavoro.
+    \item \emph{PineSU \textbf{CLI} (Command Line Interface)}. L’interazione con PineSU da parte degli utenti avviene attraverso un emulatore di terminale di una macchina avente NodeJS installato\footnote{L’interfaccia si basa sul modulo npm Inquirer.js \url{https://github.com/SBoudrias/Inquirer.js}.}, analogamente a come avviene con Git, tuttavia con un’interazione più guidata. Oltre al permettere l’uso delle normali funzioni di PineSU, questo modulo permette anche l’inserimento di un qualsiasi comando di Git in modo da rendere l’utilizzo diretto di quest’ultimo non necessario durante una tipica sessione di lavoro.
     \item \emph{PineSU \textbf{BEL} (Back End Logic)}. Questo componente è il nucleo di PineSU. Gestisce tutte le SU e controlla la comunicazione con la blockchain e il client Git locale.
     Il client Git viene utilizzato inoltre per interagire indirettamente con i server Git remoti.
     Il modulo BEL, inoltre, si occupa dei due Storge Group, Open (OSG) e Closed (CSG), e
     mantiene il Merkle Tree dinamico chiamato Merkle Calendar che permette di recuperare efficientemente
-    l'hash registrato in blockchain per un qualsiasi BSP. La gestione del salvataggio remoto del Merkle Calendar avviene tramite una repository Git scelta dall'utente.
-    \item \emph{PineSU \textbf{EC} (Ethereum Connector)} Si interfaccia con il modulo \emph{web3.js}\footnote{\url{https://github.com/ChainSafe/web3.js}.}. 
-    \item \emph{PineSU \textbf{GC} (Git Connector)} Si interfaccia con il modulo \emph{simple-git}\footnote{\url{https://github.com/steveukx/git-js}.}. 
+    l’hash registrato in blockchain per un qualsiasi BSP. La gestione del salvataggio remoto del Merkle Calendar avviene tramite una repository Git scelta dall’utente.
+    \item \emph{PineSU \textbf{EC} (Ethereum Connector)} Si interfaccia con il modulo \textsf{web3.js}\footnote{\url{https://github.com/ChainSafe/web3.js}.}. 
+    \item \emph{PineSU \textbf{GC} (Git Connector)} Si interfaccia con il modulo \textsf{simple-git}\footnote{\url{https://github.com/steveukx/git-js}.}. 
     \item \emph{PineSU \textbf{SM} (Smart Contract)} Questo modulo entra in gioco solamente nel caso di una registrazione “forte” di una Storage Unit nella blockchain, in una fruizione standard dell’applicativo non entrerà probabilmente in azione.
 \end{itemize}
 
@@ -99,9 +99,9 @@ con la blockchain Ethereum, possiamo descrivere la sua architettura come in Fig.
     \centering
     \includegraphics[width=0.98\textwidth]{Figures/PineSU-architecture}
     \caption{\small{
-    Rappresentazione dell'architettura ad alto livello di PineSU. 
+    Rappresentazione dell’architettura ad alto livello di PineSU. 
     Le frecce nere sono messaggi scatenati dalle entità sorgente corrispondenti
-    mentre le frecce grigie sono risposte passive dell'entità interrogata.
+    mentre le frecce grigie sono risposte passive dell’entità interrogata.
     } % end small
     } % end caption
     \label{fi:arch}
@@ -123,7 +123,7 @@ di una SU, il tutto richiamando all’occorrenza le librerie del modulo \emph{Pi
     \centering
     \includegraphics[width=0.98\textwidth]{Figures/menu}
     \caption{\small{
-    Menù principale dell'applicativo con la scelta dell'operazione da effettuare.
+    Menù principale dell’applicativo con la scelta dell’operazione da effettuare.
     } % end small
     } % end caption
     \label{fi:menu}
@@ -200,9 +200,9 @@ Possiamo vedere, anche grazie a Fig.~\ref{fi:umlMC}, come questa struttura sia i
 \subsection{Excursus sul Merkle Calendar}
 
 In Fig.~\ref{fi:mcIPE} possiamo osservare un possibile Markle Calendar.
-Nell'esempio è stato esplorato il mese di Febbraio 2021 e lì troviamo tre BSP:
-esse corrispondono a tre registrazioni della root dell'intero MC su blockchain, ovviamente
-sempre diversa dato che l'hash root si calcola con gli hash delle sue foglie.
+Nell’esempio è stato esplorato il mese di Febbraio 2021 e lì troviamo tre BSP:
+esse corrispondono a tre registrazioni della root dell’intero MC su blockchain, ovviamente
+sempre diversa dato che l’hash root si calcola con gli hash delle sue foglie.
 
 \begin{figure}[H]
     \centering
@@ -215,26 +215,26 @@ sempre diversa dato che l'hash root si calcola con gli hash delle sue foglie.
 \end{figure}
 
 Ogni volta che un nuovo BSP viene inserito per la prima volta si avvia la procedura di
-ricalcolo dell'hash di ognuno dei suoi antenati in modo da non dover effettuare il calcolo
-dell'hash di gran parte dell'albero nella fase di reperimento.
+ricalcolo dell’hash di ognuno dei suoi antenati in modo da non dover effettuare il calcolo
+dell’hash di gran parte dell’albero nella fase di reperimento.
 
-Nel momento in cui ognuna di queste tre BSP è stata inserita nell'albero essa era la foglia più
+Nel momento in cui ognuna di queste tre BSP è stata inserita nell’albero essa era la foglia più
 giovane, ergo se volessimo calcolare la root del MC in una data BSP ci basterebbe non
 considerare tutto ciò che è stato inserito successivamente, andando ad escludere una
 partizione di estrema destra dal sottoalbero radicato in Open (in questo caso).
 
 Ipotizziamo di voler recuperare la MC root nel momento in cui è stata inserita BSP B:
 \begin{enumerate}
-    \item Calcoliamo l'hash di Febbraio tramite l'hash di BSP a e di BSP B;
-    \item Calcoliamo l'hash del 2021 tramite l'hash di Gennaio e il “nuovo” hash di Febbraio;
-    \item Calcoliamo l'hash di Open tramite gli hash del 2019, del 2020 e il “nuovo” hash del 2021;
-    \item Calcoliamo la root del MC tramite l'hash di Closed e il “nuovo” hash di Open, l'hash di Closed nell'istante dell'inserimento di BSP B viene salvato in un descrittore JSON presente in ogni SU registrata con BSP B.
+    \item Calcoliamo l’hash di Febbraio tramite l’hash di BSP a e di BSP B;
+    \item Calcoliamo l’hash del 2021 tramite l’hash di Gennaio e il “nuovo” hash di Febbraio;
+    \item Calcoliamo l’hash di Open tramite gli hash del 2019, del 2020 e il “nuovo” hash del 2021;
+    \item Calcoliamo la root del MC tramite l’hash di Closed e il “nuovo” hash di Open, l’hash di Closed nell’istante dell’inserimento di BSP B viene salvato in un descrittore JSON presente in ogni SU registrata con BSP B.
 \end{enumerate}
-Il calcolo di hash tramite altri hash è effettuato tramite dei piccoli Merkle Tree binari “usa e getta”, alla stessa maniera di come calcoliamo l'hash root di uno Storage Group (che andrà a finire nei BSP foglia dei MC).
+Il calcolo di hash tramite altri hash è effettuato tramite dei piccoli Merkle Tree binari “usa e getta”, alla stessa maniera di come calcoliamo l’hash root di uno Storage Group (che andrà a finire nei BSP foglia dei MC).
 
 \subsection{PineSU EC}
 
-Come visualizzabile in Fig.~\ref{fi:umlEC} il connettore per la blockchain, in questo caso specifico quello della rete Ethereum, è composto da una semplice classe che, con i suoi attributi che corrispondono ad un oggetto del modulo web3.js, i due indirizzi dei wallet e la chiave privata del primo, svolge le operazioni di effettuare una transazione e verificarne una precedente.
+Come visualizzabile in Fig.~\ref{fi:umlEC} il connettore per la blockchain, in questo caso specifico quello della rete Ethereum, è composto da una semplice classe che, con i suoi attributi che corrispondono ad un oggetto del modulo \textsf{web3.js}, i due indirizzi dei wallet e la chiave privata del primo, svolge le operazioni di effettuare una transazione e verificarne una precedente.
 
 \begin{figure}[H]
     \centering
@@ -294,10 +294,10 @@ essa tramite il client Git installato sulla macchina.
 Lo Smart Comtract (\autoref{sub:smp}) di PineSU è necessario
 per poter effettuare registrazioni “forti”, ovvero andare a salvare su blockchain
 che una determinata SU è stata chiusa in modo da evitare che delle eventuali manomissioni
-cerchino di chiuderla nuovamente (ricordiamo che una SU chiusa implica un'impossibilità di modifica e ricalcolo).
+cerchino di chiuderla nuovamente (ricordiamo che una SU chiusa implica un’impossibilità di modifica e ricalcolo).
 Questo modulo è presente solamente in caso si vadano ad utilizzare blockchain di criptovalute che
 supportano la presenza di Smart Contract, nel nostro caso, con Ethereum, siamo a posto.
-Questo modulo non è tutt'ora implementato ed è destinato a sviluppi futuri \autoref{}.
+Questo modulo non è tutt’ora implementato ed è destinato a sviluppi futuri \autoref{}.
 
 \section{Funzionalità}
 
@@ -313,12 +313,12 @@ L’elenco delle funzionalità è il seguente.
     \item Controllo di integrità su una SU
 \end{enumerate}
 
-Alle operazioni che implicano modifiche alla struttura o allo stato della SU seguirà sempre un Git commit.
+Alle operazioni che implicano modifiche alla struttura o allo stato della SU seguirà sempre un Git \textsf{commit} (\autoref{sub:git}).
 Andremo ora ad analizzarle una per volta.
 
 \subsection{Creazione di una Storage Unit o Ricalcolo di una Storage Unit pre-esistente}
-La creazione di una Storage Unit è in realtà un'operazione che comprende sia la trasformazione in una Git Repository della directory, sia il calcolo degli hash che serviranno poi per registrare la nostra SU nella blockchain. Le informazioni della nostra SU sono conservate nel file descrittore \textbf{.pinesu.json} nella root della directory, la presenza di questo file indica al programma che la directory è già una SU. Anche nel caso in cui .pinesu.json sia già presente nella directory questa operazione può essere eseguita e provvederà al ricalcolo degli hash e la creazione di un nuovo descrittore, questo ovviamente solo se la SU è aperta.
-Dei file possono essere esclusi dalla Storage Unit con l’ausilio di un semplice file \emph{.gitignore}, la cui creazione viene anch’essa gestita, in maniera opzionale, dal software.
+La creazione di una Storage Unit è in realtà un’operazione che comprende sia la trasformazione in una Git Repository della directory, sia il calcolo degli hash che serviranno poi per registrare la nostra SU nella blockchain. Le informazioni della nostra SU sono conservate nel file descrittore \textsf{.pinesu.json} nella root della directory, la presenza di questo file indica al programma che la directory è già una SU. Anche nel caso in cui .pinesu.json sia già presente nella directory questa operazione può essere eseguita e provvederà al ricalcolo degli hash e la creazione di un nuovo descrittore, questo ovviamente solo se la SU è aperta.
+Dei file possono essere esclusi dalla Storage Unit con l’ausilio di un semplice file \textsf{.gitignore}, la cui creazione viene anch’essa gestita, in maniera opzionale, dal software.
 
 \subsection{Staging di una Storage Unit nello Storage Group}
 Lo hash principale della Storage Unit viene inserito in uno dei due Storage Group (a seconda che sia aperta o chiusa), questa operazione è stata nominata \emph{staging} in quanto è concettualmente simile all’operazione omonima di Git se consideriamo la registrazione nella Blockchain analoga ad un \emph{commit}.
@@ -335,7 +335,7 @@ La Storage Unit viene chiusa ma ad una condizione che varia a seconda dei casi:
 \end{itemize}
 
 \subsection{Esportazione di sottoinsiemi di file da una SU}
-In questa fase all'utente viene data la possibilità di scegliere di esportare alcuni file dalla SU, viene creato un file \textbf{.pifiles.json} in cui si salva, per ogni file esportato, il suo percorso originale, il suo hash, l'hash della root e le \emph{proof} per calcolare la root dato l'hash del file (ciò servirà nell'operazione di verifica d'integrità). Infine i file, seguendo la struttura in cui comparivano nella SU originale, e .pifiles.json vengono compressi in un file ZIP e salvati nella cartella precedente a quella in cui si sta operando.
+In questa fase all’utente viene data la possibilità di scegliere di esportare alcuni file dalla SU, viene creato un file \textbf{.pifiles.json} in cui si salva, per ogni file esportato, il suo percorso originale, il suo hash, l’hash della root e le \emph{proof} per calcolare la root dato l’hash del file (ciò servirà nell’operazione di verifica d’integrità). Infine i file, seguendo la struttura in cui comparivano nella SU originale, e .pifiles.json vengono compressi in un file ZIP e salvati nella cartella precedente a quella in cui si sta operando.
 
 \subsection{Controllo di integrità di singoli file esportati da altre SU}
 Viene analizzata la directory in modo da trovare dei file descrittori \textbf{.pifiles.json}, da quelli e dai file in essi elencati si fa un controllo d’integrità che va anche ad effettuare lo stesso controllo su Blockchain che si effettua nell’ultima operazione.

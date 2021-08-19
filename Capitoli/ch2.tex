@@ -25,29 +25,29 @@ di repository tra i vari client.
 \textbf{Git}~\cite{git-21} è il sistema di controllo di versione distribuito più diffuso al mondo.
 Esso modella ogni repository come una \emph{sequenza} o \emph{flusso di snapshot} (istantanee)
 di un piccolo file system. Ogni volta che un utente salva lo stato del suo progetto
-(tramite l'operazione di \emph{commit}) Git crea uno snapshot di tutti i file e le directory
+(tramite l’operazione di \emph{commit}) Git crea uno snapshot di tutti i file e le directory
 sotto controllo di versione in quel momento e la archivia nel suo database locale, ogni
-file modificato dall'ultimo commit viene incluso nell'ultimo snapshot, mentre i file che
+file modificato dall’ultimo commit viene incluso nell’ultimo snapshot, mentre i file che
 non sono stati modificati non vengono inclusi se non con un collegamento alla loro versione identica
 nel commit precedente, in modo da evitare alcuna duplicazione non necessaria.
-Ogni risorsa in una repository è identificata internamente dal suo checksum (SHA-1) enon dal suo nome,
+Ogni risorsa in una repository è identificata internamente dal suo checksum (SHA-1) e non dal suo nome,
 questo permette a Git di individuare efficientemente i cambiamenti nei file.
 Inoltre, quasi ogni operazione di Git va ad aggiungere informazioni al suo database, anche se si tratta
-di un'operazione di rimozione, ciò assicura che ogni cambiamento sia reversibile.
+di un’operazione di rimozione, ciò assicura che ogni cambiamento sia reversibile.
 
 Ogni file in una directory assume uno dei questi due stati:
 \emph{untracked} (non tracciato) o \emph{tracked} (tracciato).
 Un file è \emph{untracked} se non è stato mai aggiunto ad una repository o se è stato
 aggiunto ma poi rimosso dalla lista dei file tracciati (comando \textsf{rm}).
-Un file \emph{tracked}, ovvero l'esatto opposto di un \emph{untracked}, può essere a sua volta in tre
+Un file \emph{tracked}, ovvero l’esatto opposto di un \emph{untracked}, può essere a sua volta in tre
 stati: \emph{unmodified} (non modificato o \emph{committed}), \emph{modified} (modificato) e \emph{staged}.
 Un file \emph{tracked} è \emph{unmodified} quando coincide con la sua ultima versione nel database.
 Se qualsiasi cambiamento avviene, diventa \emph{modified}.
-Per diventare \emph{staged} è necessario che l'utente utilizzi su di lui il comando \textsf{add},
+Per diventare \emph{staged} è necessario che l’utente utilizzi su di lui il comando \textsf{add},
 in questo modo esso viene viene inserito (o aggiornato se era già presente) nella \emph{staging area}
 (o \emph{index}) della repository, essa contiene tutti i file tracciati della repository con una flag
-che indica se sono stati modificvati o meno dall'ultimo snapshot.
-L'operazione di \emph{commit} (comando \textsf{commit}) crea un nuovo snapshot che incorpora
+che indica se sono stati modificvati o meno dall’ultimo snapshot.
+L’operazione di \emph{commit} (comando \textsf{commit}) crea un nuovo snapshot che incorpora
 tutti i cambiamenti specificati nella staging area e lo immagazzina nel suo database locale.
 A questo punto la staging area verrà ripulita (\emph{cleaned}).
 Gli utenti Git possono condividere informazioni e collaborare tra di loro tramite repository remote
@@ -61,12 +61,17 @@ Il comando \textsf{fetch} permette di scaricare le risorse di un progetto remoto
 presenti in quello locale, senza però andare a modificare i file già presenti
 applicando eventuali modifiche.
 Il comando \textsf{pull} è simile a \textsf{fetch}, eccetto che tenta di eseguire una fusione
-automatica del file remoto e del file locale applicando a quest'ultimo le modifiche più recenti.
+automatica del file remoto e del file locale applicando a quest’ultimo le modifiche più recenti.
 Infine, il comando \textsf{push} consente di inviare ogni nuovo commit locale al sevrer remoto,
 in modo da mantenerli sincronizzati.
 
 \section{Funzioni di hash}
 \label{sub:hash}
+Le funzioni di hashing sono funzioni non invertibili che
+permettono di associare in maniera univoca (o quasi) stringhe
+di caratteri (e quindi anche documenti di varia natura tradotti 
+in stringhe) a delle stringhe alfanumeriche di lunghezza fissa
+TODOTODOTODOTODO
 
 \section{Blockchain ed Ethereum}
 \label{sub:bc}
@@ -107,7 +112,7 @@ proprio  nella criptovaluta della rete.
 \label{sub:eth}
 Nasce da queste tecnologie il progetto \textbf{Ethereum}, con l’obiettivo di mettere però
 più carne al fuoco: esso trascende il concetto di semplice criptovaluta andando a creare
-una piattaforma decentralizzata per la creazione e la pubblicazione peer-to-peer di Smart Contracts
+una piattaforma decentralizzata per la creazione e la pubblicazione peer-to-peer di Smart Contract
 in linguaggi di programmazione Turing completi (ovvero capaci di risolvere ogni problema
 che gli si possa presentare): Solidity e Vyper.
 Con Ethereum è quindi possibile andare a creare vere e proprie applicazioni
@@ -124,15 +129,15 @@ I \textbf{Merkle Tree} sono una tipologia di \textbf{accumulatori crittografici}
 di comprimere molti elementi informativi in una costante di dimensione fissa, in altre parole
 ci permettono di rappresentare più blocchi di dati con un singolo hash.
 Nel particolare, i Merkle Tree, nello specifico quelli binari, sono essenzialmente alberi binari
-in cui ogni foglia corrisponde all'hash di uno dei nostri elementi, risalendo verso la radice ogni
+in cui ogni foglia corrisponde all’hash di uno dei nostri elementi, risalendo verso la radice ogni
 nodo interno calcolerà il proprio hash concatenando gli hash dei nodi figli, infine si avrà
-una radice (\textbf{Merkle Root} o MR) il cui hash è univoco a quella lista di hash che l'albero
+una radice (\textbf{Merkle Root} o MR) il cui hash è univoco a quella lista di hash che l’albero
 ha come foglie, in quella sequenza.
 Inoltre, utilizzando degli hash generati con una funzione crittografica “forte”, si ha
-un'assenza di collisioni tra le Merkle Root.
+un’assenza di collisioni tra le Merkle Root.
 Perciò sappiamo che, per una determinata sequenza di documenti, anche solo una
 piccola modfica ad un file causerebbe il cambiamento totale della MR.
-Possiamo quindi capire che c'è stato un cambiamento, tuttavia per capire anche
+Possiamo quindi capire che c’è stato un cambiamento, tuttavia per capire anche
 quale dei documenti è stato cambiato bisogna ricorrere al concetto di \textbf{Merkle Proof}.
 Per effettuare una verifica tramite Merkle Proof sono tre gli elementi necessari:
 \begin{enumerate}
