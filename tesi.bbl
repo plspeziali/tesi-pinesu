@@ -1,7 +1,39 @@
 \begin{thebibliography}{1}
 
+\bibitem{eth-22}
+Ethereum.org.
+\newblock {Ethereum Documentation}, Accessed: August, 2021.
+
+\bibitem{eth-21}
+Ethereum.org.
+\newblock {Ethereum.org}, Accessed: August, 2021.
+
 \bibitem{git-21}
 Git-scm.com.
-\newblock Git, Accessed: July, 2021.
+\newblock {Git}, Accessed: August, 2021.
+
+\bibitem{block1}
+IBM.
+\newblock {What is Blockchain?}, Accessed: August, 2021.
+
+\bibitem{json}
+JSON.org.
+\newblock {JSON.org}, Accessed: August, 2021.
+
+\bibitem{vcs2}
+Mateusz Lubański.
+\newblock {Centralized vs Distributed Version Control Systems}, 2019.
+
+\bibitem{mertree}
+Haseeb Qureshi.
+\newblock {Merkle Trees}, 2019.
+
+\bibitem{block2}
+Wikipedia.
+\newblock {Blockchain}, Accessed: August, 2021.
+
+\bibitem{vcs1}
+Wikipedia.
+\newblock {Controllo versione}, Accessed: August, 2021.
 
 \end{thebibliography}
