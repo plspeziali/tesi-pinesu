@@ -1135,6 +1135,7 @@ INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\export.png
 INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\export.png
 INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\export.png
 INPUT c:\Users\Paolo\Dropbox\Tesi\Figures\export.png
+INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT c:\Users\Paolo\Dropbox\Tesi\tesi.bbl
 INPUT c:\Users\Paolo\Dropbox\Tesi\tesi.bbl
 INPUT c:\Users\Paolo\Dropbox\Tesi\tesi.bbl
@@ -1156,6 +1157,8 @@ INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\type1\kosch\crimson\Cri
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\type1\kosch\crimson\Crimson-Roman.pfb
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss12.pfb
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss12.pfb
+INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt12.pfb
