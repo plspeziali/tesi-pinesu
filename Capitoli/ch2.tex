@@ -2,6 +2,29 @@ Di seguito si introducono alcuni concetti
 per permettere al lettore di acquisire le nozioni necessarie alla
 corretta fruizione del materiale successivo.
 
+\section{Funzioni di hash}
+\label{sub:hash}
+Una \textbf{funzione di hashing}~\cite{hash} è un algoritmo che calcola una stringa di lunghezza
+fissa a partire da una sequenza di dati di lunghezza variabile, come un file,
+che altro non è che un insieme di blocchi di dati.
+L’hashing trasforma questi dati in una stringa di lunghezza fissa, chiama \textbf{hash} o stringa di hash,
+il cui valore rappresenta la stringa originale. Il valore della stringa può essere considerato
+il riassunto di tutto il contenuto del file. Un hash è di solito una stringa esadecimale.
+
+Un buon algoritmo di hashing possiede una proprietà chiamata \emph{effetto valanga},
+ovvero la stringa di output cambia in maniera significativa o anche interamente anche
+quando un singolo bit o byte di data viene modificato. Inoltre l’algoritmo deve essere
+complesso abbastanza da non produrre lo stesso output per due diversi input, se ciò avviene
+siamo in presenza di una \emph{collisione}. Una possibilità molto bassa di collisione è spesso
+indice di un algoritmo solido. L’hashing è un’operazione unidirezionale, dalla stringa di hash
+non si può risalire al file originale.
+Uno dei tanti usi dello hashing è quello di confrontare due file per controllare se il loro contenuto
+è lo stesso, in caso affermativo produrranno, per la stessa funzione, lo stesso hash,
+possiamo quindi controllare in maniera immediata l’uguaglianza senza dover necessariamente
+controllare l’intero file parola per parola.
+Grazie a ciò è anche possibile controllare l’\textbf{integrità} di un file, se è stato infatti
+modificato o manomesso esso produrrà una stringa di hash differente rispetto a quella che dovrebbe produrre.
+
 \section{VCS e Git}
 \label{sub:vcs}
 Un \textbf{Version Control System}~\cite{vcs1} (o anche VCS), in italiano “sistema di controllo di versione”,
@@ -30,7 +53,7 @@ sotto controllo di versione in quel momento e la archivia nel suo database local
 file modificato dall’ultimo commit viene incluso nell’ultimo snapshot, mentre i file che
 non sono stati modificati non vengono inclusi se non con un collegamento alla loro versione identica
 nel commit precedente, in modo da evitare alcuna duplicazione non necessaria.
-Ogni risorsa in una repository è identificata internamente dal suo checksum (SHA-1) e non dal suo nome,
+Ogni risorsa in una repository è identificata internamente dal suo hash (\autoref{sub:hash}) e non dal suo nome,
 questo permette a Git di individuare efficientemente i cambiamenti nei file.
 Inoltre, quasi ogni operazione di Git va ad aggiungere informazioni al suo database, anche se si tratta
 di un’operazione di rimozione, ciò assicura che ogni cambiamento sia reversibile.
@@ -65,13 +88,6 @@ automatica del file remoto e del file locale applicando a quest’ultimo le modi
 Infine, il comando \textsf{push} consente di inviare ogni nuovo commit locale al sevrer remoto,
 in modo da mantenerli sincronizzati.
 
-\section{Funzioni di hash}
-\label{sub:hash}
-Le funzioni di hashing sono funzioni non invertibili che
-permettono di associare in maniera univoca (o quasi) stringhe
-di caratteri (e quindi anche documenti di varia natura tradotti 
-in stringhe) a delle stringhe alfanumeriche di lunghezza fissa
-TODOTODOTODOTODO
 
 \section{Blockchain ed Ethereum}
 \label{sub:bc}

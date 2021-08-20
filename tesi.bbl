@@ -1,39 +1,77 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{eth-22}
-Ethereum.org.
-\newblock {Ethereum Documentation}, Accessed: August, 2021.
-
-\bibitem{eth-21}
-Ethereum.org.
-\newblock {Ethereum.org}, Accessed: August, 2021.
-
-\bibitem{git-21}
-Git-scm.com.
-\newblock {Git}, Accessed: August, 2021.
-
-\bibitem{block1}
-IBM.
-\newblock {What is Blockchain?}, Accessed: August, 2021.
-
-\bibitem{json}
-JSON.org.
-\newblock {JSON.org}, Accessed: August, 2021.
-
-\bibitem{vcs2}
-Mateusz Lubański.
-\newblock {Centralized vs Distributed Version Control Systems}, 2019.
-
-\bibitem{mertree}
-Haseeb Qureshi.
-\newblock {Merkle Trees}, 2019.
-
-\bibitem{block2}
-Wikipedia.
-\newblock {Blockchain}, Accessed: August, 2021.
+\bibitem{hash}
+C.~Chung, ``{Introduction to Hashing and its uses},'' Accessed: August, 2021.
+\newblock
+  [\url{https://www.2brightsparks.com/resources/articles/introduction-to-hashing-and-its-uses.html}].
 
 \bibitem{vcs1}
-Wikipedia.
-\newblock {Controllo versione}, Accessed: August, 2021.
+Wikipedia, ``{Controllo versione},'' Accessed: August, 2021.
+\newblock [\url{https://it.wikipedia.org/wiki/Controllo_versione}].
+
+\bibitem{vcs2}
+M.~Lubański, ``{Centralized vs Distributed Version Control Systems},'' 2019.
+\newblock [\url{https://bit.ly/3sw1gh6}].
+
+\bibitem{git-21}
+Git-scm.com, ``{Git},'' Accessed: August, 2021.
+\newblock [\url{https://git-scm.com/}].
+
+\bibitem{block1}
+IBM, ``{What is Blockchain?},'' Accessed: August, 2021.
+\newblock [\url{https://www.ibm.com/it-it/topics/what-is-blockchain}].
+
+\bibitem{block2}
+Wikipedia, ``{Blockchain},'' Accessed: August, 2021.
+\newblock [\url{https://it.wikipedia.org/wiki/Blockchain}].
+
+\bibitem{eth-21}
+Ethereum.org, ``{Ethereum.org},'' Accessed: August, 2021.
+\newblock [\url{https://ethereum.org}].
+
+\bibitem{eth-22}
+Ethereum.org, ``{Ethereum Documentation},'' Accessed: August, 2021.
+\newblock [\url{https://ethereum.org/en/developers/docs/}].
+
+\bibitem{mertree}
+H.~Qureshi, ``{Merkle Trees},'' 2019.
+\newblock [\url{https://nakamoto.com/merkle-trees/}].
+
+\bibitem{json}
+JSON.org, ``{JSON.org},'' Accessed: August, 2021.
+\newblock [\url{https://www.json.org/json-it.html}].
+
+\bibitem{inquirer-github-21}
+S.~Boudrias, ``{GitHub - SBoudrias/Inquirer.js},'' Accessed: August, 2021.
+\newblock [\url{https://github.com/SBoudrias/Inquirer.js/}].
+
+\bibitem{adm-zip-github-21}
+{The Brain}, ``{GitHub - cthackers / adm-zip : ADM-ZIP for NodeJS},'' Accessed:
+  August, 2021.
+\newblock [\url{https://github.com/cthackers/adm-zip}].
+
+\bibitem{chalk-github-21}
+{Chalk}, ``{GitHub - chalk / chalk : Chalk},'' Accessed: August, 2021.
+\newblock [\url{https://github.com/chalk/chalk}].
+
+\bibitem{merkle-tools-github-21}
+{Tierion}, ``{GitHub - Tierion / merkle-tools : merkle-tools},'' Accessed:
+  August, 2021.
+\newblock [\url{https://github.com/Tierion/merkle-tools}].
+
+\bibitem{web3js-github-21}
+{ChainSafe Systems}, ``{GitHub - ChainSafe/web3.js: Ethereum JavaScript API},''
+  Accessed: August, 2021.
+\newblock [\url{https://github.com/ChainSafe/web3.js}].
+
+\bibitem{web3js-doc-21}
+{ChainSafe Systems}, ``{web3.js - Ethereum JavaScript API},'' Accessed: August,
+  2021.
+\newblock [\url{https://web3js.readthedocs.io/en/v1.4.0/}].
+
+\bibitem{simple-git-github-21}
+{Steve King}, ``{GitHub - steveukx / git-js : Simple Git},'' Accessed: August,
+  2021.
+\newblock [\url{https://github.com/steveukx/git-js}].
 
 \end{thebibliography}

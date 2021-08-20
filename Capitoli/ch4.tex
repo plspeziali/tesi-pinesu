@@ -84,14 +84,14 @@ Una chiusura unita con una registrazione su blockchain fanno diventare la Storag
 Il sistema va ad interfacciarsi con il client Git e con l’API \textsf{web3.js} per la comunicazione
 con la blockchain Ethereum, possiamo descrivere la sua architettura come in Fig.~\ref{fi:arch}, dove troviamo i componenti principali:
 \begin{itemize}
-    \item \emph{PineSU \textbf{CLI} (Command Line Interface)}. L’interazione con PineSU da parte degli utenti avviene attraverso un emulatore di terminale di una macchina avente NodeJS installato\footnote{L’interfaccia si basa sul modulo npm Inquirer.js \url{https://github.com/SBoudrias/Inquirer.js}.}, analogamente a come avviene con Git, tuttavia con un’interazione più guidata. Oltre al permettere l’uso delle normali funzioni di PineSU, questo modulo permette anche l’inserimento di un qualsiasi comando di Git in modo da rendere l’utilizzo diretto di quest’ultimo non necessario durante una tipica sessione di lavoro.
-    \item \emph{PineSU \textbf{BEL} (Back End Logic)}. Questo componente è il nucleo di PineSU. Gestisce tutte le SU e controlla la comunicazione con la blockchain e il client Git locale.
+    \item \emph{PineSU \textbf{CLI} (Command Line Interface)}. L’interazione con PineSU da parte degli utenti avviene attraverso un emulatore di terminale di una macchina avente NodeJS installato\footnote{L’interfaccia si basa sul modulo npm Inquirer.js ~\cite{inquirer-github-21}}, analogamente a come avviene con Git, tuttavia con un’interazione più guidata. Oltre al permettere l’uso delle normali funzioni di PineSU, questo modulo permette anche l’inserimento di un qualsiasi comando di Git in modo da rendere l’utilizzo diretto di quest’ultimo non necessario durante una tipica sessione di lavoro.
+    \item \emph{PineSU \textbf{BEL} (Back End Logic)}. Questo componente è il nucleo di PineSU\footnote{Il componente si basa su alcuni moduli npm per opertazioni di supporto ~\cite{adm-zip-github-21}~\cite{chalk-github-21}~\cite{merkle-tools-github-21}}. Gestisce tutte le SU e controlla la comunicazione con la blockchain e il client Git locale.
     Il client Git viene utilizzato inoltre per interagire indirettamente con i server Git remoti.
     Il modulo BEL, inoltre, si occupa dei due Storge Group, Open (OSG) e Closed (CSG), e
     mantiene il Merkle Tree dinamico chiamato Merkle Calendar che permette di recuperare efficientemente
     l’hash registrato in blockchain per un qualsiasi BSP. La gestione del salvataggio remoto del Merkle Calendar avviene tramite una repository Git scelta dall’utente.
-    \item \emph{PineSU \textbf{EC} (Ethereum Connector)} Si interfaccia con il modulo \textsf{web3.js}\footnote{\url{https://github.com/ChainSafe/web3.js}.}. 
-    \item \emph{PineSU \textbf{GC} (Git Connector)} Si interfaccia con il modulo \textsf{simple-git}\footnote{\url{https://github.com/steveukx/git-js}.}. 
+    \item \emph{PineSU \textbf{EC} (Ethereum Connector)} Si interfaccia con il modulo \textsf{web3.js}~\cite{web3js-github-21}~\cite{web3js-doc-21}. 
+    \item \emph{PineSU \textbf{GC} (Git Connector)} Si interfaccia con il modulo \textsf{simple-git}~\cite{simple-git-github-21}. 
     \item \emph{PineSU \textbf{SM} (Smart Contract)} Questo modulo entra in gioco solamente nel caso di una registrazione “forte” di una Storage Unit nella blockchain, in una fruizione standard dell’applicativo non entrerà probabilmente in azione.
 \end{itemize}
 
