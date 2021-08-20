@@ -28,7 +28,7 @@
 \contentsline {subsection}{\numberline {4.4.5}Esportazione di sottoinsiemi di file da una SU}{23}{subsection.4.4.5}%
 \contentsline {subsection}{\numberline {4.4.6}Controllo di integrità di singoli file esportati da altre SU}{23}{subsection.4.4.6}%
 \contentsline {subsection}{\numberline {4.4.7}Controllo di integrità su una SU}{23}{subsection.4.4.7}%
-\contentsline {chapter}{\numberline {5}Dimostrazioni d’uso\\per il fine preposto}{24}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Dimostrazioni d’uso per il fine preposto}{24}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Prima inizializzazione}{24}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Creazione delle Storage Unit}{24}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Staging delle Storage Unit}{28}{section.5.3}%

@@ -146,14 +146,14 @@ l’hash della transazione per recuperarla dalla catena e gli hash dei sottoalbe
 del MerkleCalendar nel momento in cui è stato registrato.
 \newpage
 \begin{lstlisting}[language=json,firstnumber=1]
-    { "path": "D:/Progetti/Tirocinio/sample",
-    "root": "e67006f15ecd3fa2719d148be68d3a3242e1be8b",
-    "proof": [ {
-     "right": "7a61ed5e43cd436fb1f88895625a8193fdb9b3be"
-    } ],
-    "transactionHash": "0xc56303032[...]2dc87d2e",
-    "oHash": "e67006f15ecd3fa2719d148be68d3a3242e1be8b",
-    "cHash": null }  
+{ "path": "D:/Progetti/Tirocinio/sample",
+"root": "e67006f15ecd3fa2719d148be68d3a3242e1be8b",
+"proof": [ {
+    "right": "7a61ed5e43cd436fb1f88895625a8193fdb9b3be"
+} ],
+"transactionHash": "0xc56303032[...]2dc87d2e",
+"oHash": "e67006f15ecd3fa2719d148be68d3a3242e1be8b",
+"cHash": null }  
 \end{lstlisting}
 
 \section{Verifica d’integrità di una Storage Unit}
@@ -209,40 +209,40 @@ su blockchain: in questo caso una foglia verrà aggiunta sia a Closed Storage Gr
 successivamente, al sottoalbero Closed del Merkle Calendar.
 Dopo questa operazioni infatti il Merkle Calendar sarà questo:
 \begin{lstlisting}[language=json,firstnumber=1,basicstyle=\small]
-    "open": [ {
-        "name": 2021,
+"open": [ {
+    "name": 2021,
+    "hash": "e67006f15ecd3fa2719d148be68d3a3242e1be8b",
+    "children": [ {
+        "name": 7,
         "hash": "e67006f15ecd3fa2719d148be68d3a3242e1be8b",
         "children": [ {
-            "name": 7,
-            "hash": "e67006f15ecd3fa2719d148be68d3a3242e1be8b",
-            "children": [ {
-                "name": "SU of Wed Aug 18 2021 16:00:20",
-                "year": 2021,
-                "month": 7,
-                "day": 3,
-                "hour": 16,
-                "minute": 0,
-                "hash": "e67006f15ecd3fa2719d148be68d3a3242e1be8b"
-            } ]
+            "name": "SU of Wed Aug 18 2021 16:00:20",
+            "year": 2021,
+            "month": 7,
+            "day": 3,
+            "hour": 16,
+            "minute": 0,
+            "hash": "e67006f15ecd3fa2719d148be68d3a3242e1be8b"
         } ]
-    } ],
-    "closed" : [ {
-        "name": 2021,
+    } ]
+} ],
+"closed" : [ {
+    "name": 2021,
+    "hash": "7a61ed5e43cd436fb1f88895625a8193fdb9b3be",
+    "children": [ {
+        "name": 7,
         "hash": "7a61ed5e43cd436fb1f88895625a8193fdb9b3be",
         "children": [ {
-            "name": 7,
-            "hash": "7a61ed5e43cd436fb1f88895625a8193fdb9b3be",
-            "children": [ {
-                "name": "SU of Thu Aug 19 2021 12:16:36",
-                "year": 2021,
-                "month": 7,
-                "day": 4,
-                "hour": 12,
-                "minute": 16,
-                "hash": "7a61ed5e43cd436fb1f88895625a8193fdb9b3be"
-            } ]
+            "name": "SU of Thu Aug 19 2021 12:16:36",
+            "year": 2021,
+            "month": 7,
+            "day": 4,
+            "hour": 12,
+            "minute": 16,
+            "hash": "7a61ed5e43cd436fb1f88895625a8193fdb9b3be"
         } ]
-    } ]  
+    } ]
+} ]  
 \end{lstlisting}
 Come possiamo vedere entrambi i sottoalberi hanno due nodi interni (anno e mese) e la foglia
 corrispondente al BSP, quello in Open è stato registrato alla \autoref{sub:regbc}, mentre quello
