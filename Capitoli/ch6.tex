@@ -1,0 +1,34 @@
+Abbiamo potuto osservare come, con il software descritto, si è risolto il problema
+della mancanza di una funzione di verifica d’integrità dei file su Git,
+andando a sfruttare le tecnologie del Web 3.0 come la Blockchain Ethereum,
+sempre con un occhio di riguardo al portafoglio dell’utilizzatore,
+servendosi di strutture dati peculiari progettate per permettere un salvataggio economico
+e una verifica veloce ed efficiente.
+
+Il progetto ha già subito diverse revisioni e riscritture e si trova ora in uno
+stato ben definito e molto fedele alla descrizione fornita
+(tralasciando alcuni dettagli poco importanti), tuttavia, nonostante sia un programma
+decisamente completo sotto il punto di vista delle funzionalità,
+almeno per ciò che avevamo progettato di realizzare, sono presenti alcuni aspetti
+su cui si potrebbe ancora lavorare per rendere l’esperienza d’uso molto più adatta
+ad affrontare le esigenze lavorative di ogni giorno all’interno di grandi e piccole aziende.
+
+In primis potrebbe essere migliorato il calcolo della Merkle Root corrispondente ad
+una singola Storage Unit, infatti per ora la lista di file e directory viene semplicemente
+ordinata in ordine alfabetico e da quella viene calcolato un Merkle Tree binario.
+Invece, ispirandosi al modo con cui Git traccia le modifiche dei propri file
+indentificandoli con il loro hash (come spiegato nella \autoref{sub:git}),
+si potrebbe identificare ogni file con l’hash corrispondente e tracciare le modifiche
+ogni volta che si effettua un ricalcolo della Storage Unit, evitando quindi di ricalcolare
+hash di file che sono rimasti identici, usando possibilmente le funzionalità dei Git commit.
+
+Una seconda aggiunta è sicuramente la creazione del PineSU Smart Contract per la gestione
+di registrazioni “forti” su blockchain EVENTUALMENTE POTREI FARLO.
+
+Una terza aggiunta, decisamente più ambiziosa, sarebbe la creazione di una piattaforma
+per il salvataggio remoto di Storage Unit, un equivalente a ciò che servizi come GitHub,
+BitBucket e GitLab sono per Git.
+In questo modo si potrebbe venire incontro anche alle aziende in cui non è
+richiesta una grande competenza informatica da parte dei dipendenti
+(nonostante l’attuale implementazione di PineSU non si lasci intimidire sotto
+il punto di vista dell’essere user-friendly).
