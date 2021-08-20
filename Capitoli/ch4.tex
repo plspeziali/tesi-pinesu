@@ -3,8 +3,8 @@ La concretizzazione della soluzione al problema esposto è l’applicativo \text
 PineSU si presenta come un software leggero scritto in Javascript e che sfrutta il runtime Node.js.
 Il software va a considerare gli insiemi di file come delle entità chiamate \\
 \textbf{Storage Unit} (SU) con cui va ad avvolgere logicamente una repository Git. \\
-Queste SU sono le singole unità su cui si andranno ad effettuare le singole
-operazioni eccetto la registrazione su blockchain che si svolgerà collettivamente con l’ausilio di accumulatori crittografici. 
+Queste SU sono le unità su cui si andranno ad effettuare le singole
+operazioni, eccetto la registrazione su blockchain che si svolgerà collettivamente con l’ausilio di accumulatori crittografici. 
 
 Vedremo come il ciclo di vita di una SU sia scandito dai \textbf{Blockchain Synchronization Point} (BSP),
 ovvero gli eventi che si generano quando si decide di andare a registrare lo stato e la presenza di una SU su blockchain inserendola,
@@ -297,7 +297,7 @@ che una determinata SU è stata chiusa in modo da evitare che delle eventuali ma
 cerchino di chiuderla nuovamente (ricordiamo che una SU chiusa implica un’impossibilità di modifica e ricalcolo).
 Questo modulo è presente solamente in caso si vadano ad utilizzare blockchain di criptovalute che
 supportano la presenza di Smart Contract, nel nostro caso, con Ethereum, siamo a posto.
-Questo modulo non è tutt’ora implementato ed è destinato a sviluppi futuri \autoref{}.
+Questo modulo non è tutt’ora implementato ed è destinato a sviluppi futuri (\autoref{cap:sf}).
 
 \section{Funzionalità}
 
