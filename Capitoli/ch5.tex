@@ -79,6 +79,7 @@ una cartella .git (eventualmente, anche un file .gitignore) e un file .pinesu.js
 il descrittore JSON in cui sono salvate le informazioni che abbiamo inserito, gli hash calcolati e
 lo stato di chiusura. Ecco, ad esempio, il file JSON di \textsf{sample}:
 
+\singlespacing
 \begin{lstlisting}[language=json,firstnumber=1]
 {"name": "sample",
 "remote": "https://github.com/plspeziali/sample",
@@ -101,6 +102,7 @@ lo stato di chiusura. Ecco, ad esempio, il file JSON di \textsf{sample}:
 "closed": false }
 \end{lstlisting}
 \newpage
+\onehalfspacing
 
 \section{Staging delle Storage Unit}
 
@@ -111,6 +113,7 @@ Per effettuare questa operazione occorre solo selezionare l’opzione apposita (
 in entrambe le directory, nella nostra cartella d’installazione verrà 
 aggiornato il file \textsf{merkles/storageGroup.json} con le informazioni delle nostre SU.
 
+\singlespacing
 \begin{lstlisting}[language=json,firstnumber=1]
 [ {
     "name": "sample",
@@ -125,6 +128,7 @@ aggiornato il file \textsf{merkles/storageGroup.json} con le informazioni delle 
     "closed": false
   } ]  
 \end{lstlisting}
+\onehalfspacing
 Questa è la lista delle foglie con cui calcoleremo l’effettivo Merkle Tree di OSG.
 
 \section{Registrazione su Blockchain}
@@ -144,7 +148,8 @@ in cui potrà trovare un nuovo file \textsf{.registration.json}, esso conterrà 
 come la root dello Storage Group in cui è stato registrato, la proof per ricostruire tale root,
 l’hash della transazione per recuperarla dalla catena e gli hash dei sottoalberi Open e Closed
 del MerkleCalendar nel momento in cui è stato registrato.
-\newpage
+
+\singlespacing
 \begin{lstlisting}[language=json,firstnumber=1]
 { "path": "D:/Progetti/Tirocinio/sample",
 "root": "e67006f15ecd3fa2719d148be68d3a3242e1be8b",
@@ -155,6 +160,9 @@ del MerkleCalendar nel momento in cui è stato registrato.
 "oHash": "e67006f15ecd3fa2719d148be68d3a3242e1be8b",
 "cHash": null }  
 \end{lstlisting}
+\onehalfspacing
+
+\newpage
 
 \section{Verifica d’integrità di una Storage Unit}
 
@@ -198,16 +206,23 @@ assieme a un file descrittore \textsf{.pifiles.json}, che contiene per ognuno le
 per ricostruire l’hash della loro SU a partire dai loro hash, e il file \textsf{.registration.json},
 in un file ZIP che verrà salvato nella cartella superiore a quella in cui si trovano.
 
+\newpage
+
 \section{Chiusura di una Storage Unit}
 Abbiamo già parlato delle implicazioni della chiusura di una Storage Unit, ora descriveremo come
 effettivamente può essere realizzata. Di fatto basta eseguire PineSU nella directory della SU e
 selezionare l’opzione \emph{Close current SU}, con questa opzione verà aggiunto un commit con un
 messaggio particolare, infatti se proveremo a richiudere la stessa Storage Unit, anche se
 il file \textsf{.pinesu.json} venisse eliminato, tale commit non ci permetterà di richiuderla
-nuovamente. Procediamo con l’esempio chiudendo \textsf{secondSample} e registrandola nuovamente
+nuovamente.
+
+Procediamo con l’esempio chiudendo \textsf{secondSample} e registrandola nuovamente
 su blockchain: in questo caso una foglia verrà aggiunta sia a Closed Storage Group che,
 successivamente, al sottoalbero Closed del Merkle Calendar.
 Dopo questa operazioni infatti il Merkle Calendar sarà questo:
+
+
+\singlespacing
 \begin{lstlisting}[language=json,firstnumber=1,basicstyle=\small]
 "open": [ {
     "name": 2021,
@@ -226,6 +241,8 @@ Dopo questa operazioni infatti il Merkle Calendar sarà questo:
         } ]
     } ]
 } ],
+\end{lstlisting}
+\newpage\begin{lstlisting}[language=json,firstnumber=18,basicstyle=\small]
 "closed" : [ {
     "name": 2021,
     "hash": "7a61ed5e43cd436fb1f88895625a8193fdb9b3be",
@@ -244,6 +261,7 @@ Dopo questa operazioni infatti il Merkle Calendar sarà questo:
     } ]
 } ]  
 \end{lstlisting}
+\onehalfspacing
 Come possiamo vedere entrambi i sottoalberi hanno due nodi interni (anno e mese) e la foglia
 corrispondente al BSP, quello in Open è stato registrato alla \autoref{sub:regbc}, mentre quello
 in Closed è il BSP generato dalla registrazione della SU appena chiusa.
