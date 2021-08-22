@@ -7,16 +7,16 @@ corretta fruizione del materiale successivo.
 Una \textbf{funzione di hashing}~\cite{hash} è un algoritmo che calcola una stringa di lunghezza
 fissa a partire da una sequenza di dati di lunghezza variabile, come un file,
 che altro non è che un insieme di blocchi di dati.
-L’hashing trasforma questi dati in una stringa di lunghezza fissa, chiama \textbf{hash} o stringa di hash,
+L’operazione di hashing trasforma questi dati in una stringa di lunghezza fissa, chiamata \textbf{hash} o stringa di hash,
 il cui valore rappresenta la stringa originale. Il valore della stringa può essere considerato
 il riassunto di tutto il contenuto del file. Un hash è di solito una stringa esadecimale.
 
-Un buon algoritmo di hashing possiede una proprietà chiamata \emph{effetto valanga},
+Un buon algoritmo di hashing gode di una proprietà chiamata \emph{effetto valanga},
 ovvero la stringa di output cambia in maniera significativa o anche interamente anche
-quando un singolo bit o byte di data viene modificato. Inoltre l’algoritmo deve essere
+quando un singolo bit o byte dell'insieme di dati in input viene modificato. Inoltre l’algoritmo deve essere
 complesso abbastanza da non produrre lo stesso output per due diversi input, se ciò avviene
 siamo in presenza di una \emph{collisione}. Una possibilità molto bassa di collisione è spesso
-indice di un algoritmo solido. L’hashing è un’operazione unidirezionale, dalla stringa di hash
+indice di un algoritmo solido. Lo hashing è un’operazione unidirezionale, dalla stringa di hash
 non si può risalire al file originale.
 Uno dei tanti usi dello hashing è quello di confrontare due file per controllare se il loro contenuto
 è lo stesso, in caso affermativo produrranno, per la stessa funzione, lo stesso hash,
@@ -62,7 +62,7 @@ Ogni file in una directory assume uno dei questi due stati:
 \emph{untracked} (non tracciato) o \emph{tracked} (tracciato).
 Un file è \emph{untracked} se non è stato mai aggiunto ad una repository o se è stato
 aggiunto ma poi rimosso dalla lista dei file tracciati (comando \textsf{rm}).
-Un file \emph{tracked}, ovvero l’esatto opposto di un \emph{untracked}, può essere a sua volta in tre
+Un file \emph{tracked}, ovvero l’esatto opposto di un \emph{untracked}, può assumere a sua volta uno di questi tre
 stati: \emph{unmodified} (non modificato o \emph{committed}), \emph{modified} (modificato) e \emph{staged}.
 Un file \emph{tracked} è \emph{unmodified} quando coincide con la sua ultima versione nel database.
 Se qualsiasi cambiamento avviene, diventa \emph{modified}.
