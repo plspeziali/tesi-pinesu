@@ -13,7 +13,7 @@ il riassunto di tutto il contenuto del file. Un hash è di solito una stringa es
 
 Un buon algoritmo di hashing gode di una proprietà chiamata \emph{effetto valanga},
 ovvero la stringa di output cambia in maniera significativa o anche interamente anche
-quando un singolo bit o byte dell'insieme di dati in input viene modificato. Inoltre l’algoritmo deve essere
+quando un singolo bit o byte dell’insieme di dati in input viene modificato. Inoltre l’algoritmo deve essere
 complesso abbastanza da non produrre lo stesso output per due diversi input, se ciò avviene
 siamo in presenza di una \emph{collisione}. Una possibilità molto bassa di collisione è spesso
 indice di un algoritmo solido. Lo hashing è un’operazione unidirezionale, dalla stringa di hash
@@ -92,19 +92,19 @@ in modo da mantenerli sincronizzati.
 \section{Blockchain ed Ethereum}
 \label{sub:bc}
 Una \textbf{blockchain}~\cite{block1}~\cite{block2} è un registro condiviso e immutabile che facilita il processo di registrazione
-delle transazioni e di tracciamento degli asset in una rete di business. Un asset è un qualsiasi
+delle transazioni e di tracciamento degli asset in una rete aziendale e non. Un asset è un qualsiasi
 elemento avente un valore, esso può essere rintracciato e scambiato su una rete blockchain,
 riducendo i rischi e i costi per tutti gli interessati. Ogni volta che un asset viene registrato e
-ne viene dunque registrata la sua transazione, essa prende la forma di un blocco,
+ne viene in realtà registrata la transazione che si riferisce ad esso, essa prende la forma di un blocco,
 il nome della tecnologia deriva dal fatto che questo registro è essenzialmente una serie di blocchi
 collegati sequenzialmente in maniera irreversibile, come una catena.
-Gli elementi chiave di una blockchain sono il registro distribuito e accessibile a chiunque faccia
-parte della stessa rete dove le transazioni vengono registrate un’unica volta, dei record immutabili
+Gli elementi chiave di una blockchain sono l’effettivo registro distribuito e accessibile a chiunque faccia
+parte della stessa rete, dove le transazioni vengono registrate un’unica volta, dei record immutabili
 che non permettono ad alcun partecipante alla rete di poter essere modificati o manomessi,
 anche in presenza di errori, e infine, anche se assenti da alcune reti come quella Bitcoin,
 la presenza dei cosiddetti \textbf{Smart Contract} \label{sub:smp}, ovvero dei set di regole programmabili che permettono
 anche la creazione di vere e proprie applicazioni che operano
-sul registro leggendo e aggiungendo nuovi blocchi alla catena. \\
+sul registro leggendo e aggiungendo nuovi blocchi alla catena. \\ 
 I vantaggi di questa tecnologia sono di certo non trascurabili, soprattutto in tempi
 recenti con l’aumento esponenziale della quantità di transazioni che vengono eseguite
 sia nelle reti pubbliche sia nelle private.
@@ -113,7 +113,7 @@ e per la memorizzazione di record duplicati, aspetti assenti in una rete dotata 
 dove chiunque è sicuro che nessuna transazione è stata eliminata o manomessa e si fida della
 validità dei dati confidando nel fatto che ogni partecipante ha la copia esatta e sincronizzata
 del registro nella sua macchina.
-Questa tecnologia può sicuramente essere implementata all’interno di un’azienda ed essere privata,
+Questa tecnologia può essere implementata senza problemi all’interno di un’azienda ed essere privata,
 l’incentivo a mantenere la sua esistenza è il profitto a cui un corretto utilizzo di essa può portare
 con un incremento della produttività e un minore utilizzo di risorse.
 Tuttavia il mantenimento di una blockchain pubblica e accessibile a tutti richiede un incentivo,
@@ -121,9 +121,9 @@ un insieme distribuito di individui deve mettere a disposizione parte della pote
 e dell’archivio della propria macchina per permettere a questo registro di esistere
 e alle transazioni di essere eseguite e calcolate correttamente.
 Non a caso la tecnologia della blockchain è nata assieme a quella delle criptovalute:
-essa doveva avere lo scopo di “libro mastro” proprio per Bitcoin, mantenendosi grazie a persone
+essa doveva avere lo scopo di “libro mastro” per Bitcoin, mantenendosi grazie a persone
 disposte a mettere a disposizione il proprio hardware in cambio di un compenso
-proprio  nella criptovaluta della rete.
+nella criptovaluta propria della rete.
 
 
 \label{sub:eth}
@@ -138,22 +138,22 @@ ovvero la grande macchina virtuale simulata andando ad unire tutta la potenza co
 messa a disposizione dagli utenti di Ethereum e usando la blockchain come archivio di
 informazioni permanenti. Ovviamente sia la pubblicazione di uno Smart Contract sia la registrazione
 in generale di informazioni sulla blockchain all’interno di reti pubbliche come quella
-thereum ha un costo pecuniario proporzionale alla quantità di informazioni che si andranno a registrare.
+Ethereum ha un costo pecuniario proporzionale alla quantità di dati che si andranno a registrare.
 
 \section{Accumulatori crittografici e Merkle Tree}
 \label{sub:mt}
 I \textbf{Merkle Tree}~\cite{mertree} sono una tipologia di \textbf{accumulatori crittografici}, ovvero strumenti che permettono
 di comprimere molti elementi informativi in una costante di dimensione fissa, in altre parole
 ci permettono di rappresentare più blocchi di dati con un singolo hash.
-Nel particolare, i Merkle Tree, nello specifico quelli binari, sono essenzialmente alberi binari
+I Merkle Tree, nello specifico quelli binari, sono essenzialmente alberi binari
 in cui ogni foglia corrisponde all’hash di uno dei nostri elementi, risalendo verso la radice ogni
 nodo interno calcolerà il proprio hash concatenando gli hash dei nodi figli, infine si avrà
-una radice (\textbf{Merkle Root} o MR) il cui hash è univoco a quella lista di hash che l’albero
+una radice (\textbf{Merkle Root} o MR) il cui hash è univoco a quella lista di elementi che l’albero
 ha come foglie, in quella sequenza.
 Inoltre, utilizzando degli hash generati con una funzione crittografica “forte”, si ha
 un’assenza di collisioni tra le Merkle Root.
 Perciò sappiamo che, per una determinata sequenza di documenti, anche solo una
-piccola modfica ad un file causerebbe il cambiamento totale della MR.
+piccola modfica ad un file causerebbe un cambiamento significativo, se non totale, della MR.
 
 Possiamo quindi capire che c’è stato un cambiamento, tuttavia per capire anche
 quale dei documenti è stato cambiato bisogna ricorrere al concetto di \textbf{Merkle Proof}.
@@ -174,5 +174,5 @@ Il JavaScript Object Notation (\textbf{JSON})~\cite{json} è un semplice formato
 facile da interpretare e capire sia per i vari linguaggi di programmazione che per gli esseri umani.
 Esso, con le librerie apposite per ogni linguaggio, permette un semplice e rapido scambio
 di dati tra più applicativi e fornisce metodologie per la conversione di oggetti e collezioni
-di dati strutturati in stringhe da salvare in file e viceversa, un’ottima alternativa ai database
+di dati strutturati in stringhe da salvare in file e viceversa, un’alternativa ragionevole ai database
 per applicazioni che cercano di sviluppare architetture distribuite.
