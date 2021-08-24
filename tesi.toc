@@ -1,41 +1,41 @@
 \babel@toc {italian}{}
 \babel@toc {italian}{}
 \contentsline {chapter}{\numberline {1}Introduzione}{4}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Concetti Preliminari}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Funzioni di hash}{5}{section.2.1}%
-\contentsline {section}{\numberline {2.2}VCS e Git}{6}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Blockchain ed Ethereum}{7}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Accumulatori crittografici e Merkle Tree}{9}{section.2.4}%
-\contentsline {section}{\numberline {2.5}JSON}{10}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Il Problema e L’Obiettivo}{11}{chapter.3}%
-\contentsline {section}{\numberline {3.1}L’obiettivo del nostro sistema}{11}{section.3.1}%
-\contentsline {section}{\numberline {3.2}La questione della memorizzazione}{12}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Il Software PineSU}{13}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Workflow}{13}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Architettura}{15}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Moduli in dettaglio}{17}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}PineSU CLI}{17}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}PineSU BEL}{18}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Excursus sul Merkle Calendar}{21}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}PineSU EC}{22}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}PineSU GC}{23}{subsection.4.3.5}%
-\contentsline {subsection}{\numberline {4.3.6}PineSU SM}{23}{subsection.4.3.6}%
-\contentsline {section}{\numberline {4.4}Funzionalità}{24}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Creazione di una Storage Unit o Ricalcolo di una Storage Unit pre-esistente}{24}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Staging di una Storage Unit nello Storage Group}{25}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Registrazione dello Storage Group nella Blockchain}{25}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Chiusura di una Storage Unit}{25}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}Esportazione di sottoinsiemi di file da una SU}{25}{subsection.4.4.5}%
-\contentsline {subsection}{\numberline {4.4.6}Controllo di integrità di singoli file esportati da altre SU}{26}{subsection.4.4.6}%
-\contentsline {subsection}{\numberline {4.4.7}Controllo di integrità su una SU}{26}{subsection.4.4.7}%
-\contentsline {chapter}{\numberline {5}Dimostrazioni d’uso per il fine preposto}{27}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Prima inizializzazione}{27}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Creazione delle Storage Unit}{27}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Staging delle Storage Unit}{31}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Registrazione su Blockchain}{31}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Verifica d’integrità di una Storage Unit}{33}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Esportazione di file da una Storage Unit}{34}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Chiusura di una Storage Unit}{35}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Verifica d’integrità di file esportati}{36}{section.5.8}%
-\contentsline {chapter}{\numberline {6}Conclusioni e Sviluppi Futuri}{38}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Bibliografia}{40}{chapter.7}%
+\contentsline {chapter}{\numberline {2}Concetti preliminari}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Funzioni di hash}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}VCS e Git}{8}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Blockchain ed Ethereum}{9}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Accumulatori crittografici e Merkle Tree}{11}{section.2.4}%
+\contentsline {section}{\numberline {2.5}JSON}{12}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Il Problema e l’Obiettivo}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}L’obiettivo del nostro sistema}{13}{section.3.1}%
+\contentsline {section}{\numberline {3.2}La questione della memorizzazione}{14}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Il Software PineSU}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Workflow}{15}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Architettura}{18}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Moduli in dettaglio}{19}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}PineSU CLI}{19}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}PineSU BEL}{21}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Excursus sul Merkle Calendar}{24}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}PineSU EC}{25}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}PineSU GC}{26}{subsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.3.6}PineSU SM}{26}{subsection.4.3.6}%
+\contentsline {section}{\numberline {4.4}Funzionalità}{27}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Creazione di una Storage Unit o Ricalcolo di una Storage Unit pre-esistente}{27}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Staging di una Storage Unit nello Storage Group}{28}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Registrazione dello Storage Group nella Blockchain}{28}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Chiusura di una Storage Unit}{28}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}Esportazione di sottoinsiemi di file da una SU}{28}{subsection.4.4.5}%
+\contentsline {subsection}{\numberline {4.4.6}Controllo di integrità di singoli file esportati da altre SU}{29}{subsection.4.4.6}%
+\contentsline {subsection}{\numberline {4.4.7}Controllo di integrità su una SU}{29}{subsection.4.4.7}%
+\contentsline {chapter}{\numberline {5}Dimostrazioni d’uso per il fine preposto}{30}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Prima inizializzazione}{30}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Creazione delle Storage Unit}{30}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Staging delle Storage Unit}{34}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Registrazione su Blockchain}{34}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Verifica d’integrità di una Storage Unit}{36}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Esportazione di file da una Storage Unit}{37}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Chiusura di una Storage Unit}{38}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Verifica d’integrità di file esportati}{39}{section.5.8}%
+\contentsline {chapter}{\numberline {6}Conclusioni e Sviluppi futuri}{41}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Bibliografia}{43}{chapter.7}%

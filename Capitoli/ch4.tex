@@ -1,14 +1,15 @@
 
 La concretizzazione della soluzione al problema esposto è l’applicativo \textbf{PineSU}~\cite{pinesu-github-21}. \\
-PineSU si presenta come un software leggero scritto in Javascript e che sfrutta il runtime Node.js.
+PineSU si presenta come un software \emph{lightweight} scritto in Javascript e che sfrutta il runtime Node.js.
 L’applicazione va a considerare gli insiemi di file come delle entità chiamate \\
-\textbf{Storage Unit} (SU) con cui va ad avvolgere logicamente una repository Git. \\
+\textbf{Storage Unit} (SU) con cui va ad inglobare logicamente una repository Git, cotruendo,
+tramite la definizione di alcuni metadati, una struttura introno ad essa. \\
 Queste SU sono le unità su cui si andranno ad effettuare le singole
 operazioni, eccetto la registrazione su blockchain che si svolgerà collettivamente con l’ausilio di accumulatori crittografici. 
 
 Vedremo come il ciclo di vita di una SU sia scandito dai \textbf{Blockchain Synchronization Point} (BSP),
-ovvero gli eventi che si generano quando si decide di andare a registrare lo stato e la presenza di una SU su blockchain inserendola
-all’interno gruppi di suoi simili chiamati \textbf{Storage Group} (SG), i quali finiranno poi nella grande struttura chiamata \textbf{Merkle Calendar} (MC).
+ovvero gli eventi che si generano quando si decide di andare a registrare lo stato e la presenza di una SU nella blockchain, inserendola
+all’interno gruppi di suoi simili chiamati \textbf{Storage Group} (SG). Questi finiranno poi nella grande struttura chiamata \textbf{Merkle Calendar} (MC).
 Infine, la root di questo MC sarà salvata nella blockchain (nell’implementazione attuale, quella Ethereum), da qui in poi sarà possibile, in qualsiasi momento, ricostruire un MC in quel preciso istante in cui un nuovo BSP è stato creato e verificare se la root di questa ricostruzione è presente nel registro.
 
 \section{Workflow}
@@ -31,18 +32,13 @@ a seconda del suo stato permetterà di fare alcune operazioni anziché altre.
 
 Possiamo vederne una rappresentazione in Fig.~\ref{fi:workflow}, si parte da una directory del nostro file
 system e, tramite PineSU, la si trasforma in una Storage Unit (\emph{Create new Storage Unit}) calcolandone
-anche gli hash in modo da rendere già possibili registrazioni e verifiche.
-Dopo questa operazione potrebbero accadere i tre eventi che seguono: 
+anche i metadati in modo da rendere già possibili registrazioni e verifiche.
+Dopo questa operazione potrebbero accadere i due eventi che seguono: 
 \begin{enumerate}
     \item Il contenuto della Storage Unit potrebbe venire modificato,
     a questo punto è necessario, se si vogliono registrare anche i nuovi cambiamenti,
     andare ad effettuare un ricalcolo (\emph{Update SU}), dopo di ciò
     si torna alla possibilità dei tre eventi;
-    \item Potremmo scegliere di chiudere la nostra Storage Unit (\emph{Close Storage Unit}),
-    una SU è aperta (\textbf{Open}) se modificabile e ricalcolabile liberamente,
-    chiusa (\textbf{Closed}) se la modifica, il ricalcolo e un’eventuale chiusura
-    successiva non possono essere eseguiti, dopo la chiusura potranno essere eseguite
-    in pratica le stesse operazioni eccetto, ovviamente, quella del ricalcolo;
     \item Potremmo scegliere di sincronizzare la SU nella blockchain (\emph{Synchronize with blockchain}),
     questo avviene in realtà tramite due fasi che vedremo in seguito, tuttavia
     questa scelta ci permette in seguito di eseguire qualsiasi operazione lo stesso,
@@ -50,11 +46,18 @@ Dopo questa operazione potrebbero accadere i tre eventi che seguono:
 \end{enumerate}
 
 Una volta che una SU è stata registrata nella blockchain o chiusa si aprono altre
-due possibili azioni da poter compiere: la verifica d’integrità (\emph{Integrity verification}),
-sia offline che online, e l’esportazione di sottoinsiemi di file dalla SU (\emph{Export verifiable (sub)bundle}),
+due possibili azioni da poter compiere: la verifica d’integrità (\emph{Verify integrity with blockchain}),
+sia offline che online, e l’esportazione di sottoinsiemi di file dalla SU (\emph{Export blockchain verifiable bundle}),
 munendoli con i dati necessari per permettere verifiche d’integrità da parte di terzi
 anche senza disporre dell’intera SU.
 
+Una terza operazione da effettuare una sola volta in seguito a una registrazione è la chiusura
+(\emph{Close Storage Unit}).
+Una SU è aperta (\textbf{Open}) se modificabile e ricalcolabile liberamente,
+chiusa (\textbf{Closed}) se la modifica, il ricalcolo e un’eventuale chiusura
+successiva non possono essere eseguiti. Dopo la chiusura, a cui dovrebbe
+seguire una regsitrazione su blockchain, potranno essere eseguite
+in pratica le stesse operazioni eccetto, ovviamente, quella del ricalcolo;
 
 Possiamo osservare il workflow appena descritto anche in Fig.~\ref{fi:stateDiag}, dove il diagramma degli
 stati di una singola Storage Unit riflette le operazioni appena descritte.

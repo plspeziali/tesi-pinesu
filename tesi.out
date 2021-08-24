@@ -1,39 +1,39 @@
-\BOOKMARK [0][-]{chapter.1}{Introduzione}{}% 1
-\BOOKMARK [0][-]{chapter.2}{Concetti Preliminari}{}% 2
-\BOOKMARK [1][-]{section.2.1}{Funzioni di hash}{chapter.2}% 3
-\BOOKMARK [1][-]{section.2.2}{VCS e Git}{chapter.2}% 4
-\BOOKMARK [1][-]{section.2.3}{Blockchain ed Ethereum}{chapter.2}% 5
-\BOOKMARK [1][-]{section.2.4}{Accumulatori crittografici e Merkle Tree}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.5}{JSON}{chapter.2}% 7
-\BOOKMARK [0][-]{chapter.3}{Il Problema e L\220Obiettivo}{}% 8
-\BOOKMARK [1][-]{section.3.1}{L\220obiettivo del nostro sistema}{chapter.3}% 9
-\BOOKMARK [1][-]{section.3.2}{La questione della memorizzazione}{chapter.3}% 10
-\BOOKMARK [0][-]{chapter.4}{Il Software PineSU}{}% 11
-\BOOKMARK [1][-]{section.4.1}{Workflow}{chapter.4}% 12
-\BOOKMARK [1][-]{section.4.2}{Architettura}{chapter.4}% 13
-\BOOKMARK [1][-]{section.4.3}{Moduli in dettaglio}{chapter.4}% 14
-\BOOKMARK [2][-]{subsection.4.3.1}{PineSU CLI}{section.4.3}% 15
-\BOOKMARK [2][-]{subsection.4.3.2}{PineSU BEL}{section.4.3}% 16
-\BOOKMARK [2][-]{subsection.4.3.3}{Excursus sul Merkle Calendar}{section.4.3}% 17
-\BOOKMARK [2][-]{subsection.4.3.4}{PineSU EC}{section.4.3}% 18
-\BOOKMARK [2][-]{subsection.4.3.5}{PineSU GC}{section.4.3}% 19
-\BOOKMARK [2][-]{subsection.4.3.6}{PineSU SM}{section.4.3}% 20
-\BOOKMARK [1][-]{section.4.4}{Funzionalit\340}{chapter.4}% 21
-\BOOKMARK [2][-]{subsection.4.4.1}{Creazione di una Storage Unit o Ricalcolo di una Storage Unit pre-esistente}{section.4.4}% 22
-\BOOKMARK [2][-]{subsection.4.4.2}{Staging di una Storage Unit nello Storage Group}{section.4.4}% 23
-\BOOKMARK [2][-]{subsection.4.4.3}{Registrazione dello Storage Group nella Blockchain}{section.4.4}% 24
-\BOOKMARK [2][-]{subsection.4.4.4}{Chiusura di una Storage Unit}{section.4.4}% 25
-\BOOKMARK [2][-]{subsection.4.4.5}{Esportazione di sottoinsiemi di file da una SU}{section.4.4}% 26
-\BOOKMARK [2][-]{subsection.4.4.6}{Controllo di integrit\340 di singoli file esportati da altre SU}{section.4.4}% 27
-\BOOKMARK [2][-]{subsection.4.4.7}{Controllo di integrit\340 su una SU}{section.4.4}% 28
-\BOOKMARK [0][-]{chapter.5}{Dimostrazioni d\220uso per il fine preposto}{}% 29
-\BOOKMARK [1][-]{section.5.1}{Prima inizializzazione}{chapter.5}% 30
-\BOOKMARK [1][-]{section.5.2}{Creazione delle Storage Unit}{chapter.5}% 31
-\BOOKMARK [1][-]{section.5.3}{Staging delle Storage Unit}{chapter.5}% 32
-\BOOKMARK [1][-]{section.5.4}{Registrazione su Blockchain}{chapter.5}% 33
-\BOOKMARK [1][-]{section.5.5}{Verifica d\220integrit\340 di una Storage Unit}{chapter.5}% 34
-\BOOKMARK [1][-]{section.5.6}{Esportazione di file da una Storage Unit}{chapter.5}% 35
-\BOOKMARK [1][-]{section.5.7}{Chiusura di una Storage Unit}{chapter.5}% 36
-\BOOKMARK [1][-]{section.5.8}{Verifica d\220integrit\340 di file esportati}{chapter.5}% 37
-\BOOKMARK [0][-]{chapter.6}{Conclusioni e Sviluppi Futuri}{}% 38
-\BOOKMARK [0][-]{chapter.7}{Bibliografia}{}% 39
+\BOOKMARK [0][-]{chapter.1}{\376\377\000I\000n\000t\000r\000o\000d\000u\000z\000i\000o\000n\000e}{}% 1
+\BOOKMARK [0][-]{chapter.2}{\376\377\000C\000o\000n\000c\000e\000t\000t\000i\000\040\000p\000r\000e\000l\000i\000m\000i\000n\000a\000r\000i}{}% 2
+\BOOKMARK [1][-]{section.2.1}{\376\377\000F\000u\000n\000z\000i\000o\000n\000i\000\040\000d\000i\000\040\000h\000a\000s\000h}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{\376\377\000V\000C\000S\000\040\000e\000\040\000G\000i\000t}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.3}{\376\377\000B\000l\000o\000c\000k\000c\000h\000a\000i\000n\000\040\000e\000d\000\040\000E\000t\000h\000e\000r\000e\000u\000m}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.4}{\376\377\000A\000c\000c\000u\000m\000u\000l\000a\000t\000o\000r\000i\000\040\000c\000r\000i\000t\000t\000o\000g\000r\000a\000f\000i\000c\000i\000\040\000e\000\040\000M\000e\000r\000k\000l\000e\000\040\000T\000r\000e\000e}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.5}{\376\377\000J\000S\000O\000N}{chapter.2}% 7
+\BOOKMARK [0][-]{chapter.3}{\376\377\000I\000l\000\040\000P\000r\000o\000b\000l\000e\000m\000a\000\040\000e\000\040\000l\040\031\000O\000b\000i\000e\000t\000t\000i\000v\000o}{}% 8
+\BOOKMARK [1][-]{section.3.1}{\376\377\000L\040\031\000o\000b\000i\000e\000t\000t\000i\000v\000o\000\040\000d\000e\000l\000\040\000n\000o\000s\000t\000r\000o\000\040\000s\000i\000s\000t\000e\000m\000a}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.2}{\376\377\000L\000a\000\040\000q\000u\000e\000s\000t\000i\000o\000n\000e\000\040\000d\000e\000l\000l\000a\000\040\000m\000e\000m\000o\000r\000i\000z\000z\000a\000z\000i\000o\000n\000e}{chapter.3}% 10
+\BOOKMARK [0][-]{chapter.4}{\376\377\000I\000l\000\040\000S\000o\000f\000t\000w\000a\000r\000e\000\040\000P\000i\000n\000e\000S\000U}{}% 11
+\BOOKMARK [1][-]{section.4.1}{\376\377\000W\000o\000r\000k\000f\000l\000o\000w}{chapter.4}% 12
+\BOOKMARK [1][-]{section.4.2}{\376\377\000A\000r\000c\000h\000i\000t\000e\000t\000t\000u\000r\000a}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.3}{\376\377\000M\000o\000d\000u\000l\000i\000\040\000i\000n\000\040\000d\000e\000t\000t\000a\000g\000l\000i\000o}{chapter.4}% 14
+\BOOKMARK [2][-]{subsection.4.3.1}{\376\377\000P\000i\000n\000e\000S\000U\000\040\000C\000L\000I}{section.4.3}% 15
+\BOOKMARK [2][-]{subsection.4.3.2}{\376\377\000P\000i\000n\000e\000S\000U\000\040\000B\000E\000L}{section.4.3}% 16
+\BOOKMARK [2][-]{subsection.4.3.3}{\376\377\000E\000x\000c\000u\000r\000s\000u\000s\000\040\000s\000u\000l\000\040\000M\000e\000r\000k\000l\000e\000\040\000C\000a\000l\000e\000n\000d\000a\000r}{section.4.3}% 17
+\BOOKMARK [2][-]{subsection.4.3.4}{\376\377\000P\000i\000n\000e\000S\000U\000\040\000E\000C}{section.4.3}% 18
+\BOOKMARK [2][-]{subsection.4.3.5}{\376\377\000P\000i\000n\000e\000S\000U\000\040\000G\000C}{section.4.3}% 19
+\BOOKMARK [2][-]{subsection.4.3.6}{\376\377\000P\000i\000n\000e\000S\000U\000\040\000S\000M}{section.4.3}% 20
+\BOOKMARK [1][-]{section.4.4}{\376\377\000F\000u\000n\000z\000i\000o\000n\000a\000l\000i\000t\000\340}{chapter.4}% 21
+\BOOKMARK [2][-]{subsection.4.4.1}{\376\377\000C\000r\000e\000a\000z\000i\000o\000n\000e\000\040\000d\000i\000\040\000u\000n\000a\000\040\000S\000t\000o\000r\000a\000g\000e\000\040\000U\000n\000i\000t\000\040\000o\000\040\000R\000i\000c\000a\000l\000c\000o\000l\000o\000\040\000d\000i\000\040\000u\000n\000a\000\040\000S\000t\000o\000r\000a\000g\000e\000\040\000U\000n\000i\000t\000\040\000p\000r\000e\000-\000e\000s\000i\000s\000t\000e\000n\000t\000e}{section.4.4}% 22
+\BOOKMARK [2][-]{subsection.4.4.2}{\376\377\000S\000t\000a\000g\000i\000n\000g\000\040\000d\000i\000\040\000u\000n\000a\000\040\000S\000t\000o\000r\000a\000g\000e\000\040\000U\000n\000i\000t\000\040\000n\000e\000l\000l\000o\000\040\000S\000t\000o\000r\000a\000g\000e\000\040\000G\000r\000o\000u\000p}{section.4.4}% 23
+\BOOKMARK [2][-]{subsection.4.4.3}{\376\377\000R\000e\000g\000i\000s\000t\000r\000a\000z\000i\000o\000n\000e\000\040\000d\000e\000l\000l\000o\000\040\000S\000t\000o\000r\000a\000g\000e\000\040\000G\000r\000o\000u\000p\000\040\000n\000e\000l\000l\000a\000\040\000B\000l\000o\000c\000k\000c\000h\000a\000i\000n}{section.4.4}% 24
+\BOOKMARK [2][-]{subsection.4.4.4}{\376\377\000C\000h\000i\000u\000s\000u\000r\000a\000\040\000d\000i\000\040\000u\000n\000a\000\040\000S\000t\000o\000r\000a\000g\000e\000\040\000U\000n\000i\000t}{section.4.4}% 25
+\BOOKMARK [2][-]{subsection.4.4.5}{\376\377\000E\000s\000p\000o\000r\000t\000a\000z\000i\000o\000n\000e\000\040\000d\000i\000\040\000s\000o\000t\000t\000o\000i\000n\000s\000i\000e\000m\000i\000\040\000d\000i\000\040\000f\000i\000l\000e\000\040\000d\000a\000\040\000u\000n\000a\000\040\000S\000U}{section.4.4}% 26
+\BOOKMARK [2][-]{subsection.4.4.6}{\376\377\000C\000o\000n\000t\000r\000o\000l\000l\000o\000\040\000d\000i\000\040\000i\000n\000t\000e\000g\000r\000i\000t\000\340\000\040\000d\000i\000\040\000s\000i\000n\000g\000o\000l\000i\000\040\000f\000i\000l\000e\000\040\000e\000s\000p\000o\000r\000t\000a\000t\000i\000\040\000d\000a\000\040\000a\000l\000t\000r\000e\000\040\000S\000U}{section.4.4}% 27
+\BOOKMARK [2][-]{subsection.4.4.7}{\376\377\000C\000o\000n\000t\000r\000o\000l\000l\000o\000\040\000d\000i\000\040\000i\000n\000t\000e\000g\000r\000i\000t\000\340\000\040\000s\000u\000\040\000u\000n\000a\000\040\000S\000U}{section.4.4}% 28
+\BOOKMARK [0][-]{chapter.5}{\376\377\000D\000i\000m\000o\000s\000t\000r\000a\000z\000i\000o\000n\000i\000\040\000d\040\031\000u\000s\000o\000\040\000p\000e\000r\000\040\000i\000l\000\040\000f\000i\000n\000e\000\040\000p\000r\000e\000p\000o\000s\000t\000o}{}% 29
+\BOOKMARK [1][-]{section.5.1}{\376\377\000P\000r\000i\000m\000a\000\040\000i\000n\000i\000z\000i\000a\000l\000i\000z\000z\000a\000z\000i\000o\000n\000e}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.2}{\376\377\000C\000r\000e\000a\000z\000i\000o\000n\000e\000\040\000d\000e\000l\000l\000e\000\040\000S\000t\000o\000r\000a\000g\000e\000\040\000U\000n\000i\000t}{chapter.5}% 31
+\BOOKMARK [1][-]{section.5.3}{\376\377\000S\000t\000a\000g\000i\000n\000g\000\040\000d\000e\000l\000l\000e\000\040\000S\000t\000o\000r\000a\000g\000e\000\040\000U\000n\000i\000t}{chapter.5}% 32
+\BOOKMARK [1][-]{section.5.4}{\376\377\000R\000e\000g\000i\000s\000t\000r\000a\000z\000i\000o\000n\000e\000\040\000s\000u\000\040\000B\000l\000o\000c\000k\000c\000h\000a\000i\000n}{chapter.5}% 33
+\BOOKMARK [1][-]{section.5.5}{\376\377\000V\000e\000r\000i\000f\000i\000c\000a\000\040\000d\040\031\000i\000n\000t\000e\000g\000r\000i\000t\000\340\000\040\000d\000i\000\040\000u\000n\000a\000\040\000S\000t\000o\000r\000a\000g\000e\000\040\000U\000n\000i\000t}{chapter.5}% 34
+\BOOKMARK [1][-]{section.5.6}{\376\377\000E\000s\000p\000o\000r\000t\000a\000z\000i\000o\000n\000e\000\040\000d\000i\000\040\000f\000i\000l\000e\000\040\000d\000a\000\040\000u\000n\000a\000\040\000S\000t\000o\000r\000a\000g\000e\000\040\000U\000n\000i\000t}{chapter.5}% 35
+\BOOKMARK [1][-]{section.5.7}{\376\377\000C\000h\000i\000u\000s\000u\000r\000a\000\040\000d\000i\000\040\000u\000n\000a\000\040\000S\000t\000o\000r\000a\000g\000e\000\040\000U\000n\000i\000t}{chapter.5}% 36
+\BOOKMARK [1][-]{section.5.8}{\376\377\000V\000e\000r\000i\000f\000i\000c\000a\000\040\000d\040\031\000i\000n\000t\000e\000g\000r\000i\000t\000\340\000\040\000d\000i\000\040\000f\000i\000l\000e\000\040\000e\000s\000p\000o\000r\000t\000a\000t\000i}{chapter.5}% 37
+\BOOKMARK [0][-]{chapter.6}{\376\377\000C\000o\000n\000c\000l\000u\000s\000i\000o\000n\000i\000\040\000e\000\040\000S\000v\000i\000l\000u\000p\000p\000i\000\040\000f\000u\000t\000u\000r\000i}{}% 38
+\BOOKMARK [0][-]{chapter.7}{\376\377\000B\000i\000b\000l\000i\000o\000g\000r\000a\000f\000i\000a}{}% 39

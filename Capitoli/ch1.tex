@@ -1,0 +1,80 @@
+Il passaggio da analogico a digitale, la cosiddetta “digitalizzazione”, è una delle più grandi
+rivoluzioni del secolo scorso sotto tutti i punti di vista. Un processo di certo lento e pieno
+di difficoltà che è però in grado di ricompensare ampiamente non solo chi riesce a
+formalizzarne il procedimento per uno specifico settore, ma anche tutti coloro che
+seguiranno ad usufruire delle risorse e i beni che hanno subito questa trasformazione.
+E nei settori non manca di certo quello più importante per le società del ventunesimo secolo,
+quello lavorativo. E chi sosteneva che la digitalizzazione delle aziende fosse qualcosa su cui
+ci si potesse permettere di prendere il proprio tempo è stato costretto a ricredersi con quel
+“pedale di accelerazione” che è stata la pandemia di COVID-19.
+
+Costringendoci a stare tutti a casa una delle conseguenze fondamentali è stata,
+come ben sappiamo, la spinta involontaria
+di miliardi di individui verso metodi tecnologici capaci di assicurare continuità alle proprie
+attività lavorative e didattiche nonché utili a fronteggiare le proprie esigenze personali.
+Le aziende, sia pubbliche che private, sono state così costrette a reinventare il proprio modo
+di lavorare, sia nell’organizzazione del lavoro subordinato che nel modo in cui si rapportano
+con terze parti, che siano clienti, utenti o altre aziende. Tuttavia è stato un processo poco
+uniforme che ha lasciato molti elementi ancora in forma mista,
+uno tra tutti la componente burocratica. 
+La burocrazia non è un problema semplice e non si può affrontare con una veloce
+scannerizzazione dei documenti in formato PDF o con una produzione dei documenti
+in formato elettronico, molti di questi documenti hanno infatti un’importanza notevole
+all’interno dell’azienda e, in molti casi, anche valenza legale, bisogna perciò essere
+estremamente sicuri che le informazioni scritte su questi documenti
+non vengano manomesse o corrotte.
+Un grande problema che si affronta di questi tempi e con questi temi estremamente
+caldi è come sviluppare strumenti informatici che permettano di salvare e trasferire
+informazioni e documenti in maniera sicura in modo tale da accelerare i tempi della
+transizione digitale della burocrazia minimizzandone anche i costi, il tutto sempre
+tenendo a mente che chi ne usufruisce non deve necessariamente avere conoscenze informatiche
+di alto livello.
+
+Le tecnologie principali per la gestione delle informazioni e della loro autenticità
+si basano sui due paradigmi di progettazione: centralizzata e distribuita.
+La prima si basa essenzialmente sulla concentrazione dei dati, e quindi del potere,
+nelle mani di un’unità centrale, ciò può essere sicuramente vantaggioso dal punto di
+vista della rapidità dello svolgimento delle operazioni e del consumo di risorse
+(sia computazionali, sia di archiviazione, sia energetiche) ma se stiamo parlando di
+sicurezza e fiducia è naturale avere qualche perplessità, non solo stiamo immagazzinando
+informazioni critiche in un database centralizzato, potenzialmente vulnerabile ad attacchi
+e perdita di dati, ma stiamo anche fornendo tali informazioni a un’entità di cui sarà
+necessario avere una totale fiducia per quanto riguarda il corretto mantenimento dei
+nostri dati. \\
+Complementarmente, il secondo paradigma, ovvero quello distribuito, si basa
+su una rete di sistemi interconnessi su cui le informazioni vengono replicate e sincronizzate
+in maniera reciproca, il tutto senza la necessità di un’entità centrale.
+Questa seconda soluzione è sicuramente più lenta, più costosa, più inefficiente,
+ma tuttavia più sicura in quanto l’autenticità dell’informazione registrata non è sostenuta
+da un’unica unità ma da una moltitudine, così facendo è molto più complicato che si
+manifestino attacchi o una manomissioni o, perlomeno, che restino inosservati. 
+
+Tra le tecnologie distribuite, \textbf{Git} è sicuramente lo standard de facto per la condivisione
+e il tracciamento delle modifiche di insiemi di file ed è uno strumento essenziale per
+gli sviluppatori di software sia indipendenti che facenti parte di grandi progetti.
+Tuttavia, oltre all’essere uno strumento il cui utilizzo è estremamente raro tra chi
+non scrive codice informatico a causa della sua natura poco orientata verso l’utente medio,
+soffre anche della mancanza di una funzione per la protezione, registrazione e controllo
+d’integrità dei propri insiemi di file. Queste lacune esistono perché Git non è un software
+che si è mai posto obiettivi del genere, tuttavia si può pensare ad un applicativo che,
+utilizzando proprio Git, si pone questi obiettivi, dopotutto una funzione che permette
+la verifica di insiemi di file tramite un’architettura distribuita e un’interfaccia più
+semplice da usare sono due aspetti che potrebbero rendere questa applicazione un potente
+strumento per venire in soccorso alla necessità di digitalizzazione della burocrazia.
+Rimane però il dilemma di come poter memorizzare le informazioni necessarie alla verifica 
+dei documenti utilizzando strutture distribuite, ed è qui che ci viene d’aiuto la giovanissima 
+tecnologia della \textbf{blockchain}.
+[Scrivere qualcosa sulla blockchain]
+
+Dato il problema esposto e le tecnologie presentate, in questo documento andremo a
+presentare il software che implementa una possibile soluzione a questo problema
+proprio grazie a Git e alla blockchain, \textbf{PineSU}.
+
+Il resto della tesi sarà strutturata come segue:
+\begin{itemize}
+    \item Capitolo 2 - \textbf{Concetti preliminari}: Verranno approfondite le tecnologie menzionate nell’introduzione e presentate altre che hanno permesso una corretta ed efficiente implementazione
+    \item Capitolo 3 - \textbf{Il Problema e l’Obiettivo}: Verrà formalizzato il problema che andremo ad affrontare e spiegate alcune delle problematiche implementative e come sono state superate
+    \item Capitolo 4 - \textbf{Il Software PineSU}: Verranno presentati l’effettiva implementazione, architettura e workflow del software realizzato
+    \item Capitolo 5 - \textbf{Dimostrazioni d’uso per il fine preposto}: Esempio pratico del funzionamento del software tramite alcuni esempi che rappresentano situazioni similari a quelle in cui l’utente potrà trovarsi utilizzandolo
+    \item Capitolo 6 - \textbf{Conclusioni e Sviluppi futuri}: Si riassumono gli obiettivi raggiunti, alcune criticità e potenziali sviluppi futuri.
+\end{itemize}

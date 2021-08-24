@@ -1,7 +1,7 @@
 
 Come già affermato in precedenza, il sistema Git,
 nonostante la sua completezza e complessità,
-non fornisce ai suoi fruitori la possibilità di un controllo d’integrità
+non fornisce ai suoi fruitori la possibilità di un controllo d’integrità rigoroso
 sulle repository da esso create e gestite, un’operazione essenziale per
 alcune organizzazioni dove è cruciale che i dati non vengano manomessi o corrotti. \\
 Tali organizzazioni potrebbero aver bisogno di tornare a versioni precedenti
@@ -10,7 +10,8 @@ correttamente oppure di trasferire a terzi insiemi e sottoinsiemi
 di file e directory del loro file system facendo si che questi ultimi
 possano in ogni momento controllare l’integrità di ogni singolo documento. \\
 La possibilità di appoggiarsi ad un sistema centralizzato è a questo punto quella
-che offrirebbe una verifica meno sicura: usando dei database le informazioni
+che offrirebbe una verifica meno sicura: non solo sarebbe necessario avere fiducia
+dell'entità che mantiene i propri dati, ma usando dei database centralizzati le informazioni
 potrebbero essere eliminate o manomesse con maggiore facilità,
 da qui l’idea di appoggiarsi ad una struttura come quella della blockchain (\autoref{sub:bc}).
 Tutto ciò deve però essere implementato con un occhio di riguardo alla quantità
@@ -35,8 +36,8 @@ Come già menzionato, la quantità di informazioni che andremo a memorizzare
 nella blockchain è direttamente proporzionale alla quantità di denaro che
 spendiamo per effettuare una registrazione.
 Occorre perciò trovare uno stratagemma per poter memorizzare una quantità
-estremamente ridotta di dati che contenga però intrinsecamente una grande
-mole di informazione. \\
+estremamente ridotta di dati che permetta però di espletare controlli su un gran numero
+di documenti. \\
 La soluzione al dilemma arriva sotto forma di accumulatori crittografici (\autoref{sub:mt}).
 Utilizzeremo delle strutture ad albero in cui le foglie saranno le nostre unità
 informative di interesse e da queste ne ricaveremo una radice unica.
