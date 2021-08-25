@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  24 AUG 2021 21:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  25 AUG 2021 12:13
 entering extended mode
 **c:/Users/Paolo/Dropbox/Tesi/tesi.tex
 (c:/Users/Paolo/Dropbox/Tesi/tesi.tex
@@ -695,7 +695,7 @@ LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/it' will be
 <figures/logounipg2021.png, id=162, 523.7166pt x 255.5949pt>
 File: figures/logounipg2021.png Graphic file (type png)
 <use figures/logounipg2021.png>
-Package pdftex.def Info: figures/logounipg2021.png  used on input line 98.
+Package pdftex.def Info: figures/logounipg2021.png  used on input line 97.
 (pdftex.def)             Requested size: 209.12683pt x 102.06454pt.
  [1
 
@@ -705,14 +705,14 @@ Package pdftex.def Info: figures/logounipg2021.png  used on input line 98.
 {C:/Users/Paolo/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <c:/Users/Paolo/Dropbox/Tesi/figures/logounipg2021.png>]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.106 \newpage \thispagestyle{empty} \ \newpage
+l.105 \newpage \thispagestyle{empty} \ \newpage
                                                 [1
 
 ]
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
-(Font)              scaled to size 24.88pt on input line 111.
+(Font)              scaled to size 24.88pt on input line 110.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/b/n' will be
-(Font)              scaled to size 24.88pt on input line 111.
+(Font)              scaled to size 24.88pt on input line 110.
  (c:/Users\Paolo\Dropbox\Tesi\tesi.toc
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/b/n' will be
 (Font)              scaled to size 12.0pt on input line 3.
@@ -749,12 +749,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [5]
-LaTeX Font Info:    Trying to load font information for TS1+Crimson-TLF on input line 75.
+LaTeX Font Info:    Trying to load font information for TS1+Crimson-TLF on input line 76.
  (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/latex/crimson\ts1crimson-tlf.fd
 File: TS1Crimson-TLF.fd 2016/02/19 (autoinst) Font definitions for TS1/Crimson-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/Crimson-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 75.
+(Font)              scaled to size 12.0pt on input line 76.
 )
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -769,7 +769,7 @@ Capitolo 2.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/b/n' will be
 (Font)              scaled to size 17.28pt on input line 5.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/it' will be
-(Font)              scaled to size 12.0pt on input line 14.
+(Font)              scaled to size 12.0pt on input line 17.
  [7
 
 ]
@@ -804,7 +804,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[11])
+[11]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -812,9 +812,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12]
+[12])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[13]
 Capitolo 3.
-(c:/Users\Paolo\Dropbox\Tesi\Capitoli/ch3.tex [13
+(c:/Users\Paolo\Dropbox\Tesi\Capitoli/ch3.tex [14
 
 ]
 
@@ -824,12 +832,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14])
+[15])
 Capitolo 4.
-(c:/Users\Paolo\Dropbox\Tesi\Capitoli/ch4.tex [15
+(c:/Users\Paolo\Dropbox\Tesi\Capitoli/ch4.tex [16
 
 ]
-<Figures/activityDiag.pdf, id=308, 498.76138pt x 292.14847pt>
+<Figures/activityDiag.pdf, id=316, 498.76138pt x 292.14847pt>
 File: Figures/activityDiag.pdf Graphic file (type pdf)
 <use Figures/activityDiag.pdf>
 Package pdftex.def Info: Figures/activityDiag.pdf  used on input line 25.
@@ -844,8 +852,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[16 <c:/Users/Paolo/Dropbox/Tesi/Figures/activityDiag.pdf>]
-<Figures/stateDiag2.pdf, id=338, 551.76138pt x 209.68336pt>
+[17 <c:/Users/Paolo/Dropbox/Tesi/Figures/activityDiag.pdf>]
+<Figures/stateDiag2.pdf, id=346, 551.76138pt x 209.68336pt>
 File: Figures/stateDiag2.pdf Graphic file (type pdf)
 <use Figures/stateDiag2.pdf>
 Package pdftex.def Info: Figures/stateDiag2.pdf  used on input line 76.
@@ -858,7 +866,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[17 <c:/Users/Paolo/Dropbox/Tesi/Figures/stateDiag2.pdf>]
+[18 <c:/Users/Paolo/Dropbox/Tesi/Figures/stateDiag2.pdf>]
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/b/it' will be
 (Font)              scaled to size 12.0pt on input line 89.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
@@ -871,7 +879,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 89.
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
 (Font)              scaled to size 7.0pt on input line 89.
-<Figures/PineSU-architecture.pdf, id=384, 546.44153pt x 96.7615pt>
+<Figures/PineSU-architecture.pdf, id=393, 546.44153pt x 96.7615pt>
 File: Figures/PineSU-architecture.pdf Graphic file (type pdf)
 <use Figures/PineSU-architecture.pdf>
 Package pdftex.def Info: Figures/PineSU-architecture.pdf  used on input line 102.
@@ -884,10 +892,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[18]
+[19]
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/b/n' will be
 (Font)              scaled to size 14.4pt on input line 113.
-<Figures/menu.jpg, id=402, 321.8424pt x 196.0926pt>
+<Figures/menu.jpg, id=410, 321.8424pt x 196.0926pt>
 File: Figures/menu.jpg Graphic file (type jpg)
 <use Figures/menu.jpg>
 Package pdftex.def Info: Figures/menu.jpg  used on input line 126.
@@ -900,7 +908,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[19 <c:/Users/Paolo/Dropbox/Tesi/Figures/PineSU-architecture.pdf>]
+[20 <c:/Users/Paolo/Dropbox/Tesi/Figures/PineSU-architecture.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -908,19 +916,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[20 <c:/Users/Paolo/Dropbox/Tesi/Figures/menu.jpg>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[21]
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-
+[21 <c:/Users/Paolo/Dropbox/Tesi/Figures/menu.jpg>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -929,6 +925,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [22]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -937,7 +937,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [23]
-<Figures/mc1.pdf, id=468, 337.6615pt x 470.43454pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[24]
+<Figures/mc1.pdf, id=477, 337.6615pt x 470.43454pt>
 File: Figures/mc1.pdf Graphic file (type pdf)
 <use Figures/mc1.pdf>
 Package pdftex.def Info: Figures/mc1.pdf  used on input line 217.
@@ -950,15 +958,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[24 <c:/Users/Paolo/Dropbox/Tesi/Figures/mc1.pdf>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[25]
+[25 <c:/Users/Paolo/Dropbox/Tesi/Figures/mc1.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -982,7 +982,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[28])
+[28]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -990,12 +990,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[29]
+[29])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[30]
 Capitolo 5.
-(c:/Users\Paolo\Dropbox\Tesi\Capitoli/ch5.tex [30
+(c:/Users\Paolo\Dropbox\Tesi\Capitoli/ch5.tex [31
 
 ]
-<Figures/calculating.png, id=543, 874.76813pt x 557.08125pt>
+<Figures/calculating.png, id=551, 874.76813pt x 557.08125pt>
 File: Figures/calculating.png Graphic file (type png)
 <use Figures/calculating.png>
 Package pdftex.def Info: Figures/calculating.png  used on input line 54.
@@ -1008,8 +1016,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[31]
-<Figures/doneCalculating.png, id=548, 980.16188pt x 557.08125pt>
+[32]
+<Figures/doneCalculating.png, id=556, 980.16188pt x 557.08125pt>
 File: Figures/doneCalculating.png Graphic file (type png)
 <use Figures/doneCalculating.png>
 Package pdftex.def Info: Figures/doneCalculating.png  used on input line 69.
@@ -1022,15 +1030,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[32 <c:/Users/Paolo/Dropbox/Tesi/Figures/calculating.png> <c:/Users/Paolo/Dropbox/Tesi/Figures/doneCalculating.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[33]
+[33 <c:/Users/Paolo/Dropbox/Tesi/Figures/calculating.png> <c:/Users/Paolo/Dropbox/Tesi/Figures/doneCalculating.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1047,7 +1047,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [35]
-<Figures/verify.png, id=612, 1166.3575pt x 742.775pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[36]
+<Figures/verify.png, id=621, 1166.3575pt x 742.775pt>
 File: Figures/verify.png Graphic file (type png)
 <use Figures/verify.png>
 Package pdftex.def Info: Figures/verify.png  used on input line 179.
@@ -1060,8 +1068,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[36 <c:/Users/Paolo/Dropbox/Tesi/Figures/verify.png>]
-<Figures/export.png, id=619, 1166.3575pt x 742.775pt>
+[37 <c:/Users/Paolo/Dropbox/Tesi/Figures/verify.png>]
+<Figures/export.png, id=627, 1166.3575pt x 742.775pt>
 File: Figures/export.png Graphic file (type png)
 <use Figures/export.png>
 Package pdftex.def Info: Figures/export.png  used on input line 195.
@@ -1074,7 +1082,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[37 <c:/Users/Paolo/Dropbox/Tesi/Figures/export.png>]
+[38 <c:/Users/Paolo/Dropbox/Tesi/Figures/export.png>]
 LaTeX Font Info:    Trying to load font information for OMS+Crimson-TLF on input line 227.
 LaTeX Font Info:    No file OMSCrimson-TLF.fd. on input line 227.
 
@@ -1090,8 +1098,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[38]
-<Figures/verifyFiles.png, id=650, 1166.3575pt x 1108.14pt>
+[39]
+<Figures/verifyFiles.png, id=658, 1166.3575pt x 1108.14pt>
 File: Figures/verifyFiles.png Graphic file (type png)
 <use Figures/verifyFiles.png>
 Package pdftex.def Info: Figures/verifyFiles.png  used on input line 281.
@@ -1104,7 +1112,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[39])
+[40])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1112,9 +1120,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[40 <c:/Users/Paolo/Dropbox/Tesi/Figures/verifyFiles.png>]
+[41 <c:/Users/Paolo/Dropbox/Tesi/Figures/verifyFiles.png>]
 Capitolo 6.
-(c:/Users\Paolo\Dropbox\Tesi\Capitoli/ch6.tex [41
+(c:/Users\Paolo\Dropbox\Tesi\Capitoli/ch6.tex [42
 
 ]) (c:/Users\Paolo\Dropbox\Tesi\tesi.bbl
 
@@ -1124,9 +1132,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[42]
+[43]
 Capitolo 7.
-[43
+[44
 
 ])
 
@@ -1136,7 +1144,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[44] (c:/Users\Paolo\Dropbox\Tesi\tesi.aux)
+[45] (c:/Users\Paolo\Dropbox\Tesi\tesi.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1144,10 +1152,10 @@ Package rerunfilecheck Info: File `tesi.out' has not changed.
 (rerunfilecheck)             Checksum: 60B1DB6D06D0CCF7B2EADBFC3F3E6BF3;7643.
  ) 
 Here is how much of TeX's memory you used:
- 26064 strings out of 479334
- 485488 string characters out of 2857084
- 957879 words of memory out of 3000000
- 42808 multiletter control sequences out of 15000+200000
+ 26066 strings out of 479334
+ 485501 string characters out of 2857084
+ 957853 words of memory out of 3000000
+ 42807 multiletter control sequences out of 15000+200000
  450739 words of font info for 61 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,11n,103p,747b,1411s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1155,10 +1163,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
-{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_n3gbj7.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_axwm4k.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_wttfgh.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_qrsm2e.enc}<C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Bold.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-BoldItalic.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Italic.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Roman.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on c:/Users\Paolo\Dropbox\Tesi\tesi.pdf (45 pages, 2445718 bytes).
+{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_n3gbj7.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_axwm4k.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_wttfgh.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_qrsm2e.enc}<C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Bold.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-BoldItalic.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Italic.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Roman.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on c:/Users\Paolo\Dropbox\Tesi\tesi.pdf (46 pages, 2472035 bytes).
 PDF statistics:
- 808 PDF objects out of 1000 (max. 8388607)
- 212 named destinations out of 1000 (max. 500000)
+ 823 PDF objects out of 1000 (max. 8388607)
+ 215 named destinations out of 1000 (max. 500000)
  380 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -4,26 +4,68 @@ corretta fruizione del materiale successivo.
 
 \section{Funzioni di hash}
 \label{sub:hash}
-Una \textbf{funzione di hashing}~\cite{hash} è un algoritmo che calcola una stringa di lunghezza
-fissa a partire da una sequenza di dati di lunghezza variabile, come un file,
-che altro non è che un insieme di blocchi di dati.
-L’operazione di hashing trasforma questi dati in una stringa di lunghezza fissa, chiamata \textbf{hash} o stringa di hash,
-il cui valore rappresenta la stringa originale. Il valore della stringa può essere considerato
-il riassunto di tutto il contenuto del file. Un hash è di solito una stringa esadecimale.
+Una \textbf{funzione di hashing} \(h\) è una funzione che permette di associare,
+a una qualsiasi sequenza \(m\) di lunghezza arbitraria in input, una sequenza
+in output \(h(m)\) di lunghezza costante. 
+Questo valore restituito in output è chiamato valore di hash, stringa di hash,
+o anche semplicemente \textbf{hash}, mentre il valore preso in input è detto
+\textbf{preimmagine}. Possiamo pensare a questa funzione come una “macchina per
+impronte digitali”, per ogni sequenza in input essa riesce a calcolarne una stringa binaria
+che la identifica univocamente.
 
-Un buon algoritmo di hashing gode di una proprietà chiamata \emph{effetto valanga},
-ovvero la stringa di output cambia in maniera significativa o anche interamente anche
-quando un singolo bit o byte dell’insieme di dati in input viene modificato. Inoltre l’algoritmo deve essere
-complesso abbastanza da non produrre lo stesso output per due diversi input, se ciò avviene
-siamo in presenza di una \emph{collisione}. Una possibilità molto bassa di collisione è spesso
-indice di un algoritmo solido. Lo hashing è un’operazione unidirezionale, dalla stringa di hash
-non si può risalire al file originale.
-Uno dei tanti usi dello hashing è quello di confrontare due file per controllare se il loro contenuto
-è lo stesso, in caso affermativo produrranno, per la stessa funzione, lo stesso hash,
-possiamo quindi controllare in maniera immediata l’uguaglianza senza dover necessariamente
-controllare l’intero file parola per parola.
-Grazie a ciò è anche possibile controllare l’\textbf{integrità} di un file, se è stato infatti
-modificato o manomesso esso produrrà una stringa di hash differente rispetto a quella che dovrebbe produrre.
+Una funzione di hash ha tre caratteristiche fondamentali:
+innanzitutto è \emph{deterministica}, ciò significa che per lo stesso input essa deve
+generare sempre lo stesso output, deve poi generare esclusivamente
+\emph{sequenze in output con una lunghezza fissa}, ciò significa che per qualsiasi input
+di qualsiasi lunghezza il risultato dovrà avere sempre una lunghezza di \(b\) bit decisa
+a priori, infine deve essere \emph{uniforme}, ovvero i suoi output dovrebbero essere
+uniformemente distribuiti nel codominio della funzione.
+Una stringa di hash, essendo una sequenza binaria, può essere rappresentata in molti modi,
+nell’ambito di questo documento presenteremo i vari hash come stringhe esadecimali.
+
+Mentre una funzione di hash classica è tranquillamente utilizzabile per situazioni
+in cui non è necessaria una particolare sicurezza nel proteggere le caratteristiche
+delle preimmagine, ragion per cui si può decidere, nel progettarla, di prestare più
+attenzione verso la sua rapidità d’esecuzione che altro, quando si ha bisogno che le
+informazioni in input rimangano nascoste e si necessita di una maggior sicurezza a scapito
+della velocità si ricorre alle \textbf{funzioni crittografiche di hash}.
+
+Una funzione crittografica di hash ha le stesse caratteristiche di una funzione di
+hash normale ma aggiunge delle proprietà che deve seguire per poter essere considerata
+\emph{crittograficamente sicura}, i valori della sua lunghezza b sono tipicamente
+128, 256 e 512, si va quindi ad ottenere degli output potenzialmente molto più lunghi
+e che non sembrano adatti alle implementazioni all’interno di semplici strutture dati
+per cui le classiche funzioni di hash sono designate.
+
+Le proprietà che permettono di definire una funzione crittografica di hash come sicura sono:
+\begin{enumerate}
+    \item \emph{Resistenza alla preimmagine}: Dato un hash \(h\) deve essere difficile riuscire a
+    trovare un input \(m\) tale che \(h = h(m)\).
+    \item \emph{Resistenza alla seconda preimmagine}: Dato un input \(m_1\) deve essere difficile
+    riuscire a trovare un diverso input \(m_2\) tale che \(h(m_1) = h(m_2)\).
+    \item \emph{Resistenza alla collisione}: Dati due messaggi \(m_1\) ed \(m_2\), deve essere
+    difficile che i due messaggi abbiano lo stesso hash, quindi con \(h(m_1) = h(m_2)\).
+\end{enumerate}
+Queste proprietà ci permettono di arrivare a concludere che una funzione crittografica di
+hash effettua un’operazione unidirezionale: non è possibile (o perlomeno non dovrebbe esserlo),
+partendo dal singolo hash, risalire alla preimmagine. \\
+Per riuscire a mantenere tali proprietà la funzione, durante la fase di generazione
+dell’output, effettua diverse e differenti operazioni sulla preimmagine
+che fanno si che anche un solo minuscolo cambiamento all’input generi
+un \emph{effetto valanga} sull’output, cambiando radicalmente, se non completamente,
+l’hash generato.
+
+Le funzioni crittografiche di hash vengono utilizzate in moltissime implementazioni
+nell’ambito della cybersecurity come la verifica di password, la generazione e
+validazione di firme digitali e la \textbf{verifica d’integrità di file}.
+Quest’ultima assume un’importanza fondamentale anche nel nostro caso: queste funzioni
+ci permettono di capire se, dati due file, il loro contenuto è identico senza
+la necessità di effettuare alcun controllo byte per byte in quanto produrranno
+lo stesso valore di hash, in questo modo possiamo anche capire se un file,
+che durante un controllo generava un determinato valore, è stato modificato,
+ciò perché il valore generato sarà ovviamente differente.
+
+
 
 \section{VCS e Git}
 \label{sub:vcs}
