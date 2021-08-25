@@ -12,22 +12,6 @@ M.~Lubański, ``{Centralized vs Distributed Version Control Systems},'' 2019.
 Git-scm.com, ``{Git},'' Accessed: August, 2021.
 \newblock [\url{https://git-scm.com/}].
 
-\bibitem{block1}
-IBM, ``{What is Blockchain?},'' Accessed: August, 2021.
-\newblock [\url{https://www.ibm.com/it-it/topics/what-is-blockchain}].
-
-\bibitem{block2}
-Wikipedia, ``{Blockchain},'' Accessed: August, 2021.
-\newblock [\url{https://it.wikipedia.org/wiki/Blockchain}].
-
-\bibitem{eth-21}
-Ethereum.org, ``{Ethereum.org},'' Accessed: August, 2021.
-\newblock [\url{https://ethereum.org}].
-
-\bibitem{eth-22}
-Ethereum.org, ``{Ethereum Documentation},'' Accessed: August, 2021.
-\newblock [\url{https://ethereum.org/en/developers/docs/}].
-
 \bibitem{mertree}
 H.~Qureshi, ``{Merkle Trees},'' 2019.
 \newblock [\url{https://nakamoto.com/merkle-trees/}].

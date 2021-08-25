@@ -133,54 +133,71 @@ in modo da mantenerli sincronizzati.
 
 \section{Blockchain ed Ethereum}
 \label{sub:bc}
-Una \textbf{blockchain}~\cite{block1}~\cite{block2} è un registro condiviso e immutabile che facilita il processo di registrazione
-delle transazioni e di tracciamento degli asset in una rete aziendale e non. Un asset è un qualsiasi
-elemento avente un valore, esso può essere rintracciato e scambiato su una rete blockchain,
-riducendo i rischi e i costi per tutti gli interessati. Ogni volta che un asset viene registrato e
-ne viene in realtà registrata la transazione che si riferisce ad esso, essa prende la forma di un blocco,
-il nome della tecnologia deriva dal fatto che questo registro è essenzialmente una serie di blocchi
-collegati sequenzialmente in maniera irreversibile, come una catena.
-Gli elementi chiave di una blockchain sono l’effettivo registro distribuito e accessibile a chiunque faccia
-parte della stessa rete, dove le transazioni vengono registrate un’unica volta, dei record immutabili
-che non permettono ad alcun partecipante alla rete di poter essere modificati o manomessi,
-anche in presenza di errori, e infine, anche se assenti da alcune reti come quella Bitcoin,
-la presenza dei cosiddetti \textbf{Smart Contract} \label{sub:smp}, ovvero dei set di regole programmabili che permettono
-anche la creazione di vere e proprie applicazioni che operano
-sul registro leggendo e aggiungendo nuovi blocchi alla catena. \\ 
-I vantaggi di questa tecnologia sono di certo non trascurabili, soprattutto in tempi
-recenti con l’aumento esponenziale della quantità di transazioni che vengono eseguite
-sia nelle reti pubbliche sia nelle private.
-In un sistema centralizzato abbiamo uno spreco di risorse per la convalida di terze parti
-e per la memorizzazione di record duplicati, aspetti assenti in una rete dotata di blockchain
-dove chiunque è sicuro che nessuna transazione è stata eliminata o manomessa e si fida della
-validità dei dati confidando nel fatto che ogni partecipante ha la copia esatta e sincronizzata
-del registro nella sua macchina.
-Questa tecnologia può essere implementata senza problemi all’interno di un’azienda ed essere privata,
-l’incentivo a mantenere la sua esistenza è il profitto a cui un corretto utilizzo di essa può portare
-con un incremento della produttività e un minore utilizzo di risorse.
-Tuttavia il mantenimento di una blockchain pubblica e accessibile a tutti richiede un incentivo,
-un insieme distribuito di individui deve mettere a disposizione parte della potenza computazionale
-e dell’archivio della propria macchina per permettere a questo registro di esistere
-e alle transazioni di essere eseguite e calcolate correttamente.
-Non a caso la tecnologia della blockchain è nata assieme a quella delle criptovalute:
-essa doveva avere lo scopo di “libro mastro” per Bitcoin, mantenendosi grazie a persone
-disposte a mettere a disposizione il proprio hardware in cambio di un compenso
-nella criptovaluta propria della rete.
+Non esiste una definizione formalizzata e universalmente condivisa di cosa è la
+\textbf{blockchain}, possiamo però tentare di definirla come una lista in continua 
+crescita di record, chiamati blocchi, collegati utilizzando metodi crittografici: 
+ogni blocco contiene l’hash corrispondente al blocco precedente, un timestamp e i 
+dati riguardanti una transazione. 
+La \emph{chain}, ovvero la catena, è formata grazie alla presenza del riferimento 
+crittografico verso il blocco precedente che si trova all’interno di ogni blocco, 
+ciò rende tale catena di blocchi immutabile: il cambiamento dei dati all’interno di 
+un blocco andrebbe a far mutare il suo riferimento crittografico, invalidando così la catena.
+La blockchain non è immagazzinata all’interno di una singola unità o insieme di 
+unità centrali, bensì è distribuita, condivisa e aggiornata tra varie macchine 
+all’interno di una rete.
 
+Abbiamo parlato di come ogni blocco contenga i dati di una transazione, essa non è 
+altro che un’azione compiuta da parte di un account della rete (i.e. Bob) nei confronti 
+di un altro account (i.e. Alice), un esempio classico è l’invio di una quantità di moneta 
+virtuale, a quel punto verrà registrata come transazione che il portafoglio o \emph{wallet}
+di Bob è in debito di tale quantità nei confronti del portafoglio di Alice.
+Possiamo quindi concludere che una transazione altro non è che la registrazione di proprietà 
+di un asset, ovvero un elemento, digitale e non, avente valore.
+
+La nascita della blockchain è infatti dovuta alla necessità di avere un “libro mastro” per 
+Bitcoin, un registro che tenesse traccia delle transazioni e che impedisse il fenomeno della 
+\emph{doppia spesa}, ovvero ciò che si verifica quando uno stesso titolo valutario viene speso 
+due o più volte. Mentre questo fenomeno è controllato in un’economia tradizionale dagli 
+istituti finanziari centrali, nell’ambito delle monete digitali distribuite a prendersi 
+in carico di effettuare questo controllo fondamentale è la blockchain con il suo 
+meccanismo di consenso \emph{Proof-of-Work} 
+(meccanismo adottato nella blockchain di Bitcoin, 
+ne esistono altri come il \emph{Proof-of-Stake} che sta venendo adottato da Ethereum).
+
+La Proof-of-Work è l’algoritmo di consenso che detta le regole per 
+la conferma di transazioni e la produzione di nuovi blocchi della catena: 
+per poter aggiungere un blocco è infatti necessario risolvere un complesso 
+enigma per cui viene richiesta un’alta potenza computazionale, i \emph{miner} 
+o minatori mettono a disposizione le proprie macchine per poter risolvere tale 
+enigma in cambio di una ricompensa nella moneta virtuale di tale rete.
+Più una catena è lunga, più lavoro computazionale è stato svolto per produrla e 
+più gli utenti saranno orientati nel riporre la propria fiducia in essa, soprattutto 
+perché un lavoro di manomissione sarebbe a quel punto incredibilmente difficoltoso e costoso.
+
+Vediamo quindi come, nonostante le limitazioni e gli sprechi di risorse che un sistema 
+distribuito come la blockchain ha per sua natura, si ha il grande vantaggio 
+di un registro condiviso in cui possiamo fidarci della parola di numerosissime 
+entità che ne usufruiscono anzichè di un’unica entità centrale.
 
 \label{sub:eth}
-Nasce da queste tecnologie il progetto \textbf{Ethereum}~\cite{eth-21}~\cite{eth-22}, con l’obiettivo di mettere però
-più carne al fuoco: esso trascende il concetto di semplice criptovaluta andando a creare
-una piattaforma decentralizzata per la creazione e la pubblicazione peer-to-peer di Smart Contract
-in linguaggi di programmazione Turing completi (ovvero capaci di risolvere ogni problema
-che gli si possa presentare): Solidity e Vyper.
-Con Ethereum è quindi possibile andare a creare vere e proprie applicazioni
-con vita propria all’interno della \textbf{Ethereum Virtual Machine},
-ovvero la grande macchina virtuale simulata andando ad unire tutta la potenza computazionale
-messa a disposizione dagli utenti di Ethereum e usando la blockchain come archivio di
-informazioni permanenti. Ovviamente sia la pubblicazione di uno Smart Contract sia la registrazione
-in generale di informazioni sulla blockchain all’interno di reti pubbliche come quella
-Ethereum ha un costo pecuniario proporzionale alla quantità di dati che si andranno a registrare.
+Mentre reti come quella Bitcoin a poco si prestano oltre al gestire l’omonima moneta virtuale, 
+troviamo altre reti in cui si è pensato di aggiungere molte più funzionalità.
+Una di queste è \textbf{Ethereum}, una rete che trascende il concetto di semplice rete 
+per criptovaluta (in questo caso \textbf{Ether} andando a creare una piattaforma 
+decentralizzata per la creazione e la pubblicazione peer-to-peer di Smart Contract 
+in linguaggi di programmazione Turing completi (ovvero capaci di risolvere ogni problema 
+che gli si possa presentare): Solidity e Vyper. 
+
+Uno \textbf{Smart Contract} è essenzialmente un programma (una collezione di codice che descrive 
+funzioni e un insieme di dati) che risiede ad uno specifico indirizzo della blockchain 
+(quindi all’interno di uno o più blocchi), gli utilizzatori possono comunicare con loro 
+ed utilizzare le loro funzioni richiamando queste ultime tramite delle transazioni. 
+Con Ethereum è quindi possibile andare a creare vere e proprie applicazioni 
+(unendo Smart Contract con un’interfaccia utente) con vita propria all’interno della 
+\textbf{Ethereum Virtual Machine}, ovvero la grande macchina virtuale simulata andando 
+ad unire tutta la potenza computazionale messa a disposizione dagli utenti di Ethereum 
+e usando la blockchain come archivio di informazioni permanenti. 
+
 
 \section{Accumulatori crittografici e Merkle Tree}
 \label{sub:mt}
@@ -207,8 +224,6 @@ Per effettuare una verifica tramite Merkle Proof sono tre gli elementi necessari
 \end{enumerate}
 Andando a svolgere questa verifica su ogni documento riusceremo ad individuare i file modificati come
 quelli per cui non è possibile ricostruire il cammino verso la radice lasciandola inalterata.
-
-\newpage
 
 \section{JSON}
 \label{sub:json}

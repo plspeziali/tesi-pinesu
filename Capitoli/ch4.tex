@@ -146,7 +146,7 @@ Essi sono fondamentali per varie operazioni che vanno dal calcolo degli hash del
 
 Il primo è il semplice SU Merkle Tree, necessario per il calcolo dell’hash corrispondente alla Storage Unit, che altro non è che un Merkle Tree binario in cui ogni foglia corrisponde a un file o una directory contenuta nella SU. Questo MT verrà utilizzato anche nella fase di esportazione per generare le proof dei file esportati che serviranno per un eventuale controllo d’integrità singolo.
 
-Il secondo è lo Storage Group, di cui ne esistono due, un \textbf{Open} (OSG) e un \textbf{Closed} (CSG). Si tratta essenzialmente di due MT binari in cui ogni foglia corrisponde all’hash di una Storage Unit \textbf{Staged} (ovvero preparata per la registrazione collettiva, ne parlremo meglio nella \autoref{sub:stage}), la differenza tra i due alberi è nel loro contenuto, uno contiene le SU Open, l’altro le SU Closed, differenza già discussa nella \autoref{sec:work}. Le root di questi alberi verranno poi salvate all’interno della prossima struttura come foglie.
+Il secondo è lo Storage Group, di cui ne esistono due, un \textbf{Open} (OSG) e un \textbf{Closed} (CSG). Si tratta essenzialmente di due MT binari in cui ogni foglia corrisponde all’hash di una Storage Unit \textbf{Staged} (ovvero preparata per la registrazione collettiva, ne parlremo meglio nella \autoref{sub:stage1} e nella \autoref{sub:stage2}), la differenza tra i due alberi è nel loro contenuto, uno contiene le SU Open, l’altro le SU Closed, differenza già discussa nella \autoref{sec:work}. Le root di questi alberi verranno poi salvate all’interno della prossima struttura come foglie.
 
 Il terzo e più importante è il \textbf{Merkle Calendar}, formato da due sottoalberi in cui vengono accolte come foglie rispettivamente le root delle istanze di OSG e di CSG. Le radici di questi due sottoalberi hanno come figli dei nodi corrispondenti agli anni, i quali a loro volta hanno come figli dei nodi corrispondenti ai mesi, i figli dei mesi saranno infine le foglie corrispondenti a ciò che chiamiamo \textbf{Blockchain Synchronization Point} (BSP) in quanto nodi contenenti un timestamp e la root dello SG corrispondente.
 
@@ -242,6 +242,26 @@ Ipotizziamo di voler recuperare la MC root nel momento in cui è stata inserita 
 \end{enumerate}
 Il calcolo di hash tramite altri hash è effettuato tramite dei piccoli Merkle Tree binari “usa e getta”, alla stessa maniera di come calcoliamo l’hash root di uno Storage Group (che andrà a finire nei BSP).
 
+\subsection{Excursus sullo Storage Group}
+\label{sub:stage1}
+È possibile, alla vista della struttura del Merkle Calendar, aver pensato se fosse realmente
+necessario inserire l’ulteriore struttura dello Storage Group (), se non si potesse,
+anziché andare ad inserire la Merkle Root dello SG nel BSP inserire direttamente
+l’hash di una singola Storage Unit, in modo da rendere ogni BSP proprio di una sola entità.
+
+Come si può notare infatti nella schematizzazione del Workflow e dell’Architettura
+(\autoref{sec:work}) non è presente una fase di Staging, in cui la Storage Unit viene
+inserita all’interno dello Storage Group, ciò perché effettivamente quest’ultima non è
+una struttura necessaria ai fini di una definizione formale dell’applicativo.
+Quel che è necessario però è che gli utilizzatori di questo spendano meno soldi possibile,
+cosa improbabile se la registrazione su blockchain avviene di ogni singola Storage Unit.
+Si tratta invece di una mossa saggia andare ad introdurre una piccola struttura che permetta,
+con una singola registrazione dal costo identico, di andare a registrare un numero
+indefinito di Storage Unit, quando ci riferiremo quindi all’operazione
+“\emph{Synchronize with blockchain}” per questa particolare implementazioni di PineSU,
+comprenderemo anche uno staging a priori di tale SU.
+
+
 \subsection{PineSU EC}
 
 Come visualizzabile in Fig.~\ref{fi:umlEC} il connettore per la blockchain, in questo caso specifico quello della rete Ethereum, è composto da una semplice classe che, con i suoi attributi che corrispondono ad un oggetto del modulo \textsf{web3.js}, i due indirizzi dei wallet e la chiave privata del primo, svolge le operazioni di effettuare una transazione e verificarne una precedente.
@@ -333,7 +353,7 @@ La creazione di una Storage Unit è in realtà un’operazione che comprende sia
 Dei file possono essere esclusi dalla Storage Unit con l’ausilio di un semplice file \textsf{.gitignore}, la cui creazione viene anch’essa gestita, in maniera opzionale, dal software.
 
 \subsection{Staging di una Storage Unit nello Storage Group}
-\label{sub:stage}
+\label{sub:stage2}
 Lo hash principale della Storage Unit viene inserito in uno dei due Storage Group (a seconda che sia aperta o chiusa), questa operazione è stata nominata \emph{staging} in quanto è concettualmente simile all’operazione omonima di Git se consideriamo la registrazione nella blockchain analoga ad un \emph{commit}.
 
 \subsection{Registrazione dello Storage Group nella Blockchain}
