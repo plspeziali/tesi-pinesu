@@ -226,11 +226,53 @@ blockchain qualcuno dovrà pagare affinché ciò accada.
 
 \section{Node.js}
 
+\textbf{Node.js} è un ambiente di run-time, ovvero che supporta l’esecuzione di
+software nonostante non faccia parte del sistema operativo, open source e cross
+platform per l’esecuzione di codice in linguaggio Javascript.
+
+\textbf{Javascript} è un linguaggio di programmazione ad alto livello,
+spesso con compilazione \emph{Just In Time} e a multi-paradigma: supporta infatti diversi
+stili di programmazione tra cui la programmazione a eventi, a oggetti,
+funzionale e persino imperativa.
+Inizialmente limitato alla sola esecuzione lato client su browser,
+la sua crescita in popolarità, complice la sua versatilità, facilità
+di apprendimento e la sua sintassi molto simile a C e Java, ha portato
+allo sviluppo anche di ambienti esterni su cui poter eseguire codice lato server
+e standalone, come il sopracitato Node.js, il quale si basa infatti sull’interprete
+Javascript V8, sviluppato da Google per il suo Chrome e dalle prestazioni elevate.
+
+Node.js rappresenta a tutti gli effetti non solo un motore per Javascript server-side,
+ma un’implementazione del paradigma \emph{Javascript everywhere}, riuscendo ad unire
+tutte le componenti di una qualsiasi applicazione, web e non, sotto un unico linguaggio.
+
+Le applicazioni Node.js vengono eseguite in un singolo processo, senza la creazione di
+nuovi thread per ogni richiesta, quando deve essere eseguita un’operazione di I/O,
+come una lettura o scrittura nella rete, un accesso a un database o a un file system,
+anziché bloccare il thread e sprecare cicli della CPU facendola attendere, Node.js
+interrompe il processo e riprende le sue funzioni non appena l’operazione I/O termina,
+questo permette a un server con ambiente Node.js di gestire efficientemente moltissime
+connessioni in concorrenza senza che il programmatore debba preoccuparsi di gestire
+alcuna concorrenza tra thread differenti.
+
+Uno dei punti più affascinanti ed eccitanti di Node.js, e di molti altri linguaggi
+con un supporto così attivo da parte della community, è sicuramente il semplice e
+veloce accesso alle migliaia di librerie che gli utenti pubblicano ogni giorno e
+installabili tramite il package manager \textbf{npm} in maniera pressoché immediata.
+
+\newpage
+
 \section{Accumulatori crittografici e Merkle Tree}
 \label{sub:mt}
 I \textbf{Merkle Tree}~\cite{mertree} sono una tipologia di \textbf{accumulatori crittografici}, ovvero strumenti che permettono
 di comprimere molti elementi informativi in una costante di dimensione fissa, in altre parole
 ci permettono di rappresentare più blocchi di dati con un singolo hash.
+\begin{wrapfigure}{r}{0.48\textwidth}
+    \vspace{-20pt}
+    \begin{center}
+      \includegraphics[width=0.4\textwidth]{mt1}
+    \end{center}
+    \vspace{-20pt}
+\end{wrapfigure}
 I Merkle Tree, nello specifico quelli binari, sono essenzialmente alberi binari
 in cui ogni foglia corrisponde all’hash di uno dei nostri elementi, risalendo verso la radice ogni
 nodo interno calcolerà il proprio hash concatenando gli hash dei nodi figli, infine si avrà
@@ -238,7 +280,7 @@ una radice (\textbf{Merkle Root} o MR) il cui hash è univoco a quella lista di 
 ha come foglie, in quella sequenza.
 Inoltre, utilizzando degli hash generati con una funzione crittografica “forte”, si ha
 un’assenza di collisioni tra le Merkle Root.
-Perciò sappiamo che, per una determinata sequenza di documenti, anche solo una
+Perciò sappiamo che, per una determinata sequenza di documenti i cui hash sono le foglie dell'albero, anche solo una
 piccola modfica ad un file causerebbe un cambiamento significativo, se non totale, della MR.
 
 Possiamo quindi capire che c’è stato un cambiamento, tuttavia per capire anche
@@ -260,3 +302,35 @@ Esso, con le librerie apposite per ogni linguaggio, permette un semplice e rapid
 di dati tra più applicativi e fornisce metodologie per la conversione di oggetti e collezioni
 di dati strutturati in stringhe da salvare in file e viceversa, un’alternativa ragionevole ai database
 per applicazioni che cercano di sviluppare architetture distribuite.
+Osserviamo e analizziamo un esempio di oggetto JSON:
+\begin{lstlisting}[language=json,firstnumber=1]
+{ "nome": "Mario",
+  "cognome": "Rossi",
+  "eta": 27,
+  "indirizzo": {
+    "indirizzoStradale": "Via Fasulla 123",
+    "citta": "Perugia"
+  },
+  "numeriTelefono": [
+    {
+      "tipo": "casa",
+      "numero": "212 555-1234"
+    },
+    {
+      "tipo": "ufficio",
+      "numero": "646 555-4567"
+    } ],
+  "figli": [],
+  "coniuge": null }
+\end{lstlisting}
+Possiamo osservare come ogni attributo e il suo valore vengano rappresentati come
+\[``key" = value \]
+dove il valore è circondato da due virgolette in caso sia una stringa (\textsf{riga 1})
+o da nulla in caso sia un tipo primitivo (\textsf{riga 3}).
+Un valore può inoltre essere anche un altro oggetto (\textsf{righe 4-7}), in questo caso
+vediamo come sia incluso tra parentesi graffe e segua poi al suo interno la sintassi che
+abbiamo appena osservato, o un array di valori semplici o oggetti (quest'ultimo alle \textsf{righe 8-16})
+andando ad inserire i valori tra parentesi quadre.
+È possibile anche rappresentare array vuoti (\textsf{riga 17}) con delle parentesi quadre senza
+contenuto e valori nulli (\textsf{riga 18}) con la parola chiave \textsf{null}.
+I valori vengono separati tra loro con una semplice virgola.
