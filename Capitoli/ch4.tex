@@ -245,7 +245,7 @@ Il calcolo di hash tramite altri hash è effettuato tramite dei piccoli Merkle T
 \label{sub:stage1}
 È possibile, alla vista della struttura del Merkle Calendar, aver pensato se fosse realmente
 necessario inserire l’ulteriore struttura dello Storage Group (Fig.~\ref{fi:SG}), se non si potesse,
-anziché andare ad inserire la Merkle Root dello SG nel BSP inserire direttamente
+anziché andare ad inserire la Merkle Root dello SG nel BSP, inserire direttamente
 l’hash di una singola Storage Unit, in modo da rendere ogni BSP proprio di una sola entità.
 
 Come si può notare infatti nella schematizzazione del Workflow e dell’Architettura
@@ -271,7 +271,7 @@ comprenderemo anche uno staging a priori di tale SU.
     } % end caption
     \label{fi:SG}
 \end{figure}
-
+ 
 \subsection{PineSU EC}
 
 Come visualizzabile in Fig.~\ref{fi:umlEC} il connettore per la blockchain, in questo caso specifico quello della rete Ethereum, è composto da una semplice classe che, con i suoi attributi che corrispondono ad un oggetto del modulo \textsf{web3.js}, i due indirizzi dei wallet e la chiave privata del primo, svolge le operazioni di effettuare una transazione e verificarne una precedente.

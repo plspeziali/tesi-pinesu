@@ -84,8 +84,8 @@ le loro repository solo attraverso client lightweight che interagiscono con il s
 per riuscire a compiere una qualsiasi operazione.
 Nel secondo caso ogni client ha una copia precisa della repository e del suo storico
 salvata localmente, i server sono coinvolti solo per effettuare sincronizzazioni
-di repository tra i vari client.
-\\ 
+di repository tra i vari client. 
+
 \label{sub:git}
 \textbf{Git}~\cite{git-21} è il sistema di controllo di versione distribuito più diffuso al mondo.
 Esso modella ogni repository come una \emph{sequenza} o \emph{flusso di snapshot} (istantanee)
@@ -192,12 +192,39 @@ Uno \textbf{Smart Contract} è essenzialmente un programma (una collezione di co
 funzioni e un insieme di dati) che risiede ad uno specifico indirizzo della blockchain 
 (quindi all’interno di uno o più blocchi), gli utilizzatori possono comunicare con loro 
 ed utilizzare le loro funzioni richiamando queste ultime tramite delle transazioni. 
-Con Ethereum è quindi possibile andare a creare vere e proprie applicazioni 
-(unendo Smart Contract con un’interfaccia utente) con vita propria all’interno della 
-\textbf{Ethereum Virtual Machine}, ovvero la grande macchina virtuale simulata andando 
-ad unire tutta la potenza computazionale messa a disposizione dagli utenti di Ethereum 
-e usando la blockchain come archivio di informazioni permanenti. 
+Con Ethereum è quindi possibile andare a creare vere e proprie applicazioni decentralizzate
+(unendo Smart Contract con un’interfaccia utente), chiamate \textbf{dapp},
+con vita propria all’interno della \textbf{Ethereum Virtual Machine}, ovvero
+la grande macchina virtuale simulata andando ad unire tutta la potenza computazionale
+messa a disposizione dagli utenti di Ethereum e usando la blockchain come archivio
+di informazioni permanenti. 
 
+Grazie alla nascita delle dapp si può azzardare ad andare a definire una nuova
+tipologia di web, diverso dal Web2 che conosciamo oggi ricco di contenuti generati
+dagli utenti ma su piattaforme centralizzate nella mani di poche aziende.
+Questo nuovo web, chiamato \textbf{Web3} ha lo scopo di creare una nuova
+esperienza di navigazione che permetta a chiunque sia in grado di connettersi
+alla rete Ethereum di partecipare al servizio e dove controllo centralizzato,
+censura e blocco dei pagamenti sono ormai concetti superati che non appartengono
+al grande network decentralizzato, purtroppo tutto ciò a scapito di costi elevati,
+spreco di risorse e di una limitata scalabilità, non è detto però che l’evoluzione
+di queste tecnologie non permetta di superare questi problemi.
+
+Un grande scoglio per gli sviluppatori di dapp è sicuramente la presenza
+delle \textbf{gas fee}, ovvero i dazi sul \textsf{gas}, l’unità di misura del
+lavoro computazionale che la EVM compie per svolgere determinate operazioni.
+Anche il semplice invio di denaro da un indirizzo a un altro o addirittura anche
+solo di un messaggio, poiché implica la creazione di un blocco nella blockchain,
+comporta il dovuto pagamento di una tassa. Nel caso di un messaggio registrato in
+una transazione, più il messaggio sarà lungo, più la tassa da pagare sarà alta.
+L’esistenza delle fee è praticamente obbligata per come la blockchain è strutturata:
+il costringere al pagamento ogni qual volta si vuol creare un nuovo blocco rende
+la struttura incredibilmente meno vulnerabile allo spamming di nuovi blocchi da
+parte di cicli infiniti malevoli o accidentali.
+Ciò implica che ogni volta che una dapps vorrà andare a registrare un dato sulla
+blockchain qualcuno dovrà pagare affinché ciò accada. 
+
+\section{Node.js}
 
 \section{Accumulatori crittografici e Merkle Tree}
 \label{sub:mt}
