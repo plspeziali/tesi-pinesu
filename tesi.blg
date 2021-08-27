@@ -5,36 +5,37 @@ Reallocating 'name_of_file' (item size: 1) to 7 items.
 The style file: ieeetr.bst
 Reallocating 'name_of_file' (item size: 1) to 13 items.
 Database file #1: bibliografia.bib
-You've used 13 entries,
+Warning--I didn't find a database entry for "vcs2"
+You've used 12 entries,
             1876 wiz_defined-function locations,
-            530 strings with 4786 characters,
-and the built_in function-call counts, 1740 in all, are:
-= -- 169
-> -- 52
+            527 strings with 4687 characters,
+and the built_in function-call counts, 1608 in all, are:
+= -- 156
+> -- 48
 < -- 0
-+ -- 26
-- -- 13
-* -- 54
-:= -- 260
-add.period$ -- 26
-call.type$ -- 13
-change.case$ -- 13
++ -- 24
+- -- 12
+* -- 50
+:= -- 241
+add.period$ -- 24
+call.type$ -- 12
+change.case$ -- 12
 chr.to.int$ -- 0
-cite$ -- 13
-duplicate$ -- 52
-empty$ -- 235
-format.name$ -- 13
-if$ -- 443
+cite$ -- 12
+duplicate$ -- 48
+empty$ -- 217
+format.name$ -- 12
+if$ -- 409
 int.to.chr$ -- 0
-int.to.str$ -- 13
+int.to.str$ -- 12
 missing$ -- 0
-newline$ -- 55
-num.names$ -- 13
-pop$ -- 91
+newline$ -- 51
+num.names$ -- 12
+pop$ -- 84
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 38
+skip$ -- 35
 stack$ -- 0
 substring$ -- 0
 swap$ -- 0
@@ -43,6 +44,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 13
-width$ -- 15
-write$ -- 119
+while$ -- 12
+width$ -- 14
+write$ -- 110
+(There was 1 warning)
