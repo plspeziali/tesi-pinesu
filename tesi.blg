@@ -8,16 +8,16 @@ Database file #1: bibliografia.bib
 Warning--I didn't find a database entry for "vcs2"
 You've used 13 entries,
             1876 wiz_defined-function locations,
-            532 strings with 4879 characters,
-and the built_in function-call counts, 1786 in all, are:
-= -- 171
+            533 strings with 4917 characters,
+and the built_in function-call counts, 1797 in all, are:
+= -- 174
 > -- 59
 < -- 0
 + -- 28
 - -- 15
 * -- 61
-:= -- 268
-add.period$ -- 26
+:= -- 270
+add.period$ -- 27
 call.type$ -- 13
 change.case$ -- 12
 chr.to.int$ -- 0
@@ -25,13 +25,13 @@ cite$ -- 13
 duplicate$ -- 57
 empty$ -- 237
 format.name$ -- 15
-if$ -- 453
+if$ -- 456
 int.to.chr$ -- 0
 int.to.str$ -- 13
 missing$ -- 2
-newline$ -- 55
+newline$ -- 56
 num.names$ -- 13
-pop$ -- 90
+pop$ -- 89
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
@@ -46,5 +46,5 @@ type$ -- 0
 warning$ -- 0
 while$ -- 13
 width$ -- 15
-write$ -- 119
+write$ -- 121
 (There was 1 warning)

@@ -329,15 +329,40 @@ essa tramite il client Git installato sulla macchina.
     \label{fi:umlGC}
 \end{figure}
 
+\newpage
+
 \subsection{PineSU SM}
 \label{sub:sm}
-Lo Smart Comtract (\autoref{sub:smp}) di PineSU è necessario
+Lo Smart Contract (\autoref{sub:bc}) di PineSU è necessario
 per poter effettuare registrazioni “forti”, ovvero andare a salvare su blockchain
 che una determinata SU è stata chiusa in modo da evitare che delle eventuali manomissioni
 cerchino di chiuderla nuovamente (ricordiamo che una SU chiusa implica un'impossibilità di modifica e ricalcolo).
 Questo modulo è presente solamente in caso si vadano ad utilizzare blockchain di criptovalute che
 supportano la presenza di Smart Contract, nel nostro caso, con Ethereum, siamo a posto.
-PineSU SM non è tutt'ora implementato ed è destinato a sviluppi futuri (\autoref{cap:sf}).
+PineSU SM non è tutt'ora implementato interamente ed è destinato a sviluppi futuri (\autoref{cap:sf}),
+possiamo tuttavia analizzarne una versione alpha, scritta in linguaggio \textbf{Solidity}, 
+che non si discosterà probabilmente poi molto da quella che verrà implementata.
+
+\vspace{\baselineskip}
+
+\begin{lstlisting}[language=Solidity]
+contract SURegistry {
+
+    string StorageUnit;
+    mapping(uint => string) public registry;
+    uint public SUCount;
+
+    function addSU(string memory hashSU) public {
+        SUCount++;
+        registry[SUCount] = hashSU;
+    }
+
+}
+\end{lstlisting}
+Vediamo come si tratta di una semplice funzione che, data in input una stringa
+che corrisponde all'hash di una SU, lo salva nel suo registro, che altro non è che una
+lista degli hash delle SU chiuse. Gli hash di questa lista vengono salvati in nuovi
+blocchi della blockchain.
 
 \newpage
 
