@@ -21,12 +21,12 @@ di qualsiasi lunghezza il risultato dovrà avere sempre una lunghezza di \(b\) b
 a priori, infine deve essere \emph{uniforme}, ovvero i suoi output dovrebbero essere
 uniformemente distribuiti nel codominio della funzione.
 Una stringa di hash, essendo una sequenza binaria, può essere rappresentata in molti modi,
-nell’ambito di questo documento presenteremo i vari hash come stringhe esadecimali.
+nell'ambito di questo documento presenteremo i vari hash come stringhe esadecimali.
 
 Mentre una funzione di hash classica è tranquillamente utilizzabile per situazioni
 in cui non è necessaria una particolare sicurezza nel proteggere le caratteristiche
 delle preimmagine, ragion per cui si può decidere, nel progettarla, di prestare più
-attenzione verso la sua rapidità d’esecuzione che altro, quando si ha bisogno che le
+attenzione verso la sua rapidità d'esecuzione che altro, quando si ha bisogno che le
 informazioni in input rimangano nascoste e si necessita di una maggior sicurezza a scapito
 della velocità si ricorre alle \textbf{funzioni crittografiche di hash}.
 
@@ -34,7 +34,7 @@ Una funzione crittografica di hash ha le stesse caratteristiche di una funzione 
 hash normale ma aggiunge delle proprietà che deve seguire per poter essere considerata
 \emph{crittograficamente sicura}, i valori della sua lunghezza b sono tipicamente
 128, 256 e 512, si va quindi ad ottenere degli output potenzialmente molto più lunghi
-e che non sembrano adatti alle implementazioni all’interno di semplici strutture dati
+e che non sembrano adatti alle implementazioni all'interno di semplici strutture dati
 per cui le classiche funzioni di hash sono designate.
 
 Le proprietà che permettono di definire una funzione crittografica di hash come sicura sono:
@@ -47,18 +47,18 @@ Le proprietà che permettono di definire una funzione crittografica di hash come
     difficile che i due messaggi abbiano lo stesso hash, quindi con \(h(m_1) = h(m_2)\).
 \end{enumerate}
 Queste proprietà ci permettono di arrivare a concludere che una funzione crittografica di
-hash effettua un’operazione unidirezionale: non è possibile (o perlomeno non dovrebbe esserlo),
+hash effettua un'operazione unidirezionale: non è possibile (o perlomeno non dovrebbe esserlo),
 partendo dal singolo hash, risalire alla preimmagine. \\
 Per riuscire a mantenere tali proprietà la funzione, durante la fase di generazione
-dell’output, effettua diverse e differenti operazioni sulla preimmagine
-che fanno si che anche un solo minuscolo cambiamento all’input generi
-un \emph{effetto valanga} sull’output, cambiando radicalmente, se non completamente,
-l’hash generato.
+dell'output, effettua diverse e differenti operazioni sulla preimmagine
+che fanno si che anche un solo minuscolo cambiamento all'input generi
+un \emph{effetto valanga} sull'output, cambiando radicalmente, se non completamente,
+l'hash generato.
 
 Le funzioni crittografiche di hash vengono utilizzate in moltissime implementazioni
-nell’ambito della cybersecurity come la verifica di password, la generazione e
-validazione di firme digitali e la \textbf{verifica d’integrità di file}.
-Quest’ultima assume un’importanza fondamentale anche nel nostro caso: queste funzioni
+nell'ambito della cybersecurity come la verifica di password, la generazione e
+validazione di firme digitali e la \textbf{verifica d'integrità di file}.
+Quest'ultima assume un'importanza fondamentale anche nel nostro caso: queste funzioni
 ci permettono di capire se, dati due file, il loro contenuto è identico senza
 la necessità di effettuare alcun controllo byte per byte in quanto produrranno
 lo stesso valore di hash, in questo modo possiamo anche capire se un file,
@@ -74,9 +74,9 @@ Un \textbf{Version Control System}~\cite{vcs1} (o anche VCS), in italiano “sis
 il controllo e la tracciabilità dei cambiamenti riguardanti determinati file e directory
 lungo un lasso di tempo e che permette agli utenti di recuperare rapidamente specifiche
 versioni dei loro documenti. Gli insiemi di file e cartelle gestite da questi sistemi
-sono suddivisi in \textbf{repository}, esse vengono trattate l’una isolata dalle altre.
+sono suddivisi in \textbf{repository}, esse vengono trattate l'una isolata dalle altre.
 Spesso si considera una intera directory di lavoro, con il suo contenuto,
-un’unica repository, potendo però scegliere di escludere alcune risorse.
+un'unica repository, potendo però scegliere di escludere alcune risorse.
 Un VCS può essere centralizzato o distribuito~\cite{vcs2}.
 Nel primo caso è il server centrale che tiene traccia dei cambiamenti e che mantiene e
 distribuisce la versione più recente delle risorse richieste, gli utenti possono gestire
@@ -90,29 +90,29 @@ di repository tra i vari client.
 \textbf{Git}~\cite{git-21} è il sistema di controllo di versione distribuito più diffuso al mondo.
 Esso modella ogni repository come una \emph{sequenza} o \emph{flusso di snapshot} (istantanee)
 di un piccolo file system. Ogni volta che un utente salva lo stato del suo progetto
-(tramite l’operazione di \emph{commit}) Git crea uno snapshot di tutti i file e le directory
+(tramite l'operazione di \emph{commit}) Git crea uno snapshot di tutti i file e le directory
 sotto controllo di versione in quel momento e la archivia nel suo database locale, ogni
-file modificato dall’ultimo commit viene incluso nell’ultimo snapshot, mentre i file che
+file modificato dall'ultimo commit viene incluso nell'ultimo snapshot, mentre i file che
 non sono stati modificati non vengono inclusi se non con un collegamento alla loro versione identica
 nel commit precedente, in modo da evitare alcuna duplicazione non necessaria.
 Ogni risorsa in una repository è identificata internamente dal suo hash (\autoref{sub:hash}) e non dal suo nome,
 questo permette a Git di individuare efficientemente i cambiamenti nei file.
 Inoltre, quasi ogni operazione di Git va ad aggiungere informazioni al suo database, anche se si tratta
-di un’operazione di rimozione, ciò assicura che ogni cambiamento sia reversibile.
+di un'operazione di rimozione, ciò assicura che ogni cambiamento sia reversibile.
 
 Ogni file in una directory assume uno dei questi due stati:
 \emph{untracked} (non tracciato) o \emph{tracked} (tracciato).
 Un file è \emph{untracked} se non è stato mai aggiunto ad una repository o se è stato
 aggiunto ma poi rimosso dalla lista dei file tracciati (comando \textsf{rm}).
-Un file \emph{tracked}, ovvero l’esatto opposto di un \emph{untracked}, può assumere a sua volta uno di questi tre
+Un file \emph{tracked}, ovvero l'esatto opposto di un \emph{untracked}, può assumere a sua volta uno di questi tre
 stati: \emph{unmodified} (non modificato o \emph{committed}), \emph{modified} (modificato) e \emph{staged}.
 Un file \emph{tracked} è \emph{unmodified} quando coincide con la sua ultima versione nel database.
 Se qualsiasi cambiamento avviene, diventa \emph{modified}.
-Per diventare \emph{staged} è necessario che l’utente utilizzi su di lui il comando \textsf{add},
+Per diventare \emph{staged} è necessario che l'utente utilizzi su di lui il comando \textsf{add},
 in questo modo esso viene viene inserito (o aggiornato se era già presente) nella \emph{staging area}
 (o \emph{index}) della repository, essa contiene tutti i file tracciati della repository con una flag
-che indica se sono stati modificati o meno dall’ultimo snapshot.
-L’operazione di \emph{commit} (comando \textsf{commit}) crea un nuovo snapshot che incorpora
+che indica se sono stati modificati o meno dall'ultimo snapshot.
+L'operazione di \emph{commit} (comando \textsf{commit}) crea un nuovo snapshot che incorpora
 tutti i cambiamenti specificati nella staging area e lo immagazzina nel suo database locale.
 A questo punto la staging area verrà ripulita (\emph{cleaned}).
 Gli utenti Git possono condividere informazioni e collaborare tra di loro tramite repository remote
@@ -126,7 +126,7 @@ Il comando \textsf{fetch} permette di scaricare le risorse di un progetto remoto
 presenti in quello locale, senza però andare a modificare i file già presenti
 applicando eventuali modifiche.
 Il comando \textsf{pull} è simile a \textsf{fetch}, eccetto che tenta di eseguire una fusione
-automatica del file remoto e del file locale applicando a quest’ultimo le modifiche più recenti.
+automatica del file remoto e del file locale applicando a quest'ultimo le modifiche più recenti.
 Infine, il comando \textsf{push} consente di inviare ogni nuovo commit locale al sevrer remoto,
 in modo da mantenerli sincronizzati.
 
@@ -136,24 +136,24 @@ in modo da mantenerli sincronizzati.
 Non esiste una definizione formalizzata e universalmente condivisa di cosa è la
 \textbf{blockchain}, possiamo però tentare di definirla come una lista in continua 
 crescita di record, chiamati blocchi, collegati utilizzando metodi crittografici: 
-ogni blocco contiene l’hash corrispondente al blocco precedente, un timestamp e i 
+ogni blocco contiene l'hash corrispondente al blocco precedente, un timestamp e i 
 dati riguardanti una transazione. 
 La \emph{chain}, ovvero la catena, è formata grazie alla presenza del riferimento 
-crittografico verso il blocco precedente che si trova all’interno di ogni blocco, 
-ciò rende tale catena di blocchi immutabile: il cambiamento dei dati all’interno di 
+crittografico verso il blocco precedente che si trova all'interno di ogni blocco, 
+ciò rende tale catena di blocchi immutabile: il cambiamento dei dati all'interno di 
 un blocco andrebbe a far mutare il suo riferimento crittografico, invalidando così la catena.
-La blockchain non è immagazzinata all’interno di una singola unità o insieme di 
+La blockchain non è immagazzinata all'interno di una singola unità o insieme di 
 unità centrali, bensì è distribuita, condivisa e aggiornata tra varie macchine 
-all’interno di una rete.
+all'interno di una rete.
 Nella letteratura scientifica la blockchain è infatti considerata un \textbf{DLT} ~\cite{asv-bdg-19},
 Distributed Ledger Technology (Tecnologia di Libro Mastro Distribuito), ovvero
-un’infrastruttura unita a dei protocolli che permettono a dei computer locati in
+un'infrastruttura unita a dei protocolli che permettono a dei computer locati in
 posizioni differenti di proporre e validare transazioni e aggiornare record in maniera
 sincronizzata all'interno della rete.
 
 Una transazione, i cui dati sono contenuti all'interno dei blocchi, non è 
-altro che un’azione compiuta da parte di un account della rete (i.e. Bob) nei confronti 
-di un altro account (i.e. Alice), un esempio classico è l’invio di una quantità di moneta 
+altro che un'azione compiuta da parte di un account della rete (i.e. Bob) nei confronti 
+di un altro account (i.e. Alice), un esempio classico è l'invio di una quantità di moneta 
 virtuale, a quel punto verrà registrata come transazione che il portafoglio o \emph{wallet}
 di Bob è in debito di tale quantità nei confronti del portafoglio di Alice.
 Possiamo quindi concludere che una transazione altro non è che la registrazione di proprietà 
@@ -162,17 +162,17 @@ di un asset, ovvero un elemento, digitale e non, avente valore.
 La nascita della blockchain è infatti dovuta alla necessità di avere un “libro mastro” per 
 Bitcoin, un registro che tenesse traccia delle transazioni e che impedisse il fenomeno della 
 \emph{doppia spesa}, ovvero ciò che si verifica quando uno stesso titolo valutario viene speso 
-due o più volte. Mentre questo fenomeno è controllato in un’economia tradizionale dagli 
-istituti finanziari centrali, nell’ambito delle monete digitali distribuite a prendersi 
+due o più volte. Mentre questo fenomeno è controllato in un'economia tradizionale dagli 
+istituti finanziari centrali, nell'ambito delle monete digitali distribuite a prendersi 
 in carico di effettuare questo controllo fondamentale è la blockchain con il suo 
 meccanismo di consenso \emph{Proof-of-Work} 
 (meccanismo adottato nella blockchain di Bitcoin, 
 ne esistono altri come il \emph{Proof-of-Stake} che sta venendo adottato da Ethereum).
 
-La Proof-of-Work è l’algoritmo di consenso che detta le regole per 
+La Proof-of-Work è l'algoritmo di consenso che detta le regole per 
 la conferma di transazioni e la produzione di nuovi blocchi della catena: 
 per poter aggiungere un blocco è infatti necessario risolvere un complesso 
-enigma per cui viene richiesta un’alta potenza computazionale, i \emph{miner} 
+enigma per cui viene richiesta un'alta potenza computazionale, i \emph{miner} 
 o minatori mettono a disposizione le proprie macchine per poter risolvere tale 
 enigma in cambio di una ricompensa nella moneta virtuale di tale rete.
 Più una catena è lunga, più lavoro computazionale è stato svolto per produrla e 
@@ -182,10 +182,10 @@ perché un lavoro di manomissione sarebbe a quel punto incredibilmente difficolt
 Vediamo quindi come, nonostante le limitazioni e gli sprechi di risorse che un sistema 
 distribuito come la blockchain ha per sua natura, si ha il grande vantaggio 
 di un registro condiviso in cui possiamo fidarci della parola di numerosissime 
-entità che ne usufruiscono anzichè di un’unica entità centrale.
+entità che ne usufruiscono anzichè di un'unica entità centrale.
 
 \label{sub:eth}
-Mentre reti come quella Bitcoin a poco si prestano oltre al gestire l’omonima moneta virtuale, 
+Mentre reti come quella Bitcoin a poco si prestano oltre al gestire l'omonima moneta virtuale, 
 troviamo altre reti in cui si è pensato di aggiungere molte più funzionalità.
 Una di queste è \textbf{Ethereum}, una rete che trascende il concetto di semplice rete 
 per criptovaluta (in questo caso \textbf{Ether} andando a creare una piattaforma 
@@ -195,11 +195,11 @@ che gli si possa presentare): Solidity e Vyper.
 
 Uno \textbf{Smart Contract} è essenzialmente un programma (una collezione di codice che descrive 
 funzioni e un insieme di dati) che risiede ad uno specifico indirizzo della blockchain 
-(quindi all’interno di uno o più blocchi), gli utilizzatori possono comunicare con loro 
+(quindi all'interno di uno o più blocchi), gli utilizzatori possono comunicare con loro 
 ed utilizzare le loro funzioni richiamando queste ultime tramite delle transazioni. 
 Con Ethereum è quindi possibile andare a creare vere e proprie applicazioni decentralizzate
-(unendo Smart Contract con un’interfaccia utente), chiamate \textbf{dapp},
-con vita propria all’interno della \textbf{Ethereum Virtual Machine}, ovvero
+(unendo Smart Contract con un'interfaccia utente), chiamate \textbf{dapp},
+con vita propria all'interno della \textbf{Ethereum Virtual Machine}, ovvero
 la grande macchina virtuale simulata andando ad unire tutta la potenza computazionale
 messa a disposizione dagli utenti di Ethereum e usando la blockchain come archivio
 di informazioni permanenti. 
@@ -212,17 +212,17 @@ esperienza di navigazione che permetta a chiunque sia in grado di connettersi
 alla rete Ethereum di partecipare al servizio e dove controllo centralizzato,
 censura e blocco dei pagamenti sono ormai concetti superati che non appartengono
 al grande network decentralizzato, purtroppo tutto ciò a scapito di costi elevati,
-spreco di risorse e di una limitata scalabilità, non è detto però che l’evoluzione
+spreco di risorse e di una limitata scalabilità, non è detto però che l'evoluzione
 di queste tecnologie non permetta di superare questi problemi.
 
 Un grande scoglio per gli sviluppatori di dapp è sicuramente la presenza
-delle \textbf{gas fee}, ovvero i dazi sul \textsf{gas}, l’unità di misura del
+delle \textbf{gas fee}, ovvero i dazi sul \textsf{gas}, l'unità di misura del
 lavoro computazionale che la EVM compie per svolgere determinate operazioni.
 Anche il semplice invio di denaro da un indirizzo a un altro o addirittura anche
 solo di un messaggio, poiché implica la creazione di un blocco nella blockchain,
 comporta il dovuto pagamento di una tassa. Nel caso di un messaggio registrato in
 una transazione, più il messaggio sarà lungo, più la tassa da pagare sarà alta.
-L’esistenza delle fee è praticamente obbligata per come la blockchain è strutturata:
+L'esistenza delle fee è praticamente obbligata per come la blockchain è strutturata:
 il costringere al pagamento ogni qual volta si vuol creare un nuovo blocco rende
 la struttura incredibilmente meno vulnerabile allo spamming di nuovi blocchi da
 parte di cicli infiniti malevoli o accidentali.
@@ -231,9 +231,9 @@ blockchain qualcuno dovrà pagare affinché ciò accada.
 
 \section{Node.js}
 
-\textbf{Node.js} è un ambiente di run-time, ovvero che supporta l’esecuzione di
+\textbf{Node.js} è un ambiente di run-time, ovvero che supporta l'esecuzione di
 software nonostante non faccia parte del sistema operativo, open source e cross
-platform per l’esecuzione di codice in linguaggio Javascript.
+platform per l'esecuzione di codice in linguaggio Javascript.
 
 \textbf{Javascript} è un linguaggio di programmazione ad alto livello,
 spesso con compilazione \emph{Just In Time} e a multi-paradigma: supporta infatti diversi
@@ -243,18 +243,18 @@ Inizialmente limitato alla sola esecuzione lato client su browser,
 la sua crescita in popolarità, complice la sua versatilità, facilità
 di apprendimento e la sua sintassi molto simile a C e Java, ha portato
 allo sviluppo anche di ambienti esterni su cui poter eseguire codice lato server
-e standalone, come il sopracitato Node.js, il quale si basa infatti sull’interprete
+e standalone, come il sopracitato Node.js, il quale si basa infatti sull'interprete
 Javascript V8, sviluppato da Google per il suo Chrome e dalle prestazioni elevate.
 
 Node.js rappresenta a tutti gli effetti non solo un motore per Javascript server-side,
-ma un’implementazione del paradigma \emph{Javascript everywhere}, riuscendo ad unire
+ma un'implementazione del paradigma \emph{Javascript everywhere}, riuscendo ad unire
 tutte le componenti di una qualsiasi applicazione, web e non, sotto un unico linguaggio.
 
 Le applicazioni Node.js vengono eseguite in un singolo processo, senza la creazione di
-nuovi thread per ogni richiesta, quando deve essere eseguita un’operazione di I/O,
+nuovi thread per ogni richiesta, quando deve essere eseguita un'operazione di I/O,
 come una lettura o scrittura nella rete, un accesso a un database o a un file system,
 anziché bloccare il thread e sprecare cicli della CPU facendola attendere, Node.js
-interrompe il processo e riprende le sue funzioni non appena l’operazione I/O termina,
+interrompe il processo e riprende le sue funzioni non appena l'operazione I/O termina,
 questo permette a un server con ambiente Node.js di gestire efficientemente moltissime
 connessioni in concorrenza senza che il programmatore debba preoccuparsi di gestire
 alcuna concorrenza tra thread differenti.
@@ -279,22 +279,22 @@ ci permettono di rappresentare più blocchi di dati con un singolo hash.
     \vspace{-20pt}
 \end{wrapfigure}
 I Merkle Tree, nello specifico quelli binari, sono essenzialmente alberi binari
-in cui ogni foglia corrisponde all’hash di uno dei nostri elementi, risalendo verso la radice ogni
+in cui ogni foglia corrisponde all'hash di uno dei nostri elementi, risalendo verso la radice ogni
 nodo interno calcolerà il proprio hash concatenando gli hash dei nodi figli, infine si avrà
-una radice (\textbf{Merkle Root} o MR) il cui hash è univoco a quella lista di elementi che l’albero
+una radice (\textbf{Merkle Root} o MR) il cui hash è univoco a quella lista di elementi che l'albero
 ha come foglie, in quella sequenza.
 Inoltre, utilizzando degli hash generati con una funzione crittografica “forte”, si ha
-un’assenza di collisioni tra le Merkle Root.
+un'assenza di collisioni tra le Merkle Root.
 Perciò sappiamo che, per una determinata sequenza di documenti i cui hash sono le foglie dell'albero, anche solo una
 piccola modfica ad un file causerebbe un cambiamento significativo, se non totale, della MR.
 
-Possiamo quindi capire che c’è stato un cambiamento, tuttavia per capire anche
+Possiamo quindi capire che c'è stato un cambiamento, tuttavia per capire anche
 quale dei documenti è stato cambiato bisogna ricorrere al concetto di \textbf{Merkle Proof}.
 Per effettuare una verifica tramite Merkle Proof sono tre gli elementi necessari:
 \begin{enumerate}
-    \item L’elemento (foglia) che vogliamo verificare
+    \item L'elemento (foglia) che vogliamo verificare
     \item La Merkle Root
-    \item La Merkle Proof, ovvero la lista degli hash dei fratelli lungo il cammino dall’elemento alla matrice
+    \item La Merkle Proof, ovvero la lista degli hash dei fratelli lungo il cammino dall'elemento alla matrice
 \end{enumerate}
 Andando a svolgere questa verifica su ogni documento riusceremo ad individuare i file modificati come
 quelli per cui non è possibile ricostruire il cammino verso la radice lasciandola inalterata.
@@ -305,7 +305,7 @@ Il JavaScript Object Notation (\textbf{JSON})~\cite{json} è un semplice formato
 facile da interpretare e capire sia per i vari linguaggi di programmazione che per gli esseri umani.
 Esso, con le librerie apposite per ogni linguaggio, permette un semplice e rapido scambio
 di dati tra più applicativi e fornisce metodologie per la conversione di oggetti e collezioni
-di dati strutturati in stringhe da salvare in file e viceversa, un’alternativa ragionevole ai database
+di dati strutturati in stringhe da salvare in file e viceversa, un'alternativa ragionevole ai database
 per applicazioni che cercano di sviluppare architetture distribuite.
 Osserviamo e analizziamo un esempio di oggetto JSON:
 \begin{lstlisting}[language=json,firstnumber=1]

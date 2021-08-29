@@ -13,14 +13,14 @@ come ben sappiamo, la spinta involontaria
 di miliardi di individui verso metodi tecnologici capaci di assicurare continuità alle proprie
 attività lavorative e didattiche nonché utili a fronteggiare le proprie esigenze personali.
 Le aziende, sia pubbliche che private, sono state così costrette a reinventare il proprio modo
-di lavorare, sia nell’organizzazione del lavoro subordinato che nel modo in cui si rapportano
+di lavorare, sia nell'organizzazione del lavoro subordinato che nel modo in cui si rapportano
 con terze parti, che siano clienti, utenti o altre aziende. Tuttavia è stato un processo poco
 uniforme che ha lasciato molti elementi ancora in forma mista,
 uno tra tutti la componente burocratica. 
 La burocrazia non è un problema semplice e non si può affrontare con una veloce
 scannerizzazione in formato PDF o con una produzione diretta
-in formato elettronico, molti di questi documenti hanno infatti un’importanza notevole
-all’interno dell’azienda e, in molti casi, anche valenza legale, bisogna perciò essere
+in formato elettronico, molti di questi documenti hanno infatti un'importanza notevole
+all'interno dell'azienda e, in molti casi, anche valenza legale, bisogna perciò essere
 estremamente sicuri che le informazioni scritte su questi documenti
 non vengano manomesse o corrotte.
 
@@ -34,43 +34,43 @@ di alto livello.
 Le tecnologie principali per la gestione delle informazioni e della loro autenticità
 si basano sui due paradigmi di progettazione: centralizzata e distribuita.
 La prima si basa essenzialmente sulla concentrazione dei dati, e quindi del potere,
-nelle mani di un’unità centrale, ciò può essere sicuramente vantaggioso dal punto di
+nelle mani di un'unità centrale, ciò può essere sicuramente vantaggioso dal punto di
 vista della rapidità dello svolgimento delle operazioni e del consumo di risorse
 (sia computazionali, sia di archiviazione, sia energetiche) ma se stiamo parlando di
 sicurezza e fiducia è naturale avere qualche perplessità, non solo stiamo immagazzinando
 informazioni critiche in un database centralizzato, potenzialmente vulnerabile ad attacchi
-e perdita di dati, ma stiamo anche fornendo tali informazioni a un’entità di cui sarà
+e perdita di dati, ma stiamo anche fornendo tali informazioni a un'entità di cui sarà
 necessario avere una totale fiducia per quanto riguarda il corretto mantenimento dei
 nostri dati. \\
 Complementarmente, il secondo paradigma, ovvero quello distribuito, si basa
 su una rete di sistemi interconnessi su cui le informazioni vengono replicate e sincronizzate
-in maniera reciproca, il tutto senza la necessità di un’entità centrale.
+in maniera reciproca, il tutto senza la necessità di un'entità centrale.
 Questa seconda soluzione è sicuramente più lenta, più costosa e più inefficiente,
-ma tuttavia più sicura in quanto l’autenticità dell’informazione registrata non è sostenuta
-da un’unica unità ma da una moltitudine, così facendo è molto più complicato che si
+ma tuttavia più sicura in quanto l'autenticità dell'informazione registrata non è sostenuta
+da un'unica unità ma da una moltitudine, così facendo è molto più complicato che si
 manifestino attacchi o una manomissioni o, perlomeno, che restino inosservati. 
 
 Tra le tecnologie distribuite, \textbf{Git} è sicuramente lo standard de facto per la condivisione
 e il tracciamento delle modifiche di insiemi di file ed è uno strumento essenziale per
 gli sviluppatori di software sia indipendenti che facenti parte di grandi progetti.
-Tuttavia, oltre all’essere uno strumento il cui utilizzo è estremamente raro tra chi
-non scrive codice informatico a causa della sua natura poco orientata verso l’utente medio,
+Tuttavia, oltre all'essere uno strumento il cui utilizzo è estremamente raro tra chi
+non scrive codice informatico a causa della sua natura poco orientata verso l'utente medio,
 soffre anche della mancanza di una funzione per la protezione, registrazione e controllo
-d’integrità dei propri insiemi di file. Queste lacune esistono perché Git non è un software
+d'integrità dei propri insiemi di file. Queste lacune esistono perché Git non è un software
 che si è mai posto obiettivi del genere, tuttavia si può pensare ad un applicativo che,
 utilizzando proprio Git, si pone questi obiettivi, dopotutto una funzione che permette
-la verifica di insiemi di file tramite un’architettura distribuita e un’interfaccia più
+la verifica di insiemi di file tramite un'architettura distribuita e un'interfaccia più
 semplice da usare sono due aspetti che potrebbero rendere questa applicazione un potente
 strumento per venire in soccorso alla necessità di digitalizzazione della burocrazia.
 Rimane però il dilemma di come poter memorizzare le informazioni necessarie alla verifica 
-dei documenti utilizzando strutture distribuite, ed è qui che ci viene d’aiuto la giovanissima 
+dei documenti utilizzando strutture distribuite, ed è qui che ci viene d'aiuto la giovanissima 
 tecnologia della \textbf{blockchain}.
 La blockchain, tramite i suoi meccanismi di registrazione e consenso, è una soluzione ideale
-per i problemi di verifica d’integrità nel mondo digitale: la natura plurale e democratica
+per i problemi di verifica d'integrità nel mondo digitale: la natura plurale e democratica
 di questa tecnologia ci riporta sempre al paragone iniziale tra le architetture e ci
 fa arrivare di conseguenza alla medesima conclusione. Per quanto possa essere efficiente
 una struttura centralizzata essa non ci darà mai la sicurezza che una struttura distribuita
-con regole ferree come la blockchain può darci, anche a costo di dover spendere un po’ di più.
+con regole ferree come la blockchain può darci, anche a costo di dover spendere un po' di più.
 
 
 Dato il problema esposto e le tecnologie presentate, in questo documento andremo a
@@ -79,9 +79,9 @@ proprio grazie a Git e alla blockchain, \textbf{PineSU}.
 
 Il resto della tesi sarà strutturata come segue:
 \begin{itemize}
-    \item Capitolo 2 - \textbf{Concetti preliminari}: Verranno approfondite le tecnologie menzionate nell’introduzione e presentate altre che hanno permesso una corretta ed efficiente implementazione
-    \item Capitolo 3 - \textbf{Il Problema e l’Obiettivo}: Verrà formalizzato il problema che andremo ad affrontare e spiegate alcune delle problematiche implementative e come sono state superate
-    \item Capitolo 4 - \textbf{Il Software PineSU}: Verranno presentati l’effettiva implementazione, architettura e workflow del software realizzato
-    \item Capitolo 5 - \textbf{Dimostrazioni d’uso per il fine preposto}: Esempio pratico del funzionamento del software tramite alcuni esempi che rappresentano situazioni similari a quelle in cui l’utente potrà trovarsi utilizzandolo
+    \item Capitolo 2 - \textbf{Concetti preliminari}: Verranno approfondite le tecnologie menzionate nell'introduzione e presentate altre che hanno permesso una corretta ed efficiente implementazione
+    \item Capitolo 3 - \textbf{Il Problema e l'Obiettivo}: Verrà formalizzato il problema che andremo ad affrontare e spiegate alcune delle problematiche implementative e come sono state superate
+    \item Capitolo 4 - \textbf{Il Software PineSU}: Verranno presentati l'effettiva implementazione, architettura e workflow del software realizzato
+    \item Capitolo 5 - \textbf{Dimostrazioni d'uso per il fine preposto}: Esempio pratico del funzionamento del software tramite alcuni esempi che rappresentano situazioni similari a quelle in cui l'utente potrà trovarsi utilizzandolo
     \item Capitolo 6 - \textbf{Conclusioni e Sviluppi futuri}: Si riassumono gli obiettivi raggiunti, alcune criticità e potenziali sviluppi futuri.
 \end{itemize}

@@ -1,38 +1,38 @@
 \label{cap:sf}
-Abbiamo potuto osservare come, grazie all’implementazione del software descritto,
+Abbiamo potuto osservare come, grazie all'implementazione del software descritto,
 sia possibile andare a soddisfare tutti gli obiettivi che ci eravamo preposti:
-l’applicativo riesce infatti a garantire un’esperienza user-friendly andando ad 
-accompagnare l’utente nella 
+l'applicativo riesce infatti a garantire un'esperienza user-friendly andando ad 
+accompagnare l'utente nella 
 creazione, gestione, registrazione permanente e verifica di insiemi di documenti,
 il tutto sfruttando in maniera efficace ed efficiente Git e la blockchain di Ethereum,
 due tecnologie che, data la comune natura distribuita e le loro funzionalità,
 sono perfette per questo ruolo.
 
-PineSU può infatti vantare, grazie all’implementazione di strutture dati salvate
+PineSU può infatti vantare, grazie all'implementazione di strutture dati salvate
 su descrittori JSON e metadati e grazie al collegamento remoto esclusivo per la blockchain
-e per eventuali repository Git remote scelte dall’utente, una struttura totalmente
+e per eventuali repository Git remote scelte dall'utente, una struttura totalmente
 decentralizzata e resistente ad attacchi informatici e manomissioni di dati,
 finché continuerà ad esistere la rete nella cui blockchain si sono registrate
-le Storage Unit, quest’ultime potranno essere verificate.
+le Storage Unit, quest'ultime potranno essere verificate.
 Il progetto ha già subito diverse revisioni e riscritture e si trova ora in uno
 stato ben definito e molto fedele alla descrizione fornita
 (tralasciando alcuni dettagli implementativi poco importanti), tuttavia,
 nonostante sia un programma
 decisamente completo sotto il punto di vista delle funzionalità, almeno per ciò che
 avevamo progettato di realizzare, sono presenti alcuni aspetti su cui si potrebbe
-ancora lavorare per rendere l’esperienza d’uso molto più adatta ad affrontare le
-esigenze lavorative di ogni giorno all’interno di grandi e piccole imprese.
+ancora lavorare per rendere l'esperienza d'uso molto più adatta ad affrontare le
+esigenze lavorative di ogni giorno all'interno di grandi e piccole imprese.
 
 In primis potrebbe essere migliorato il calcolo della Merkle Root corrispondente
 ad una singola Storage Unit, infatti per ora la lista di file e directory viene
 semplicemente ordinata in ordine alfabetico e da quella viene calcolato
 un Merkle Tree binario. Invece, ispirandosi al modo con cui Git traccia le modifiche
 dei propri file indentificandoli con il loro hash (come spiegato nella \autoref{sub:git}),
-si potrebbe identificare ogni file con l’hash corrispondente e tracciare le modifiche ogni
+si potrebbe identificare ogni file con l'hash corrispondente e tracciare le modifiche ogni
 volta che si effettua un ricalcolo della Storage Unit, evitando quindi di ricalcolare hash
 di file che sono rimasti identici, usando possibilmente le funzionalità dei Git commit.
 
-Una seconda aggiunta è l’implementazione di connettori per blockchain, in modo tale
+Una seconda aggiunta è l'implementazione di connettori per blockchain, in modo tale
 da poter registrare le proprie SU su blockchain pubbliche differenti o, potenzialmente,
 anche su blockchain private.
 
