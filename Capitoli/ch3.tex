@@ -17,6 +17,10 @@ da qui l’idea di appoggiarsi ad una struttura come quella della blockchain (\a
 Tutto ciò deve però essere implementato con un occhio di riguardo alla quantità
 di informazioni che verranno salvate su di essa: come sappiamo più byte vogliamo
 memorizzare più la nostra operazione sarà costosa dal punto di vista pecuniario.
+Una corretta soluzione per questo problema con un’interfaccia user-friendly
+potrebbe portare enormi benefici soprattutto per quanto riguarda questioni
+come il miglioramento del lento e complesso macchinario della burocrazia
+all'interno delle aziende pubbliche. 
 
 \section{L’obiettivo del nostro sistema}
 
@@ -28,7 +32,42 @@ salvataggio di \emph{hash} (\autoref{sub:hash}) su blockchain, esportazione di s
 e verifica sia di singoli file che di moltitudini.
 Tutto ciò implementato con operazioni più o meno severe, a discrezione dell’utente,
 permettendo anche di impedire il ricalcolo di determinati insiemi di file con controllo
-sullo storico dei \emph{commit} (\autoref{sub:vcs}) o, volendo spendere di più, anche su Blockchain.
+sullo storico dei \emph{commit} (\autoref{sub:vcs}) o, volendo spendere di più, anche su blockchain.
+
+\section{Perché blockchain?}
+
+Nonostante la spiegazione della natura e del funzionamento della blockchain è comunque
+lecito domandarsi se effettivamente questa tecnologia sia la strada giusta e se, a
+causa dei suoi costi diretti elevati e della sua lentezza, non sia comunque meglio
+affidarsi a delle strutture centralizzate.
+Vedremo quindi cinque vantaggi della blockchain e come questi possono andare ad impattare
+in maniera molto positiva le problematiche della burocrazia.
+Quest’ultima, nell’implementazione classica non digitale, soffre di transazioni talvolta
+non controllate e dalla dubbia veridicità, quando esse vengono controllate il prezzo
+da pagare è invece elevato: il costo del controllo, di intermediazione da parte di terzi
+e di strumenti di certificazione non è sicuramente trascurabile.
+Al contrario, la blockchain, presenta le seguenti caratteristiche chiave che cercano di
+risolvere questa questione:
+\begin{enumerate}
+    \item Un registro distribuito che condivide contenuti tra più entità.
+    Questa natura condivisa rende le transazioni facilmente tracciabili e
+    ampiamente divulgabili anche in ecosistemi larghi e complessi.
+    \item La decentralizzazione fisica dell'archivio dei dettagli delle transazioni
+    è un elemento di potenziale sicurezza extra intrinseca alla struttura della rete.
+    Ciò infatti elimina il rischio del \emph{Single Point of Failure}, dove un singolo
+    nodo si trova in uno stato critico e rende la rete vulnerabili agli attacchi informatici.
+    \item I nuovi record vengono registrati esclusivamente concatenandoli ai vecchi.
+    La loro immutabilità garantisce l'integrità dei dati nel registro.
+    \item Le transazioni vengono validate attraverso un meccanismo di consenso peer-to-peer,
+    le entità di validazione centrale non sono più necessarie.
+    Una conseguenza di questo è lo spostamento del potere dagli intermediari verso
+    l'intero ecosistema, la decentralizzazione del potere e del controllo introduce
+    il concetto di proprietà dei singoli nodi e permette di mantenere il registro
+    bilanciato e verificato tramite le sue metodologie intrinsiche.
+    \item Le quattro caratteristiche precedenti permettono la disintermediazione,
+    ovvero l'eliminazione di middle-men e intermediatori, eliminando di conseguenza
+    anche i loro costi.
+\end{enumerate}
 
 \section{La questione della memorizzazione}
 
