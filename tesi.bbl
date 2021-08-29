@@ -1,12 +1,39 @@
 \begin{thebibliography}{10}
 
+\bibitem{hash}
+H.~Qureshi, ``{Hash functions},'' 2019.
+\newblock [\url{https://nakamoto.com/hash-functions/}].
+
 \bibitem{vcs1}
-Wikipedia, ``{Controllo versione},'' Accessed: August, 2021.
-\newblock [\url{https://it.wikipedia.org/wiki/Controllo_versione}].
+B.~O'Sullivan, {\em {Mercurial: the Definitive Guide}}.
+\newblock O'Reilly Media, Inc, 2009.
+\newblock [\url{http://hgbook.red-bean.com/read/}].
+
+\bibitem{vcs2}
+BetterExplained, ``{Intro to Distributed Version Control},'' Accessed: August,
+  2021.
+\newblock
+  [\url{https://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/}].
 
 \bibitem{git-21}
 Git-scm.com, ``{Git},'' Accessed: August, 2021.
 \newblock [\url{https://git-scm.com/}].
+
+\bibitem{block1}
+{101 Blockchains}, ``{Blockchain Definition: Everything You Need To Know},''
+  Accessed: August, 2021.
+\newblock [\url{https://101blockchains.com/blockchain-definition/}].
+
+\bibitem{block2}
+D.~Puthal, N.~Malik, S.~P. Mohanty, E.~Kougianos, and G.~Das, {\em {Everything
+  you Wanted to Know about the Blockchain}}.
+\newblock IEEE Consumer Electronics Magazine, Volume 7, July 2018.
+\newblock [\url{https://bit.ly/2WsHVCb}].
+
+\bibitem{block3}
+{The Economist}, ``{Blockchain - The great chain of being sure about things},''
+  31 October, 2015.
+\newblock [\url{https://bit.ly/3BfpAqP}].
 
 \bibitem{asv-bdg-19}
 D.~Allessie, M.~Sobolewski, and L.~Vaccari, {\em {Blockchain for Digital
@@ -14,6 +41,31 @@ D.~Allessie, M.~Sobolewski, and L.~Vaccari, {\em {Blockchain for Digital
 \newblock Luxembourg: Pignatelli, F. editor(s), EUR 29677 EN, Publications
   Office of the European Union, 2019.
 \newblock [\url{https://doi.org/10.2760/942739}].
+
+\bibitem{ethorg-wp-21}
+Ethereum.org, ``{Ethereum Whitepaper},'' Accessed: August, 2021.
+\newblock [\url{https://ethereum.org/en/whitepaper/}].
+
+\bibitem{eth-21}
+Ethereum.org, ``{Ethereum.org},'' Accessed: August, 2021.
+\newblock [\url{https://ethereum.org}].
+
+\bibitem{eth-22}
+Ethereum.org, ``{Ethereum Documentation},'' Accessed: August, 2021.
+\newblock [\url{https://ethereum.org/en/developers/docs/}].
+
+\bibitem{njs-1}
+{OpenJS Foundation}, ``{Nodejs.org},'' Accessed: August, 2021.
+\newblock [\url{https://nodejs.org/}].
+
+\bibitem{njs-2}
+{OpenJS Foundation}, ``{Node.js Documentation},'' Accessed: August, 2021.
+\newblock [\url{https://nodejs.dev/learn}].
+
+\bibitem{njs-3}
+L.~Orsini, ``{What You Need To Know About Node.js},'' 31 October, 2015.
+\newblock
+  [\url{https://readwrite.com/2013/11/07/what-you-need-to-know-about-nodejs/}].
 
 \bibitem{mertree}
 H.~Qureshi, ``{Merkle Trees},'' 2019.
