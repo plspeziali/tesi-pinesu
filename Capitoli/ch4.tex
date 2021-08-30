@@ -1,16 +1,29 @@
 
 La concretizzazione della soluzione al problema esposto è l'applicativo \textbf{PineSU}~\cite{pinesu-github-21}. \\
 PineSU si presenta come un software \emph{lightweight} scritto in Javascript e che sfrutta il runtime Node.js.
-L'applicazione va a considerare gli insiemi di file come delle entità chiamate \\
+L'applicazione va a considerare gli insiemi di file come delle entità chiamate
 \textbf{Storage Unit} (SU) con cui va ad inglobare logicamente una repository Git, cotruendo,
-tramite la definizione di alcuni metadati, una struttura introno ad essa. \\
+tramite la definizione di alcuni metadati, una struttura introno ad essa.
+\begin{wrapfigure}{l}{0.36\textwidth}
+    \vspace{-20pt}
+    \begin{center}
+        \includegraphics[width=0.30\textwidth]{favicon}
+        \caption{\small{
+        Logo di PineSU.
+        } % end small
+        } % end caption
+    \end{center}
+    \vspace{-10pt}
+\end{wrapfigure}
+% https://www.iconpacks.net/free-icon/pine-1577.html
 Queste SU sono le unità su cui si andranno ad effettuare le singole
 operazioni, eccetto la registrazione su blockchain che si svolgerà collettivamente con l'ausilio di accumulatori crittografici. 
 
 Vedremo come il ciclo di vita di una SU sia scandito dai \textbf{Blockchain Synchronization Point} (BSP),
-ovvero gli eventi che si generano quando si decide di andare a registrare lo stato e la presenza di una SU nella blockchain, inserendola
-all'interno gruppi di suoi simili chiamati \textbf{Storage Group} (SG). Questi finiranno poi nella grande struttura chiamata \textbf{Merkle Calendar} (MC).
+ovvero gli eventi che si generano quando si decide di andare a registrare lo stato e la presenza di tale SU nella blockchain, inserendola
+all'interno di gruppi di suoi simili chiamati \textbf{Storage Group} (SG). Questi finiranno poi nella grande struttura chiamata \textbf{Merkle Calendar} (MC).
 Infine, la root di questo MC sarà salvata nella blockchain (nell'implementazione attuale, quella Ethereum), da qui in poi sarà possibile, in qualsiasi momento, ricostruire un MC in quel preciso istante in cui un nuovo BSP è stato creato e verificare se la root di questa ricostruzione è presente nel registro.
+Tutto ciò avviene attraverso il salvataggio e la lettura di metadati che PineSU è in grado di gestire.
 
 \section{Workflow}
 \label{sec:work}

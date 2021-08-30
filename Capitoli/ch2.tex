@@ -292,9 +292,9 @@ Possiamo quindi capire che c'è stato un cambiamento, tuttavia per capire anche
 quale dei documenti è stato cambiato bisogna ricorrere al concetto di \textbf{Merkle Proof}.
 Per effettuare una verifica tramite Merkle Proof sono tre gli elementi necessari:
 \begin{enumerate}
-    \item L'elemento (foglia) che vogliamo verificare
-    \item La Merkle Root
-    \item La Merkle Proof, ovvero la lista degli hash dei fratelli lungo il cammino dall'elemento alla matrice
+    \item L'elemento (foglia) che vogliamo verificare;
+    \item La Merkle Root;
+    \item La Merkle Proof, ovvero la lista degli hash dei fratelli lungo il cammino dall'elemento alla radice.
 \end{enumerate}
 Andando a svolgere questa verifica su ogni documento riusceremo ad individuare i file modificati come
 quelli per cui non è possibile ricostruire il cammino verso la radice lasciandola inalterata.
@@ -330,12 +330,12 @@ Osserviamo e analizziamo un esempio di oggetto JSON:
 \end{lstlisting} 
 Possiamo osservare come ogni attributo e il suo valore vengano rappresentati come
 \[``key" = value \]
-dove il valore è circondato da due virgolette in caso sia una stringa (\textsf{riga 1})
+dove il valore è posto tra due virgolette in caso sia una stringa (\textsf{riga 1})
 o da nulla in caso sia un tipo primitivo (\textsf{riga 3}).
 Un valore può inoltre essere anche un altro oggetto (\textsf{righe 4-7}), in questo caso
 vediamo come sia incluso tra parentesi graffe e segua poi al suo interno la sintassi che
 abbiamo appena osservato, o un array di valori semplici o oggetti (quest'ultimo alle \textsf{righe 8-16})
 andando ad inserire i valori tra parentesi quadre.
-È possibile anche rappresentare array vuoti (\textsf{riga 17}) con delle parentesi quadre senza
-contenuto e valori nulli (\textsf{riga 18}) con la parola chiave \textsf{null}.
+È possibile anche rappresentare array vuoti (\textsf{riga 17}), con delle parentesi quadre senza
+contenuto, e valori nulli (\textsf{riga 18}) con la parola chiave \textsf{null}.
 I valori vengono separati tra loro con una semplice virgola.
