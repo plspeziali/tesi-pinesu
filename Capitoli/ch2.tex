@@ -9,8 +9,8 @@ a una qualsiasi sequenza \(m\) di lunghezza arbitraria in input, una sequenza
 in output \(h(m)\) di lunghezza costante. 
 Questo valore restituito in output è chiamato valore di hash, stringa di hash,
 o anche semplicemente \textbf{hash}, mentre il valore preso in input è detto
-\textbf{preimmagine}. Possiamo pensare a questa funzione come una “macchina per
-impronte digitali”, per ogni sequenza in input essa riesce a calcolarne una stringa binaria
+\textbf{preimmagine}. Possiamo pensare a questa funzione come una ``macchina per
+impronte digitali", per ogni sequenza in input essa riesce a calcolarne una stringa binaria
 che la identifica univocamente.
 
 Una funzione di hash ha tre caratteristiche fondamentali:
@@ -23,10 +23,9 @@ uniformemente distribuiti nel codominio della funzione.
 Una stringa di hash, essendo una sequenza binaria, può essere rappresentata in molti modi,
 nell'ambito di questo documento presenteremo i vari hash come stringhe esadecimali.
 
-Mentre una funzione di hash classica è tranquillamente utilizzabile per situazioni
+Mentre una funzione di hash generica è tranquillamente utilizzabile per situazioni
 in cui non è necessaria una particolare sicurezza nel proteggere le caratteristiche
-delle preimmagine, ragion per cui si può decidere, nel progettarla, di prestare più
-attenzione verso la sua rapidità d'esecuzione che altro, quando si ha bisogno che le
+delle preimmagine, quando si ha bisogno che le
 informazioni in input rimangano nascoste e si necessita di una maggior sicurezza a scapito
 della velocità si ricorre alle \textbf{funzioni crittografiche di hash}.
 
@@ -46,7 +45,7 @@ Le proprietà che permettono di definire una funzione crittografica di hash come
     \item \emph{Resistenza alla collisione}: Dati due messaggi \(m_1\) ed \(m_2\), deve essere
     difficile che i due messaggi abbiano lo stesso hash, quindi con \(h(m_1) = h(m_2)\).
 \end{enumerate}
-Queste proprietà ci permettono di arrivare a concludere che una funzione crittografica di
+Da quanto detto si evince che una funzione crittografica di
 hash effettua un'operazione unidirezionale: non è possibile (o perlomeno non dovrebbe esserlo),
 partendo dal singolo hash, risalire alla preimmagine. \\
 Per riuscire a mantenere tali proprietà la funzione, durante la fase di generazione
@@ -69,7 +68,7 @@ ciò perché il valore generato sarà ovviamente differente.
 
 \section{VCS e Git}
 \label{sub:vcs}
-Un \textbf{Version Control System}~\cite{vcs1} (o anche VCS), in italiano “sistema di controllo di versione”,
+Un \textbf{Version Control System}~\cite{vcs1} (o anche VCS), in italiano ``sistema di controllo di versione",
 è una tipologia di software per la condivisione,
 il controllo e la tracciabilità dei cambiamenti riguardanti determinati file e directory
 lungo un lasso di tempo e che permette agli utenti di recuperare rapidamente specifiche
@@ -133,8 +132,8 @@ in modo da mantenerli sincronizzati.
 
 \section{Blockchain ed Ethereum}
 \label{sub:bc}
-Non esiste una definizione formalizzata e universalmente condivisa di cosa è la
-\textbf{blockchain}~\cite{block1}~\cite{block2}~\cite{block3}, possiamo però tentare di definirla come una lista in continua 
+Non esiste una definizione formalizzata e universalmente accettata di cosa sia la
+\textbf{blockchain}~\cite{block1}~\cite{block2}~\cite{block3}, possiamo però descriverla semplicemente come una lista in continua 
 crescita di record, chiamati blocchi, collegati utilizzando metodi crittografici: 
 ogni blocco contiene l'hash corrispondente al blocco precedente, un timestamp e i 
 dati riguardanti una transazione. 
@@ -142,9 +141,9 @@ La \emph{chain}, ovvero la catena, è formata grazie alla presenza del riferimen
 crittografico verso il blocco precedente che si trova all'interno di ogni blocco, 
 ciò rende tale catena di blocchi immutabile: il cambiamento dei dati all'interno di 
 un blocco andrebbe a far mutare il suo riferimento crittografico, invalidando così la catena.
-La blockchain non è immagazzinata all'interno di una singola unità o insieme di 
+La blockchain non è controllata all'interno di una singola unità o insieme di 
 unità centrali, bensì è distribuita, condivisa e aggiornata tra varie macchine 
-all'interno di una rete.
+all'interno di una rete in modalità \emph{peer-to-peer}.
 Nella letteratura scientifica la blockchain è infatti considerata un \textbf{DLT} ~\cite{asv-bdg-19},
 Distributed Ledger Technology (Tecnologia di Libro Mastro Distribuito), ovvero
 un'infrastruttura unita a dei protocolli che permettono a dei computer locati in
@@ -159,7 +158,7 @@ di Bob è in debito di tale quantità nei confronti del portafoglio di Alice.
 Possiamo quindi concludere che una transazione altro non è che la registrazione di proprietà 
 di un asset, ovvero un elemento, digitale e non, avente valore.
 
-La nascita della blockchain è infatti dovuta alla necessità di avere un “libro mastro” per 
+La nascita della blockchain è infatti dovuta alla necessità di avere un ``libro mastro" per 
 Bitcoin, un registro che tenesse traccia delle transazioni e che impedisse il fenomeno della 
 \emph{doppia spesa}, ovvero ciò che si verifica quando uno stesso titolo valutario viene speso 
 due o più volte. Mentre questo fenomeno è controllato in un'economia tradizionale dagli 
@@ -283,7 +282,7 @@ in cui ogni foglia corrisponde all'hash di uno dei nostri elementi, risalendo ve
 nodo interno calcolerà il proprio hash concatenando gli hash dei nodi figli, infine si avrà
 una radice (\textbf{Merkle Root} o MR) il cui hash è univoco a quella lista di elementi che l'albero
 ha come foglie, in quella sequenza.
-Inoltre, utilizzando degli hash generati con una funzione crittografica “forte”, si ha
+Inoltre, utilizzando degli hash generati con una funzione crittografica ``forte", si ha
 un'assenza di collisioni tra le Merkle Root.
 Perciò sappiamo che, per una determinata sequenza di documenti i cui hash sono le foglie dell'albero, anche solo una
 piccola modfica ad un file causerebbe un cambiamento significativo, se non totale, della MR.

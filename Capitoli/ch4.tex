@@ -119,14 +119,14 @@ con la blockchain Ethereum, possiamo descrivere la sua architettura come in Fig.
     l'hash registrato in blockchain per un qualsiasi BSP. La gestione del salvataggio remoto del Merkle Calendar avviene tramite una repository Git scelta dall'utente.
     \item \emph{PineSU \textbf{EC} (Ethereum Connector)} Si interfaccia con il modulo \textsf{web3.js}~\cite{web3js-github-21}~\cite{web3js-doc-21}. 
     \item \emph{PineSU \textbf{GC} (Git Connector)} Si interfaccia con il modulo \textsf{simple-git}~\cite{simple-git-github-21}. 
-    \item \emph{PineSU \textbf{SM} (Smart Contract)} Questo modulo entra in gioco solamente nel caso di una registrazione “forte” di una Storage Unit nella blockchain, in una fruizione standard dell'applicativo non entrerà probabilmente in azione.
+    \item \emph{PineSU \textbf{SM} (Smart Contract)} Questo modulo entra in gioco solamente nel caso di una registrazione ``forte" di una Storage Unit nella blockchain, in una fruizione standard dell'applicativo non entrerà probabilmente in azione.
 \end{itemize}
 
 \section{Moduli in dettaglio}
 \subsection{PineSU CLI}
 
 Il modulo si occupa di creare l'effettiva interfaccia utente con cui è possibile interagire,
-le domande vengono create dal modulo apposito “inquirer”, dove sono definite
+le domande vengono create dal modulo apposito ``inquirer", dove sono definite
 insieme alle risposte possibili e ai controlli di consistenza delle risposte date dall'utente.
 
 Dopo un setup una tantum in cui all'utente vengono chieste informazioni come gli indirizzi dei
@@ -248,11 +248,11 @@ partizione di estrema destra dal sottoalbero radicato in Open (in questo caso).
 Ipotizziamo di voler recuperare la MC root nel momento in cui è stata inserita BSP B:
 \begin{enumerate}
     \item Calcoliamo l'hash di Febbraio tramite l'hash di BSP a e di BSP B;
-    \item Calcoliamo l'hash del 2021 tramite l'hash di Gennaio e il “nuovo” hash di Febbraio;
-    \item Calcoliamo l'hash di Open tramite gli hash del 2019, del 2020 e il “nuovo” hash del 2021;
-    \item Calcoliamo la root del MC tramite l'hash di Closed e il “nuovo” hash di Open, l'hash di Closed nell'istante dell'inserimento di BSP B viene salvato in un descrittore JSON presente in ogni SU registrata con BSP B.
+    \item Calcoliamo l'hash del 2021 tramite l'hash di Gennaio e il ``nuovo" hash di Febbraio;
+    \item Calcoliamo l'hash di Open tramite gli hash del 2019, del 2020 e il ``nuovo" hash del 2021;
+    \item Calcoliamo la root del MC tramite l'hash di Closed e il ``nuovo" hash di Open, l'hash di Closed nell'istante dell'inserimento di BSP B viene salvato in un descrittore JSON presente in ogni SU registrata con BSP B.
 \end{enumerate}
-Il calcolo di hash tramite altri hash è effettuato tramite dei piccoli Merkle Tree binari “usa e getta”, alla stessa maniera di come calcoliamo l'hash root di uno Storage Group (che andrà a finire nei BSP).
+Il calcolo di hash tramite altri hash è effettuato tramite dei piccoli Merkle Tree binari ``usa e getta", alla stessa maniera di come calcoliamo l'hash root di uno Storage Group (che andrà a finire nei BSP).
 
 \subsection{Excursus sullo Storage Group}
 \label{sub:stage1}
@@ -270,7 +270,7 @@ cosa improbabile se la registrazione su blockchain avviene di ogni singola Stora
 Si tratta invece di una mossa saggia andare ad introdurre una piccola struttura che permetta,
 con una singola registrazione dal costo identico, di andare a registrare un numero
 indefinito di Storage Unit, quando ci riferiremo quindi all'operazione
-“\emph{Synchronize with blockchain}” per questa particolare implementazioni di PineSU,
+``\emph{Synchronize with blockchain}" per questa particolare implementazioni di PineSU,
 comprenderemo anche uno staging a priori di tale SU.
 
 \begin{figure}[H]
@@ -347,7 +347,7 @@ essa tramite il client Git installato sulla macchina.
 \subsection{PineSU SM}
 \label{sub:sm}
 Lo Smart Contract (\autoref{sub:bc}) di PineSU è necessario
-per poter effettuare registrazioni “forti”, ovvero andare a salvare su blockchain
+per poter effettuare registrazioni ``forti", ovvero andare a salvare su blockchain
 che una determinata SU è stata chiusa in modo da evitare che delle eventuali manomissioni
 cerchino di chiuderla nuovamente (ricordiamo che una SU chiusa implica un'impossibilità di modifica e ricalcolo).
 Questo modulo è presente solamente in caso si vadano ad utilizzare blockchain di criptovalute che
