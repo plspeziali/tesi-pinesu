@@ -17,7 +17,7 @@
 \usepackage[simplified]{pgf-umlcd}
 \usepackage{float}
 \usepackage{wrapfig,lipsum}
-\usepackage{fancyhdr}
+\usepackage{fancyhdr, etoolbox}
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{url}
@@ -30,9 +30,12 @@
 \usetikzlibrary{calc} 
 \pagestyle{fancy}
 
-\fancyhf{}
-\lhead{\leftmark}
-\cfoot{\thepage}
+\fancyhead{}
+\fancyhead[OL]{\ifnumodd{\value{page}}{\slshape \leftmark}{\slshape SEZIONE \rightmark}}
+\fancypagestyle{mystyle}{
+    \fancyhead[OL]{\slshape \leftmark}
+}
+\fancyfoot[C]{\thepage}
 
 \fontfamily{bch}\selectfont
 
@@ -79,9 +82,9 @@ title=\lstname, % show the filename of files included with \lstinputlisting; als
 
 %define Javascript language
 \lstdefinelanguage{JavaScript}{
-keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break, for, of},
+keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, while, do, else, case, break, for, of, const, async, await},
 keywordstyle=\color{blue}\bfseries,
-ndkeywords={class, export, boolean, throw, implements, import, this},
+ndkeywords={class, export, boolean, throw, implements, import},
 ndkeywordstyle=\color{darkgray}\bfseries,
 identifierstyle=\color{black},
 sensitive=false,
@@ -186,6 +189,7 @@ Dipartimento d'Ingegneria
 
 \input{Capitoli/ch1}
 
+
 \chapter{Concetti preliminari}
 
 \input{Capitoli/ch2}
@@ -194,13 +198,16 @@ Dipartimento d'Ingegneria
 
 \input{Capitoli/ch3}
 
+\normalfont
 \chapter{Il Software PineSU}
 
 \input{Capitoli/ch4}
 
+
 \chapter{Dimostrazioni d'uso per il fine preposto}
 
 \input{Capitoli/ch5}
+
 
 \chapter{Conclusioni e Sviluppi futuri}
 

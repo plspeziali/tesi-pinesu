@@ -880,6 +880,7 @@ INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex\latex\fancyhdr\fancyhdr.s
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
+INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
@@ -1064,6 +1065,7 @@ INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tf
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
 OUTPUT c:\Users\Paolo\Dropbox\Tesi\tesi.toc
+INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\tfm\kosch\crimson\Crimson-Italic-tlf-ot1.tfm
 INPUT c:\Users\Paolo\Dropbox\Tesi\Capitoli\ch1.tex
 INPUT c:\Users\Paolo\Dropbox\Tesi\Capitoli\ch1.tex
 INPUT c:\Users\Paolo\Dropbox\Tesi\Capitoli\ch1.tex
@@ -1094,7 +1096,6 @@ INPUT c:\Users\Paolo\Dropbox\Tesi\Capitoli\ch2.tex
 INPUT c:\Users\Paolo\Dropbox\Tesi\Capitoli\ch2.tex
 INPUT c:\Users\Paolo\Dropbox\Tesi\Capitoli\ch2.tex
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\tfm\kosch\crimson\Crimson-Bold-tlf-ot1.tfm
-INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\tfm\kosch\crimson\Crimson-Italic-tlf-ot1.tfm
 INPUT C:\Users\Paolo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss12.tfm
 INPUT c:\Users\Paolo\Dropbox\Tesi\figures\\mt1.pdf
 INPUT c:\Users\Paolo\Dropbox\Tesi\figures\\mt1.pdf

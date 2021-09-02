@@ -18,12 +18,12 @@ innanzitutto è \emph{deterministica}, ciò significa che per lo stesso input es
 generare sempre lo stesso output, deve poi generare esclusivamente
 \emph{sequenze in output con una lunghezza fissa}, ciò significa che per qualsiasi input
 di qualsiasi lunghezza il risultato dovrà avere sempre una lunghezza di \(b\) bit decisa
-a priori, infine deve essere \emph{uniforme}, ovvero i suoi output dovrebbero essere
+a priori, infine deve essere \emph{uniforme}, ovvero i suoi output devono essere
 uniformemente distribuiti nel codominio della funzione.
 Una stringa di hash, essendo una sequenza binaria, può essere rappresentata in molti modi,
 nell'ambito di questo documento presenteremo i vari hash come stringhe esadecimali.
 
-Mentre una funzione di hash generica è tranquillamente utilizzabile per situazioni
+Mentre una funzione di hash generica è tranquillamente utilizzabile per contesti
 in cui non è necessaria una particolare sicurezza nel proteggere le caratteristiche
 delle preimmagine, quando si ha bisogno che le
 informazioni in input rimangano nascoste e si necessita di una maggior sicurezza a scapito
@@ -72,10 +72,10 @@ Un \textbf{Version Control System}~\cite{vcs1} (o anche VCS), in italiano ``sist
 è una tipologia di software per la condivisione,
 il controllo e la tracciabilità dei cambiamenti riguardanti determinati file e directory
 lungo un lasso di tempo e che permette agli utenti di recuperare rapidamente specifiche
-versioni dei loro documenti. Gli insiemi di file e cartelle gestite da questi sistemi
-sono suddivisi in \textbf{repository}, esse vengono trattate l'una isolata dalle altre.
+versioni dei loro documenti. Gli insiemi di file e directory gestite da questi sistemi
+sono suddivisi in \textbf{repository}, esse rappresentano entità indipendenti tra loro.
 Spesso si considera una intera directory di lavoro, con il suo contenuto,
-un'unica repository, potendo però scegliere di escludere alcune risorse.
+come un'unica repository, potendo però scegliere di escludere alcune risorse.
 Un VCS può essere centralizzato o distribuito~\cite{vcs2}.
 Nel primo caso è il server centrale che tiene traccia dei cambiamenti e che mantiene e
 distribuisce la versione più recente delle risorse richieste, gli utenti possono gestire
@@ -115,7 +115,7 @@ L'operazione di \emph{commit} (comando \textsf{commit}) crea un nuovo snapshot c
 tutti i cambiamenti specificati nella staging area e lo immagazzina nel suo database locale.
 A questo punto la staging area verrà ripulita (\emph{cleaned}).
 Gli utenti Git possono condividere informazioni e collaborare tra di loro tramite repository remote
-su server Git che possono essere sincronizzate con le loro repository locali.
+su server Git, le quali possono essere sincronizzate con le loro repository locali.
 
 Le operazioni di \emph{pull}, \emph{push}, \emph{clone} e \emph{fetch}
 sono tipiche quando si lavora con repository remote.

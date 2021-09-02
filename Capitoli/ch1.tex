@@ -7,7 +7,7 @@ nella dematerializzazione di documenti concreti in file elettronici che possano 
 consultati da qualsiasi dispositivo e offrono una facilità e velocità d'utilizzo,
 una sicurezza e un risparmio che l'equivalente cartaceo non potrà mai ottenere.
 \\
-Questo processo appena descritto non è però pensabile senza che venga accompagnato
+Questo cambiamento appena descritto non è però pensabile senza che venga accompagnato
 da una completa rivoluzione, sia per quanto riguarda le apparecchiature e le
 infrastrutture presenti all'interno dei nostri pubblici uffici, sia per quanto
 riguarda la competenza di chi, questi dispositivi, dovrà utilizzarli.
@@ -15,7 +15,7 @@ riguarda la competenza di chi, questi dispositivi, dovrà utilizzarli.
 La Commissione Europea, con la recente comunicazione
 ``2030 Digital Compass: the European Way for the Digital Decade"~\cite{intro-1},
 compie un passo strategico  prefiggendosi degli obiettivi ben precisi per realizzare
-la vision di una Unione Europea basata sulla crescita di consapevolezza informatica
+la \emph{vision} di una Unione Europea basata sulla crescita di consapevolezza informatica
 dei cittadini e sul consolidamento di una leadership tecnologica che permetta
 alla società di prosperare al meglio.
 \\
@@ -38,12 +38,9 @@ La soluzione a questo problema è l'attuazione di un processo che tenda a \textb
 gli uffici statali, sostituendo i processi attuali con nuovi processi digitali che siano
 all'altezza della missione: si tratterebbe essenzialmente di sviluppare strumenti informatici
 che permettano di salvare, validare e condividere informazioni e documenti in maniera sicura.
-Una delle caratteristiche fondamentali di questi strumenti dovrà essere necessariamente la
-fiducia, in quanto chi riceve quei documenti dovrà essere sicuro che essi non siano stati
-manomessi o corrotti.
 
-Nello sviluppo di strumenti di qesto tipo, generalmente si ricade nell'abbracciare
-uno dei due paradigmi di progettazione: centralizzato e distribuito.
+Gli strumenti attuali si basano fondamentalmente su due paradigmi
+di progettazione: centralizzato e distribuito.
 \\
 Il primo si basa essenzialmente sulla concentrazione dei dati e del loro controllo
 all'interno di una o più entità centrali. Ciò può essere sicuramente vantaggioso sotto
@@ -54,13 +51,6 @@ non solo stiamo immagazzinando informazioni critiche in un database centralizzat
 potenzialmente vulnerabile ad attacchi e perdita di dati, ma stiamo anche fornendo
 tali informazioni a un'entità di cui sarà necessario avere una totale fiducia per quanto
 riguarda il corretto mantenimento dei nostri documenti.
-\\
-Uno strumento fondato su questo paradigma è l'ormai ampiamente utilizzata firma digitale:
-la pubblica amministrazione si interfaccia infatti a servizi di terze parti andando a pagare
-alte tariffe periodiche e mettendo in mano a queste aziende dati sensibili e la gestione della
-verifica di validità e integrità dei loro documenti.
-Uno strumento del genere è costoso e ci costringe a fidarci
-di organizzazioni esterne, con tutte le conseguenze del caso.
 
 Al contrario, il paradigma distribuito, si basa su una rete di sistemi interconnessi nei
 quali le informazioni vengono replicate e sincronizzate in maniera reciproca, il tutto senza
@@ -72,38 +62,24 @@ moltitudine di entità indipendenti tra loro.
 Così facendo è molto più complicato che si manifestino attacchi o manomissioni
 o che, perlomeno, restino inosservati.
 
-Potremmo quindi progettare un sistema software che si basi su un'architettura distribuita
-e che permetta non solo di abbattere i costi dei servizi forniti da intermediari,
-costi che strumenti come la firma digitale portano con loro necessariamente, ma anche,
-grazie alla natura democratica di questa architettura, di avere massima sicurezza
-e fiducia sull'integrità dei propri documenti.
-
-Dovendo andare ad unire una gestione distribuita di documenti con il bisogno, allo stesso 
-tempo, di archiviare i metadati che mi permettano di verificarli, si può pensare di andare
-ad unire le due tecnologie distribuite più adatte a questi scopi:
-rispettivamente Git e blockchain.
-
 Tra le tecnologie distribuite, \textbf{Git} è sicuramente lo standard de facto per la condivisione
-e il tracciamento delle modifiche di insiemi di file di qualsiasi natura ed è uno strumento essenziale per
-gli sviluppatori di software sia indipendenti che facenti parte di grandi progetti.
-\\
-Tuttavia, oltre all'essere uno strumento il cui utilizzo è estremamente raro tra
-chi non scrive codice informatico a causa della sua natura poco orientata verso
-l'utente medio, soffre anche della mancanza di una funzione per la protezione,
-registrazione e controllo d'integrità dei propri insiemi di file.
+e il tracciamento di modifiche a file di varia natura, in particolare viene utilizzato
+quotidianamente da milioni di sviluppatori software in tutto il mondo.
+Tuttavia, allo stato attuale, Git non può essere utilizzato in tutti quei
+contesti applicativi che richiedono elevate garanzie sull'integrità ed autenticità dei dati,
+in quanto sprovvisto di meccanismi di verifica dell'integrità eseguibili da soggetti
+che non controllano direttamente gli archivi di file.
 
-L'aggiunta della \textbf{blockchain}, tramite i suoi meccanismi di registrazione e consenso,
-va ad integrare queste funzioni, rendendo questa unione una soluzione ideale per risolvere
-i problemi di verifica d'integrità nel mondo digitale di insiemi di documenti.
-
-In questo documento andremo a presentare una possibile implementazione del
-progetto software appena descritto, \textbf{PineSU}.
+Scopo di tale progetto di tesi è pertanto lo sviluppo di un prototipo software,
+denominato \textbf{PineSU}, che incapsuli il sistema Git e che offra al contempo un'elevata
+protezione dell'autenticità dei dati, tramite un'opportuna interazione con una \textbf{blockchain}
+pubblica.
 
 Il resto della tesi sarà strutturata come segue:
 \begin{itemize}
-    \item Capitolo 2 - \textbf{Concetti preliminari}: Verranno approfondite le tecnologie menzionate nell'introduzione e presentate altre che hanno permesso una corretta ed efficiente implementazione
-    \item Capitolo 3 - \textbf{Il Problema e l'Obiettivo}: Verrà formalizzato il problema che andremo ad affrontare e spiegate alcune delle problematiche implementative e come sono state superate
-    \item Capitolo 4 - \textbf{Il Software PineSU}: Verranno presentati l'effettiva implementazione, architettura e workflow del software realizzato
-    \item Capitolo 5 - \textbf{Dimostrazioni d'uso per il fine preposto}: Esempio pratico del funzionamento del software tramite alcuni esempi che rappresentano situazioni similari a quelle in cui l'utente potrà trovarsi utilizzandolo
+    \item Capitolo 2 - \textbf{Concetti preliminari}: Verranno approfondite le tecnologie menzionate nell'introduzione e presentate altre che hanno permesso una corretta ed efficiente implementazione.
+    \item Capitolo 3 - \textbf{Il Problema e l'Obiettivo}: Verrà formalizzato il problema che andremo ad affrontare e spiegate alcune delle problematiche implementative e come sono state superate.
+    \item Capitolo 4 - \textbf{Il Software PineSU}: Verranno presentati l'effettiva implementazione, architettura e workflow del software realizzato.
+    \item Capitolo 5 - \textbf{Dimostrazioni d'uso per il fine preposto}: Esempio pratico del funzionamento del software tramite alcuni esempi che rappresentano situazioni similari a quelle in cui l'utente potrà trovarsi utilizzandolo.
     \item Capitolo 6 - \textbf{Conclusioni e Sviluppi futuri}: Si riassumono gli obiettivi raggiunti, alcune criticità e potenziali sviluppi futuri.
 \end{itemize}
