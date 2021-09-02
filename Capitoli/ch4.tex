@@ -2,7 +2,7 @@
 La concretizzazione della soluzione al problema esposto è l'applicativo \textbf{PineSU}~\cite{pinesu-github-21}. \\
 PineSU si presenta come un software \emph{lightweight} scritto in Javascript e che sfrutta il runtime Node.js.
 L'applicazione va a considerare gli insiemi di file come delle entità chiamate
-\textbf{Storage Unit} (SU) con cui va ad inglobare logicamente una repository Git, cotruendo,
+\textbf{Storage Unit} (SU) con cui va ad inglobare logicamente una repository Git, costruendo,
 tramite la definizione di alcuni metadati, una struttura introno ad essa.
 \begin{wrapfigure}{l}{0.36\textwidth}
     \vspace{-20pt}
@@ -22,7 +22,7 @@ operazioni, eccetto la registrazione su blockchain che si svolgerà collettivame
 Vedremo come il ciclo di vita di una SU sia scandito dai \textbf{Blockchain Synchronization Point} (BSP),
 ovvero gli eventi che si generano quando si decide di andare a registrare lo stato e la presenza di tale SU nella blockchain, inserendola
 all'interno di gruppi di suoi simili chiamati \textbf{Storage Group} (SG). Questi finiranno poi nella grande struttura chiamata \textbf{Merkle Calendar} (MC).
-Infine, la root di questo MC sarà salvata nella blockchain (nell'implementazione attuale, quella Ethereum), da qui in poi sarà possibile, in qualsiasi momento, ricostruire un MC in quel preciso istante in cui un nuovo BSP è stato creato e verificare se la root di questa ricostruzione è presente nel registro.
+Infine, la root di questo MC verrà salvata nella blockchain (nell'implementazione attuale, quella Ethereum), da qui in poi sarà possibile, in qualsiasi momento, ricostruire un MC in quel preciso istante in cui un nuovo BSP è stato creato e verificare se la root di questa ricostruzione è presente nel registro.
 Tutto ciò avviene attraverso il salvataggio e la lettura di metadati che PineSU è in grado di gestire.
 
 \section{Workflow}
@@ -51,14 +51,15 @@ Dopo questa operazione potrebbero accadere i due eventi che seguono:
     \item Il contenuto della Storage Unit potrebbe venire modificato,
     a questo punto è necessario, se si vogliono registrare anche i nuovi cambiamenti,
     andare ad effettuare un ricalcolo (\emph{Update SU}), dopo di ciò
-    si torna alla possibilità dei tre eventi;
+    si torna alla possibilità dei due eventi;
     \item Potremmo scegliere di sincronizzare la SU nella blockchain (\emph{Synchronize with blockchain}),
     questo avviene in realtà tramite due fasi che vedremo in seguito, tuttavia
-    questa scelta ci permette in seguito di eseguire qualsiasi operazione lo stesso,
-    eccetto il ricalcolo nell'eventualità che questa SU sia stata chiusa precedentemente.
+    questa scelta ci permette in seguito di eseguire qualsiasi operazione volessimo,
+    eccetto il ricalcolo nell'eventualità che questa SU sia stata chiusa precedentemente,
+    vedremo abreve cosa significa.
 \end{enumerate}
  
-Una volta che una SU è stata registrata nella blockchain o chiusa si aprono altre
+Una volta che una SU è stata registrata nella blockchain si aprono altre
 due possibili azioni da poter compiere: la verifica d'integrità (\emph{Verify integrity with blockchain}),
 sia offline che online, e l'esportazione di sottoinsiemi di file dalla SU (\emph{Export blockchain verifiable bundle}),
 munendoli con i dati necessari per permettere verifiche d'integrità da parte di terzi
@@ -70,12 +71,12 @@ Una SU è aperta (\textbf{Open}) se modificabile e ricalcolabile liberamente,
 chiusa (\textbf{Closed}) se la modifica, il ricalcolo e un'eventuale chiusura
 successiva non possono essere eseguiti. Dopo la chiusura, a cui dovrebbe
 seguire una regsitrazione su blockchain, potranno essere eseguite
-in pratica le stesse operazioni eccetto, ovviamente, quella del ricalcolo;
+in pratica tutte operazioni eccetto, ovviamente, quella del ricalcolo;
 
 Possiamo osservare il workflow appena descritto anche in Fig.~\ref{fi:stateDiag}, dove il diagramma degli
 stati di una singola Storage Unit riflette le operazioni appena descritte.
 Appena creata possiamo infatti riferirci ad essa come una Storage Unit \textbf{Updated Unsynchronized Open},
-ovvero aperta e non sincronizzata alla blockchain, tuttavia aggiornata in quanto gli hash sono stati calcolati
+ovvero aperta e non sincronizzata sulla blockchain, tuttavia aggiornata in quanto gli hash sono stati calcolati
 sulla situazione corrente dei file contenuti. Sincronizzandola diventa una SU \textbf{Updated Synchronized Open},
 su cui possiamo eseguire operazioni di verifica ed esportazioni senza cambiare però il suo stato.
 Modificando un file esternamente, in entrambi gli stati che abbiamo visto, si entra in uno stato da cui si
@@ -112,7 +113,7 @@ Il sistema va ad interfacciarsi con il client Git e con l'API \textsf{web3.js} p
 con la blockchain Ethereum, possiamo descrivere la sua architettura come in Fig.~\ref{fi:arch}, dove troviamo i componenti principali:
 \begin{itemize}
     \item \emph{PineSU \textbf{CLI} (Command Line Interface)}. L'interazione con PineSU da parte degli utenti avviene attraverso un emulatore di terminale, analogamente a come avviene con Git, di una macchina avente Node.js installato\footnote{L'interfaccia si basa sul modulo npm Inquirer.js ~\cite{inquirer-github-21}}, tuttavia con un'interazione più guidata rispetto al noto VCS. Oltre al permettere l'uso delle normali funzioni di PineSU, questo modulo permette anche l'inserimento di un qualsiasi comando di Git, in modo da rendere l'utilizzo diretto di quest'ultimo non necessario durante una tipica sessione di lavoro.
-    \item \emph{PineSU \textbf{BEL} (Back End Logic)}. Questo componente è il nucleo di PineSU\footnote{Il componente si basa su alcuni moduli npm per opertazioni di supporto ~\cite{adm-zip-github-21}~\cite{chalk-github-21}~\cite{merkle-tools-github-21}}. Gestisce tutte le SU e controlla la comunicazione con la blockchain e il client Git locale.
+    \item \emph{PineSU \textbf{BEL} (Back End Logic)}. Questo componente è il nucleo di PineSU\footnote{Il componente si basa su alcuni moduli npm per operazioni di supporto ~\cite{adm-zip-github-21}~\cite{chalk-github-21}~\cite{merkle-tools-github-21}}. Gestisce tutte le SU e controlla la comunicazione con la blockchain e il client Git locale.
     Il client Git viene utilizzato inoltre per interagire indirettamente con i server Git remoti.
     Il modulo BEL, in aggiunta, si occupa della gestione dei due Storge Group, Open (OSG) e Closed (CSG), e
     mantiene il Merkle Tree dinamico chiamato Merkle Calendar che permette di recuperare efficientemente
@@ -129,8 +130,8 @@ Il modulo si occupa di creare l'effettiva interfaccia utente con cui è possibil
 le domande vengono create dal modulo apposito ``inquirer", dove sono definite
 insieme alle risposte possibili e ai controlli di consistenza delle risposte date dall'utente.
 
-Dopo un setup una tantum in cui all'utente vengono chieste informazioni come gli indirizzi dei
-suoi due wallet, a seconda delle scelte dall'utente, la prima di cui sarà quella dell'effettiva
+Avviene inizialmente un setup una tantum in cui all'utente vengono chieste informazioni come gli indirizzi dei
+suoi due wallet. A seconda delle scelte dall'utente, la prima di cui sarà quella dell'effettiva
 operazione da eseguire (Fig.~\ref{fi:menu}), il modulo va a delineare il workflow preciso che descrive il ciclo vitale
 di una SU, il tutto richiamando all'occorrenza le librerie del modulo \emph{PineSU BEL}. 
 
@@ -160,7 +161,8 @@ Il primo è il semplice SU Merkle Tree, necessario per il calcolo dell'hash corr
 
 Il secondo è lo Storage Group, di cui ne esistono due, un \textbf{Open} (OSG) e un \textbf{Closed} (CSG). Si tratta essenzialmente di due MT binari in cui ogni foglia corrisponde all'hash di una Storage Unit \textbf{Staged} (ovvero preparata per la registrazione collettiva, ne parlremo meglio nella \autoref{sub:stage1} e nella \autoref{sub:stage2}), la differenza tra i due alberi è nel loro contenuto, uno contiene le SU Open, l'altro le SU Closed, differenza già discussa nella \autoref{sec:work}. Le root di questi alberi verranno poi salvate all'interno della prossima struttura come foglie.
 
-Il terzo e più importante è il \textbf{Merkle Calendar}, formato da due sottoalberi in cui vengono accolte come foglie rispettivamente le root delle istanze di OSG e di CSG. Le radici di questi due sottoalberi hanno come figli dei nodi corrispondenti agli anni, i quali a loro volta hanno come figli dei nodi corrispondenti ai mesi, i figli dei mesi saranno infine le foglie corrispondenti a ciò che chiamiamo \textbf{Blockchain Synchronization Point} (BSP) in quanto nodi contenenti un timestamp e la root dello SG corrispondente.
+Il terzo e più importante è il \textbf{Merkle Calendar}, formato da due sottoalberi in cui vengono accolte come foglie rispettivamente le root delle istanze di OSG e di CSG. Le radici di questi due sottoalberi hanno come figli dei nodi corrispondenti agli anni, i quali a loro volta hanno come figli dei nodi corrispondenti ai mesi.
+I figli dei mesi saranno infine le foglie corrispondenti a ciò che chiamiamo \textbf{Blockchain Synchronization Point} (BSP) in quanto nodi contenenti un timestamp e la root dello SG corrispondente.
 
 Per ogni BSP, sappiamo che c'è stata la registrazione su blockchain della blockchain
 della root dell'MC in quel momento.
@@ -221,8 +223,7 @@ Possiamo vedere, anche grazie a Fig.~\ref{fi:umlMC}, come questa struttura sia i
 
 In Fig.~\ref{fi:mcIPE} possiamo osservare un possibile Markle Calendar.
 Nell'esempio è stato esplorato il mese di Febbraio 2021 e lì troviamo tre BSP:
-esse corrispondono a tre registrazioni della root dell'intero MC su blockchain, ovviamente
-sempre diversa dato che l'hash root si calcola con gli hash delle sue foglie.
+esse corrispondono a tre registrazioni della root del MC su blockchain.
 
 \begin{figure}[H]
     \centering
@@ -247,7 +248,7 @@ partizione di estrema destra dal sottoalbero radicato in Open (in questo caso).
 
 Ipotizziamo di voler recuperare la MC root nel momento in cui è stata inserita BSP B:
 \begin{enumerate}
-    \item Calcoliamo l'hash di Febbraio tramite l'hash di BSP a e di BSP B;
+    \item Calcoliamo l'hash di Febbraio tramite l'hash di BSP A e di BSP B;
     \item Calcoliamo l'hash del 2021 tramite l'hash di Gennaio e il ``nuovo" hash di Febbraio;
     \item Calcoliamo l'hash di Open tramite gli hash del 2019, del 2020 e il ``nuovo" hash del 2021;
     \item Calcoliamo la root del MC tramite l'hash di Closed e il ``nuovo" hash di Open, l'hash di Closed nell'istante dell'inserimento di BSP B viene salvato in un descrittore JSON presente in ogni SU registrata con BSP B.
@@ -256,8 +257,8 @@ Il calcolo di hash tramite altri hash è effettuato tramite dei piccoli Merkle T
 
 \subsection{Excursus sullo Storage Group}
 \label{sub:stage1}
-È possibile, alla vista della struttura del Merkle Calendar, aver pensato se fosse realmente
-necessario inserire l'ulteriore struttura dello Storage Group (Fig.~\ref{fi:SG}), se non si potesse,
+È lecito, alla vista della struttura del Merkle Calendar, domandarsi se fosse realmente
+necessario inserire l'ulteriore struttura dello Storage Group (Fig.~\ref{fi:SG}) e se non si potesse,
 anziché andare ad inserire la Merkle Root dello SG nel BSP, inserire direttamente
 l'hash di una singola Storage Unit, in modo da rendere ogni BSP proprio di una sola entità.
 
@@ -266,11 +267,12 @@ Come si può notare infatti nella schematizzazione del Workflow e dell'Architett
 inserita all'interno dello Storage Group, ciò perché effettivamente quest'ultima non è
 una struttura necessaria ai fini di una definizione formale dell'applicativo.
 Quel che è necessario però è che gli utilizzatori di questo spendano meno soldi possibile,
-cosa improbabile se la registrazione su blockchain avviene di ogni singola Storage Unit.
+cosa improbabile se la registrazione su blockchain avviene per ogni singola Storage Unit.
+
 Si tratta invece di una mossa saggia andare ad introdurre una piccola struttura che permetta,
 con una singola registrazione dal costo identico, di andare a registrare un numero
 indefinito di Storage Unit, quando ci riferiremo quindi all'operazione
-``\emph{Synchronize with blockchain}" per questa particolare implementazioni di PineSU,
+``\emph{Synchronize with blockchain}" per questa particolare implementazione di PineSU,
 comprenderemo anche uno staging a priori di tale SU.
 
 \begin{figure}[H]
@@ -315,7 +317,7 @@ Come visualizzabile in Fig.~\ref{fi:umlEC} il connettore per la blockchain, in q
 
 Il connettore per Git, la cui rappresentazione UML è visualizzabile in Fig.~\ref{fi:umlGC},
 è una semplice classe che lavora con un attributo della classe proveniente
-dal modulo simple-git, essa prende in input una directory su cui lavorare
+dal modulo \textsf{simple-git}, essa prende in input una directory su cui lavorare
 ed è poi in grado, in base alle chiamate delle funzioni del connettore, di operare su di
 essa tramite il client Git installato sulla macchina.
 
@@ -350,8 +352,8 @@ Lo Smart Contract (\autoref{sub:bc}) di PineSU è necessario
 per poter effettuare registrazioni ``forti", ovvero andare a salvare su blockchain
 che una determinata SU è stata chiusa in modo da evitare che delle eventuali manomissioni
 cerchino di chiuderla nuovamente (ricordiamo che una SU chiusa implica un'impossibilità di modifica e ricalcolo).
-Questo modulo è presente solamente in caso si vadano ad utilizzare blockchain di criptovalute che
-supportano la presenza di Smart Contract, nel nostro caso, con Ethereum, siamo a posto.
+Questo modulo è presente solamente in caso si vadano ad utilizzare blockchain che
+supportano la presenza di Smart Contract.
 PineSU SM non è tutt'ora implementato interamente ed è destinato a sviluppi futuri (\autoref{cap:sf}),
 possiamo tuttavia analizzarne una versione alpha, scritta in linguaggio \textbf{Solidity}, 
 che non si discosterà probabilmente poi molto da quella che verrà implementata.
@@ -372,9 +374,9 @@ contract SURegistry {
 
 }
 \end{lstlisting}
-Vediamo come si tratta di una semplice funzione che, data in input una stringa
-che corrisponde all'hash di una SU, lo salva nel suo registro, che altro non è che una
-lista degli hash delle SU chiuse. Gli hash di questa lista vengono salvati in nuovi
+Vediamo come si tratti di una semplice funzione che, data in input una stringa
+che corrisponde all'hash di una SU, la salva nel suo registro, che altro non è che una
+lista degli hash delle SU chiuse. Gli elementi di questa lista vengono salvati in nuovi
 blocchi della blockchain.
 
 \newpage
@@ -397,7 +399,7 @@ Alle operazioni che implicano modifiche alla struttura o allo stato della SU seg
 Andremo ora ad analizzarle una per volta mostrando anche il codice della parte PineSU CLI associato.
 
 \subsection{Creazione di una Storage Unit o Ricalcolo di una Storage Unit pre-esistente}
-La creazione di una Storage Unit è in realtà un'operazione che comprende sia la trasformazione in una Git Repository della directory, sia il calcolo degli hash che serviranno poi per registrare la nostra SU nella blockchain. Le informazioni della nostra SU sono conservate nel file descrittore \textsf{.pinesu.json} nella root della directory, la presenza di questo file indica al programma che la directory è già una SU. Anche nel caso in cui .pinesu.json sia già presente nella directory, questa operazione può essere eseguita e provvederà al ricalcolo degli hash e alla creazione di un nuovo descrittore, questo ovviamente solo se la SU è aperta.
+La creazione di una Storage Unit è in realtà un'operazione che comprende sia la trasformazione in una Git repository della directory, sia il calcolo degli hash che serviranno poi per registrare la nostra SU nella blockchain. Le informazioni della nostra SU sono conservate nel file descrittore \textsf{.pinesu.json} nella root della directory, la presenza di questo file indica al programma che la directory è già una SU. Anche nel caso in cui \textsf{.pinesu.json} sia già presente nella directory, questa operazione può essere eseguita e provvederà al ricalcolo degli hash e alla creazione di un nuovo descrittore, questo ovviamente solo se la SU è aperta.
 Dei file possono essere esclusi dalla Storage Unit con l'ausilio di un semplice file \textsf{.gitignore}, la cui creazione viene anch'essa gestita, in maniera opzionale, dal software.
 
 \begin{lstlisting}[language=JavaScript]
@@ -469,7 +471,7 @@ const create = async () => {
 
 \subsection{Staging di una Storage Unit nello Storage Group}
 \label{sub:stage2}
-Lo hash principale della Storage Unit viene inserito in uno dei due Storage Group (a seconda che sia aperta o chiusa), questa operazione è stata nominata \emph{staging} in quanto è concettualmente simile all'operazione omonima di Git se consideriamo la registrazione nella blockchain analoga ad un \emph{commit}.
+L'o 'hash principale della Storage Unit viene inserito in uno dei due Storage Group (a seconda che sia aperta o chiusa), questa operazione è stata nominata \emph{staging} in quanto è concettualmente simile all'operazione omonima di Git se consideriamo la registrazione nella blockchain analoga ad un \emph{commit}.
 
 \begin{lstlisting}[language=JavaScript]
 const stage = async () => {
@@ -492,7 +494,7 @@ const stage = async () => {
 
 \subsection{Registrazione dello Storage Group nella Blockchain}
 Le root dei due Storage Group vengono inserite nel Merkle Calendar, si effettua una transazione tra due wallet contenente la nuova root del Merkle Calendar.
-Gli SG vengono poi svuotati e le proof per essere dinamicamente ricostruiti vengono salvate, insieme alle informazioni per reperire la transazione, in un descrittore JSON nelle directory delle varie Storage Unit appena registrate.
+Gli SG vengono poi eliminati e le proof per essere dinamicamente ricostruiti vengono salvate, insieme alle informazioni per reperire la transazione, in un descrittore JSON nelle directory delle varie Storage Unit appena registrate.
 
 \newpage
 
@@ -569,7 +571,7 @@ L'implementazione \emph{strong} appare identica eccetto per la chiamata di un me
 alla \textsf{riga 5}. 
 
 \subsection{Esportazione di sottoinsiemi di file da una SU}
-In questa fase all'utente viene data la possibilità di scegliere di esportare alcuni file dalla SU, viene creato un file \textbf{.pifiles.json} in cui si salva, per ogni file esportato, il suo percorso originale, il suo hash, l'hash della root e le proof per calcolare la root dato l'hash del file (ciò servirà nell'operazione di verifica d'integrità). Infine i file, seguendo la struttura in cui comparivano nella SU originale, e .pifiles.json vengono compressi in un file ZIP e salvati nella cartella precedente a quella in cui si sta operando.
+In questa fase all'utente viene data la possibilità di scegliere di esportare alcuni file dalla SU, viene creato un file \textsf{.pifiles.json} in cui si salva, per ogni file esportato, il suo percorso originale, il suo hash, la root della sua SU e le proof per calcolare la root dato l'hash del file (ciò servirà nell'operazione di verifica d'integrità). Infine i file, seguendo la struttura in cui comparivano nella SU originale, e .pifiles.json vengono compressi in un file ZIP e salvati nella cartella precedente a quella in cui si sta operando.
 
 \begin{lstlisting}[language=JavaScript]
 const distribute = async () => {

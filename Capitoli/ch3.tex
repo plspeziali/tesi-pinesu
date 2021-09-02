@@ -8,7 +8,7 @@ Tali organizzazioni potrebbero aver bisogno di tornare a versioni precedenti
 dei loro documenti con la certezza che essi siano stati ripristinati
 correttamente oppure di trasferire a terzi insiemi e sottoinsiemi
 di file e directory del loro file system facendo si che questi ultimi
-possano in ogni momento controllare l'integrità di ogni singolo documento. \\
+possano in qualsiasi momento controllare l'integrità di ogni singolo documento. \\
 La possibilità di appoggiarsi ad un sistema centralizzato è a questo punto quella
 che offrirebbe una verifica meno sicura: non solo sarebbe necessario avere fiducia
 dell'entità che mantiene i propri dati, ma usando dei database centralizzati le informazioni
@@ -23,7 +23,7 @@ memorizzare più la nostra operazione sarà costosa dal punto di vista economico
 Il sistema progettato ha lo scopo di riuscire a fornire a chi ne usufruisce
 un livello di sicurezza aggiuntivo sopra il software Git tramite un'opportuna
 comunicazione con la blockchain.
-Il software, tramite un'interfaccia user-friendly, deve permettere non solo di gestire
+Il software, grazie a un'interfaccia user-friendly, deve permettere non solo di gestire
 le directory come normali \emph{repository} (\autoref{sub:vcs}), ma fornire
 anche degli utili strumenti di salvataggio di \emph{hash} (\autoref{sub:hash}) su blockchain,
 esportazione di sottoinsiemi di repository
@@ -56,11 +56,13 @@ risolvere questa questione:
     nodo si trova in uno stato critico e rende la rete vulnerabili agli attacchi informatici.
     \item I nuovi record vengono registrati esclusivamente concatenandoli ai vecchi.
     La loro immutabilità garantisce l'integrità dei dati nel registro.
+    \newline
+    \newline
     \item Le transazioni vengono validate attraverso un meccanismo di consenso peer-to-peer,
     le entità di validazione centrale non sono più necessarie.
     Una conseguenza di questo è lo spostamento del potere dagli intermediari verso
-    l'intero ecosistema, la decentralizzazione del potere e del controllo introduce
-    il concetto di proprietà dei singoli nodi e permette di mantenere il registro
+    l'intero ecosistema. La decentralizzazione del potere e del controllo
+    permette di mantenere il registro
     bilanciato e verificato tramite le sue metodologie intrinsiche.
     \item Le quattro caratteristiche precedenti permettono la disintermediazione,
     ovvero l'eliminazione di middle-men e intermediatori, eliminando di conseguenza
@@ -79,7 +81,8 @@ nella blockchain è direttamente proporzionale alla quantità di denaro che
 spendiamo per effettuare una registrazione.
 Occorre perciò trovare uno stratagemma per poter memorizzare una quantità
 estremamente ridotta di dati che permetta però di espletare controlli su un gran numero
-di documenti. \\
+di documenti.
+
 La soluzione al dilemma arriva sotto forma di accumulatori crittografici (\autoref{sub:mt}).
 Utilizzeremo delle strutture ad albero in cui le foglie saranno le nostre unità
 informative di interesse e da queste ne ricaveremo una radice unica.

@@ -143,7 +143,7 @@ ciò rende tale catena di blocchi immutabile: il cambiamento dei dati all'intern
 un blocco andrebbe a far mutare il suo riferimento crittografico, invalidando così la catena.
 La blockchain non è controllata all'interno di una singola unità o insieme di 
 unità centrali, bensì è distribuita, condivisa e aggiornata tra varie macchine 
-all'interno di una rete in modalità \emph{peer-to-peer}.
+all'interno di una rete secondo un modello \emph{peer-to-peer}.
 Nella letteratura scientifica la blockchain è infatti considerata un \textbf{DLT} ~\cite{asv-bdg-19},
 Distributed Ledger Technology (Tecnologia di Libro Mastro Distribuito), ovvero
 un'infrastruttura unita a dei protocolli che permettono a dei computer locati in
@@ -152,7 +152,7 @@ sincronizzata all'interno della rete.
 
 Una transazione, i cui dati sono contenuti all'interno dei blocchi, non è 
 altro che un'azione compiuta da parte di un account della rete (i.e. Bob) nei confronti 
-di un altro account (i.e. Alice), un esempio classico è l'invio di una quantità di moneta 
+di un altro account (i.e. Alice), un esempio classico è l'invio di una certa quantità di moneta 
 virtuale, a quel punto verrà registrata come transazione che il portafoglio o \emph{wallet}
 di Bob è in debito di tale quantità nei confronti del portafoglio di Alice.
 Possiamo quindi concludere che una transazione altro non è che la registrazione di proprietà 
@@ -171,8 +171,8 @@ ne esistono altri come il \emph{Proof-of-Stake} che sta venendo adottato da Ethe
 La Proof-of-Work è l'algoritmo di consenso che detta le regole per 
 la conferma di transazioni e la produzione di nuovi blocchi della catena: 
 per poter aggiungere un blocco è infatti necessario risolvere un complesso 
-enigma per cui viene richiesta un'alta potenza computazionale, i \emph{miner} 
-o minatori mettono a disposizione le proprie macchine per poter risolvere tale 
+enigma per cui viene richiesta un'alta potenza computazionale. \\
+I \emph{miner}, o minatori, mettono a disposizione le proprie macchine per poter risolvere tale 
 enigma in cambio di una ricompensa nella moneta virtuale di tale rete.
 Più una catena è lunga, più lavoro computazionale è stato svolto per produrla e 
 più gli utenti saranno orientati nel riporre la propria fiducia in essa, soprattutto 
@@ -186,17 +186,17 @@ entità che ne usufruiscono anzichè di un'unica entità centrale.
 \label{sub:eth}
 Mentre reti come quella Bitcoin a poco si prestano oltre al gestire l'omonima moneta virtuale, 
 troviamo altre reti in cui si è pensato di aggiungere molte più funzionalità.
-Una di queste è \textbf{Ethereum}~\cite{ethorg-wp-21}~\cite{eth-21}~\cite{eth-22}, una rete che trascende il concetto di semplice rete 
-per criptovaluta (in questo caso \textbf{Ether} andando a creare una piattaforma 
+Una di queste è \textbf{Ethereum}~\cite{ethorg-wp-21}~\cite{eth-21}~\cite{eth-22}, una tecnologia che trascende il concetto di semplice rete 
+per criptovaluta (in questo caso \textbf{Ether}) andando a creare una piattaforma 
 decentralizzata per la creazione e la pubblicazione peer-to-peer di Smart Contract 
 in linguaggi di programmazione Turing completi (ovvero capaci di risolvere ogni problema 
 che gli si possa presentare): Solidity e Vyper. 
 
 Uno \textbf{Smart Contract} è essenzialmente un programma (una collezione di codice che descrive 
 funzioni e un insieme di dati) che risiede ad uno specifico indirizzo della blockchain 
-(quindi all'interno di uno o più blocchi), gli utilizzatori possono comunicare con loro 
-ed utilizzare le loro funzioni richiamando queste ultime tramite delle transazioni. 
-Con Ethereum è quindi possibile andare a creare vere e proprie applicazioni decentralizzate
+(quindi all'interno di uno o più blocchi), gli utenti possono comunicare con loro 
+ed utilizzare le loro funzioni richiamandole tramite delle transazioni. 
+Con Ethereum è quindi possibile andare a creare applicazioni decentralizzate
 (unendo Smart Contract con un'interfaccia utente), chiamate \textbf{dapp},
 con vita propria all'interno della \textbf{Ethereum Virtual Machine}, ovvero
 la grande macchina virtuale simulata andando ad unire tutta la potenza computazionale
@@ -204,15 +204,15 @@ messa a disposizione dagli utenti di Ethereum e usando la blockchain come archiv
 di informazioni permanenti. 
 
 Grazie alla nascita delle dapp si può azzardare ad andare a definire una nuova
-tipologia di web, diverso dal Web2 che conosciamo oggi ricco di contenuti generati
+tipologia di web, diverso dal Web2 che conosciamo oggi, ricco di contenuti generati
 dagli utenti ma su piattaforme centralizzate nella mani di poche aziende.
-Questo nuovo web, chiamato \textbf{Web3} ha lo scopo di creare una nuova
-esperienza di navigazione che permetta a chiunque sia in grado di connettersi
-alla rete Ethereum di partecipare al servizio e dove controllo centralizzato,
+
+Questo nuovo web, chiamato \textbf{Web3}, ha lo scopo di creare una nuova
+esperienza di navigazione che permetta, a chiunque sia in grado di connettersi
+alla rete Ethereum, di partecipare al servizio e dove controllo centrale,
 censura e blocco dei pagamenti sono ormai concetti superati che non appartengono
-al grande network decentralizzato, purtroppo tutto ciò a scapito di costi elevati,
-spreco di risorse e di una limitata scalabilità, non è detto però che l'evoluzione
-di queste tecnologie non permetta di superare questi problemi.
+al grande network decentralizzato. Purtroppo tutto ciò porta con sé costi elevati,
+uno spreco di risorse e una limitata scalabilità.
 
 Un grande scoglio per gli sviluppatori di dapp è sicuramente la presenza
 delle \textbf{gas fee}, ovvero i dazi sul \textsf{gas}, l'unità di misura del
@@ -235,32 +235,23 @@ software nonostante non faccia parte del sistema operativo, open source e cross
 platform per l'esecuzione di codice in linguaggio Javascript.
 
 \textbf{Javascript} è un linguaggio di programmazione ad alto livello,
-spesso con compilazione \emph{Just In Time} e a multi-paradigma: supporta infatti diversi
+spesso con compilazione \emph{Just In Time} e a paradigma multiplo: supporta infatti diversi
 stili di programmazione tra cui la programmazione a eventi, a oggetti,
 funzionale e persino imperativa.
 Inizialmente limitato alla sola esecuzione lato client su browser,
 la sua crescita in popolarità, complice la sua versatilità, facilità
 di apprendimento e la sua sintassi molto simile a C e Java, ha portato
 allo sviluppo anche di ambienti esterni su cui poter eseguire codice lato server
-e standalone, come il sopracitato Node.js, il quale si basa infatti sull'interprete
+e standalone. Un esempio ne è il sopracitato Node.js, il quale si basa sull'interprete
 Javascript V8, sviluppato da Google per il suo Chrome e dalle prestazioni elevate.
 
 Node.js rappresenta a tutti gli effetti non solo un motore per Javascript server-side,
 ma un'implementazione del paradigma \emph{Javascript everywhere}, riuscendo ad unire
 tutte le componenti di una qualsiasi applicazione, web e non, sotto un unico linguaggio.
 
-Le applicazioni Node.js vengono eseguite in un singolo processo, senza la creazione di
-nuovi thread per ogni richiesta, quando deve essere eseguita un'operazione di I/O,
-come una lettura o scrittura nella rete, un accesso a un database o a un file system,
-anziché bloccare il thread e sprecare cicli della CPU facendola attendere, Node.js
-interrompe il processo e riprende le sue funzioni non appena l'operazione I/O termina,
-questo permette a un server con ambiente Node.js di gestire efficientemente moltissime
-connessioni in concorrenza senza che il programmatore debba preoccuparsi di gestire
-alcuna concorrenza tra thread differenti.
-
-Uno dei punti più affascinanti ed eccitanti di Node.js, e di molti altri linguaggi
-con un supporto così attivo da parte della community, è sicuramente il semplice e
-veloce accesso alle migliaia di librerie che gli utenti pubblicano ogni giorno e
+Uno dei punti più affascinanti ed eccitanti di Node.js (e di molti altri linguaggi
+con un supporto molto attivo da parte della community), è sicuramente il semplice e
+veloce accesso alle migliaia di librerie che gli utenti pubblicano ogni giorno,
 installabili tramite il package manager \textbf{npm} in maniera pressoché immediata.
 
 \newpage
@@ -277,17 +268,17 @@ ci permettono di rappresentare più blocchi di dati con un singolo hash.
     \end{center}
     \vspace{-20pt}
 \end{wrapfigure}
-I Merkle Tree, nello specifico quelli binari, sono essenzialmente alberi binari
-in cui ogni foglia corrisponde all'hash di uno dei nostri elementi, risalendo verso la radice ogni
+I Merkle Tree sono essenzialmente alberi binari
+in cui ogni foglia corrisponde all'hash di uno dei nostri elementi. Risalendo verso la radice ogni
 nodo interno calcolerà il proprio hash concatenando gli hash dei nodi figli, infine si avrà
 una radice (\textbf{Merkle Root} o MR) il cui hash è univoco a quella lista di elementi che l'albero
 ha come foglie, in quella sequenza.
-Inoltre, utilizzando degli hash generati con una funzione crittografica ``forte", si ha
+Infatti, utilizzando degli hash generati con una funzione crittografica ``forte", si ha
 un'assenza di collisioni tra le Merkle Root.
 Perciò sappiamo che, per una determinata sequenza di documenti i cui hash sono le foglie dell'albero, anche solo una
 piccola modfica ad un file causerebbe un cambiamento significativo, se non totale, della MR.
 
-Possiamo quindi capire che c'è stato un cambiamento, tuttavia per capire anche
+Possiamo quindi capire se c'è stato un cambiamento, tuttavia per capire anche
 quale dei documenti è stato cambiato bisogna ricorrere al concetto di \textbf{Merkle Proof}.
 Per effettuare una verifica tramite Merkle Proof sono tre gli elementi necessari:
 \begin{enumerate}
@@ -296,7 +287,7 @@ Per effettuare una verifica tramite Merkle Proof sono tre gli elementi necessari
     \item La Merkle Proof, ovvero la lista degli hash dei fratelli lungo il cammino dall'elemento alla radice.
 \end{enumerate}
 Andando a svolgere questa verifica su ogni documento riusceremo ad individuare i file modificati come
-quelli per cui non è possibile ricostruire il cammino verso la radice lasciandola inalterata.
+quelli per cui non è possibile ricostruire il cammino verso la radice, lasciando quest'ultima inalterata.
 
 \section{JSON}
 \label{sub:json}
@@ -332,7 +323,7 @@ Possiamo osservare come ogni attributo e il suo valore vengano rappresentati com
 dove il valore è posto tra due virgolette in caso sia una stringa (\textsf{riga 1})
 o da nulla in caso sia un tipo primitivo (\textsf{riga 3}).
 Un valore può inoltre essere anche un altro oggetto (\textsf{righe 4-7}), in questo caso
-vediamo come sia incluso tra parentesi graffe e segua poi al suo interno la sintassi che
+vediamo come venga incluso tra parentesi graffe e segua poi al suo interno la sintassi che
 abbiamo appena osservato, o un array di valori semplici o oggetti (quest'ultimo alle \textsf{righe 8-16})
 andando ad inserire i valori tra parentesi quadre.
 È possibile anche rappresentare array vuoti (\textsf{riga 17}), con delle parentesi quadre senza
