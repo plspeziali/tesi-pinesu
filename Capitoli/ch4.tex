@@ -571,7 +571,7 @@ L'implementazione \emph{strong} appare identica eccetto per la chiamata di un me
 alla \textsf{riga 5}. 
 
 \subsection{Esportazione di sottoinsiemi di file da una SU}
-In questa fase all'utente viene data la possibilità di scegliere di esportare alcuni file dalla SU, viene creato un file \textsf{.pifiles.json} in cui si salva, per ogni file esportato, il suo percorso originale, il suo hash, la root della sua SU e le proof per calcolare la root dato l'hash del file (ciò servirà nell'operazione di verifica d'integrità). Infine i file, seguendo la struttura in cui comparivano nella SU originale, e .pifiles.json vengono compressi in un file ZIP e salvati nella cartella precedente a quella in cui si sta operando.
+In questa fase all'utente viene data la possibilità di scegliere di esportare alcuni file dalla SU, viene creato un file \textsf{.pifiles.json} in cui si salva, per ogni file esportato, il suo percorso originale, il suo hash, la root della sua SU e le proof per ricostruire la root dato l'hash del file (ciò servirà nell'operazione di verifica d'integrità). Infine i file, seguendo la struttura in cui comparivano nella SU originale, e \textsf{.pifiles.json} vengono compressi in un file ZIP che verrà salvato nella cartella precedente a quella in cui si sta operando.
 
 \begin{lstlisting}[language=JavaScript]
 const distribute = async () => {
@@ -592,7 +592,7 @@ const distribute = async () => {
 \end{lstlisting}
 
 \subsection{Controllo di integrità di singoli file esportati da altre SU}
-Viene analizzata la directory in modo da trovare dei file descrittori \textbf{.pifiles.json}, da quelli e dai file in essi elencati si fa un controllo d'integrità che va anche ad effettuare lo stesso controllo su Blockchain che si effettua nell'ultima operazione.
+Viene analizzata la directory in modo da trovare dei file descrittori \textsf{.pifiles.json}, da quelli e dai file in essi elencati si fa un controllo d'integrità che va anche ad effettuare lo stesso controllo su Blockchain che si effettua nell'ultima operazione.
 
 \begin{lstlisting}[language=JavaScript]
 const checkFilesBlockchain = async () => {
@@ -634,7 +634,7 @@ const checkFilesBlockchain = async () => {
 \end{lstlisting}
 
 \subsection{Controllo di integrità su una SU}
-Si legge la root dello Storage Group della SU selezionata e si cerca tale root nel Merkle Calendar, una volta trovato si è in grado di ricalcolare la root del Merkle Calendar nel momento in cui tale Storage Group è stato registrato, da qui si controlla se la transazione salvata contiene anch'essa la root del vecchio Merkle Calendar come messaggio.
+Si legge la root dello Storage Group della SU selezionata e si cerca tale root nel Merkle Calendar, una volta trovata si è in grado di ricalcolare la root del Merkle Calendar nel momento in cui tale Storage Group è stato registrato, da qui si controlla se la transazione salvata contiene anch'essa la root del vecchio Merkle Calendar come messaggio.
 
 \newpage
 

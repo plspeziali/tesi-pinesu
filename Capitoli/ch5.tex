@@ -12,7 +12,7 @@ opzionalmente, la repository Git remota con cui sincronizzare il MerkleCalendar.
 
 \section{Creazione delle Storage Unit}
 
-Partiamo definendo il contenuto delle nostre due directory, la prima,
+Partiamo definendo il contenuto delle nostre due directory. La prima,
 \textbf{\textsf{sample}}, ha questa struttura:
 \begin{itemize}
     \itemsep0em
@@ -40,13 +40,13 @@ La seconda directory, \textbf{\textsf{secondSample}}, ha questa struttura:
 \end{itemize}
 
 Dove \textsf{esonero1}, \textsf{esonero2} ed \textsf{esonero3} sono tre subdirectory di \textsf{secondSample}.
-In questa directory troviamo anche la presenza di file di diversa natura. \\
+In questa directory troviamo la presenza di file di diversa natura. \\
 
 
 Per trasformare le directory in Storage Unit posizioniamoci con il terminale all'interno di ognuna,
-avviamo lo script di avvio di PineSU e selezioniamo la prima opzione (\emph{Create / Recalculate SU}),
-ovviamente il procedimento andrà ripetuto due volte.
-Il processo ci chiederà se inizializzare una repository Git e se escludere alcuni file,
+avviamo PineSU e selezioniamo la prima opzione (\emph{Create / Recalculate SU}),
+ovviamente il procedimento andrà eseguito per entrambe le directory.
+Il processo ci chiederà se inizializzare una repository Git nella nostra posizione e se escludere alcuni file,
 procederà poi al calcolo dei vari hash.
 
 \begin{figure}[H]
@@ -75,7 +75,7 @@ Finite le domande, l'applicativo ci riporterà al menù principale.
 \end{figure}
 
 Al termine di entrambe le elaborazioni sulle due directory avremo alcune nuove aggiunte al loro interno:
-una cartella .git (eventualmente, anche un file .gitignore) e un file .pinesu.json, quest'ultimo è
+una cartella \textsf{.git} (eventualmente, anche un file \textsf{.gitignore}) e un file \textsf{.pinesu.json}, quest'ultimo è
 il descrittore JSON in cui sono salvate le informazioni che abbiamo inserito, gli hash calcolati e
 lo stato di chiusura. Ecco, ad esempio, il file JSON di \textsf{sample}:
 
@@ -111,7 +111,7 @@ lo stato di chiusura. Ecco, ad esempio, il file JSON di \textsf{sample}:
 A questo punto vogliamo registrare le nostre Storage Unit aperte nella blockchain, 
 occorre però prima inserirle negli Storage Group
 (in questo caso solo in Open Storage Group).
-Per effettuare questa operazione occorre solo selezionare l'opzione apposita (\emph{Stage SU for Synchronization})
+Per effettuare questa operazione occorre selezionare l'opzione apposita (\emph{Stage SU for Synchronization})
 in entrambe le directory, nella nostra cartella d'installazione verrà 
 aggiornato il file \textsf{merkles/storageGroup.json} con le informazioni delle nostre SU.
 
@@ -137,9 +137,9 @@ Questa è la lista delle foglie con cui calcoleremo l'effettivo Merkle Tree di O
 \label{sub:regbc}
 Per la registrazione non è necessario posizionarsi in una delle directory delle SU
 in quanto quelle da registrare sono già nello Storage Group, ci rimane solo
-da selezionare l'opzione apposita (\emph{Register Staged SUs}) per eseguire
-con la registrazione, a questo punto lo Storage Group verrà svuotato
-e verrà popolato, almeno nel sottoalbero Open, il Merkle Calendar con una foglia
+da selezionare l'opzione apposita (\emph{Register Staged SUs}) per proseguire
+con la registrazione, a questo punto lo Storage Group verrà eliminato.
+In compenso verrà popolato, almeno nel sottoalbero Open, il Merkle Calendar con una foglia
 in più e, all'occorrenza, dei nodi interni extra (in caso non fossero state
 registrate delle SU in questo mese e anno).
 
@@ -173,8 +173,8 @@ del MerkleCalendar nel momento in cui è stato registrato.
 \section{Verifica d'integrità di una Storage Unit}
 
 A questo punto ci troveremo ad avere Storage Unit USO (Updated Synchronized Open), ciò
-significa che ha senso sia effettura verifiche d'integrità avvalendoci della blockchain,
-sia esportare sottoinsiemi di file da essa in modo che anche chi reperisce tali file sia
+significa che ha senso sia effettuare sia verifiche d'integrità avvalendoci della blockchain,
+sia esportare sottoinsiemi di file da essa in modo che, anche chi li riceverà, sarà
 in grado di verificare la loro integrità e la loro registrazione su blockchain.
 La verifica può essere fatta selezionando l'opzione \emph{Check SU integrity}
 mentre ci si trova nella directory della SU da verificare, il successo o
@@ -193,7 +193,7 @@ l'insuccesso ci verranno comunicati su schermo.
 
 \section{Esportazione di file da una Storage Unit}
 \label{sub:exp}
-Per quanto riguarda l'esportazione di file, andremo ad eseguirla su \textsf{secondSample}.
+Per quanto riguarda l'esportazione di file, andremo a testarla su \textsf{secondSample}.
 Essa viene eseguita selezionando i file da esportare con l'apposita interfaccia
 di selezione multipla
 \begin{figure}[H]
@@ -209,7 +209,7 @@ di selezione multipla
 In questo caso siamo andati a selezionare \textsf{esonero2/preesonero2.pdf},
 \textsf{esonero3/preesonero3.tex} e \textsf{esonero1/Immagine.png}, essi verranno inseriti,
 assieme a un file descrittore \textsf{.pifiles.json}, che contiene per ognuno le proof
-per ricostruire l'hash della loro SU a partire dai loro hash, e il file \textsf{.registration.json},
+per ricostruire l'hash della SU originale a partire dai loro hash, e il file \textsf{.registration.json},
 in un file ZIP che verrà salvato nella cartella superiore a quella in cui si trovano.
 
 \newpage
@@ -240,7 +240,7 @@ Dopo questa operazioni infatti il Merkle Calendar sarà questo:
             "name": "SU of Wed Aug 18 2021 16:00:20",
             "year": 2021,
             "month": 7,
-            "day": 3,
+            "day": 17,
             "hour": 16,
             "minute": 0,
             "hash": "e67006f15ecd3fa[...]3242e1be8b"
@@ -259,7 +259,7 @@ Dopo questa operazioni infatti il Merkle Calendar sarà questo:
             "name": "SU of Thu Aug 19 2021 12:16:36",
             "year": 2021,
             "month": 7,
-            "day": 4,
+            "day": 18,
             "hour": 12,
             "minute": 16,
             "hash": "7a61ed5e43cd436[...]93fdb9b3be"
