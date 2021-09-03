@@ -354,7 +354,7 @@ che una determinata SU è stata chiusa in modo da evitare che delle eventuali ma
 cerchino di chiuderla nuovamente (ricordiamo che una SU chiusa implica un'impossibilità di modifica e ricalcolo).
 Questo modulo è presente solamente in caso si vadano ad utilizzare blockchain che
 supportano la presenza di Smart Contract.
-PineSU SM non è tutt'ora implementato interamente ed è destinato a sviluppi futuri (\autoref{cap:sf}),
+\emph{PineSU SM} non è tutt'ora implementato interamente ed è destinato a sviluppi futuri (\autoref{cap:sf}),
 possiamo tuttavia analizzarne una versione alpha, scritta in linguaggio \textbf{Solidity}, 
 che non si discosterà probabilmente poi molto da quella che verrà implementata.
 
@@ -396,7 +396,7 @@ L'elenco delle funzionalità è il seguente.
 \end{enumerate}
 
 Alle operazioni che implicano modifiche alla struttura o allo stato della SU seguirà sempre un Git \textsf{commit} (\autoref{sub:git}).
-Andremo ora ad analizzarle una per volta mostrando anche il codice della parte PineSU CLI associato.
+Andremo ora ad analizzarle una per volta mostrando anche il codice della parte \emph{PineSU CLI} associato.
 
 \subsection{Creazione di una Storage Unit o Ricalcolo di una Storage Unit pre-esistente}
 La creazione di una Storage Unit è in realtà un'operazione che comprende sia la trasformazione in una Git repository della directory, sia il calcolo degli hash che serviranno poi per registrare la nostra SU nella blockchain. Le informazioni della nostra SU sono conservate nel file descrittore \textsf{.pinesu.json} nella root della directory, la presenza di questo file indica al programma che la directory è già una SU. Anche nel caso in cui \textsf{.pinesu.json} sia già presente nella directory, questa operazione può essere eseguita e provvederà al ricalcolo degli hash e alla creazione di un nuovo descrittore, questo ovviamente solo se la SU è aperta.
@@ -542,7 +542,7 @@ const register = async () => {
 La Storage Unit viene chiusa ma ad una condizione che varia a seconda dei casi:
 \begin{itemize}
     \item \emph{Weak}: Si controllano i commit della repository per controllare che un commit di chiusura non sia già avvenuto.
-    \item \emph{Strong}: Si controlla la blockchain, tramite PineSU SM (\autoref{sub:sm}), per verificare che non sia già presente la entry corrispondente alla chiusura di quella SU.
+    \item \emph{Strong}: Si controlla la blockchain, tramite \emph{PineSU SM} (\autoref{sub:sm}), per verificare che non sia già presente la entry corrispondente alla chiusura di quella SU.
 \end{itemize}
 
 \begin{lstlisting}[language=JavaScript]

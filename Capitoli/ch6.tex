@@ -26,12 +26,12 @@ In primis potrebbe essere migliorato il calcolo della Merkle Root corrispondente
 ad una singola Storage Unit, infatti per ora la lista di file e directory viene
 semplicemente ordinata in ordine alfabetico e da quella viene calcolato
 un Merkle Tree binario. Invece, ispirandosi al modo con cui Git traccia le modifiche
-dei propri file(come spiegato nella \autoref{sub:git}),
+dei propri file (come spiegato nella \autoref{sub:git}),
 si potrebbe identificare ogni file con l'hash corrispondente e tracciare le modifiche ogni
 volta che si effettua un ricalcolo della Storage Unit, evitando quindi di ricalcolare hash
 di file che sono rimasti identici, usando possibilmente le funzionalità dei Git commit.
 
-Una seconda aggiunta, già discussa, è l'implementazione del PineSU Smart Contract
+Una seconda aggiunta, già discussa, è l'implementazione del \emph{PineSU SM}
 per registrazioni su blockchain dell'hash di SU chiuse.
 
 Una terza aggiunta è l'implementazione di connettori per ulteriori blockchain, in modo tale
