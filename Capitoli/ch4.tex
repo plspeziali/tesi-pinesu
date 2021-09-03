@@ -188,8 +188,6 @@ Possiamo vedere, anche grazie a Fig.~\ref{fi:umlMC}, come questa struttura sia i
             \begin{class}[text width=9.5cm]{InternalCalendar}{4,-4.5}
                 \attribute{- name : string}
                 \attribute{- category : int}
-                \attribute{- parent : InternalCalendar}
-                \attribute{- category : int}
                 \attribute{- hash : string}
                 \operation{constructor(name: string, category: int, parent: Object)}
                 \operation{+ addChild(node: Object) : void}
@@ -200,7 +198,7 @@ Possiamo vedere, anche grazie a Fig.~\ref{fi:umlMC}, come questa struttura sia i
             \begin{class}[text width=15cm]{LeafCalendar}{2,-12.5}
                 \attribute{- name : string}
                 \attribute{- day : int}
-                \attribute{- hour : InternalCalendar}
+                \attribute{- hour : int}
                 \attribute{- minute : int}
                 \attribute{- hash : string}
                 \operation{constructor(name: string, day: int, hour: int, minute: int, hash: string, parent: Object)}
