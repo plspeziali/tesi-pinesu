@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  2 SEP 2021 21:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  3 SEP 2021 12:22
 entering extended mode
 **c:/Users/Paolo/Dropbox/Tesi/tesi.tex
 (c:/Users/Paolo/Dropbox/Tesi/tesi.tex
@@ -847,7 +847,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <figures//mt1.pdf, id=326, 242.30524pt x 346.19337pt>
 File: figures//mt1.pdf Graphic file (type pdf)
 <use figures//mt1.pdf>
-Package pdftex.def Info: figures//mt1.pdf  used on input line 267.
+Package pdftex.def Info: figures//mt1.pdf  used on input line 268.
 (pdftex.def)             Requested size: 167.2989pt x 239.03215pt.
 
 
@@ -859,7 +859,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [14 <c:/Users/Paolo/Dropbox/Tesi/figures//mt1.pdf>]
 LaTeX Font Info:    Font shape `OT1/Crimson-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 302.
+(Font)              scaled to size 10.0pt on input line 303.
 )
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1136,7 +1136,7 @@ Capitolo 5.
 (c:/Users\Paolo\Dropbox\Tesi\Capitoli/ch5.tex [42
 
 ]
-<Figures/calculating.png, id=978, 874.76813pt x 557.08125pt>
+<Figures/calculating.png, id=973, 874.76813pt x 557.08125pt>
 File: Figures/calculating.png Graphic file (type png)
 <use Figures/calculating.png>
 Package pdftex.def Info: Figures/calculating.png  used on input line 54.
@@ -1150,7 +1150,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [43]
-<Figures/doneCalculating.png, id=983, 980.16188pt x 557.08125pt>
+<Figures/doneCalculating.png, id=978, 980.16188pt x 557.08125pt>
 File: Figures/doneCalculating.png Graphic file (type png)
 <use Figures/doneCalculating.png>
 Package pdftex.def Info: Figures/doneCalculating.png  used on input line 69.
@@ -1191,7 +1191,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [47]
-<Figures/verify.png, id=1052, 1166.3575pt x 742.775pt>
+<Figures/verify.png, id=1047, 1166.3575pt x 742.775pt>
 File: Figures/verify.png Graphic file (type png)
 <use Figures/verify.png>
 Package pdftex.def Info: Figures/verify.png  used on input line 185.
@@ -1205,7 +1205,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [48 <c:/Users/Paolo/Dropbox/Tesi/Figures/verify.png>]
-<Figures/export.png, id=1059, 1166.3575pt x 742.775pt>
+<Figures/export.png, id=1054, 1166.3575pt x 742.775pt>
 File: Figures/export.png Graphic file (type png)
 <use Figures/export.png>
 Package pdftex.def Info: Figures/export.png  used on input line 201.
@@ -1227,7 +1227,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [50]
-<Figures/verifyFiles.png, id=1089, 1166.3575pt x 1108.14pt>
+<Figures/verifyFiles.png, id=1084, 1166.3575pt x 1108.14pt>
 File: Figures/verifyFiles.png Graphic file (type png)
 <use Figures/verifyFiles.png>
 Package pdftex.def Info: Figures/verifyFiles.png  used on input line 287.
@@ -1285,10 +1285,10 @@ Package rerunfilecheck Info: File `tesi.out' has not changed.
 (rerunfilecheck)             Checksum: 0052EEF52E310E58A7EF0CEB7B7F184A;8080.
  ) 
 Here is how much of TeX's memory you used:
- 27150 strings out of 479334
- 499801 string characters out of 2857084
+ 27143 strings out of 479334
+ 499674 string characters out of 2857084
  1349930 words of memory out of 3000000
- 43585 multiletter control sequences out of 15000+200000
+ 43583 multiletter control sequences out of 15000+200000
  450650 words of font info for 61 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,12n,103p,1060b,1996s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1297,9 +1297,9 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 {C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_n3gbj7.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_axwm4k.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_wttfgh.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_qrsm2e.enc}<C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Bold.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-BoldItalic.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Italic.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Roman.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on c:/Users\Paolo\Dropbox\Tesi\tesi.pdf (58 pages, 2780940 bytes).
+Output written on c:/Users\Paolo\Dropbox\Tesi\tesi.pdf (58 pages, 2779923 bytes).
 PDF statistics:
- 1334 PDF objects out of 1440 (max. 8388607)
- 510 named destinations out of 1000 (max. 500000)
+ 1329 PDF objects out of 1440 (max. 8388607)
+ 505 named destinations out of 1000 (max. 500000)
  419 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -404,7 +404,8 @@ Dei file possono essere esclusi dalla Storage Unit con l'ausilio di un semplice 
 
 \begin{lstlisting}[language=JavaScript]
 const create = async () => {
-  // Controllo d'esistenza di repository Git con creazione in caso contrario
+  // Controllo d'esistenza di repository Git
+  // con creazione in caso contrario
   if (files.fileExists(".git")) {
     console.log(chalk.green("Already a Git repository!"));
   } else {
@@ -424,8 +425,8 @@ const create = async () => {
     await gitLogic.addFileSU(".gitignore");
   }
 
-  // Aggiunta dei file della directory a un commit "fantoccio"
-  // e calcolo dei loro hash
+  // Aggiunta dei file della directory a un commit
+  // "fantoccio" e calcolo dei loro hash
   const spinnerAdd = 
     ora("Adding files to the Storage Unit...").start();
   await gitLogic.addAllSU();
@@ -471,8 +472,8 @@ const create = async () => {
 
 \subsection{Staging di una Storage Unit nello Storage Group}
 \label{sub:stage2}
-L'o 'hash principale della Storage Unit viene inserito in uno dei due Storage Group (a seconda che sia aperta o chiusa), questa operazione è stata nominata \emph{staging} in quanto è concettualmente simile all'operazione omonima di Git se consideriamo la registrazione nella blockchain analoga ad un \emph{commit}.
-
+L'hash principale della Storage Unit viene inserito in uno dei due Storage Group (a seconda che sia aperta o chiusa), questa operazione è stata nominata \emph{staging} in quanto è concettualmente simile all'operazione omonima di Git se consideriamo la registrazione nella blockchain analoga ad un \emph{commit}.
+\\
 \begin{lstlisting}[language=JavaScript]
 const stage = async () => {
   // Lettura dei metadati della SU,
@@ -572,7 +573,7 @@ alla \textsf{riga 5}.
 
 \subsection{Esportazione di sottoinsiemi di file da una SU}
 In questa fase all'utente viene data la possibilità di scegliere di esportare alcuni file dalla SU, viene creato un file \textsf{.pifiles.json} in cui si salva, per ogni file esportato, il suo percorso originale, il suo hash, la root della sua SU e le proof per ricostruire la root dato l'hash del file (ciò servirà nell'operazione di verifica d'integrità). Infine i file, seguendo la struttura in cui comparivano nella SU originale, e \textsf{.pifiles.json} vengono compressi in un file ZIP che verrà salvato nella cartella precedente a quella in cui si sta operando.
-
+\\
 \begin{lstlisting}[language=JavaScript]
 const distribute = async () => {
     // Si fanno scegliere all'utente i file
@@ -593,19 +594,11 @@ const distribute = async () => {
 
 \subsection{Controllo di integrità di singoli file esportati da altre SU}
 Viene analizzata la directory in modo da trovare dei file descrittori \textsf{.pifiles.json}, da quelli e dai file in essi elencati si fa un controllo d'integrità che va anche ad effettuare lo stesso controllo su Blockchain che si effettua nell'ultima operazione.
-
+\newpage
 \begin{lstlisting}[language=JavaScript]
 const checkFilesBlockchain = async () => {
-    // Si controlla la presenza nella directory
-    // di un file chiamato ".pifiles.json"
+    // Si controlla la presenza di ".pifiles.json"
     var pifile = files.readPifile();
-\end{lstlisting}
-\newpage
-\begin{lstlisting}[language=JavaScript, firstnumber=5]
-    if(pifile[0] == "null"){
-        console.log(chalk.cyan("No ".pifiles.json" found"));
-        return;
-    }
     // Per ogni file elencato in ".pifiles.json"
     // si effettuano controlli locali
     for(var el of pifile){
