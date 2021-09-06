@@ -1,0 +1,10 @@
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\beamer@sectionintoc {1}{Introduzione}{2}{0}{1}
+\beamer@sectionintoc {2}{Specifica dei requisiti}{6}{0}{2}
+\beamer@sectionintoc {3}{Excursus sulle tecnologie}{8}{0}{3}
+\beamer@sectionintoc {4}{Progettazione}{12}{0}{4}
+\beamer@sectionintoc {5}{Apprendimento}{14}{0}{5}
+\beamer@sectionintoc {6}{Implementa -zione}{19}{0}{6}
+\beamer@sectionintoc {7}{Resoconto}{25}{0}{7}
+\beamer@sectionintoc {8}{Fonti}{26}{0}{8}
