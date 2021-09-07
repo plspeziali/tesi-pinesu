@@ -18,6 +18,10 @@ sicuro combinando Git e Blockchain}
 \begin{frame}
 	\titlepage % beamer's \maketitle
 \end{frame}
+\begin{frame}
+	\frametitle{Indice}
+	\tableofcontents
+\end{frame}
 \section{Introduzione}
 \begin{frame}
 	\frametitle{La digitalizzazione}
@@ -78,13 +82,39 @@ sicuro combinando Git e Blockchain}
 	\end{figure}
 \end{frame}
 
-\section{Specifica dei requisiti}
+\section{Concetti preliminari}
 \begin{frame}
-	\frametitle{Fase 2: Specifica dei requisiti}
-	Partendo da questa idea lo step successivo è stato la definizione dei requisiti del progetto. Abbiamo perciò concordato che l’attività potesse orientarsi verso la creazione di un tool universale per la registrazione dell’impronta digitale (tramite funzioni di hashing) di insiemi di file, da noi battezzati Storage Unit, su Blockchain, utilizzando gli strumenti messi a disposizione da Git per gestirli meglio.
-
-	Il nome scelto per l'applicazione è stato \textbf{PineSU}.
+	\frametitle{Funzioni crittografiche di hashing}
+	Una funzione crittografica di hashing è una funzione di hashing, ovvero
+	una funzione che permette di associare,
+	a una qualsiasi sequenza \(m\) di lunghezza arbitraria in input, una sequenza
+	in output \(h(m)\) di lunghezza costante,
+	con alcune proprietà aggiunte che deve seguire per poter essere considerata
+	\emph{crittograficamente sicura}. Esse impediscono di risalire all'input originale
+	e facilitano i \textbf{controlli di integrità sui file}.
+	\medskip
+	\begin{figure}
+		\includegraphics[width=0.85\textwidth]{figures/hashing.jpg}
+	\end{figure}
 \end{frame}
+
+\section{Il Problema e l'Obiettivo}
+\begin{frame}
+	\frametitle{Il Problema}
+	Una funzione crittografica di hashing è una funzione di hashing, ovvero
+	una funzione che permette di associare,
+	a una qualsiasi sequenza \(m\) di lunghezza arbitraria in input, una sequenza
+	in output \(h(m)\) di lunghezza costante,
+	con alcune proprietà aggiunte che deve seguire per poter essere considerata
+	\emph{crittograficamente sicura}. Esse impediscono di risalire all'input originale
+	e facilitano i \textbf{controlli di integrità sui file}.
+	\medskip
+	\begin{figure}
+		\includegraphics[width=0.85\textwidth]{figures/hashing.jpg}
+	\end{figure}
+\end{frame}
+
+
 \begin{frame}
 	\frametitle{Fase 2: Specifica dei requisiti}
 	\begin{columns}
@@ -97,7 +127,7 @@ sicuro combinando Git e Blockchain}
 		\end{figure}
 	\end{columns}
 \end{frame}
-\section{Excursus sulle tecnologie}
+
 \begin{frame}
 	\frametitle{Excursus su Ethereum e Blockchain}
 	La tecnologia di Ethereum permette la creazione di una rete distribuita e decentralizzata finanziata e incentivata ad operare e rimanere attiva mediante la creazione, lo scambio e l’utilizzo dell’omonima criptovaluta.
@@ -129,141 +159,7 @@ sicuro combinando Git e Blockchain}
 		\includegraphics[width=0.85\textwidth]{figures/hashing.jpg}
 	\end{figure}
 \end{frame}
-\section{Progettazione}
-\begin{frame}
-	\frametitle{Fase 3: Progettazione - Prima stesura}
-	\begin{columns}
-		\column{0.5\textwidth}
-			La stesura iniziale è stata svolta dal professore che mi ha quindi fornito una linea guida da cui poter prendere spunto per poter realizzare il progetto dopo aver concordato sulle sue funzionalità, tale architettura è stata tuttavia modificata abbastanza in quanto le tecnologie utilizzate sono ancora troppo sperimentali e non offrono gli strumenti per potere essere adattati ad una struttura del genere.
-		\column{0.5\textwidth}
-		\begin{figure}
-			\includegraphics[width=0.88\textwidth]{figures/architecture1.png}
-		\end{figure}
-	\end{columns}
-\end{frame}
-\begin{frame}
-	\frametitle{Fase 3: Progettazione - Seconda stesura}
-	\begin{columns}
-		\column{0.5\textwidth}
-			\begin{figure}
-				\includegraphics[width=1\textwidth, height=1.05\textwidth]{figures/architecture2.png}
-			\end{figure}
-		\column{0.5\textwidth}
-		Il Front-End in NodeJS che comunica con una parte logica è stato mantenuto, sono stati però introdotti alcuni moduli Utility che vengono utilizzati da entrambe le componenti.
 
-		La connessione alla Blockchain avviene attraverso l’avvio di un Web Server apposito e l’apertura di una scheda del browser, l’interazione da parte dell’utente deve avvenire tramite l’add-on \textbf{Metamask}.
-	\end{columns}
-\end{frame}
-\section{Apprendimento}
-\begin{frame}
-	\frametitle{Fase 4: Apprendimento}
-	In concomitanza con la fase di progettazione è stato necessario l’apprendimento di alcune tecnologie in modo da poter imparare le loro modalità di utilizzo e poter effettuare la seconda stesura dello schema progettuale.
-
-	Oltre ai già citati Truffle Suite e Metamask, abbastanza intuitivi nell'utilizzo, le tecnologie che seguono sono quelle che hanno occupato la maggior parte di questa fase.
-	\begin{figure}
-		\includegraphics[width=0.50\textwidth]{figures/metamask.png}
-	\end{figure}
-\end{frame}
-\begin{frame}
-	\frametitle{Fase 4: Apprendimento - Solidity}
-	\begin{columns}
-		\column{0.5\textwidth}
-		Per l’apprendimento della sintassi e delle peculiarità del linguaggio da utilizzare per scrivere DAPP per la Blockchain Ethereum mi sono avvalso della documentazione ufficiale e del tutorial interattivo \textbf{CryptoZombies}.	
-		\column{0.5\textwidth}
-		\begin{figure}
-			\includegraphics[width=0.30\textwidth]{figures/solidity.png}
-		\end{figure}
-		\begin{figure}
-			\includegraphics[width=0.40\textwidth]{figures/zombie.png}
-		\end{figure}
-	\end{columns}
-\end{frame}
-\begin{frame}
-	\frametitle{Fase 4: Apprendimento - Javascript Asynchronous Programming}	
-	\begin{figure}
-		\includegraphics[width=0.65\textwidth]{figures/async.jpg}
-	\end{figure}
-	L’utilizzo di alcuni moduli all’interno dell’applicazione ha richiesto che io spendessi diverso tempo ad imparare le tecniche di programmazione asincrona di Javascript in quanto lo scorretto utilizzo delle keyword async e await sono state fonte di svariati problemi nella prima fase della stesura del codice.
-\end{frame}
-\begin{frame}
-	\frametitle{Fase 4: Apprendimento - Modulo Merkle Tree}
-	\begin{columns}
-		\column{0.5\textwidth}
-		La necessità di dover calcolare una singola stringa Hash per una moltitudine di file ha portato il professore a proporre l’utilizzo di questa struttura, è stato quindi necessario da parte mia non solo comprenderne bene il funzionamento ma anche essere in grado di poter utilizzare al meglio i moduli che fornivano metodi per lavorare con questi particolari alberi.
-		\column{0.5\textwidth}
-		\begin{figure}
-			\includegraphics[width=0.88\textwidth]{figures/merkle-tree.jpg}
-		\end{figure}
-	\end{columns}
-\end{frame}
-\begin{frame}
-	\frametitle{Fase 4: Apprendimento - Modulo InquirerJS}
-	\begin{columns}
-		\column{0.5\textwidth}
-			\begin{figure}
-				\includegraphics[width=1\textwidth]{figures/inquirer.png}
-			\end{figure}
-		\column{0.5\textwidth}
-		Anziché realizzare un Front-End dotato di GUI, ho preferito optare per una interfaccia testuale. Tuttavia, non volendo rinunciare all’immediatezza e la semplicità che un approccio grafico e user-friendly poteva portare al progetto ho imparato ad utilizzare il modulo di InquirerJS, il quale consente di realizzare menù a scelta singola, multipla e libera in tutta comodità.
-	\end{columns}
-\end{frame}
-\section{Implementa -zione}
-\begin{frame}
-	\frametitle{Fase 5: Implementazione}
-	La fase di implementazione è divisibile in tre macro-sezioni:
-	\begin{enumerate}
-		\item Creazione delle librerie di utility e dei moduli di interfacciamento con Git
-  		\item Creazione della CLI e del flow di interazione con le librerie e la logica di Git
-  		\item Creazione del modulo di interrogazione e registrazione per la Blockchain
-	\end{enumerate}
-\end{frame}
-\begin{frame}
-	\frametitle{Creazione delle librerie di utility e dei moduli di interfacciamento con Git}
-	La prima stesura di codice è avvenuta nella creazione della classe “connettore” per Git con il modulo “simple-git” e del relativo modulo Logic il quale richiama le sue funzioni a seconda della necessità della CLI.
-\end{frame}
-\begin{frame}
-	\frametitle{Creazione delle librerie di utility e dei moduli di interfacciamento con Git}
-	In concomitanza ho scritto i moduli del package “lib”:
-	\begin{itemize}
-		\item files: Lettura e scrittura di file JSON in cui conservare le informazioni riguardanti la Storage Unit o l’utente che sta utilizzando l’applicativo;
-		\item inquirer: Contiene tutte le scelte che vengono poi presentate all’utente nella CLI;
-		\item treelist: Si occupa di effettuare tutte le operazioni riguardanti l’hashing di file, l’assegnazione di hash alle subdirectories e la creazione e gestione di Merkle Tree.
-	\end{itemize}
-\end{frame}
-\begin{frame}
-	\frametitle{Creazione della CLI e del flow di interazione con le librerie e la logica di Git}
-	Ho proseguito andando a creare l’effettivo workflow del programma richiamando le scelte dal modulo inquirer e funzioni differenti in base alle selezioni dell’utente.	
-\end{frame}
-\begin{frame}
-	\frametitle{Creazione della CLI e del flow di interazione con le librerie e la logica di Git - Workflow}
-	\begin{figure}
-		\includegraphics[width=1\textwidth]{figures/workflow.png}
-	\end{figure}
-\end{frame}
-\begin{frame}
-	\frametitle{Creazione del modulo di interrogazione e registrazione per la Blockchain}
-	\begin{columns}
-		\column{0.5\textwidth}
-		\begin{figure}
-			\includegraphics[width=0.6\textwidth]{figures/meta-gui.png}
-			\caption{Transazione per registrare un hash nella blockchain}
-		\end{figure}
-		\column{0.5\textwidth}
-		L’ultima parte della fase di implementazione è stata la realizzazione del Web Server locale che permette all’utente di registrare gli hash delle proprie Storage Unit nella blockchain, il risultato è stato ottenuto con una versione pesantemente modificata dell’applicazione \emph{sample} fornita dal sito della suite Truffle.
-	\end{columns}
-\end{frame}
-\section{Resoconto}
-\begin{frame}
-	\frametitle{Resoconto}
-	\begin{itemize}
-		\item Data di inizio tirocinio: 15/2/2021
-  		\item Data di fine tirocinio: 28/5/2021
-  		\item Totale Ore: 150 (25 ore \(\cdot\) 6 CFU)
-  		\item Professore Tutor: Luca Grilli
-  		\item Studente Tirocinante: Paolo Speziali
-  		\item Anno Accademico: 2020/2021
-	\end{itemize}
-\end{frame}
 \section{Fonti}
 \begin{frame}
 	\frametitle{Fonti}
