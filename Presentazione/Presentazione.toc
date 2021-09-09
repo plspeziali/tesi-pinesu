@@ -2,5 +2,5 @@
 \babel@toc {italian}{}
 \beamer@sectionintoc {1}{Il Problema}{3}{0}{1}
 \beamer@sectionintoc {2}{Concetti preliminari}{7}{0}{2}
-\beamer@sectionintoc {3}{L'Obiettivo}{11}{0}{3}
-\beamer@sectionintoc {4}{Il Software PineSU}{18}{0}{4}
+\beamer@sectionintoc {3}{L'Obiettivo}{17}{0}{3}
+\beamer@sectionintoc {4}{Il Software PineSU}{19}{0}{4}

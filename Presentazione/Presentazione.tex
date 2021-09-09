@@ -90,13 +90,13 @@ sicuro combinando Git e Blockchain}
 \section{Concetti preliminari}
 \begin{frame}
 	\frametitle{Funzioni crittografiche di hashing}
-	Una funzione crittografica di hashing è una funzione di hashing, ovvero
-	una funzione che permette di associare,
+	Funzione che associa,
 	a una qualsiasi sequenza \(m\) di lunghezza arbitraria in input, una sequenza
 	in output \(h(m)\) di lunghezza costante,
-	con alcune proprietà aggiunte che deve seguire per poter essere considerata
-	\emph{crittograficamente sicura}. Esse impediscono di risalire all'input originale
-	e facilitano i \textbf{controlli di integrità sui file}.
+	seguendo alcune proprietà che la rendono
+	\emph{crittograficamente sicura}.
+	Ciò impedisce di risalire all'input originale
+	e facilita i \textbf{controlli di integrità sui file}.
 	\begin{figure}
 		\includegraphics[width=0.85\textwidth]{figures/hashing.jpg}
 	\end{figure}
@@ -107,19 +107,17 @@ sicuro combinando Git e Blockchain}
 
 	\begin{columns}[T]
 		\column{0.99\textwidth}
-		\textbf{Git} è  è il sistema di controllo di versione (\textbf{VCS}) \\
+		\textbf{Git} è il sistema di controllo di versione (\textbf{VCS}) \\
 		distribuito più diffuso al mondo. \\
-		Un VCS suddivide gli insiemi di file e directory\\ in repository.
-		Git modella ogni repository\\come una \emph{sequenza di snapshot} 
-		di un piccolo\\ file system.
-		Ogni volta che un utente salva lo stato del suo progetto
-		(tramite l'operazione di \emph{commit}), Git crea uno snapshot
-		di tutti i file e le directory sotto controllo di versione in
-		quel momento e lo archivia nel suo database locale.
-		Inoltre, quasi ogni operazione di Git va ad aggiungere informazioni
-		al suo database, anche se si tratta
-		di un'operazione di rimozione, ciò assicura che ogni cambiamento
-		sia reversibile.
+		Esso agevola la gestione \textbf{distribuita} di insiemi\\di file e directory.
+		Un VCS considera tali insiemi\\unità chiamate repository.\\
+		Git ci permette di:
+		\begin{itemize}
+			\item \textbf{Tracciare} le modifiche in una repository.
+			\item \textbf{Ripristinare} le repository ad uno stato precedente.
+			\item \textbf{Condividere} le repository con il loro storico dei cambiamenti.
+		\end{itemize}
+		e molto altro\dots
 		\column{0.01\textwidth}
 		\hspace*{-2cm}
 		\includegraphics[width=2cm]{figures/git.png}
@@ -129,28 +127,53 @@ sicuro combinando Git e Blockchain}
 
 \begin{frame}
 	\frametitle{Blockchain}
-	La \textbf{blockchain}\dots
-	\medskip
+	La \textbf{blockchain} è un registro in continua crescita di
+	record chiamati blocchi, collegati l'uno all'altro come in una
+	catena grazie a metodi crittografici.
+	Essa è:
+	\begin{itemize}
+		\item \textbf{Immutabile}.
+		\item \textbf{Distribuita}.
+		\item \textbf{Estremamente sicura}.
+	\end{itemize}
 	\begin{figure}
 		\includegraphics[width=0.65\textwidth]{figures/blockchain.png}
-		% https://www.esperiabc.com/it/blockchain-e-sicurezza-informatica/
+		% https://rubygarage.org/blog/how-blockchain-works
 	\end{figure}
+	\pause
+	È alla base delle reti di criptovalute, come \textbf{Ethereum},
+	su cui si possono anche costruire applicazioni decentralizzate con gli
+	\textbf{Smart Contract}.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Perché blockchain?}
+	L'utilizzo della blockchain nel progetto è giustificato da:
+	\begin{itemize}[<+->]
+		\item Immutabilità \(\rightarrow\) Garantisce integrità dei dati
+		\item Decentralizzazione \(\rightarrow\) Resistenza allo \textbf{SPOF}\footnote{Single Point Of Failure}
+		\item Disintermediazione \(\rightarrow\) Eliminazione di \emph{middle-men} e dei loro costi
+		\item Validazione \emph{peer-to-peer} \(\rightarrow\) Potere distribuito
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Il problema della blockchain}
+	
 \end{frame}
 
 \begin{frame}
 	\frametitle{Accumulatori crittografici}
 	\begin{columns}
 		\column{0.62\textwidth}
-		Gli \textbf{accumulatori crittografici} sono strumenti che permettono
-		di comprimere molti elementi informativi in una costante di dimensione fissa.
+		Strumenti che \textbf{comprimono molte informazioni}
+		in una \textbf{costante} di dimensione fissa.
 		
 		Un esempio ne sono i \textbf{Merkle Tree}, alberi binari
 		in cui ogni foglia corrisponde all'hash di un elemento.
-		Risalendo verso la radice ogni nodo interno calcolerà il proprio hash
-		concatenando gli hash dei nodi figli, infine si otterrà
-		una radice (\textbf{Merkle Root} o MR), univoca
-		a quella lista di elementi che l'albero
-		ha come foglie, in quella sequenza.
+		Risalendo ogni nodo interno calcolerà il proprio hash
+		con gli hash dei nodi figli, l'hash della root
+		sarà \textbf{univoco} a quelle foglie in quell'ordine.
 		\column{0.38\textwidth}
 		\begin{figure}
 			\includegraphics[width=0.9\textwidth]{figures/mt1.pdf}
@@ -175,17 +198,6 @@ sicuro combinando Git e Blockchain}
 	dati da memorizzare durante l'implementazione.
 \end{frame}
 
-\begin{frame}
-	\frametitle{Perché blockchain?}
-	L'utilizzo della blockchain nel progetto è giustificato da:
-	\begin{itemize}[<+->]
-		\item Natura condivisa \(\rightarrow\) Transazioni facilmente tracciabili
-		\item Decentralizzazione \(\rightarrow\) Resistenza allo \textbf{SPOF}\footnote{Single Point Of Failure}
-		\item Immutabilità \(\rightarrow\) Garantisce integrità dei dati
-		\item Validazione \emph{peer-to-peer} \(\rightarrow\) Potere distribuito
-		\item Disintermediazione \(\rightarrow\) Eliminazione di \emph{middle-men} e dei loro costi
-	\end{itemize}
-\end{frame}
 
 \begin{frame}
 	\frametitle{Il costo della blockchain}
