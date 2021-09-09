@@ -7,9 +7,9 @@
 
 \title{Condividere informazioni in modo \\
 sicuro combinando Git e Blockchain}
-\author{Paolo Speziali}
-\institute{Università degli Studi di Perugia - Dipartimento di Ingegneria\\[\medskipamount]
-      \includegraphics[width=0.35\textwidth]{figures/logo_unipg.png}
+\author{Studente: Paolo Speziali \\ Relatore: Luca Grilli}
+\institute{Università degli Studi di Perugia - Dipartimento di Ingegneria\\Corso di laurea triennale in Ingegneria Informatica ed Elettronica\\[\medskipamount]
+      \includegraphics[width=0.3\textwidth]{figures/logo_unipg.png}
  }
 \logo{\includegraphics[height=1cm]{favicon.png}}
 \date{A.A. 2020/2021}
@@ -22,15 +22,15 @@ sicuro combinando Git e Blockchain}
 	\frametitle{Indice}
 	\tableofcontents
 \end{frame}
-\section{Introduzione}
+\section{Il Problema}
 \begin{frame}
 	\frametitle{La digitalizzazione}
 	È in atto, negli ultimi anni, un piano di \textbf{digitalizzazione} delle PA.
 	Esso mira all'evoluzione tecnologica di tutte le sue mansioni e alla creazione
 	di portali web per il cittadino.
 	L'esigenza di questa trasformazione si è fatta sentire anche da parte
-	dell'Unione Europea, che con il Recovery Fund
-	ci sta fornendo i fondi per attuarla.
+	dell'\textbf{Unione Europea}, che con il \textbf{Recovery Fund}
+	ci sta fornendo i fondi per attuarla, ben \textbf{11,75 milioni di euro}.
 	\begin{figure}
 		\includegraphics[width=0.55\textwidth]{digitalizzazione.jpg}
 		% https://www.agendadigitale.eu/documenti/digitalizzazione-della-pa-in-italia-la-strategia-delle-tre-c/
@@ -39,11 +39,12 @@ sicuro combinando Git e Blockchain}
 
 \begin{frame}
 	\frametitle{Il problema della burocrazia}
-	Tuttavia, anche avendo i fondi necessari, sono molti i problemi che non permettono
-	una digitalizzazione totale delle PA, tra cui la lenta e farraginosa macchina
-	della burocrazia. Sembra necessario un processo di \textbf{sburocratizzazione}
-	grazie a degli strumenti digitali che permettano di salvare,
-	validare e condividere documenti in maniera sicura.
+	Il più grande avversario della digitalizzazione è la \textbf{burocrazia} italiana:
+	i suoi processi sono \textbf{lenti} e \textbf{complessi} anche a causa dell'\textbf{importanza}
+	dei documenti da gestire.
+	È necessaria una \textbf{sburocratizzazione}
+	grazie a degli strumenti digitali che permettano di \textbf{salvare},
+	\textbf{validare} e \textbf{condividere} documenti senza abbassare il \textbf{livello di sicurezza}.
 	\medskip
 	\begin{figure}
 		\includegraphics[width=0.65\textwidth]{buro.jpg}
@@ -53,16 +54,21 @@ sicuro combinando Git e Blockchain}
 
 \begin{frame}
 	\frametitle{Gli strumenti attuali}
+	\medskip
 	\begin{columns}
-		\column{0.5\textwidth}
-		Gli strumenti attualmente in utilizzo hanno un'architettura centralizzata:
-		un'entità centrale si occupa dell'immagazzinamento e della verifica dei dati
-		degli utenti. Ciò è potenzialmente rischioso, sia perché potrebbero verificarsi
-		attacchi alle unità centrali,
-		sia perché mettiamo in mano di un'azienda esterna i nostri dati.
-		\column{0.5\textwidth}
+		\column{0.65\textwidth}
+		Uno strumento digitale solitamente segue uno di questi due paradigmi:
+		\textbf{centralizzato} e \textbf{distribuito}. \\
+		Nel primo un'entità centrale si occupa dell'\textbf{immagazzinamento} e della \textbf{verifica} dei dati
+		degli utenti.\\ Ciò ha diversi \textbf{svantaggi}:
+		\begin{itemize}
+			\item Potenziali attacchi all'entità
+			\item Possibile uso malevolo dei nostri dati
+			\item Alti costi d'intermediazione
+		\end{itemize}
+		\column{0.35\textwidth}
 		\begin{figure}
-			\includegraphics[width=0.80\textwidth]{cent.png}
+			\includegraphics[width=0.90\textwidth]{cent.png}
 			% https://icon-icons.com/it/icona/centralizzato-rete-dati-blockchain-tecnologia/95906
 		\end{figure}
 	\end{columns}
@@ -70,9 +76,8 @@ sicuro combinando Git e Blockchain}
 
 \begin{frame}
 	\frametitle{Strumenti distribuiti}
-		Usando invece strumenti distribuiti, sia per la gestione dei file,
-		per cui utilizzeremo \textbf{Git}, sia per la verifica delle informazioni,
-		per cui useremo la \textbf{blockchain}, saremo in grado costruire uno strumento
+		Usando invece \textbf{un'architettura distribuita}, sia per la gestione dei file,
+		sia per la verifica delle informazioni, saremo in grado costruire uno strumento
 		che può affidarsi alla parola di una moltitudine di entità, rendendo molto
 		più complicati e rilevabili attacchi e manomissioni.
 	\medskip
@@ -92,10 +97,65 @@ sicuro combinando Git e Blockchain}
 	con alcune proprietà aggiunte che deve seguire per poter essere considerata
 	\emph{crittograficamente sicura}. Esse impediscono di risalire all'input originale
 	e facilitano i \textbf{controlli di integrità sui file}.
-	\medskip
 	\begin{figure}
 		\includegraphics[width=0.85\textwidth]{figures/hashing.jpg}
 	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Git}
+
+	\begin{columns}[T]
+		\column{0.99\textwidth}
+		\textbf{Git} è  è il sistema di controllo di versione (\textbf{VCS}) \\
+		distribuito più diffuso al mondo. \\
+		Un VCS suddivide gli insiemi di file e directory\\ in repository.
+		Git modella ogni repository\\come una \emph{sequenza di snapshot} 
+		di un piccolo\\ file system.
+		Ogni volta che un utente salva lo stato del suo progetto
+		(tramite l'operazione di \emph{commit}), Git crea uno snapshot
+		di tutti i file e le directory sotto controllo di versione in
+		quel momento e lo archivia nel suo database locale.
+		Inoltre, quasi ogni operazione di Git va ad aggiungere informazioni
+		al suo database, anche se si tratta
+		di un'operazione di rimozione, ciò assicura che ogni cambiamento
+		sia reversibile.
+		\column{0.01\textwidth}
+		\hspace*{-2cm}
+		\includegraphics[width=2cm]{figures/git.png}
+	\end{columns}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Blockchain}
+	La \textbf{blockchain}\dots
+	\medskip
+	\begin{figure}
+		\includegraphics[width=0.65\textwidth]{figures/blockchain.png}
+		% https://www.esperiabc.com/it/blockchain-e-sicurezza-informatica/
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Accumulatori crittografici}
+	\begin{columns}
+		\column{0.62\textwidth}
+		Gli \textbf{accumulatori crittografici} sono strumenti che permettono
+		di comprimere molti elementi informativi in una costante di dimensione fissa.
+		
+		Un esempio ne sono i \textbf{Merkle Tree}, alberi binari
+		in cui ogni foglia corrisponde all'hash di un elemento.
+		Risalendo verso la radice ogni nodo interno calcolerà il proprio hash
+		concatenando gli hash dei nodi figli, infine si otterrà
+		una radice (\textbf{Merkle Root} o MR), univoca
+		a quella lista di elementi che l'albero
+		ha come foglie, in quella sequenza.
+		\column{0.38\textwidth}
+		\begin{figure}
+			\includegraphics[width=0.9\textwidth]{figures/mt1.pdf}
+		\end{figure}
+	\end{columns}
 \end{frame}
 
 \section{L'Obiettivo}
@@ -118,7 +178,7 @@ sicuro combinando Git e Blockchain}
 \begin{frame}
 	\frametitle{Perché blockchain?}
 	L'utilizzo della blockchain nel progetto è giustificato da:
-	\begin{itemize}
+	\begin{itemize}[<+->]
 		\item Natura condivisa \(\rightarrow\) Transazioni facilmente tracciabili
 		\item Decentralizzazione \(\rightarrow\) Resistenza allo \textbf{SPOF}\footnote{Single Point Of Failure}
 		\item Immutabilità \(\rightarrow\) Garantisce integrità dei dati
@@ -202,7 +262,7 @@ sicuro combinando Git e Blockchain}
 	\frametitle{Gli accumulatori di PineSU}
 	\begin{columns}
 		\column{0.5\textwidth}
-		\begin{itemize}
+		\begin{itemize}[<+->]
 			\item \emph{SU Merkle Tree}: Le sue foglie sono gli hash dei file e directory della SU, la sua root è l'hash della SU stessa. 
 			\item \emph{Storage Group (\textbf{SG})}: Le sue foglie sono le SU da registrare su blockchain nella prossima transazione. 
 			\item \emph{Merkle Calendar (\textbf{MC})}.
@@ -236,7 +296,7 @@ sicuro combinando Git e Blockchain}
 
 \begin{frame}
 	\frametitle{Le operazioni disponibili}
-	\begin{enumerate}
+	\begin{enumerate}[<+->]
 		\item Creazione di una Storage Unit o Ricalcolo di una Storage Unit pre-esistente
 		\item Staging di una Storage Unit nello Storage Group
 		\item Registrazione dello Storage Group nella Blockchain

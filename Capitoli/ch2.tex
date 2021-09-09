@@ -90,7 +90,7 @@ di repository tra i vari client.
 Esso modella ogni repository come una \emph{sequenza} o \emph{flusso di snapshot} (istantanee)
 di un piccolo file system. Ogni volta che un utente salva lo stato del suo progetto
 (tramite l'operazione di \emph{commit}) Git crea uno snapshot di tutti i file e le directory
-sotto controllo di versione in quel momento e la archivia nel suo database locale, ogni
+sotto controllo di versione in quel momento e lo archivia nel suo database locale, ogni
 file modificato dall'ultimo commit viene incluso nell'ultimo snapshot, mentre i file che
 non sono stati modificati non vengono inclusi se non con un collegamento alla loro versione identica
 nel commit precedente, in modo da evitare alcuna duplicazione non necessaria.
