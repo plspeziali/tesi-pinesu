@@ -1,0 +1,23 @@
+\documentclass{standalone}
+ 
+\usepackage{url}
+\usepackage[simplified]{pgf-umlcd}
+\usepackage{tikz}
+\usepackage{color}
+\usetikzlibrary{calc} 
+\begin{document}
+ 
+
+\begin{tikzpicture}
+    \begin{class}[text width=10.5cm]{EthConnector}{0,0}
+        \attribute{- web3 : Web3}
+        \attribute{- w1 : string}
+        \attribute{- w2 : string}
+        \attribute{- k : string}
+        \operation{constructor(host: string, w1 : string, w2 : string, k : string)}
+        \operation{+ deploy(hashRoot: string) : string}
+        \operation{+ verifyHash(transHash: string, hash: string) : boolean}
+    \end{class}
+\end{tikzpicture}
+ 
+\end{document}

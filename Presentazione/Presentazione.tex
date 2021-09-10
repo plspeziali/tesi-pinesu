@@ -3,6 +3,77 @@
 \usetheme{Berkeley}
 \usepackage{graphicx}
 \usepackage{booktabs}
+% Taken from Lena Herrmann at 
+% http://lenaherrmann.net/2010/05/20/javascript-syntax-highlighting-in-the-latex-listings-package
+\usepackage{listings}
+\usepackage{color} %use color
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\input{solidity-highlighting.tex}
+%Customize a bit the look
+\lstset{ %
+backgroundcolor=\color{white}, % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+basicstyle=\footnotesize, % the size of the fonts that are used for the code
+breakatwhitespace=false, % sets if automatic breaks should only happen at whitespace
+breaklines=true, % sets automatic line breaking
+captionpos=b, % sets the caption-position to bottom
+commentstyle=\color{mygreen}, % comment style
+deletekeywords={...}, % if you want to delete keywords from the given language
+escapeinside={<@}{@>}, % if you want to add LaTeX within your code
+extendedchars=true, % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+frame=single, % adds a frame around the code
+keepspaces=true, % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+keywordstyle=\color{blue}, % keyword style
+% language=Octave, % the language of the code
+morekeywords={*,...}, % if you want to add more keywords to the set
+numbers=left, % where to put the line-numbers; possible values are (none, left, right)
+numbersep=5pt, % how far the line-numbers are from the code
+numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+rulecolor=\color{black}, % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+showspaces=false, % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+showstringspaces=false, % underline spaces within strings only
+showtabs=false, % show tabs within strings adding particular underscores
+stepnumber=1, % the step between two line-numbers. If it's 1, each line will be numbered
+stringstyle=\color{mymauve}, % string literal style
+tabsize=2, % sets default tabsize to 2 spaces
+title=\lstname, % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+%END of listing package%
+
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+%define Javascript language
+\lstdefinelanguage{JavaScript}{
+keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, while, do, else, case, break, for, of, const, async, await},
+keywordstyle=\color{blue}\bfseries,
+ndkeywords={class, export, boolean, throw, implements, import},
+ndkeywordstyle=\color{darkgray}\bfseries,
+identifierstyle=\color{black},
+sensitive=false,
+comment=[l]{//},
+morecomment=[s]{/*}{*/},
+commentstyle=\color{purple}\ttfamily,
+stringstyle=\color{red}\ttfamily,
+morestring=[b]',
+morestring=[b]"
+}
+
+\lstset{
+language=JavaScript,
+extendedchars=true,
+basicstyle=\fontsize{8}{9}\selectfont\ttfamily,
+showstringspaces=false,
+showspaces=false,
+numbers=left,
+numberstyle=\fontsize{8}{9}\selectfont,
+numbersep=9pt,
+tabsize=2,
+breaklines=true,
+showtabs=false,
+captionpos=b
+}
 \graphicspath{{figures/}}
 
 \title{Condividere informazioni in modo \\
@@ -149,7 +220,7 @@ sicuro combinando Git e Blockchain}
 \begin{frame}
 	\frametitle{Perché blockchain?}
 	L'utilizzo della blockchain nel progetto è giustificato da:
-	\begin{itemize}[<+->]
+	\begin{itemize}%[<+->]
 		\item Immutabilità \(\rightarrow\) Garantisce integrità dei dati
 		\item Decentralizzazione \(\rightarrow\) Resistenza allo \textbf{SPOF}\footnote{Single Point Of Failure}
 		\item Disintermediazione \(\rightarrow\) Eliminazione di \emph{middle-men} e dei loro costi
@@ -271,21 +342,39 @@ sicuro combinando Git e Blockchain}
 		\item \emph{PineSU \textbf{CLI} (Command Line Interface)}: \textbf{Crea l'interfaccia utente} con cui è possibile
 			interagire e \textbf{richiama le funzioni} degli altri moduli all'occorrenza.
 		\item \emph{PineSU \textbf{BEL} (Back End Logic)}: Il \textbf{nucleo} di PineSU.
-		Gestisce tutte le SU e controlla la comunicazione con la blockchain e il client Git locale.
-		\item \emph{PineSU \textbf{EC} (Ethereum Connector)}: Si interfaccia con le API della blockchain. 
-		\item \emph{PineSU \textbf{GC} (Git Connector)}: Si interfaccia con il client Git. 
-		\item \emph{PineSU \textbf{SM} (Smart Contract)}: Permette registrazioni permanenti di singole SU nella blockchain.
+		\textbf{Gestisce le SU} e controlla la comunicazione con la \textbf{blockchain} e il client \textbf{Git} locale.
+		\item \emph{PineSU \textbf{EC} (Ethereum Connector)}: Si interfaccia con le \textbf{API della blockchain}. 
+		\item \emph{PineSU \textbf{GC} (Git Connector)}: Si interfaccia con il client \textbf{Git}. 
+		\item \emph{PineSU \textbf{SM} (Smart Contract)}: Permette \textbf{registrazioni permanenti} di singole SU nella blockchain.
 	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{PineSU CLI}
+	\centering
+	\begin{figure}
+		\includegraphics[width=0.95\textwidth]{figures/menu.jpg}
+	\end{figure}
+	La creazione di interfacce user-friendly è fatta tramite \textbf{Inquirer.js}.
+\end{frame}
+
+\begin{frame}
+	\frametitle{PineSU BEL}
+	Il nucleo centrale che si occupa di:
+	\begin{enumerate}
+		\item \textbf{Gestione} dei \textbf{file descrittori}.
+		\item \textbf{Gestione} degli \textbf{accumulatori crittografici}.
+		\item \textbf{Comunicazione} con \textbf{Git} e \textbf{blockchain}.
+	\end{enumerate}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Gli accumulatori di PineSU}
 	\begin{columns}
 		\column{0.5\textwidth}
-		\begin{itemize}[<+->]
-			\item \emph{SU Merkle Tree}: Le sue foglie sono gli hash dei file e directory della SU, la sua root è l'hash della SU stessa. 
-			\item \emph{Storage Group (\textbf{SG})}: Le sue foglie sono le SU da registrare su blockchain nella prossima transazione. 
-			\item \emph{Merkle Calendar (\textbf{MC})}.
+		\begin{itemize}%[<+->]
+			\item \emph{SU Merkle Tree}: Le sue \textbf{foglie} sono gli \textbf{hash dei file e directory} della SU.\\La sua \textbf{root} è l'\textbf{hash della SU} stessa. 
+			\item \emph{Storage Group (\textbf{SG})}: Le sue \textbf{foglie} sono le \textbf{SU da registrare} su blockchain nella prossima transazione.
 		\end{itemize}
 		\column{0.5\textwidth}
 		\centering
@@ -299,24 +388,103 @@ sicuro combinando Git e Blockchain}
 \begin{frame}
 	\frametitle{Gli accumulatori di PineSU (Cont.)}
 	\begin{columns}
-		\column{0.5\textwidth}
-		Un \textbf{Merkle Calendar} è un albero in cui le foglie sono
+		\column{0.6\textwidth}
+		\begin{itemize}
+		\item \emph{Merkle Calendar (\textbf{MC})}: Albero in cui le \textbf{foglie} sono
 		i Blockchain Synchronization Point (\textbf{BSP}), istanze di
 		Storage Group, a loro volta raggruppate in nodi rappresentanti
-		mesi e anni, ciò rende i reperimenti di registrazioni passate
+		\textbf{mesi e anni}, ciò rende i reperimenti di registrazioni passate
 		più agevoli e veloci.
-		\column{0.5\textwidth}
+		\end{itemize}
+		\column{0.4\textwidth}
 		\centering
 		\begin{figure}
-			\includegraphics[width=0.8\textwidth]{figures/mc1.pdf}
+			\includegraphics[width=\textwidth]{figures/mc1.pdf}
 			\caption{Un Merkle Calendar}
 		\end{figure} 
 	\end{columns}
 \end{frame}
 
 \begin{frame}
+	\frametitle{Merkle Calendar UML}
+	\begin{figure}
+		\includegraphics[width=0.75\textwidth]{figures/umlmc.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Codice - Reperimento di una BSP Root}
+	\begin{lstlisting}[language=JavaScript, numbers=none]
+	for(let i = 0; i <= leafIndex; i++){
+		leavesHash.push(monthNode.getChildByNum(i).getHash())
+	}
+	let newMonth = this.calculateHash(leavesHash);
+	let monthsHash = new Array();
+	for(let i = 0; i < monthIndex; i++){
+		monthsHash.push(yearNode.getChildByNum(i).getHash())
+	}
+	monthsHash.push(newMonth);
+	let newYear = this.calculateHash(monthsHash);
+	let yearsHash = new Array();
+	for(let i = 0; i < yearIndex; i++){
+		yearsHash.push(yearNode.getChildByNum(i).getHash())
+	}
+	yearsHash.push(newYear);
+	let newRoot = this.calculateHash(yearsHash)
+	\end{lstlisting}
+\end{frame}
+
+\begin{frame}
+	\frametitle{PineSU GC}
+	\begin{figure}
+		\includegraphics[width=0.85\textwidth]{figures/umlgc.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{PineSU EC}
+	\begin{figure}
+		\includegraphics[width=\textwidth]{figures/umlec.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Codice - Salvataggio di un hash su blockchain}
+	\begin{lstlisting}[language=JavaScript, numbers=none]
+	const ct = await this.web3.eth.accounts.signTransaction({
+			from: this.w1,
+			to: this.w2,
+			data: hashRoot,
+			gas: 3000000,
+		},
+		this.k
+	);
+	const receipt = await this.web3.eth.sendSignedTransaction(ct.rawTransaction);
+	return receipt.transactionHash;
+	\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{PineSU SM}
+	\begin{lstlisting}[language=Solidity, numbers=none]
+		contract SURegistry {
+		
+			string StorageUnit;
+			mapping(uint => string) public registry;
+			uint public SUCount;
+		
+			function addSU(string memory hashSU) public {
+				SUCount++;
+				registry[SUCount] = hashSU;
+			}
+		}
+	\end{lstlisting}
+	Codice dello \textbf{Smart Contract} che gestisce il salvataggio su blockchain delle \textbf{singole SU}.
+\end{frame}
+
+\begin{frame}
 	\frametitle{Le operazioni disponibili}
-	\begin{enumerate}[<+->]
+	\begin{enumerate}%[<+->]
 		\item Creazione di una Storage Unit o Ricalcolo di una Storage Unit pre-esistente
 		\item Staging di una Storage Unit nello Storage Group
 		\item Registrazione dello Storage Group nella Blockchain

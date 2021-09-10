@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  9 SEP 2021 12:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  10 SEP 2021 19:12
 entering extended mode
 **c:/Users/Paolo/Dropbox/Tesi/tesi.tex
 (c:/Users/Paolo/Dropbox/Tesi/tesi.tex
@@ -1008,7 +1008,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <Figures/mc1.pdf, id=585, 337.6615pt x 470.43454pt>
 File: Figures/mc1.pdf Graphic file (type pdf)
 <use Figures/mc1.pdf>
-Package pdftex.def Info: Figures/mc1.pdf  used on input line 228.
+Package pdftex.def Info: Figures/mc1.pdf  used on input line 252.
 (pdftex.def)             Requested size: 209.12683pt x 291.35773pt.
 
 
@@ -1022,7 +1022,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <Figures/sg1.pdf, id=616, 435.02524pt x 474.67337pt>
 File: Figures/sg1.pdf Graphic file (type pdf)
 <use Figures/sg1.pdf>
-Package pdftex.def Info: Figures/sg1.pdf  used on input line 278.
+Package pdftex.def Info: Figures/sg1.pdf  used on input line 302.
 (pdftex.def)             Requested size: 334.60422pt x 365.11575pt.
 
 
@@ -1050,7 +1050,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [31]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 362.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 384.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1287,7 +1287,7 @@ Package rerunfilecheck Info: File `tesi.out' has not changed.
 Here is how much of TeX's memory you used:
  27143 strings out of 479334
  499674 string characters out of 2857084
- 1349928 words of memory out of 3000000
+ 1349927 words of memory out of 3000000
  43583 multiletter control sequences out of 15000+200000
  450650 words of font info for 61 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1297,7 +1297,7 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 {C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_n3gbj7.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_axwm4k.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_wttfgh.enc}{C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/crimson/crm_qrsm2e.enc}<C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Bold.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-BoldItalic.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Italic.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/kosch/crimson/Crimson-Roman.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on c:/Users\Paolo\Dropbox\Tesi\tesi.pdf (58 pages, 2779991 bytes).
+Output written on c:/Users\Paolo\Dropbox\Tesi\tesi.pdf (58 pages, 2779972 bytes).
 PDF statistics:
  1329 PDF objects out of 1440 (max. 8388607)
  505 named destinations out of 1000 (max. 500000)

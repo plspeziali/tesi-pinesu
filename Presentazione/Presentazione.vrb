@@ -1,0 +1,15 @@
+\frametitle{PineSU SM}
+	\begin{lstlisting}[language=Solidity, numbers=none]
+		contract SURegistry {
+		
+			string StorageUnit;
+			mapping(uint => string) public registry;
+			uint public SUCount;
+		
+			function addSU(string memory hashSU) public {
+				SUCount++;
+				registry[SUCount] = hashSU;
+			}
+		}
+	\end{lstlisting}
+	Codice dello \textbf{Smart Contract} che gestisce il salvataggio su blockchain delle \textbf{singole SU}.
