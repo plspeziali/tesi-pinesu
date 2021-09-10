@@ -90,7 +90,7 @@ sicuro combinando Git e Blockchain}
 \section{Concetti preliminari}
 \begin{frame}
 	\frametitle{Funzioni crittografiche di hashing}
-	Funzione che associa,
+	Funzione che \textbf{associa},
 	a una qualsiasi sequenza \(m\) di lunghezza arbitraria in input, una sequenza
 	in output \(h(m)\) di lunghezza costante,
 	seguendo alcune proprietà che la rendono
@@ -159,7 +159,14 @@ sicuro combinando Git e Blockchain}
 
 \begin{frame}
 	\frametitle{Il problema della blockchain}
-	
+	Vogliamo usare la blockchain per
+	\textbf{immagazzinare} informazioni,
+	ciò è problematico: \textbf{più dati} vorremo registrare, \textbf{più
+	dovremo pagare}.
+	Occorre trovare una soluzione per registrare \textbf{pochi dati}
+	ma utilizzabili per \textbf{numerosi controlli} in 
+	\textbf{breve tempo}.
+	La soluzione è l'utilizzo di \textbf{accumulatori crittografici}.
 \end{frame}
 
 \begin{frame}
@@ -184,32 +191,33 @@ sicuro combinando Git e Blockchain}
 \section{L'Obiettivo}
 \begin{frame}
 	\frametitle{L'Obiettivo}
-	Il sistema progettato ha lo scopo di riuscire a fornire a chi ne usufruisce
-	un livello di sicurezza aggiuntivo sopra il software Git tramite un'opportuna
-	comunicazione con la blockchain.
-
-	Il software, grazie a un'interfaccia user-friendly, deve permettere non solo di gestire
-	le directory come normali repository, ma fornire
-	anche degli utili strumenti di salvataggio di hash su blockchain,
-	esportazione di sottoinsiemi di repository
-	e verifica sia di singoli file che di moltitudini.
-	Tutto ciò implementato con operazioni più o meno severe (e quindi onerose)
-	e con un occhio di riguardo anche alla quantità di
-	dati da memorizzare durante l'implementazione.
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{Il costo della blockchain}
-	Il salvataggio delle informazioni su blockchain ha però un costo proporzionale al quantitativo
-	di dati che vorremo memorizzarci.
-	
-	Per superare questo problema dovrà essere implementata una soluzione che sfrutti
-	degli accumulatori crittografici per memorizzare l'identità di molti collettivi di documenti
-	con un unico hash.
-
-	Ovviamente la loro struttura dovrà essere tale da permetterci di andare a reperire
-	informazioni passate e già calcolate in un tempo che sia relativamente ragionevole.
+	Realizzare uno \textbf{strumento digitale distribuito} in grado, tramite
+	interazioni con \textbf{Git} e la \textbf{blockchain}, di:
+	\medskip
+	\begin{columns}
+		\column{0.33\textwidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=0.7\textwidth]{figures/fingerprint.png}
+		\end{figure}
+		\textbf{Salvare} hash di
+		repository su
+		blockchain
+		\column{0.33\textwidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=0.7\textwidth]{figures/folder_zip.png}
+		\end{figure}
+		\textbf{Esportare} sottoinsiemi
+		di repository verificabili
+		\column{0.33\textwidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=0.7\textwidth]{figures/verify.png}
+		\end{figure}
+		\textbf{Verificare} l'integrità
+		di singoli file e repository
+	\end{columns}
 \end{frame}
 
 \section{Il Software PineSU}
@@ -217,12 +225,12 @@ sicuro combinando Git e Blockchain}
 	\frametitle{Il Software PineSU}
 	\begin{columns}
 		\column{0.7\textwidth}
-		Un'implementazione del sistema ideato è l'applicativo \textbf{PineSU}. \\
-		PineSU è un software \emph{lightweight} in Javascript e che sfrutta il runtime Node.js.
-		L'applicazione va a considerare gli insiemi di file come delle entità chiamate
-		\textbf{Storage Unit} (SU) con cui va ad inglobare logicamente una repository Git,
-		costruendo, tramite metadati, una struttura introno ad essa.
-		Queste SU sono le unità su cui si andranno ad effettuare le singole
+		\textbf{PineSU} è un software \textbf{Javascript} che sfrutta il runtime \textbf{Node.js}. \\
+		\smallskip
+		L'applicazione crea delle \textbf{strutture} sulle repository Git chiamate
+		\textbf{Storage Unit} (SU) tramite metadati. \\
+		\smallskip
+		Queste SU sono le unità su cui effettueremo le singole
 		operazioni, eccetto la registrazione su blockchain che si svolgerà
 		collettivamente con l'ausilio di accumulatori crittografici. 
 		\column{0.3\textwidth}
