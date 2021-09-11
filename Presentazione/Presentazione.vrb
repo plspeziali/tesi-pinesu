@@ -1,23 +1,15 @@
-\frametitle{Chiusura di una Storage Unit}
+\frametitle{Controllo d'integrità su una Storage Unit}
 	\begin{figure}
-		\includegraphics[width=0.8\textwidth]{figures/closed.pdf}
+		\includegraphics[width=0.6\textwidth]{figures/verify.pdf}
 	\end{figure}
-	\begin{columns}
-		\column{0.4\textwidth}
-		\begin{figure}
-			\includegraphics[width=0.8\textwidth]{figures/usc.pdf}
-			\bigskip
-		\end{figure}
-		\column{0.6\textwidth}
-		\begin{lstlisting}[language=JavaScript, numbers=none]
-			if(fs.existsSync(".pinesu.json")){
-				var data =
-				 fs.readFileSync(".pinesu.json")
-				var myObj = JSON.parse(data);
-				myObj.closed = true;
-				fs.writeFileSync(".pinesu.json",
-					JSON.stringify(myObj));
-				return myObj;
-			}
-		\end{lstlisting}
-	\end{columns}
+	\begin{lstlisting}[language=JavaScript, numbers=none]
+	async verifyHash(transHash, hash){
+		const res =
+			await this.web3.eth.getTransaction(transHash)
+		if(res.input == "0x"+hash){
+			return true;
+		} else {
+			return false;
+		}
+	}
+	\end{lstlisting}

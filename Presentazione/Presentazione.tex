@@ -451,16 +451,20 @@ sicuro combinando Git e Blockchain}
 \begin{frame}[fragile]
 	\frametitle{Codice - Salvataggio di un hash su blockchain}
 	\begin{lstlisting}[language=JavaScript, numbers=none]
-	const ct = await this.web3.eth.accounts.signTransaction({
-			from: this.w1,
-			to: this.w2,
-			data: hashRoot,
-			gas: 3000000,
-		},
-		this.k
-	);
-	const receipt = await this.web3.eth.sendSignedTransaction(ct.rawTransaction);
-	return receipt.transactionHash;
+	async deploy(hashRoot){
+		const ct = await this.web3.eth.accounts
+			.signTransaction({
+				from: this.w1,
+				to: this.w2,
+				data: hashRoot,
+				gas: 3000000,
+			},
+			this.k
+		);
+		const receipt = await this.web3.eth
+			.sendSignedTransaction(ct.rawTransaction);
+		return receipt.transactionHash;
+	}
 	\end{lstlisting}
 \end{frame}
 
@@ -555,6 +559,38 @@ sicuro combinando Git e Blockchain}
 \end{frame}
 
 \begin{frame}[fragile]
+	\frametitle{Visualizzazione post-registrazione}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[width=\textwidth]{figures/blocks.png}
+		\end{figure}
+		\column{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[width=\textwidth]{figures/block.png}
+		\end{figure}
+	\end{columns}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[width=\textwidth]{figures/block2.png}
+		\end{figure}
+		\bigskip
+		\column{0.5\textwidth}
+		\begin{lstlisting}[language=JavaScript, numbers=none]
+			{ 
+			"path":
+				"D:/Progetti/Tirocinio/sample",
+			"root":
+				"e67006f15ecd3[...]e68d3a3242e1be8b",
+			"transactionHash":
+				"0xc563030328e[...]69eb497e2dc87d2e"
+			}  
+		\end{lstlisting}
+	\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
 	\frametitle{Chiusura di una Storage Unit}
 	\begin{figure}
 		\includegraphics[width=0.8\textwidth]{figures/closed.pdf}
@@ -578,6 +614,40 @@ sicuro combinando Git e Blockchain}
 			}
 		\end{lstlisting}
 	\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Esportazione di sottoinsiemi di Storage Unit}
+	\begin{figure}
+		\includegraphics[width=0.6\textwidth]{figures/export.pdf}
+	\end{figure}
+	\begin{lstlisting}[language=JavaScript, numbers=none]
+	var zip = new AdmZip()
+	var fl = JSON.stringify(json)
+	zip.addFile(".pifiles.json", Buffer.alloc(fl.length, fl))
+	for(var el of list){
+		zip.addLocalFile(path)
+	}
+	zip.writeZip("/../pinesuExport.zip")
+	\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Controllo d'integrità su una Storage Unit}
+	\begin{figure}
+		\includegraphics[width=0.6\textwidth]{figures/verify.pdf}
+	\end{figure}
+	\begin{lstlisting}[language=JavaScript, numbers=none]
+	async verifyHash(transHash, hash){
+		const res =
+			await this.web3.eth.getTransaction(transHash)
+		if(res.input == "0x"+hash){
+			return true;
+		} else {
+			return false;
+		}
+	}
+	\end{lstlisting}
 \end{frame}
 
 %\section{Fonti}
