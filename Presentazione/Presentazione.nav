@@ -80,8 +80,22 @@
 \headcommand {\beamer@framepages {35}{35}}
 \headcommand {\slideentry {4}{0}{22}{36/36}{}{0}}
 \headcommand {\beamer@framepages {36}{36}}
-\headcommand {\beamer@partpages {1}{36}}
-\headcommand {\beamer@subsectionpages {15}{36}}
 \headcommand {\beamer@sectionpages {15}{36}}
-\headcommand {\beamer@documentpages {36}}
-\headcommand {\gdef \inserttotalframenumber {35}}
+\headcommand {\beamer@subsectionpages {15}{36}}
+\headcommand {\sectionentry {5}{Tecnologie utilizzate}{37}{Tecnologie utilizzate}{0}}
+\headcommand {\slideentry {5}{0}{1}{37/37}{}{0}}
+\headcommand {\beamer@framepages {37}{37}}
+\headcommand {\slideentry {5}{0}{2}{38/38}{}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\slideentry {5}{0}{3}{39/39}{}{0}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\beamer@sectionpages {37}{39}}
+\headcommand {\beamer@subsectionpages {37}{39}}
+\headcommand {\sectionentry {6}{Sviluppi futuri}{40}{Sviluppi futuri}{0}}
+\headcommand {\slideentry {6}{0}{1}{40/40}{}{0}}
+\headcommand {\beamer@framepages {40}{40}}
+\headcommand {\beamer@partpages {1}{40}}
+\headcommand {\beamer@subsectionpages {40}{40}}
+\headcommand {\beamer@sectionpages {40}{40}}
+\headcommand {\beamer@documentpages {40}}
+\headcommand {\gdef \inserttotalframenumber {39}}

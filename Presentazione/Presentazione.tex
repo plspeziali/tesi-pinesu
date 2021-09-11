@@ -79,7 +79,7 @@ captionpos=b
 
 \title{Condividere informazioni in modo \\
 sicuro combinando Git e Blockchain}
-\author{Studente: Paolo Speziali \\ Relatore: Luca Grilli}
+\author{Laureando: Paolo Speziali \\ Relatore: Luca Grilli}
 \institute{Università degli Studi di Perugia - Dipartimento di Ingegneria\\Corso di laurea triennale in Ingegneria Informatica ed Elettronica\\[\medskipamount]
       \includegraphics[width=0.3\textwidth]{figures/logo_unipg.png}
  }
@@ -297,7 +297,7 @@ sicuro combinando Git e Blockchain}
 	\frametitle{Il Software PineSU}
 	\begin{columns}
 		\column{0.7\textwidth}
-		\textbf{PineSU} è un software \textbf{Javascript} che sfrutta il runtime \textbf{Node.js}. \\
+		\textbf{PineSU} è un software \textbf{Javascript} che sfrutta il run-time \textbf{Node.js}. \\
 		\smallskip
 		L'applicazione crea delle \textbf{strutture} sulle repository Git chiamate
 		\textbf{Storage Unit} (SU) tramite metadati. \\
@@ -356,7 +356,6 @@ sicuro combinando Git e Blockchain}
 	\begin{figure}
 		\includegraphics[width=0.95\textwidth]{figures/menu.jpg}
 	\end{figure}
-	La creazione di interfacce user-friendly è fatta tramite \textbf{Inquirer.js}.
 \end{frame}
 
 \begin{frame}
@@ -579,14 +578,13 @@ sicuro combinando Git e Blockchain}
 		\bigskip
 		\column{0.5\textwidth}
 		\begin{lstlisting}[language=JavaScript, numbers=none]
-			{ 
 			|\color{blue}"path"|:
 				"D:/Progetti/Tirocinio/sample",
 			|\color{blue}"root"|:
-				"e67006f15ecd3[...]e68d3a3242e1be8b",
+				"e67006f15ecd3[...]e6
+				8d3a3242e1be8b",
 			|\color{blue}"transHash"|:
 				"0xc563030328e[...]69eb497e2dc87d2e"
-			}  
 		\end{lstlisting}
 	\end{columns}
 \end{frame}
@@ -649,6 +647,104 @@ sicuro combinando Git e Blockchain}
 		}
 	}
 	\end{lstlisting}
+\end{frame}
+
+\section{Tecnologie utilizzate}
+\begin{frame}
+	\frametitle{Node.js}
+	\begin{columns}
+		\column{0.7\textwidth}
+		\textbf{Node.js} è un \textbf{ambiente di run-time},
+		che permette di eseguire codice \textbf{Javascript}.
+		\smallskip \\
+		Esso ha come obiettivi chiave l'\textbf{efficienza} 
+		e la \textbf{scalabilità}, può infatti eseguire
+		velocemente codice Javascript sia \textbf{server-side}
+		che \textbf{client-side}.\\
+		\smallskip
+		Parte fondamentale di Node sono
+		i suoi numerosi \textbf{moduli}: librerie e framework
+		realizzati dalla comunità e installabili con facilità
+		tramite il package manager \textbf{npm}
+		\column{0.3\textwidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=\textwidth]{figures/node.png}
+		\end{figure} 
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Moduli dei connettori}
+	\begin{columns}
+		\column{0.7\textwidth}
+		\textbf{web3.js} è un \textbf{modulo npm} che permette di
+		interagire con \textbf{nodi Ethereum} locali e remoti.\\
+		\smallskip
+		\emph{PineSU EC} lo utilizza per effettuare le transazioni con i
+		suoi wallet e per comunicare con lo Smart Contract. \\
+		\column{0.3\textwidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=\textwidth]{figures/web3.jpg}
+		\end{figure} 
+	\end{columns}
+	\medskip
+	\begin{columns}
+		\column{0.3\textwidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=0.75\textwidth]{figures/gitfw.png}
+		\end{figure} 
+		\column{0.7\textwidth}
+		\textbf{Simple Git} è un \textbf{modulo npm} che permette di
+		comunicare con il client Git locale. \\
+		\smallskip
+		Usato in \emph{PineSU GC}, esso permette l'esecuzione di
+		comandi in maniera \textbf{asincrona}. \\
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Altri moduli}
+	\begin{columns}
+		\column{0.3\textwidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=0.75\textwidth]{figures/inquirer.png}
+		\end{figure} 
+		\column{0.7\textwidth}
+		\textbf{Inquirer.js} è un \textbf{modulo npm} che facilita
+		la creazione di \textbf{interfacce utente} tramite menù testuali. \\
+		\smallskip
+		In \emph{PineSU CLI} viene usato per \textbf{interagire}
+		con l'utente ponendogli \textbf{domande} dalla risposta chiusa o aperta. \\
+	\end{columns}
+	\medskip
+	\begin{columns}
+		\column{0.7\textwidth}
+		\textbf{ADM-ZIP} è un \textbf{modulo npm} che consente di
+		creare cartelle compresse in formato ZIP.\\
+		\smallskip
+		\emph{PineSU BEL} lo utilizza per \textbf{esportare sottoinsiemi} di
+		SU mantenendo la \textbf{struttura gerarchica} originale. \\
+		\column{0.3\textwidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=\textwidth]{figures/zip.png}
+		\end{figure} 
+	\end{columns}
+\end{frame}
+
+\section{Sviluppi futuri}
+\begin{frame}
+	\frametitle{Sviluppi futuri}
+	\begin{enumerate}
+		\item Migliorare gestione degli \textbf{accumulatori crittografici} per le \textbf{singole SU}.
+		\item Implementare \textbf{Smart Contract} dalle migliori funzionalità.
+		\item Aggiungere \textbf{connettori} per \textbf{ulteriori blockchain}.
+		\item Creare \textbf{portale web} con \textbf{server Git} per la gestione remota delle SU (\emph{ambizioso}).
+	\end{enumerate}
 \end{frame}
 
 %\section{Fonti}

@@ -4,3 +4,5 @@
 \beamer@sectionintoc {2}{Concetti preliminari}{7}{0}{2}
 \beamer@sectionintoc {3}{L'Obiettivo}{14}{0}{3}
 \beamer@sectionintoc {4}{Il Software PineSU}{15}{0}{4}
+\beamer@sectionintoc {5}{Tecnologie utilizzate}{37}{0}{5}
+\beamer@sectionintoc {6}{Sviluppi futuri}{40}{0}{6}

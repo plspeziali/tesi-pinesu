@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  11 SEP 2021 20:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  11 SEP 2021 21:34
 entering extended mode
 **c:/Users/Paolo/Dropbox/Tesi/Presentazione/Presentazione.tex
 (c:/Users/Paolo/Dropbox/Tesi/Presentazione/Presentazione.tex
@@ -830,12 +830,12 @@ italian.ldf    on input line 89.
 
 \c@lstlisting=\count348
 (c:/Users\Paolo\Dropbox\Tesi\Presentazione\Presentazione.nav)
-<figures//favicon.png, id=28, 513.92pt x 513.92pt>
+<figures//favicon.png, id=36, 513.92pt x 513.92pt>
 File: figures//favicon.png Graphic file (type png)
 <use figures//favicon.png>
 Package pdftex.def Info: figures//favicon.png  used on input line 89.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
-<figures/logo_unipg.png, id=30, 523.7166pt x 255.5949pt>
+<figures/logo_unipg.png, id=38, 523.7166pt x 255.5949pt>
 File: figures/logo_unipg.png Graphic file (type png)
 <use figures/logo_unipg.png>
 Package pdftex.def Info: figures/logo_unipg.png  used on input line 92.
@@ -858,7 +858,7 @@ Package pdftex.def Info: figures//favicon.png  used on input line 96.
  [2
 
 ]
-<figures//digitalizzazione.jpg, id=106, 1284.8pt x 722.7pt>
+<figures//digitalizzazione.jpg, id=121, 1284.8pt x 722.7pt>
 File: figures//digitalizzazione.jpg Graphic file (type jpg)
 <use figures//digitalizzazione.jpg>
 Package pdftex.def Info: figures//digitalizzazione.jpg  used on input line 110.
@@ -870,7 +870,7 @@ Package pdftex.def Info: figures//favicon.png  used on input line 110.
  [3
 
  <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures//digitalizzazione.jpg>]
-<figures//buro.jpg, id=139, 931.48pt x 521.95pt>
+<figures//buro.jpg, id=156, 931.48pt x 521.95pt>
 File: figures//buro.jpg Graphic file (type jpg)
 <use figures//buro.jpg>
 Package pdftex.def Info: figures//buro.jpg  used on input line 125.
@@ -894,7 +894,7 @@ LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inpu
  (C:\Users\Paolo\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 )
-<figures//cent.png, id=170, 513.92pt x 513.92pt>
+<figures//cent.png, id=189, 513.92pt x 513.92pt>
 File: figures//cent.png Graphic file (type png)
 <use figures//cent.png>
 Package pdftex.def Info: figures//cent.png  used on input line 147.
@@ -906,7 +906,7 @@ Package pdftex.def Info: figures//favicon.png  used on input line 147.
  [5
 
  <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures//cent.png>]
-<figures//dece.jpg, id=201, 1084.05pt x 580.1675pt>
+<figures//dece.jpg, id=222, 1084.05pt x 580.1675pt>
 File: figures//dece.jpg Graphic file (type jpg)
 <use figures//dece.jpg>
 Package pdftex.def Info: figures//dece.jpg  used on input line 160.
@@ -918,7 +918,7 @@ Package pdftex.def Info: figures//favicon.png  used on input line 160.
  [6
 
  <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures//dece.jpg>]
-<figures/hashing.jpg, id=231, 1606.0pt x 622.325pt>
+<figures/hashing.jpg, id=254, 1606.0pt x 622.325pt>
 File: figures/hashing.jpg Graphic file (type jpg)
 <use figures/hashing.jpg>
 Package pdftex.def Info: figures/hashing.jpg  used on input line 175.
@@ -930,7 +930,7 @@ Package pdftex.def Info: figures//favicon.png  used on input line 175.
  [7
 
  <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures/hashing.jpg>]
-<figures/git.png, id=266, 1027.84pt x 1027.84pt>
+<figures/git.png, id=291, 1027.84pt x 1027.84pt>
 File: figures/git.png Graphic file (type png)
 <use figures/git.png>
 Package pdftex.def Info: figures/git.png  used on input line 198.
@@ -942,7 +942,7 @@ Package pdftex.def Info: figures//favicon.png  used on input line 198.
  [8
 
  <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures/git.png>]
-<figures/blockchain.png, id=298, 640.3925pt x 212.795pt>
+<figures/blockchain.png, id=325, 640.3925pt x 212.795pt>
 File: figures/blockchain.png Graphic file (type png)
 <use figures/blockchain.png>
 Package pdftex.def Info: figures/blockchain.png  used on input line 219.
@@ -979,7 +979,7 @@ Package pdftex.def Info: figures//favicon.png  used on input line 242.
  [12
 
 ]
-<figures/mt1.pdf, id=421, 242.30524pt x 346.19337pt>
+<figures/mt1.pdf, id=456, 242.30524pt x 346.19337pt>
 File: figures/mt1.pdf Graphic file (type pdf)
 <use figures/mt1.pdf>
 Package pdftex.def Info: figures/mt1.pdf  used on input line 261.
@@ -991,17 +991,17 @@ Package pdftex.def Info: figures//favicon.png  used on input line 261.
  [13
 
  <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures/mt1.pdf>]
-<figures/fingerprint.png, id=482, 513.92pt x 513.92pt>
+<figures/fingerprint.png, id=519, 513.92pt x 513.92pt>
 File: figures/fingerprint.png Graphic file (type png)
 <use figures/fingerprint.png>
 Package pdftex.def Info: figures/fingerprint.png  used on input line 293.
 (pdftex.def)             Requested size: 67.1616pt x 67.15698pt.
-<figures/folder_zip.png, id=483, 513.92pt x 513.92pt>
+<figures/folder_zip.png, id=520, 513.92pt x 513.92pt>
 File: figures/folder_zip.png Graphic file (type png)
 <use figures/folder_zip.png>
 Package pdftex.def Info: figures/folder_zip.png  used on input line 293.
 (pdftex.def)             Requested size: 67.1616pt x 67.15698pt.
-<figures/verify.png, id=484, 513.92pt x 513.92pt>
+<figures/verify.png, id=521, 513.92pt x 513.92pt>
 File: figures/verify.png Graphic file (type png)
 <use figures/verify.png>
 Package pdftex.def Info: figures/verify.png  used on input line 293.
@@ -1013,7 +1013,7 @@ Package pdftex.def Info: figures//favicon.png  used on input line 293.
  [14
 
  <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures/fingerprint.png> <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures/folder_zip.png> <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures/verify.png>]
-<figures/favicon.png, id=517, 513.92pt x 513.92pt>
+<figures/favicon.png, id=556, 513.92pt x 513.92pt>
 File: figures/favicon.png Graphic file (type png)
 <use figures/favicon.png>
 Package pdftex.def Info: figures/favicon.png  used on input line 314.
@@ -1025,7 +1025,7 @@ Package pdftex.def Info: figures//favicon.png  used on input line 314.
  [15
 
  <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures/favicon.png>]
-<figures/activityDiag.pdf, id=549, 498.76138pt x 292.14847pt>
+<figures/activityDiag.pdf, id=591, 498.76138pt x 292.14847pt>
 File: figures/activityDiag.pdf Graphic file (type pdf)
 <use figures/activityDiag.pdf>
 Package pdftex.def Info: figures/activityDiag.pdf  used on input line 322.
@@ -1037,7 +1037,7 @@ Package pdftex.def Info: figures//favicon.png  used on input line 322.
  [16
 
  <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures/activityDiag.pdf>]
-<figures/stateDiag2.pdf, id=600, 551.76138pt x 209.68336pt>
+<figures/stateDiag2.pdf, id=644, 551.76138pt x 209.68336pt>
 File: figures/stateDiag2.pdf Graphic file (type pdf)
 <use figures/stateDiag2.pdf>
 Package pdftex.def Info: figures/stateDiag2.pdf  used on input line 330.
@@ -1049,7 +1049,7 @@ Package pdftex.def Info: figures//favicon.png  used on input line 330.
  [17
 
  <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures/stateDiag2.pdf>]
-<figures/pineSU-architecture.pdf, id=661, 546.44153pt x 120.8515pt>
+<figures/pineSU-architecture.pdf, id=707, 546.44153pt x 120.8515pt>
 File: figures/pineSU-architecture.pdf Graphic file (type pdf)
 <use figures/pineSU-architecture.pdf>
 Package pdftex.def Info: figures/pineSU-architecture.pdf  used on input line 338.
@@ -1096,65 +1096,65 @@ Package pdftex.def Info: figures//favicon.png  used on input line 351.
 [19
 
 ]
-<figures/menu.jpg, id=762, 321.8424pt x 196.0926pt>
+<figures/menu.jpg, id=812, 321.8424pt x 196.0926pt>
 File: figures/menu.jpg Graphic file (type jpg)
 <use figures/menu.jpg>
-Package pdftex.def Info: figures/menu.jpg  used on input line 360.
+Package pdftex.def Info: figures/menu.jpg  used on input line 359.
 (pdftex.def)             Requested size: 276.2046pt x 168.30122pt.
 File: figures//favicon.png Graphic file (type png)
 <use figures//favicon.png>
-Package pdftex.def Info: figures//favicon.png  used on input line 360.
+Package pdftex.def Info: figures//favicon.png  used on input line 359.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
  [20
 
  <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures/menu.jpg>]
 File: figures//favicon.png Graphic file (type png)
 <use figures//favicon.png>
-Package pdftex.def Info: figures//favicon.png  used on input line 370.
+Package pdftex.def Info: figures//favicon.png  used on input line 369.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
  [21
 
 ]
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/b/it' instead on input line 387.
+(Font)              using `OT1/cmss/b/it' instead on input line 386.
 
-<figures/sg1.pdf, id=823, 435.02524pt x 474.67337pt>
+<figures/sg1.pdf, id=877, 435.02524pt x 474.67337pt>
 File: figures/sg1.pdf Graphic file (type pdf)
 <use figures/sg1.pdf>
-Package pdftex.def Info: figures/sg1.pdf  used on input line 387.
+Package pdftex.def Info: figures/sg1.pdf  used on input line 386.
 (pdftex.def)             Requested size: 145.3713pt x 158.62001pt.
 File: figures//favicon.png Graphic file (type png)
 <use figures//favicon.png>
-Package pdftex.def Info: figures//favicon.png  used on input line 387.
+Package pdftex.def Info: figures//favicon.png  used on input line 386.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
 [22
 
  <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures/sg1.pdf>]
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/b/it' instead on input line 407.
+(Font)              using `OT1/cmss/b/it' instead on input line 406.
 
-<figures/mc1.pdf, id=897, 337.6615pt x 470.43454pt>
+<figures/mc1.pdf, id=953, 337.6615pt x 470.43454pt>
 File: figures/mc1.pdf Graphic file (type pdf)
 <use figures/mc1.pdf>
-Package pdftex.def Info: figures/mc1.pdf  used on input line 407.
+Package pdftex.def Info: figures/mc1.pdf  used on input line 406.
 (pdftex.def)             Requested size: 116.29527pt x 162.02013pt.
 File: figures//favicon.png Graphic file (type png)
 <use figures//favicon.png>
-Package pdftex.def Info: figures//favicon.png  used on input line 407.
+Package pdftex.def Info: figures//favicon.png  used on input line 406.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
 [23
 
  <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures/mc1.pdf>]
-<figures/umlmc.pdf, id=951, 483.84966pt x 450.8243pt>
+<figures/umlmc.pdf, id=1009, 483.84966pt x 450.8243pt>
 File: figures/umlmc.pdf Graphic file (type pdf)
 <use figures/umlmc.pdf>
-Package pdftex.def Info: figures/umlmc.pdf  used on input line 414.
+Package pdftex.def Info: figures/umlmc.pdf  used on input line 413.
 (pdftex.def)             Requested size: 218.05696pt x 203.17174pt.
 File: figures//favicon.png Graphic file (type png)
 <use figures//favicon.png>
-Package pdftex.def Info: figures//favicon.png  used on input line 414.
+Package pdftex.def Info: figures//favicon.png  used on input line 413.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
  [24
 
@@ -1167,31 +1167,31 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
 )
 File: figures//favicon.png Graphic file (type png)
 <use figures//favicon.png>
-Package pdftex.def Info: figures//favicon.png  used on input line 436.
+Package pdftex.def Info: figures//favicon.png  used on input line 435.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
  [25
 
 ]
-<figures/umlgc.pdf, id=1025, 234.68779pt x 155.4307pt>
+<figures/umlgc.pdf, id=1087, 234.68779pt x 155.4307pt>
 File: figures/umlgc.pdf Graphic file (type pdf)
 <use figures/umlgc.pdf>
-Package pdftex.def Info: figures/umlgc.pdf  used on input line 443.
+Package pdftex.def Info: figures/umlgc.pdf  used on input line 442.
 (pdftex.def)             Requested size: 247.133pt x 163.68137pt.
 File: figures//favicon.png Graphic file (type png)
 <use figures//favicon.png>
-Package pdftex.def Info: figures//favicon.png  used on input line 443.
+Package pdftex.def Info: figures//favicon.png  used on input line 442.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
  [26
 
  <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures/umlgc.pdf>]
-<figures/umlec.pdf, id=1063, 305.81953pt x 107.43137pt>
+<figures/umlec.pdf, id=1127, 305.81953pt x 107.43137pt>
 File: figures/umlec.pdf Graphic file (type pdf)
 <use figures/umlec.pdf>
-Package pdftex.def Info: figures/umlec.pdf  used on input line 450.
+Package pdftex.def Info: figures/umlec.pdf  used on input line 449.
 (pdftex.def)             Requested size: 290.74263pt x 102.13625pt.
 File: figures//favicon.png Graphic file (type png)
 <use figures//favicon.png>
-Package pdftex.def Info: figures//favicon.png  used on input line 450.
+Package pdftex.def Info: figures//favicon.png  used on input line 449.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
  [27
 
@@ -1201,7 +1201,7 @@ Package pdftex.def Info: figures//favicon.png  used on input line 450.
  (c:/Users\Paolo\Dropbox\Tesi\Presentazione\Presentazione.vrb)
 File: figures//favicon.png Graphic file (type png)
 <use figures//favicon.png>
-Package pdftex.def Info: figures//favicon.png  used on input line 470.
+Package pdftex.def Info: figures//favicon.png  used on input line 469.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
  [28
 
@@ -1211,14 +1211,14 @@ Package pdftex.def Info: figures//favicon.png  used on input line 470.
  (c:/Users\Paolo\Dropbox\Tesi\Presentazione\Presentazione.vrb)
 File: figures//favicon.png Graphic file (type png)
 <use figures//favicon.png>
-Package pdftex.def Info: figures//favicon.png  used on input line 488.
+Package pdftex.def Info: figures//favicon.png  used on input line 487.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
  [29
 
 ]
 File: figures//favicon.png Graphic file (type png)
 <use figures//favicon.png>
-Package pdftex.def Info: figures//favicon.png  used on input line 501.
+Package pdftex.def Info: figures//favicon.png  used on input line 500.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
  [30
 
@@ -1226,12 +1226,12 @@ Package pdftex.def Info: figures//favicon.png  used on input line 501.
 \openout4 = `Presentazione.vrb'.
 
  (c:/Users\Paolo\Dropbox\Tesi\Presentazione\Presentazione.vrb
-<figures/uuo.pdf, id=1191, 402.90524pt x 96.7615pt>
+<figures/uuo.pdf, id=1263, 402.90524pt x 96.7615pt>
 File: figures/uuo.pdf Graphic file (type pdf)
 <use figures/uuo.pdf>
 Package pdftex.def Info: figures/uuo.pdf  used on input line 3.
 (pdftex.def)             Requested size: 232.59499pt x 55.86037pt.
-<figures/create.pdf, id=1192, 129.88524pt x 139.57848pt>
+<figures/create.pdf, id=1264, 129.88524pt x 139.57848pt>
 File: figures/create.pdf Graphic file (type pdf)
 <use figures/create.pdf>
 Package pdftex.def Info: figures/create.pdf  used on input line 8.
@@ -1239,7 +1239,7 @@ Package pdftex.def Info: figures/create.pdf  used on input line 8.
 )
 File: figures//favicon.png Graphic file (type png)
 <use figures//favicon.png>
-Package pdftex.def Info: figures//favicon.png  used on input line 529.
+Package pdftex.def Info: figures//favicon.png  used on input line 528.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
  [31
 
@@ -1247,23 +1247,23 @@ Package pdftex.def Info: figures//favicon.png  used on input line 529.
 \openout4 = `Presentazione.vrb'.
 
  (c:/Users\Paolo\Dropbox\Tesi\Presentazione\Presentazione.vrb
-<figures/sync.pdf, id=1253, 353.72049pt x 97.76526pt>
+<figures/sync.pdf, id=1327, 353.72049pt x 97.76526pt>
 File: figures/sync.pdf Graphic file (type pdf)
 <use figures/sync.pdf>
 Package pdftex.def Info: figures/sync.pdf  used on input line 3.
 (pdftex.def)             Requested size: 232.59499pt x 64.28656pt.
-<figures/uso.pdf, id=1254, 175.04094pt x 64.6415pt>
+<figures/uso.pdf, id=1328, 175.04094pt x 64.6415pt>
 File: figures/uso.pdf Graphic file (type pdf)
 <use figures/uso.pdf>
 Package pdftex.def Info: figures/uso.pdf  used on input line 25.
 (pdftex.def)             Requested size: 116.29527pt x 42.94658pt.
 )
-Overfull \vbox (14.87744pt too high) detected at line 560
+Overfull \vbox (14.87744pt too high) detected at line 559
  []
 
 File: figures//favicon.png Graphic file (type png)
 <use figures//favicon.png>
-Package pdftex.def Info: figures//favicon.png  used on input line 560.
+Package pdftex.def Info: figures//favicon.png  used on input line 559.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
 [32
 
@@ -1271,17 +1271,17 @@ Package pdftex.def Info: figures//favicon.png  used on input line 560.
 \openout4 = `Presentazione.vrb'.
 
  (c:/Users\Paolo\Dropbox\Tesi\Presentazione\Presentazione.vrb
-<figures/blocks.png, id=1314, 417.05812pt x 172.39406pt>
+<figures/blocks.png, id=1390, 417.05812pt x 172.39406pt>
 File: figures/blocks.png Graphic file (type png)
 <use figures/blocks.png>
 Package pdftex.def Info: figures/blocks.png  used on input line 5.
 (pdftex.def)             Requested size: 145.3713pt x 60.09155pt.
-<figures/block.png, id=1315, 569.87906pt x 267.24844pt>
+<figures/block.png, id=1391, 569.87906pt x 267.24844pt>
 File: figures/block.png Graphic file (type png)
 <use figures/block.png>
 Package pdftex.def Info: figures/block.png  used on input line 9.
 (pdftex.def)             Requested size: 145.3713pt x 68.16988pt.
-<figures/block2.png, id=1316, 328.22626pt x 154.32657pt>
+<figures/block2.png, id=1392, 328.22626pt x 154.32657pt>
 File: figures/block2.png Graphic file (type png)
 <use figures/block2.png>
 Package pdftex.def Info: figures/block2.png  used on input line 15.
@@ -1289,7 +1289,7 @@ Package pdftex.def Info: figures/block2.png  used on input line 15.
 )
 File: figures//favicon.png Graphic file (type png)
 <use figures//favicon.png>
-Package pdftex.def Info: figures//favicon.png  used on input line 592.
+Package pdftex.def Info: figures//favicon.png  used on input line 590.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
  [33
 
@@ -1297,12 +1297,12 @@ Package pdftex.def Info: figures//favicon.png  used on input line 592.
 \openout4 = `Presentazione.vrb'.
 
  (c:/Users\Paolo\Dropbox\Tesi\Presentazione\Presentazione.vrb
-<figures/closed.pdf, id=1350, 353.72049pt x 113.32338pt>
+<figures/closed.pdf, id=1428, 353.72049pt x 113.32338pt>
 File: figures/closed.pdf Graphic file (type pdf)
 <use figures/closed.pdf>
 Package pdftex.def Info: figures/closed.pdf  used on input line 3.
 (pdftex.def)             Requested size: 232.59499pt x 74.51698pt.
-<figures/usc.pdf, id=1351, 175.04094pt x 49.08337pt>
+<figures/usc.pdf, id=1429, 175.04094pt x 49.08337pt>
 File: figures/usc.pdf Graphic file (type pdf)
 <use figures/usc.pdf>
 Package pdftex.def Info: figures/usc.pdf  used on input line 8.
@@ -1310,7 +1310,7 @@ Package pdftex.def Info: figures/usc.pdf  used on input line 8.
 )
 File: figures//favicon.png Graphic file (type png)
 <use figures//favicon.png>
-Package pdftex.def Info: figures//favicon.png  used on input line 618.
+Package pdftex.def Info: figures//favicon.png  used on input line 616.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
  [34
 
@@ -1318,7 +1318,7 @@ Package pdftex.def Info: figures//favicon.png  used on input line 618.
 \openout4 = `Presentazione.vrb'.
 
  (c:/Users\Paolo\Dropbox\Tesi\Presentazione\Presentazione.vrb
-<figures/export.pdf, id=1411, 177.0605pt x 65.14337pt>
+<figures/export.pdf, id=1491, 177.0605pt x 65.14337pt>
 File: figures/export.pdf Graphic file (type pdf)
 <use figures/export.pdf>
 Package pdftex.def Info: figures/export.pdf  used on input line 3.
@@ -1326,7 +1326,7 @@ Package pdftex.def Info: figures/export.pdf  used on input line 3.
 )
 File: figures//favicon.png Graphic file (type png)
 <use figures//favicon.png>
-Package pdftex.def Info: figures//favicon.png  used on input line 634.
+Package pdftex.def Info: figures//favicon.png  used on input line 632.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
  [35
 
@@ -1334,7 +1334,7 @@ Package pdftex.def Info: figures//favicon.png  used on input line 634.
 \openout4 = `Presentazione.vrb'.
 
  (c:/Users\Paolo\Dropbox\Tesi\Presentazione\Presentazione.vrb
-<figures/verify.pdf, id=1449, 161.0015pt x 65.14337pt>
+<figures/verify.pdf, id=1531, 161.0015pt x 65.14337pt>
 File: figures/verify.pdf Graphic file (type pdf)
 <use figures/verify.pdf>
 Package pdftex.def Info: figures/verify.pdf  used on input line 3.
@@ -1342,11 +1342,64 @@ Package pdftex.def Info: figures/verify.pdf  used on input line 3.
 )
 File: figures//favicon.png Graphic file (type png)
 <use figures//favicon.png>
-Package pdftex.def Info: figures//favicon.png  used on input line 652.
+Package pdftex.def Info: figures//favicon.png  used on input line 650.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
  [36
 
  <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures/verify.pdf>]
+<figures/node.png, id=1571, 361.35pt x 361.35pt>
+File: figures/node.png Graphic file (type png)
+<use figures/node.png>
+Package pdftex.def Info: figures/node.png  used on input line 675.
+(pdftex.def)             Requested size: 87.22366pt x 87.222pt.
+File: figures//favicon.png Graphic file (type png)
+<use figures//favicon.png>
+Package pdftex.def Info: figures//favicon.png  used on input line 675.
+(pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
+ [37
+
+ <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures/node.png>]
+<figures/web3.jpg, id=1607, 675.19385pt x 574.11693pt>
+File: figures/web3.jpg Graphic file (type jpg)
+<use figures/web3.jpg>
+Package pdftex.def Info: figures/web3.jpg  used on input line 706.
+(pdftex.def)             Requested size: 87.22366pt x 74.16476pt.
+<figures/gitfw.png, id=1608, 281.05pt x 281.05pt>
+File: figures/gitfw.png Graphic file (type png)
+<use figures/gitfw.png>
+Package pdftex.def Info: figures/gitfw.png  used on input line 706.
+(pdftex.def)             Requested size: 65.41774pt x 65.41635pt.
+File: figures//favicon.png Graphic file (type png)
+<use figures//favicon.png>
+Package pdftex.def Info: figures//favicon.png  used on input line 706.
+(pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
+ [38
+
+ <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures/web3.jpg> <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures/gitfw.png>]
+<figures/inquirer.png, id=1641, 188.705pt x 188.705pt>
+File: figures/inquirer.png Graphic file (type png)
+<use figures/inquirer.png>
+Package pdftex.def Info: figures/inquirer.png  used on input line 737.
+(pdftex.def)             Requested size: 65.41774pt x 65.41714pt.
+<figures/zip.png, id=1642, 513.92pt x 513.92pt>
+File: figures/zip.png Graphic file (type png)
+<use figures/zip.png>
+Package pdftex.def Info: figures/zip.png  used on input line 737.
+(pdftex.def)             Requested size: 87.22366pt x 87.22409pt.
+File: figures//favicon.png Graphic file (type png)
+<use figures//favicon.png>
+Package pdftex.def Info: figures//favicon.png  used on input line 737.
+(pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
+ [39
+
+ <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures/inquirer.png> <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures/zip.png>]
+File: figures//favicon.png Graphic file (type png)
+<use figures//favicon.png>
+Package pdftex.def Info: figures//favicon.png  used on input line 748.
+(pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
+ [40
+
+]
 \tf@nav=\write6
 \openout6 = `Presentazione.nav'.
 
@@ -1361,20 +1414,20 @@ Package pdftex.def Info: figures//favicon.png  used on input line 652.
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `Presentazione.out' has not changed.
-(rerunfilecheck)             Checksum: DA5CEF3D2B4F3DDF41217724F61098CE;484.
+(rerunfilecheck)             Checksum: 11AC5484EBE5661B13C388338C40071A;756.
  ) 
 Here is how much of TeX's memory you used:
- 23854 strings out of 479334
- 434976 string characters out of 2857084
- 915003 words of memory out of 3000000
- 40675 multiletter control sequences out of 15000+200000
+ 23910 strings out of 479334
+ 435769 string characters out of 2857084
+ 916304 words of memory out of 3000000
+ 40716 multiletter control sequences out of 15000+200000
  414764 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  131i,20n,132p,1083b,1578s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on c:/Users\Paolo\Dropbox\Tesi\Presentazione\Presentazione.pdf (36 pages, 2083169 bytes).
+Output written on c:/Users\Paolo\Dropbox\Tesi\Presentazione\Presentazione.pdf (40 pages, 2253546 bytes).
 PDF statistics:
- 1535 PDF objects out of 1728 (max. 8388607)
- 77 named destinations out of 1000 (max. 500000)
- 245 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1759 PDF objects out of 2073 (max. 8388607)
+ 87 named destinations out of 1000 (max. 500000)
+ 286 words of extra memory for PDF output out of 10000 (max. 10000000)
 
