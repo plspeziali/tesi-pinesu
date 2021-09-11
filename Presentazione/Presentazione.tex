@@ -23,7 +23,7 @@ deletekeywords={...}, % if you want to delete keywords from the given language
 escapeinside={<@}{@>}, % if you want to add LaTeX within your code
 extendedchars=true, % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
 frame=single, % adds a frame around the code
-keepspaces=true, % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+%keepspaces=true, % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
 keywordstyle=\color{blue}, % keyword style
 % language=Octave, % the language of the code
 morekeywords={*,...}, % if you want to add more keywords to the set
@@ -181,7 +181,7 @@ sicuro combinando Git e Blockchain}
 		\textbf{Git} è il sistema di controllo di versione (\textbf{VCS}) \\
 		distribuito più diffuso al mondo. \\
 		Esso agevola la gestione \textbf{distribuita} di insiemi\\di file e directory.
-		Un VCS considera tali insiemi\\unità chiamate repository.\\
+		Un VCS considera tali insiemi\\unità chiamate \textbf{repository}.\\
 		Git ci permette di:
 		\begin{itemize}
 			\item \textbf{Tracciare} le modifiche in una repository.
@@ -493,6 +493,34 @@ sicuro combinando Git e Blockchain}
 		\item Controllo di integrità di singoli file esportati da altre SU
 		\item Controllo di integrità su una SU
 	\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Creazione di una Storage Unit}
+	\begin{figure}
+		\includegraphics[width=0.8\textwidth]{figures/uuo.pdf}
+	\end{figure}
+	\begin{columns}
+		\column{0.3\textwidth}
+		\begin{figure}
+			\includegraphics[width=\textwidth]{figures/create.pdf}
+			\bigskip
+		\end{figure}
+		\column{0.7\textwidth}
+		\begin{lstlisting}[language=JavaScript, numbers=none]
+		var merkleroot =
+		 gitLogic.calculateTree(filelist);
+		await inquirer.askSUDetails(
+			files.getCurrentDirectoryBase(),
+			remote).then((details) => {
+			details.owner = w1
+			details.hash = merkleroot
+			details.filelist = filelist
+			details.closed = false
+			files.saveJSON(details);
+		});
+		\end{lstlisting}
+	\end{columns}
 \end{frame}
 
 %\section{Fonti}

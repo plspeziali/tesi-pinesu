@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  10 SEP 2021 19:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.19)  11 SEP 2021 12:53
 entering extended mode
 **c:/Users/Paolo/Dropbox/Tesi/Presentazione/Presentazione.tex
 (c:/Users/Paolo/Dropbox/Tesi/Presentazione/Presentazione.tex
@@ -1220,6 +1220,27 @@ Package pdftex.def Info: figures//favicon.png  used on input line 496.
  [30
 
 ]
+\openout4 = `Presentazione.vrb'.
+
+ (c:/Users\Paolo\Dropbox\Tesi\Presentazione\Presentazione.vrb
+<figures/uuo.pdf, id=1190, 402.90524pt x 96.7615pt>
+File: figures/uuo.pdf Graphic file (type pdf)
+<use figures/uuo.pdf>
+Package pdftex.def Info: figures/uuo.pdf  used on input line 3.
+(pdftex.def)             Requested size: 232.59499pt x 55.86037pt.
+<figures/create.pdf, id=1191, 129.88524pt x 139.57848pt>
+File: figures/create.pdf Graphic file (type pdf)
+<use figures/create.pdf>
+Package pdftex.def Info: figures/create.pdf  used on input line 8.
+(pdftex.def)             Requested size: 87.22366pt x 93.73431pt.
+)
+File: figures//favicon.png Graphic file (type png)
+<use figures//favicon.png>
+Package pdftex.def Info: figures//favicon.png  used on input line 524.
+(pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
+ [31
+
+ <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures/uuo.pdf> <c:/Users/Paolo/Dropbox/Tesi/Presentazione/figures/create.pdf>]
 \tf@nav=\write6
 \openout6 = `Presentazione.nav'.
 
@@ -1237,17 +1258,17 @@ Package rerunfilecheck Info: File `Presentazione.out' has not changed.
 (rerunfilecheck)             Checksum: DA5CEF3D2B4F3DDF41217724F61098CE;484.
  ) 
 Here is how much of TeX's memory you used:
- 23674 strings out of 479334
- 431321 string characters out of 2857084
- 934394 words of memory out of 3000000
- 40532 multiletter control sequences out of 15000+200000
+ 23706 strings out of 479334
+ 431935 string characters out of 2857084
+ 915433 words of memory out of 3000000
+ 40558 multiletter control sequences out of 15000+200000
  414764 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 131i,20n,132p,1083b,1434s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 131i,20n,132p,1083b,1519s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on c:/Users\Paolo\Dropbox\Tesi\Presentazione\Presentazione.pdf (30 pages, 1823461 bytes).
+Output written on c:/Users\Paolo\Dropbox\Tesi\Presentazione\Presentazione.pdf (31 pages, 1872123 bytes).
 PDF statistics:
- 1234 PDF objects out of 1440 (max. 8388607)
- 65 named destinations out of 1000 (max. 500000)
- 190 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1297 PDF objects out of 1440 (max. 8388607)
+ 67 named destinations out of 1000 (max. 500000)
+ 200 words of extra memory for PDF output out of 10000 (max. 10000000)
 

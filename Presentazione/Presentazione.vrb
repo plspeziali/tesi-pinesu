@@ -1,15 +1,25 @@
-\frametitle{PineSU SM}
-	\begin{lstlisting}[language=Solidity, numbers=none]
-		contract SURegistry {
-		
-			string StorageUnit;
-			mapping(uint => string) public registry;
-			uint public SUCount;
-		
-			function addSU(string memory hashSU) public {
-				SUCount++;
-				registry[SUCount] = hashSU;
-			}
-		}
-	\end{lstlisting}
-	Codice dello \textbf{Smart Contract} che gestisce il salvataggio su blockchain delle \textbf{singole SU}.
+\frametitle{Creazione di una Storage Unit}
+	\begin{figure}
+		\includegraphics[width=0.8\textwidth]{figures/uuo.pdf}
+	\end{figure}
+	\begin{columns}
+		\column{0.3\textwidth}
+		\begin{figure}
+			\includegraphics[width=\textwidth]{figures/create.pdf}
+			\bigskip
+		\end{figure}
+		\column{0.7\textwidth}
+		\begin{lstlisting}[language=JavaScript, numbers=none]
+		var merkleroot =
+		 gitLogic.calculateTree(filelist);
+		await inquirer.askSUDetails(
+			files.getCurrentDirectoryBase(),
+			remote).then((details) => {
+			details.owner = w1
+			details.hash = merkleroot
+			details.filelist = filelist
+			details.closed = false
+			files.saveJSON(details);
+		});
+		\end{lstlisting}
+	\end{columns}
