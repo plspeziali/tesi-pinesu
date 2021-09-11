@@ -1,25 +1,23 @@
-\frametitle{Creazione di una Storage Unit}
+\frametitle{Chiusura di una Storage Unit}
 	\begin{figure}
-		\includegraphics[width=0.8\textwidth]{figures/uuo.pdf}
+		\includegraphics[width=0.8\textwidth]{figures/closed.pdf}
 	\end{figure}
 	\begin{columns}
-		\column{0.3\textwidth}
+		\column{0.4\textwidth}
 		\begin{figure}
-			\includegraphics[width=\textwidth]{figures/create.pdf}
+			\includegraphics[width=0.8\textwidth]{figures/usc.pdf}
 			\bigskip
 		\end{figure}
-		\column{0.7\textwidth}
+		\column{0.6\textwidth}
 		\begin{lstlisting}[language=JavaScript, numbers=none]
-		var merkleroot =
-		 gitLogic.calculateTree(filelist);
-		await inquirer.askSUDetails(
-			files.getCurrentDirectoryBase(),
-			remote).then((details) => {
-			details.owner = w1
-			details.hash = merkleroot
-			details.filelist = filelist
-			details.closed = false
-			files.saveJSON(details);
-		});
+			if(fs.existsSync(".pinesu.json")){
+				var data =
+				 fs.readFileSync(".pinesu.json")
+				var myObj = JSON.parse(data);
+				myObj.closed = true;
+				fs.writeFileSync(".pinesu.json",
+					JSON.stringify(myObj));
+				return myObj;
+			}
 		\end{lstlisting}
 	\end{columns}
