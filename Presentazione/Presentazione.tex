@@ -314,6 +314,14 @@ sicuro combinando Git e Blockchain}
 \end{frame}
 
 \begin{frame}
+	\frametitle{Storage Unit}
+	\centering
+	\begin{figure}
+		\includegraphics[width=0.8\textwidth]{figures/repo.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
 	\frametitle{Workflow}
 	\centering
 	\begin{figure}
@@ -544,8 +552,6 @@ sicuro combinando Git e Blockchain}
 			var [oHash, cHash, transHash] =
 			 await ethLogic.registerMC(mc);
 			for(var el of document){
-				el.oHash = oHash;
-				el.cHash = cHash;
 				el.transHash = transHash;
 				files.createReg(el);
 			}
@@ -579,7 +585,7 @@ sicuro combinando Git e Blockchain}
 		\column{0.5\textwidth}
 		\begin{lstlisting}[language=JavaScript, numbers=none]
 			|\color{blue}"path"|:
-				"D:/Progetti/Tirocinio/sample",
+				"D:/sample",
 			|\color{blue}"root"|:
 				"e67006f15ecd3[...]e6
 				8d3a3242e1be8b",
@@ -698,7 +704,7 @@ sicuro combinando Git e Blockchain}
 		\end{figure} 
 		\column{0.7\textwidth}
 		\textbf{Simple Git} è un \textbf{modulo npm} che permette di
-		comunicare con il client Git locale. \\
+		comunicare con il \textbf{client Git} locale. \\
 		\smallskip
 		Usato in \emph{PineSU GC}, esso permette l'esecuzione di
 		comandi in maniera \textbf{asincrona}. \\
@@ -722,16 +728,16 @@ sicuro combinando Git e Blockchain}
 	\end{columns}
 	\medskip
 	\begin{columns}
-		\column{0.7\textwidth}
+		\column{0.72\textwidth}
 		\textbf{ADM-ZIP} è un \textbf{modulo npm} che consente di
-		creare cartelle compresse in formato ZIP.\\
+		creare \textbf{cartelle compresse} in formato ZIP.\\
 		\smallskip
 		\emph{PineSU BEL} lo utilizza per \textbf{esportare sottoinsiemi} di
 		SU mantenendo la \textbf{struttura gerarchica} originale. \\
-		\column{0.3\textwidth}
+		\column{0.28\textwidth}
 		\centering
 		\begin{figure}
-			\includegraphics[width=\textwidth]{figures/zip.png}
+			\includegraphics[width=0.88\textwidth]{figures/zip.png}
 		\end{figure} 
 	\end{columns}
 \end{frame}
