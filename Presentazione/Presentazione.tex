@@ -244,6 +244,10 @@ sicuro combinando Git e Blockchain}
 \begin{frame}
 	\frametitle{Accumulatori crittografici}
 	\begin{columns}
+		\column{0.38\textwidth}
+		\begin{figure}
+			\includegraphics[width=0.9\textwidth]{figures/mt1.pdf}
+		\end{figure}
 		\column{0.62\textwidth}
 		Strumenti che \textbf{comprimono molte informazioni}
 		in una \textbf{costante} di dimensione fissa.
@@ -253,10 +257,6 @@ sicuro combinando Git e Blockchain}
 		Risalendo ogni nodo interno calcolerà il proprio hash
 		con gli hash dei nodi figli, l'hash della root
 		sarà \textbf{univoco} a quelle foglie in quell'ordine.
-		\column{0.38\textwidth}
-		\begin{figure}
-			\includegraphics[width=0.9\textwidth]{figures/mt1.pdf}
-		\end{figure}
 	\end{columns}
 \end{frame}
 
@@ -353,7 +353,7 @@ sicuro combinando Git e Blockchain}
 		\item \emph{PineSU \textbf{BEL} (Back End Logic)}: Il \textbf{nucleo} di PineSU.
 		\textbf{Gestisce le SU} e controlla la comunicazione con la \textbf{blockchain} e il client \textbf{Git} locale.
 		\item \emph{PineSU \textbf{EC} (Ethereum Connector)}: Si interfaccia con le \textbf{API della blockchain}. 
-		\item \emph{PineSU \textbf{GC} (Git Connector)}: Si interfaccia con il client \textbf{Git}. 
+		\item \emph{PineSU \textbf{GC} (Git Connector)}: Si interfaccia con il \textbf{client Git}. 
 		\item \emph{PineSU \textbf{SM} (Smart Contract)}: Permette \textbf{registrazioni permanenti} di singole SU nella blockchain.
 	\end{itemize}
 \end{frame}
@@ -687,8 +687,8 @@ sicuro combinando Git e Blockchain}
 		\textbf{web3.js} è un \textbf{modulo npm} che permette di
 		interagire con \textbf{nodi Ethereum} locali e remoti.\\
 		\smallskip
-		\emph{PineSU EC} lo utilizza per effettuare le transazioni con i
-		suoi wallet e per comunicare con lo Smart Contract. \\
+		\emph{PineSU EC} lo utilizza per effettuare le \textbf{transazioni} con i
+		suoi wallet e per comunicare con lo \textbf{Smart Contract}. \\
 		\column{0.3\textwidth}
 		\centering
 		\begin{figure}
