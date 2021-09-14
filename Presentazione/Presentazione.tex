@@ -5,7 +5,7 @@
 \usepackage{booktabs}
 % Taken from Lena Herrmann at 
 % http://lenaherrmann.net/2010/05/20/javascript-syntax-highlighting-in-the-latex-listings-package
-\usepackage{listings,lstautogobble}
+\usepackage{listings,lstautogobble,longtable}
 \usepackage{color} %use color
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
@@ -97,12 +97,16 @@ sicuro combinando Git e Blockchain}
 \section{Il Problema}
 \begin{frame}
 	\frametitle{La digitalizzazione}
-	È in atto, negli ultimi anni, un piano di \textbf{digitalizzazione} delle PA.
-	Esso mira all'evoluzione tecnologica di tutte le sue mansioni e alla creazione
-	di portali web per il cittadino.
+	È in atto, negli ultimi anni, un piano di \textbf{digitalizzazione} della \textbf{Pubblica Amministrazione}.
+	%Esso mira all'evoluzione tecnologica di tutte le sue mansioni e alla creazione
+	%di portali web per il cittadino.
 	L'esigenza di questa trasformazione si è fatta sentire anche da parte
 	dell'\textbf{Unione Europea}, che con il \textbf{Recovery Fund}
 	ci sta fornendo i fondi per attuarla, ben \textbf{11,75 milioni di euro}.
+	\medskip
+	% digitalizzazione PA
+	% serve immagine
+	% evocare quanto si spende per la burocrazia
 	\begin{figure}
 		\includegraphics[width=0.55\textwidth]{digitalizzazione.jpg}
 		% https://www.agendadigitale.eu/documenti/digitalizzazione-della-pa-in-italia-la-strategia-delle-tre-c/
@@ -111,71 +115,60 @@ sicuro combinando Git e Blockchain}
 
 \begin{frame}
 	\frametitle{Il problema della burocrazia}
-	Il più grande avversario della digitalizzazione è la \textbf{burocrazia} italiana:
-	i suoi processi sono \textbf{lenti} e \textbf{complessi} anche a causa dell'\textbf{importanza}
-	dei documenti da gestire.
-	È necessaria una \textbf{sburocratizzazione}
-	grazie a degli strumenti digitali che permettano di \textbf{salvare},
-	\textbf{validare} e \textbf{condividere} documenti senza abbassare il \textbf{livello di sicurezza}.
-	\medskip
-	\begin{figure}
-		\includegraphics[width=0.65\textwidth]{buro.jpg}
-		% https://www.identitafutura.it/burocrazia-allitaliana/
-	\end{figure}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Gli strumenti attuali}
-	\medskip
 	\begin{columns}
-		\column{0.65\textwidth}
-		Uno strumento digitale solitamente segue uno di questi due paradigmi:
-		\textbf{centralizzato} e \textbf{distribuito}. \\
-		Nel primo un'entità centrale si occupa dell'\textbf{immagazzinamento} e della \textbf{verifica} dei dati
-		degli utenti.\\ Ciò ha diversi \textbf{svantaggi}:
-		\begin{itemize}
-			\item Potenziali attacchi all'entità
-			\item Possibile uso malevolo dei nostri dati
-			\item Alti costi d'intermediazione
-		\end{itemize}
-		\column{0.35\textwidth}
+		% in realtà la digitalizzazione è la soluzione alla
+		% burocrazia
+		% portare esempio di processo burocratico reale
+		% senza autenticazione abbiamo i vcs
+		% inserire slide intermedia
+		% salva condividere -> Git
+		% autentic -> blockchain
+		% stato dell'arte
+		% in relazione a salva condividere e tracciare abbiamo i vcs
+		% l'autenticaz. ci sta la blockchain
+		% magari fare tabella con stelle
+		% anche i costi
+		\column{0.7\textwidth}
 		\begin{figure}
-			\includegraphics[width=0.90\textwidth]{cent.png}
-			% https://icon-icons.com/it/icona/centralizzato-rete-dati-blockchain-tecnologia/95906
+			\includegraphics[width=\textwidth]{buro2.jpg}
+			% https://www.identitafutura.it/burocrazia-allitaliana/
 		\end{figure}
+		\column{0.3\textwidth}
+		Serve una \textbf{sburocratizzazione}
+		grazie a software per \textbf{salvare},
+		\textbf{autenticare} e \textbf{condividere} documenti in maniera \textbf{sicura}.
 	\end{columns}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Strumenti distribuiti}
-		Usando invece \textbf{un'architettura distribuita}, sia per la \textbf{gestione dei file},
-		sia per la \textbf{verifica delle informazioni}, saremo in grado costruire uno strumento
-		che può affidarsi alla parola di una \textbf{moltitudine di entità}, rendendo molto
-		più complicati e rilevabili attacchi e manomissioni.
-	\medskip
-	\begin{figure}
-		\includegraphics[width=0.70\textwidth]{dece.jpg}
-		% https://docs.microsoft.com/it-it/archive/msdn-magazine/2018/july/blockchain-decentralized-applications-with-azure-blockchain-as-a-service
-	\end{figure}
-\end{frame}
-
-\section{Concetti preliminari}
-\begin{frame}
-	\frametitle{Funzioni crittografiche di hashing}
-	Funzione che \textbf{associa},
-	a una qualsiasi sequenza \(m\) di lunghezza arbitraria in input, una sequenza
-	in output \(h(m)\) di lunghezza costante,
-	seguendo alcune proprietà che la rendono
-	\emph{crittograficamente sicura}.
-	Ciò impedisce di risalire all'input originale
-	e facilita i \textbf{controlli di integrità sui file}.
-	\begin{figure}
-		\includegraphics[width=0.85\textwidth]{figures/hashing.jpg}
-	\end{figure}
+	\frametitle{Stato dell'arte}
+	\begin{longtable}{@{}lcc@{}}
+		\toprule
+		\textbf{Proprietà} & \multicolumn{1}{l}{\textbf{Version Control System}} & \multicolumn{1}{l}{\textbf{Blockchain}} \\* \midrule
+		\endfirsthead
+		%
+		\endhead
+		%
+		\bottomrule
+		\endfoot
+		%
+		\endlastfoot
+		%
+		Condivis.    & \includegraphics[width=0.05\textwidth]{joy.png}   & \includegraphics[width=0.05\textwidth]{joy2.png} \\
+		Tracciabil.  & \includegraphics[width=0.05\textwidth]{joy.png}   & \includegraphics[width=0.05\textwidth]{joy2.png} \\
+		Autenticità  & \includegraphics[width=0.05\textwidth]{sad2.png}         & \includegraphics[width=0.05\textwidth]{joy2.png} \\
+		Integrità    & \includegraphics[width=0.05\textwidth]{sad2.png}         & \includegraphics[width=0.05\textwidth]{joy2.png} \\
+		Efficienza   & \includegraphics[width=0.05\textwidth]{joy2.png} & \includegraphics[width=0.05\textwidth]{sad2.png}         \\
+		Flessibilità & \includegraphics[width=0.05\textwidth]{joy2.png} & \includegraphics[width=0.05\textwidth]{sad.png}       \\
+		Costi        & \includegraphics[width=0.05\textwidth]{sad2.png}         & \includegraphics[width=0.05\textwidth]{joy2.png} \\* \bottomrule
+	\end{longtable}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Git}
+	% pushare che git è il software che è
+	% per lo sviluppatore come la penna
+	% per lo scrittore
 
 	\begin{columns}[T]
 		\column{0.99\textwidth}
@@ -195,6 +188,35 @@ sicuro combinando Git e Blockchain}
 		\includegraphics[width=2cm]{figures/git.png}
 	\end{columns}
 
+\end{frame}
+
+\begin{frame}
+	\frametitle{Git - Un po' di numeri}
+	% pushare che git è il software che è
+	% per lo sviluppatore come la penna
+	% per lo scrittore
+
+	\begin{columns}[T]
+		\column{0.5\textwidth}
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.8\textwidth]{users.png}
+			% https://www.identitafutura.it/burocrazia-allitaliana/
+		\end{figure}
+		\column{0.5\textwidth}
+		\begin{figure}
+			\centering
+			\bigskip\bigskip
+			\hspace*{-1.5cm}
+			\includegraphics[width=\textwidth]{numberrepo.png}
+			% https://www.identitafutura.it/burocrazia-allitaliana/
+		\end{figure}
+	\end{columns}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\textwidth]{companies.png}
+		% https://www.identitafutura.it/burocrazia-allitaliana/
+	\end{figure}
 \end{frame}
 
 \begin{frame}
@@ -218,15 +240,37 @@ sicuro combinando Git e Blockchain}
 	\textbf{Smart Contract}.
 \end{frame}
 
+%\begin{frame}
+%	\frametitle{Perché blockchain?}
+%	L'utilizzo della blockchain nel progetto è giustificato da:
+%	\begin{itemize}%[<+->]
+%		\item \textbf{Immutabilità} \(\rightarrow\) Garantisce integrità dei dati.
+%		\item \textbf{Decentralizzazione} \(\rightarrow\) Resistenza al Single Point Of Failure.
+%		\item \textbf{Disintermediazione} \(\rightarrow\) Eliminazione di \emph{middle-men} e dei loro costi.
+%		\item \textbf{Validazione \emph{peer-to-peer}} \(\rightarrow\) Potere distribuito.
+%	\end{itemize}
+%\end{frame}
+
+%spostare a dopo
+% introdurre SU e poi ci va l'hash
+% Autenticazione con blockchain
+% parto da repo con solo documento -> vogliamo dargli garanzia
+% -> calcolo hash -> salvo hash su blockchain ->
+% -> mi prendo il timestamp
+% si chiama batching
+
 \begin{frame}
-	\frametitle{Perché blockchain?}
-	L'utilizzo della blockchain nel progetto è giustificato da:
-	\begin{itemize}%[<+->]
-		\item \textbf{Immutabilità} \(\rightarrow\) Garantisce integrità dei dati.
-		\item \textbf{Decentralizzazione} \(\rightarrow\) Resistenza al Single Point Of Failure.
-		\item \textbf{Disintermediazione} \(\rightarrow\) Eliminazione di \emph{middle-men} e dei loro costi.
-		\item \textbf{Validazione \emph{peer-to-peer}} \(\rightarrow\) Potere distribuito.
-	\end{itemize}
+	\frametitle{Funzioni crittografiche di hashing}
+	Funzione che \textbf{associa},
+	a una qualsiasi sequenza \(m\) di lunghezza arbitraria in input, una sequenza
+	in output \(h(m)\) di lunghezza costante,
+	seguendo alcune proprietà che la rendono
+	\emph{crittograficamente sicura}.
+	Ciò impedisce di risalire all'input originale
+	e facilita i \textbf{controlli di integrità sui file}.
+	\begin{figure}
+		\includegraphics[width=0.85\textwidth]{figures/hashing.jpg}
+	\end{figure}
 \end{frame}
 
 \begin{frame}
@@ -260,11 +304,11 @@ sicuro combinando Git e Blockchain}
 	\end{columns}
 \end{frame}
 
+% anticipare l'obiettivo
 \section{L'Obiettivo}
 \begin{frame}
 	\frametitle{L'Obiettivo}
-	Realizzare uno \textbf{strumento digitale distribuito} in grado, tramite
-	interazioni con \textbf{Git} e la \textbf{blockchain}, di:
+	Realizzare uno \textbf{software} che combini \textbf{Git} con una \textbf{blockchain} e sia in grado di:
 	\medskip
 	\begin{columns}
 		\column{0.33\textwidth}
@@ -329,6 +373,8 @@ sicuro combinando Git e Blockchain}
 	\end{figure}
 \end{frame}
 
+% qua l'interfaccia
+
 \begin{frame}
 	\frametitle{Ciclo vitale di una Storage Unit}
 	\centering
@@ -392,6 +438,9 @@ sicuro combinando Git e Blockchain}
 		\end{figure} 
 	\end{columns}
 \end{frame}
+
+% spiega solo MC	cava SG
+% togli MT
 
 \begin{frame}
 	\frametitle{Gli accumulatori di PineSU (Cont.)}
@@ -506,6 +555,8 @@ sicuro combinando Git e Blockchain}
 		\item \textbf{Controllo} di integrità su una \textbf{Storage Unit}.
 	\end{enumerate}
 \end{frame}
+
+% aggiungere slide con l'interfaccia
 
 \begin{frame}[fragile]
 	\frametitle{Creazione di una Storage Unit}
@@ -742,15 +793,25 @@ sicuro combinando Git e Blockchain}
 	\end{columns}
 \end{frame}
 
+% git e blockchain hanno potenzialità
+% pinesu è un punto di partenza
+% tuttavia potrebbe essere semplificato migliorato e velocizzato
+% nella blockchain salvando solo
+% gli hash riduciamo al minimo l'esposizione di dati
 \section{Sviluppi futuri}
 \begin{frame}
 	\frametitle{Sviluppi futuri}
 	\begin{enumerate}
 		\item Migliorare gestione degli \textbf{accumulatori crittografici} per le \textbf{singole SU}.
-		\item Implementare \textbf{Smart Contract} dalle migliori funzionalità.
+		\item Impedire tramite \textbf{Smart Contract} la modifica di SU chiuse.
 		\item Aggiungere \textbf{connettori} per \textbf{ulteriori blockchain}.
-		\item Creare \textbf{portale web} con \textbf{server Git} per la gestione remota delle SU (\emph{ambizioso}).
+		\item Creare \textbf{portale web} con \textbf{server Git} per la gestione remota delle SU.
 	\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+
 \end{frame}
 
 %\section{Fonti}
@@ -773,5 +834,40 @@ sicuro combinando Git e Blockchain}
 %			\item \href{https://waifu2x.booru.pics/Home/index}{Strumento di upscaling delle immagini} 
 %	\end{itemize}
 %\end{frame}
+
+\begin{frame}
+	\frametitle{Gli strumenti attuali per la condivisione di documenti}
+	\medskip
+	\begin{columns}
+		\column{0.65\textwidth}
+		Uno strumento digitale solitamente segue uno di questi due paradigmi:
+		\textbf{centralizzato} e \textbf{distribuito}. \\
+		Nel primo un'entità centrale si occupa dell'\textbf{immagazzinamento} e della \textbf{verifica} dei dati
+		degli utenti.\\ Ciò ha diversi \textbf{svantaggi}:
+		\begin{itemize}
+			\item Potenziali attacchi all'entità
+			\item Possibile uso malevolo dei nostri dati
+			\item Alti costi d'intermediazione
+		\end{itemize}
+		\column{0.35\textwidth}
+		\begin{figure}
+			\includegraphics[width=0.90\textwidth]{cent.png}
+			% https://icon-icons.com/it/icona/centralizzato-rete-dati-blockchain-tecnologia/95906
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Strumenti distribuiti}
+		Usando invece \textbf{un'architettura distribuita}, sia per la \textbf{gestione dei file},
+		sia per la \textbf{verifica delle informazioni}, saremo in grado costruire uno strumento
+		che può affidarsi alla parola di una \textbf{moltitudine di entità}, rendendo molto
+		più complicati e rilevabili attacchi e manomissioni.
+	\medskip
+	\begin{figure}
+		\includegraphics[width=0.70\textwidth]{dece.jpg}
+		% https://docs.microsoft.com/it-it/archive/msdn-magazine/2018/july/blockchain-decentralized-applications-with-azure-blockchain-as-a-service
+	\end{figure}
+\end{frame}
 
 \end{document}
