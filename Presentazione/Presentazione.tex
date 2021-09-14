@@ -196,7 +196,7 @@ sicuro combinando Git e Blockchain}
 	% per lo sviluppatore come la penna
 	% per lo scrittore
 
-	\begin{columns}[T]
+	\begin{columns}
 		\column{0.5\textwidth}
 		\begin{figure}
 			\centering
@@ -207,7 +207,7 @@ sicuro combinando Git e Blockchain}
 		\begin{figure}
 			\centering
 			\bigskip\bigskip
-			\hspace*{-1.5cm}
+			\hspace*{-1cm}
 			\includegraphics[width=\textwidth]{numberrepo.png}
 			% https://www.identitafutura.it/burocrazia-allitaliana/
 		\end{figure}
@@ -259,52 +259,6 @@ sicuro combinando Git e Blockchain}
 % -> mi prendo il timestamp
 % si chiama batching
 
-\begin{frame}
-	\frametitle{Funzioni crittografiche di hashing}
-	Funzione che \textbf{associa},
-	a una qualsiasi sequenza \(m\) di lunghezza arbitraria in input, una sequenza
-	in output \(h(m)\) di lunghezza costante,
-	seguendo alcune proprietà che la rendono
-	\emph{crittograficamente sicura}.
-	Ciò impedisce di risalire all'input originale
-	e facilita i \textbf{controlli di integrità sui file}.
-	\begin{figure}
-		\includegraphics[width=0.85\textwidth]{figures/hashing.jpg}
-	\end{figure}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Il problema della blockchain}
-	Vogliamo usare la blockchain per
-	\textbf{immagazzinare} informazioni,
-	ciò è problematico: \textbf{più dati} vorremo registrare, \textbf{più
-	dovremo pagare}.
-	Occorre trovare una soluzione per registrare \textbf{pochi dati}
-	ma utilizzabili per \textbf{numerosi controlli} in 
-	\textbf{breve tempo}.
-	La soluzione è l'utilizzo di \textbf{accumulatori crittografici}.
-\end{frame}
-
-\begin{frame}
-	\frametitle{Accumulatori crittografici}
-	\begin{columns}
-		\column{0.38\textwidth}
-		\begin{figure}
-			\includegraphics[width=0.9\textwidth]{figures/mt1.pdf}
-		\end{figure}
-		\column{0.62\textwidth}
-		Strumenti che \textbf{comprimono molte informazioni}
-		in una \textbf{costante} di dimensione fissa.
-		
-		Un esempio ne sono i \textbf{Merkle Tree}, alberi binari
-		in cui ogni foglia corrisponde all'hash di un elemento.
-		Risalendo ogni nodo interno calcolerà il proprio hash
-		con gli hash dei nodi figli, l'hash della root
-		sarà \textbf{univoco} a quelle foglie in quell'ordine.
-	\end{columns}
-\end{frame}
-
-% anticipare l'obiettivo
 \section{L'Obiettivo}
 \begin{frame}
 	\frametitle{L'Obiettivo}
@@ -335,6 +289,46 @@ sicuro combinando Git e Blockchain}
 		di singoli file e repository
 	\end{columns}
 \end{frame}
+
+\begin{frame}
+	\frametitle{Autenticazione con blockchain}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[width=0.7\textwidth]{figures/hashsaving.pdf}
+		\end{figure}
+		\column{0.5\textwidth}
+		\begin{enumerate}
+			\item Associazione \textbf{hash} al documento tramite una \textbf{funzione crittografica di hashing}.
+			\item Registrazione dell'hash su un \textbf{blocco} della blockchain.
+			\item Restituzione e salvataggio dell'\textbf{hash della transazione} e del \textbf{timestamp}.
+		\end{enumerate}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Funzioni crittografiche di hashing}
+	Funzione che \textbf{associa},
+	a una qualsiasi sequenza \(m\) di lunghezza arbitraria in input, una sequenza
+	in output \(h(m)\) di lunghezza costante,
+	seguendo alcune proprietà che la rendono
+	\emph{crittograficamente sicura}.
+	Ciò impedisce di risalire all'input originale
+	e facilita i \textbf{controlli di integrità sui file}.
+	\begin{figure}
+		\includegraphics[width=0.85\textwidth]{figures/hashing.jpg}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Il problema della blockchain}
+	Non possiamo però utilizzare un blocco per registrare \textbf{un solo file}
+	e nemmeno \textbf{una sola repository}, sarebbe troppo \textbf{costoso}.
+	La soluzione è l'utilizzo di \textbf{accumulatori crittografici}:
+	strumenti che \textbf{comprimono molte informazioni}
+	in una \textbf{costante} di dimensione fissa.
+\end{frame}
+
 
 \section{Il Software PineSU}
 \begin{frame}
@@ -422,37 +416,19 @@ sicuro combinando Git e Blockchain}
 	\end{enumerate}
 \end{frame}
 
-\begin{frame}
-	\frametitle{Gli accumulatori di PineSU}
-	\begin{columns}
-		\column{0.5\textwidth}
-		\begin{itemize}%[<+->]
-			\item \emph{SU Merkle Tree}: Le sue \textbf{foglie} sono gli \textbf{hash dei file e directory} della SU.\\La sua \textbf{root} è l'\textbf{hash della SU} stessa. 
-			\item \emph{Storage Group (\textbf{SG})}: Le sue \textbf{foglie} sono le \textbf{SU da registrare} su blockchain nella prossima transazione.
-		\end{itemize}
-		\column{0.5\textwidth}
-		\centering
-		\begin{figure}
-			\includegraphics[width=\textwidth]{figures/sg1.pdf}
-			\caption{Uno Storage Group}
-		\end{figure} 
-	\end{columns}
-\end{frame}
-
 % spiega solo MC	cava SG
 % togli MT
 
 \begin{frame}
-	\frametitle{Gli accumulatori di PineSU (Cont.)}
+	\frametitle{Merkle Calendar}
 	\begin{columns}
 		\column{0.6\textwidth}
-		\begin{itemize}
-		\item \emph{Merkle Calendar (\textbf{MC})}: Albero in cui le \textbf{foglie} sono
+		Il \emph{Merkle Calendar (\textbf{MC})} è l'\textbf{accumulatore critografico}
+		più importante di PineSU. Si tratta di un albero in cui le \textbf{foglie} sono
 		i Blockchain Synchronization Point (\textbf{BSP}), istanze di
 		Storage Group, a loro volta raggruppate in nodi rappresentanti
 		\textbf{mesi e anni}, ciò rende i reperimenti di registrazioni passate
 		più agevoli e veloci.
-		\end{itemize}
 		\column{0.4\textwidth}
 		\centering
 		\begin{figure}
@@ -558,8 +534,15 @@ sicuro combinando Git e Blockchain}
 
 % aggiungere slide con l'interfaccia
 
+\begin{frame}
+	\frametitle{Creazione di una Storage Unit (1 di 2)}
+	\begin{figure}
+		\includegraphics[width=0.8\textwidth]{figures/menu.jpg}
+	\end{figure}
+\end{frame}
+
 \begin{frame}[fragile]
-	\frametitle{Creazione di una Storage Unit}
+	\frametitle{Creazione di una Storage Unit (2 di 2)}
 	\begin{figure}
 		\includegraphics[width=0.8\textwidth]{figures/uuo.pdf}
 	\end{figure}
@@ -647,7 +630,7 @@ sicuro combinando Git e Blockchain}
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{Chiusura di una Storage Unit}
+	\frametitle{Chiusura di una Storage Unit (2 di 2)}
 	\begin{figure}
 		\includegraphics[width=0.8\textwidth]{figures/closed.pdf}
 	\end{figure}
@@ -868,6 +851,43 @@ sicuro combinando Git e Blockchain}
 		\includegraphics[width=0.70\textwidth]{dece.jpg}
 		% https://docs.microsoft.com/it-it/archive/msdn-magazine/2018/july/blockchain-decentralized-applications-with-azure-blockchain-as-a-service
 	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Accumulatori crittografici}
+	\begin{columns}
+		\column{0.38\textwidth}
+		\begin{figure}
+			\includegraphics[width=0.9\textwidth]{figures/mt1.pdf}
+		\end{figure}
+		\column{0.62\textwidth}
+		Strumenti che \textbf{comprimono molte informazioni}
+		in una \textbf{costante} di dimensione fissa.
+		
+		Un esempio ne sono i \textbf{Merkle Tree}, alberi binari
+		in cui ogni foglia corrisponde all'hash di un elemento.
+		Risalendo ogni nodo interno calcolerà il proprio hash
+		con gli hash dei nodi figli, l'hash della root
+		sarà \textbf{univoco} a quelle foglie in quell'ordine.
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Gli accumulatori di PineSU}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{itemize}%[<+->]
+			\item \emph{SU Merkle Tree}: Le sue \textbf{foglie} sono gli \textbf{hash dei file e directory} della SU.\\La sua \textbf{root} è l'\textbf{hash della SU} stessa. 
+			\item \emph{Storage Group (\textbf{SG})}: Le sue \textbf{foglie} sono le \textbf{SU da registrare} su blockchain nella prossima transazione.
+			\item \emph{Merkle Calendar (\textbf{MC})}.
+		\end{itemize}
+		\column{0.5\textwidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=\textwidth]{figures/sg1.pdf}
+			\caption{Uno Storage Group}
+		\end{figure} 
+	\end{columns}
 \end{frame}
 
 \end{document}
