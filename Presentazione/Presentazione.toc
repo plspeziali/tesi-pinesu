@@ -1,7 +1,8 @@
 \babel@toc {italian}{}
 \babel@toc {italian}{}
-\beamer@sectionintoc {1}{Il Problema}{3}{0}{1}
-\beamer@sectionintoc {2}{L'Obiettivo}{10}{0}{2}
-\beamer@sectionintoc {3}{Il Software PineSU}{14}{0}{3}
-\beamer@sectionintoc {4}{Tecnologie utilizzate}{41}{0}{4}
-\beamer@sectionintoc {5}{Conclusioni e Sviluppi futuri}{42}{0}{5}
+\beamer@sectionintoc {1}{Premessa}{3}{0}{1}
+\beamer@sectionintoc {2}{L'obiettivo}{5}{0}{2}
+\beamer@sectionintoc {3}{Il problema affrontato}{14}{0}{3}
+\beamer@sectionintoc {4}{Il Software PineSU}{15}{0}{4}
+\beamer@sectionintoc {5}{Tecnologie utilizzate}{42}{0}{5}
+\beamer@sectionintoc {6}{Conclusioni e Sviluppi futuri}{43}{0}{6}

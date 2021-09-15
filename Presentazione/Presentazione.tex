@@ -94,27 +94,10 @@ sicuro combinando Git e Blockchain}
 	\frametitle{Indice}
 	\tableofcontents
 \end{frame}
-\section{Il Problema}
-\begin{frame}
-	\frametitle{La digitalizzazione}
-	È in atto, negli ultimi anni, un piano di \textbf{digitalizzazione} della \textbf{Pubblica Amministrazione}.
-	%Esso mira all'evoluzione tecnologica di tutte le sue mansioni e alla creazione
-	%di portali web per il cittadino.
-	L'esigenza di questa trasformazione si è fatta sentire anche da parte
-	dell'\textbf{Unione Europea}, che con il \textbf{Recovery Fund}
-	ci sta fornendo i fondi per attuarla, ben \textbf{11,75 milioni di euro} \href{https://www.altalex.com/documents/news/2021/05/06/transizione-digitale-pubblica-amministrazione}{[M. Poccu, 2021]}.
-	\medskip
-	% digitalizzazione PA
-	% serve immagine
-	% evocare quanto si spende per la burocrazia
-	\begin{figure}
-		\includegraphics[width=0.55\textwidth]{digitalizzazione.jpg}
-		% https://www.agendadigitale.eu/documenti/digitalizzazione-della-pa-in-italia-la-strategia-delle-tre-c/
-	\end{figure}
-\end{frame}
+\section{Premessa}
 
 \begin{frame}
-	\frametitle{Il problema della burocrazia}
+	\frametitle{Motivazione - Il problema dell'eccessiva burocrazia}
 	\begin{columns}
 		% in realtà la digitalizzazione è la soluzione alla
 		% burocrazia
@@ -134,17 +117,50 @@ sicuro combinando Git e Blockchain}
 			% https://www.identitafutura.it/burocrazia-allitaliana/
 		\end{figure}
 		\column{0.35\textwidth}
-		Obiettivo principale del processo è la \textbf{sburocratizzazione}
-		grazie a software per \textbf{salvare},
-		\textbf{autenticare} e \textbf{condividere} documenti in maniera \textbf{sicura}.
+		% aggiungere qualcosa riguardo l'eccessiva burocrazia
+		% si parli del miglior utilizzo dei sistemi informatici
+		% un processo di efficace sbur. richiede l'attuazione di un piano di digitaliz.
+		In Italia il peso dell'\textbf{eccessiva} e \textbf{confusionaria burocrazia} sulle imprese è estremo.
+		Una delle priorità per il rilancio dell'economia è la \textbf{sburocratizzazione} \href{https://www.dire.it/26-03-2020/439491-coronavirus-ed-economia-il-peso-della-burocrazia-in-italia-e-un-problema-maledettamente-serio/}{[Dire.it, 2020]},
+		processo che richiede l'attuazione di un piano di \textbf{digitalizzazione}.	
 	\end{columns}
 \end{frame}
+
+\begin{frame}
+	\frametitle{Digitalizzazione e Recovery Fund}
+	È in atto, negli ultimi anni, un piano di \textbf{digitalizzazione} della \textbf{Pubblica Amministrazione}.
+	%Esso mira all'evoluzione tecnologica di tutte le sue mansioni e alla creazione
+	%di portali web per il cittadino.
+	L'esigenza di questa trasformazione si è fatta sentire anche da parte
+	dell'\textbf{Unione Europea}, che con il \textbf{Recovery Fund}
+	ci sta fornendo i fondi per attuarla, ben \textbf{11,75 milioni di euro} \\ \href{https://www.altalex.com/documents/news/2021/05/06/transizione-digitale-pubblica-amministrazione}{[Altalex.com - M. Poccu, 2021]}.
+	\medskip
+	% digitalizzazione PA
+	% serve immagine
+	% evocare quanto si spende per la burocrazia
+	\begin{figure}
+		\includegraphics[width=0.55\textwidth]{digitalizzazione.jpg}
+		% https://www.agendadigitale.eu/documenti/digitalizzazione-della-pa-in-italia-la-strategia-delle-tre-c/
+	\end{figure}
+\end{frame}
+
+\section{L'obiettivo}
+\begin{frame}
+	\frametitle{L'obiettivo}
+
+
+	Realizzare uno \textbf{software} che combini \textbf{Git} con una \textbf{blockchain} e ci consenta vi verificare in maniera sicura
+\end{frame}
+
+%sicuramente la digit. la cui autenticità possa essere verificata in modo affidabile elemento fondamentale
+% questa tesi si propone di proporre un sistema software che risponda a questa necessità.
+% considerando questo prob. oggigiorno abbiamo sistemi evoluti chiamati vcs e blockchain
 
 \begin{frame}
 	\frametitle{Stato dell'arte}
 	\begin{longtable}{@{}lcc@{}}
 		\toprule
-		\textbf{Proprietà} & \multicolumn{1}{l}{\textbf{Version Control System}} & \multicolumn{1}{l}{\textbf{Blockchain}} \\* \midrule
+		\textbf{Proprietà} & \multicolumn{1}{l}{\textbf{Version Control Systems}} & \multicolumn{1}{l}{\textbf{Blockchain}} \\* \midrule
 		\endfirsthead
 		%
 		\endhead
@@ -154,13 +170,13 @@ sicuro combinando Git e Blockchain}
 		%
 		\endlastfoot
 		%
-		Condivis.    & \includegraphics[width=0.05\textwidth]{joy.png}   & \includegraphics[width=0.05\textwidth]{joy2.png} \\
-		Tracciabil.  & \includegraphics[width=0.05\textwidth]{joy.png}   & \includegraphics[width=0.05\textwidth]{joy2.png} \\
+		Condivisione    & \includegraphics[width=0.05\textwidth]{joy.png}   & \includegraphics[width=0.05\textwidth]{joy2.png} \\
+		Tracciabilità  & \includegraphics[width=0.05\textwidth]{joy.png}   & \includegraphics[width=0.05\textwidth]{joy2.png} \\
 		Autenticità  & \includegraphics[width=0.05\textwidth]{sad2.png}         & \includegraphics[width=0.05\textwidth]{joy2.png} \\
 		Integrità    & \includegraphics[width=0.05\textwidth]{sad2.png}         & \includegraphics[width=0.05\textwidth]{joy2.png} \\
 		Efficienza   & \includegraphics[width=0.05\textwidth]{joy2.png} & \includegraphics[width=0.05\textwidth]{sad2.png}         \\
 		Flessibilità & \includegraphics[width=0.05\textwidth]{joy2.png} & \includegraphics[width=0.05\textwidth]{sad.png}       \\
-		Costi        & \includegraphics[width=0.05\textwidth]{sad2.png}         & \includegraphics[width=0.05\textwidth]{joy2.png} \\* \bottomrule
+		Costi        & \includegraphics[width=0.05\textwidth]{joy2.png}         & \includegraphics[width=0.05\textwidth]{sad2.png} \\* \bottomrule
 	\end{longtable}
 \end{frame}
 
@@ -169,12 +185,12 @@ sicuro combinando Git e Blockchain}
 	% pushare che git è il software che è
 	% per lo sviluppatore come la penna
 	% per lo scrittore
-
+	% scrivere che è opensource
 	\begin{columns}[T]
 		\column{0.99\textwidth}
-		\textbf{Git} è il sistema di controllo di versione (\textbf{VCS}) \\
+		\textbf{Git} è il Version Control System (\textbf{VCS}) \\
 		distribuito più diffuso al mondo. \\
-		Esso agevola la gestione \textbf{distribuita} di insiemi\\di file e directory.
+		Software \textbf{Open Source}, esso agevola la gestione \textbf{distribuita} di insiemi\\di file e directory.
 		Un VCS considera tali insiemi\\unità chiamate \textbf{repository}.\\
 		Git ci permette di:
 		\begin{itemize}
@@ -221,8 +237,8 @@ sicuro combinando Git e Blockchain}
 
 \begin{frame}
 	\frametitle{Blockchain}
-	La \textbf{blockchain} è un registro in continua crescita di
-	record chiamati \textbf{blocchi}, collegati l'uno all'altro come in una
+	La \textbf{blockchain} è un registro di
+	contenitori immutabili chiamati \textbf{\emph{blocchi}}, collegati l'uno all'altro come in una
 	\textbf{catena} grazie a \textbf{metodi crittografici}.
 	Essa è:
 	\begin{itemize}
@@ -230,6 +246,7 @@ sicuro combinando Git e Blockchain}
 		\item \textbf{Distribuita}.
 		\item \textbf{Estremamente sicura}.
 	\end{itemize}
+	Grazie a ciò è l'ideale per effettuare \textbf{verifiche d'integrità}.
 	\begin{figure}
 		\includegraphics[width=0.65\textwidth]{figures/blockchain.png}
 		% https://rubygarage.org/blog/how-blockchain-works
@@ -259,9 +276,51 @@ sicuro combinando Git e Blockchain}
 % -> mi prendo il timestamp
 % si chiama batching
 
-\section{L'Obiettivo}
 \begin{frame}
-	\frametitle{L'Obiettivo}
+	\frametitle{Funzioni crittografiche di hashing}
+	Funzione che \textbf{associa},
+	a una qualsiasi sequenza \(m\) di lunghezza arbitraria in input, una sequenza
+	in output \(h(m)\) di lunghezza costante,
+	garantendo alcune proprietà che la rendono
+	\emph{crittograficamente sicura}.
+	Sono estremamente impiegate per effettuare \textbf{controlli di integrità sui file}.
+	\begin{figure}
+		\includegraphics[width=0.85\textwidth]{figures/hashing.jpg}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Verifica d'integrità/autenticità con blockchain}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[width=0.7\textwidth]{figures/hashsaving.pdf}
+		\end{figure}
+		\column{0.5\textwidth}
+		\begin{enumerate}
+			\item Calcolo \textbf{impronta digitale} del documento tramite una \textbf{funzione crittografica di hashing}.
+			\item Registrazione dell'impronta su un \textbf{blocco} della blockchain.
+			\item Acquisizione dell'\textbf{impronta digitale della transazione} e del \textbf{timestamp}.
+		\end{enumerate}
+	\end{columns}
+\end{frame}
+
+% prendo documento con punto interrogativo e txhash
+
+\begin{frame}
+	\frametitle{Costo della blockchain}
+	Non possiamo però effettuare un'operazione di registrazione su blockchain per \textbf{ogni singolo file}
+	e nemmeno per \textbf{ogni singola repository}, sarebbe troppo \textbf{costoso}.
+	La soluzione è l'utilizzo di \textbf{accumulatori crittografici}:
+	strumenti che \textbf{calcolano} in modo efficiente \textbf{l'impronta digitale}
+	di una \textbf{collezione} di file.
+	% tempo di verifica cresce ma noi usiamo strutture bilanciate
+\end{frame}
+
+\section{Il problema affrontato}
+\begin{frame}
+	\frametitle{Il problema affrontato}
 	Realizzare uno \textbf{software} che combini \textbf{Git} con una \textbf{blockchain} e sia in grado di:
 	\medskip
 	\begin{columns}
@@ -270,7 +329,7 @@ sicuro combinando Git e Blockchain}
 		\begin{figure}
 			\includegraphics[width=0.7\textwidth]{figures/fingerprint.png}
 		\end{figure}
-		\textbf{Salvare} hash di
+		\textbf{Salvare} l'\emph{impronta digitale} di
 		repository su
 		blockchain
 		\column{0.33\textwidth}
@@ -290,46 +349,6 @@ sicuro combinando Git e Blockchain}
 	\end{columns}
 \end{frame}
 
-\begin{frame}
-	\frametitle{Autenticazione con blockchain}
-	\begin{columns}
-		\column{0.5\textwidth}
-		\begin{figure}
-			\includegraphics[width=0.7\textwidth]{figures/hashsaving.pdf}
-		\end{figure}
-		\column{0.5\textwidth}
-		\begin{enumerate}
-			\item Associazione \textbf{hash} al documento tramite una \textbf{funzione crittografica di hashing}.
-			\item Registrazione dell'hash su un \textbf{blocco} della blockchain.
-			\item Restituzione e salvataggio dell'\textbf{hash della transazione} e del \textbf{timestamp}.
-		\end{enumerate}
-	\end{columns}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Funzioni crittografiche di hashing}
-	Funzione che \textbf{associa},
-	a una qualsiasi sequenza \(m\) di lunghezza arbitraria in input, una sequenza
-	in output \(h(m)\) di lunghezza costante,
-	seguendo alcune proprietà che la rendono
-	\emph{crittograficamente sicura}.
-	Ciò impedisce di risalire all'input originale
-	e facilita i \textbf{controlli di integrità sui file}.
-	\begin{figure}
-		\includegraphics[width=0.85\textwidth]{figures/hashing.jpg}
-	\end{figure}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Il problema della blockchain}
-	Non possiamo però utilizzare un blocco per registrare \textbf{un solo file}
-	e nemmeno \textbf{una sola repository}, sarebbe troppo \textbf{costoso}.
-	La soluzione è l'utilizzo di \textbf{accumulatori crittografici}:
-	strumenti che \textbf{comprimono molte informazioni}
-	in una \textbf{costante} di dimensione fissa.
-\end{frame}
-
-
 \section{Il Software PineSU}
 \begin{frame}
 	\frametitle{Il Software PineSU}
@@ -337,12 +356,12 @@ sicuro combinando Git e Blockchain}
 		\column{0.7\textwidth}
 		\textbf{PineSU} è un software \textbf{Javascript} che sfrutta il run-time \textbf{Node.js}. \\
 		\smallskip
-		L'applicazione crea delle \textbf{strutture} sulle repository Git chiamate
-		\textbf{Storage Unit} (SU) tramite metadati. \\
-		\smallskip
-		Queste SU sono le unità su cui effettueremo le singole
-		operazioni, eccetto la registrazione su blockchain che si svolgerà
-		collettivamente con l'ausilio di accumulatori crittografici. 
+		L'applicazione si basa sul concetto di
+		\textbf{Storage Unit} (SU): \textbf{repository Git} dotate di speciali metadati. \\
+		%\smallskip
+		%Queste SU sono le unità su cui effettueremo le singole
+		%operazioni, eccetto la registrazione su blockchain che si svolgerà
+		%collettivamente con l'ausilio di accumulatori crittografici. 
 		\column{0.3\textwidth}
 		\centering
 		\begin{figure}
@@ -358,6 +377,8 @@ sicuro combinando Git e Blockchain}
 		\includegraphics[width=0.8\textwidth]{figures/repo.pdf}
 	\end{figure}
 \end{frame}
+
+
 
 \begin{frame}
 	\frametitle{Workflow}
@@ -377,6 +398,7 @@ sicuro combinando Git e Blockchain}
 	\end{figure}
 \end{frame}
 
+% è blockchain-agnostic
 \begin{frame}
 	\frametitle{Architettura}
 	\centering
@@ -483,6 +505,7 @@ sicuro combinando Git e Blockchain}
 
 \begin{frame}[fragile]
 	\frametitle{Codice - Salvataggio di un hash su blockchain}
+	% mettere immagine w1 -> w2 con messaggino in allegato
 	\begin{lstlisting}[language=JavaScript, numbers=none]
 	async deploy(hashRoot){
 		const ct = await this.web3.eth.accounts
@@ -603,6 +626,10 @@ sicuro combinando Git e Blockchain}
 			\bigskip
 		\end{figure}
 	\end{columns}
+	\vspace{-0.6cm}
+	\hspace{-0.4cm}
+	{\scriptsize La \textbf{registrazione} equivale qui alla \textbf{sincronizzazione}.}
+	% registrazione = sincronizzazione
 \end{frame}
 
 \begin{frame}[fragile]
@@ -670,14 +697,14 @@ sicuro combinando Git e Blockchain}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Esportazione di sottoinsiemi di Storage Unit (1 di 2)}
+	\frametitle{Esportazione di bundle di Storage Unit (1 di 2)}
 	\begin{figure}
 		\includegraphics[width=\textwidth]{figures/ops/6.png}
 	\end{figure}
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{Esportazione di sottoinsiemi di Storage Unit (2 di 2)}
+	\frametitle{Esportazione di bundle di Storage Unit (2 di 2)}
 	\begin{figure}
 		\includegraphics[width=0.6\textwidth]{figures/export.pdf}
 	\end{figure}
@@ -725,6 +752,7 @@ sicuro combinando Git e Blockchain}
 		\column{0.3\textwidth}
 		\begin{itemize}
 			\item \textbf{Node.js}
+			\item \textbf{JSON}
 			\item \textbf{web3.js}
 			\item \textbf{Simple Git}
 			\item \textbf{Inquirer.js}
@@ -761,11 +789,18 @@ sicuro combinando Git e Blockchain}
 \section{Conclusioni e Sviluppi futuri}
 \begin{frame}
 	\frametitle{Conclusioni}
+	% ridire obiettivo al passato.
 	\textbf{PineSU}, sfruttando saggiamente l'interazione tra \textbf{Git} e \textbf{blockchain}
 	assicura \textbf{facilità} d'utilizzo e \textbf{minima esposizione} dei propri dati.\\
 	L'implementazione attuale è però solo un \textbf{punto di partenza} che, dato il potenziale,
 	con ulteriori sviluppi che lo \textbf{migliorino} e \textbf{velocizzino}, potrebbe diventare un'importante risorsa.
 \end{frame}
+
+% non fare telecronista
+% le persone devono capire che la tesi ha ottime motivaz.
+% che ho fatto un sistema intelligente
+% dimostro che c'è una modellazione logica
+% c'è stata un'implementazione
 
 \begin{frame}
 	\frametitle{Sviluppi futuri}
