@@ -102,7 +102,7 @@ sicuro combinando Git e Blockchain}
 	%di portali web per il cittadino.
 	L'esigenza di questa trasformazione si è fatta sentire anche da parte
 	dell'\textbf{Unione Europea}, che con il \textbf{Recovery Fund}
-	ci sta fornendo i fondi per attuarla, ben \textbf{11,75 milioni di euro}.
+	ci sta fornendo i fondi per attuarla, ben \textbf{11,75 milioni di euro} \href{https://www.altalex.com/documents/news/2021/05/06/transizione-digitale-pubblica-amministrazione}{[M. Poccu, 2021]}.
 	\medskip
 	% digitalizzazione PA
 	% serve immagine
@@ -128,13 +128,13 @@ sicuro combinando Git e Blockchain}
 		% l'autenticaz. ci sta la blockchain
 		% magari fare tabella con stelle
 		% anche i costi
-		\column{0.7\textwidth}
+		\column{0.65\textwidth}
 		\begin{figure}
 			\includegraphics[width=\textwidth]{buro2.jpg}
 			% https://www.identitafutura.it/burocrazia-allitaliana/
 		\end{figure}
-		\column{0.3\textwidth}
-		Serve una \textbf{sburocratizzazione}
+		\column{0.35\textwidth}
+		Obiettivo principale del processo è la \textbf{sburocratizzazione}
 		grazie a software per \textbf{salvare},
 		\textbf{autenticare} e \textbf{condividere} documenti in maniera \textbf{sicura}.
 	\end{columns}
@@ -537,7 +537,7 @@ sicuro combinando Git e Blockchain}
 \begin{frame}
 	\frametitle{Creazione di una Storage Unit (1 di 2)}
 	\begin{figure}
-		\includegraphics[width=0.8\textwidth]{figures/menu.jpg}
+		\includegraphics[width=\textwidth]{figures/ops/1.png}
 	\end{figure}
 \end{frame}
 
@@ -569,8 +569,15 @@ sicuro combinando Git e Blockchain}
 	\end{columns}
 \end{frame}
 
+\begin{frame}
+	\frametitle{Registrazione di uno Storage Group (1 di 2)}
+	\begin{figure}
+		\includegraphics[width=\textwidth]{figures/ops/4.png}
+	\end{figure}
+\end{frame}
+
 \begin{frame}[fragile]
-	\frametitle{Registrazione di uno Storage Group}
+	\frametitle{Registrazione di uno Storage Group (2 di 2)}
 	\begin{figure}
 		\includegraphics[width=0.8\textwidth]{figures/sync.pdf}
 	\end{figure}
@@ -629,6 +636,13 @@ sicuro combinando Git e Blockchain}
 	\end{columns}
 \end{frame}
 
+\begin{frame}
+	\frametitle{Chiusura di una Storage Unit (1 di 2)}
+	\begin{figure}
+		\includegraphics[width=\textwidth]{figures/ops/3.png}
+	\end{figure}
+\end{frame}
+
 \begin{frame}[fragile]
 	\frametitle{Chiusura di una Storage Unit (2 di 2)}
 	\begin{figure}
@@ -655,8 +669,15 @@ sicuro combinando Git e Blockchain}
 	\end{columns}
 \end{frame}
 
+\begin{frame}
+	\frametitle{Esportazione di sottoinsiemi di Storage Unit (1 di 2)}
+	\begin{figure}
+		\includegraphics[width=\textwidth]{figures/ops/6.png}
+	\end{figure}
+\end{frame}
+
 \begin{frame}[fragile]
-	\frametitle{Esportazione di sottoinsiemi di Storage Unit}
+	\frametitle{Esportazione di sottoinsiemi di Storage Unit (2 di 2)}
 	\begin{figure}
 		\includegraphics[width=0.6\textwidth]{figures/export.pdf}
 	\end{figure}
@@ -671,8 +692,15 @@ sicuro combinando Git e Blockchain}
 	\end{lstlisting}
 \end{frame}
 
+\begin{frame}
+	\frametitle{Controllo d'integrità su una Storage Unit (1 di 2)}
+	\begin{figure}
+		\includegraphics[width=\textwidth]{figures/ops/5.png}
+	\end{figure}
+\end{frame}
+
 \begin{frame}[fragile]
-	\frametitle{Controllo d'integrità su una Storage Unit}
+	\frametitle{Controllo d'integrità su una Storage Unit (2 di 2)}
 	\begin{figure}
 		\includegraphics[width=0.6\textwidth]{figures/verify.pdf}
 	\end{figure}
@@ -690,88 +718,37 @@ sicuro combinando Git e Blockchain}
 \end{frame}
 
 \section{Tecnologie utilizzate}
-\begin{frame}
-	\frametitle{Node.js}
-	\begin{columns}
-		\column{0.7\textwidth}
-		\textbf{Node.js} è un \textbf{ambiente di run-time},
-		che permette di eseguire codice \textbf{Javascript}.
-		\smallskip \\
-		Esso ha come obiettivi chiave l'\textbf{efficienza} 
-		e la \textbf{scalabilità}, può infatti eseguire
-		velocemente codice Javascript sia \textbf{server-side}
-		che \textbf{client-side}.\\
-		\smallskip
-		Parte fondamentale di Node sono
-		i suoi numerosi \textbf{moduli}: librerie e framework
-		realizzati dalla comunità e installabili con facilità
-		tramite il package manager \textbf{npm}
-		\column{0.3\textwidth}
-		\centering
-		\begin{figure}
-			\includegraphics[width=\textwidth]{figures/node.png}
-		\end{figure} 
-	\end{columns}
-\end{frame}
 
 \begin{frame}
-	\frametitle{Moduli dei connettori}
-	\begin{columns}
-		\column{0.7\textwidth}
-		\textbf{web3.js} è un \textbf{modulo npm} che permette di
-		interagire con \textbf{nodi Ethereum} locali e remoti.\\
-		\smallskip
-		\emph{PineSU EC} lo utilizza per effettuare le \textbf{transazioni} con i
-		suoi wallet e per comunicare con lo \textbf{Smart Contract}. \\
-		\column{0.3\textwidth}
-		\centering
-		\begin{figure}
-			\includegraphics[width=\textwidth]{figures/web3.jpg}
-		\end{figure} 
-	\end{columns}
-	\medskip
+	\frametitle{Tecnologie utilizzate}
 	\begin{columns}
 		\column{0.3\textwidth}
+		\begin{itemize}
+			\item \textbf{Node.js}
+			\item \textbf{web3.js}
+			\item \textbf{Simple Git}
+			\item \textbf{Inquirer.js}
+			\item \textbf{Chalk}
+			\item \textbf{ADM-ZIP}
+		\end{itemize}
+		\column{0.35\textwidth}
 		\centering
 		\begin{figure}
-			\includegraphics[width=0.75\textwidth]{figures/gitfw.png}
+			\includegraphics[width=0.7\textwidth]{figures/node.png}
+		\end{figure}
+		\begin{figure}
+			\includegraphics[width=0.7\textwidth]{figures/web3.jpg}
 		\end{figure} 
-		\column{0.7\textwidth}
-		\textbf{Simple Git} è un \textbf{modulo npm} che permette di
-		comunicare con il \textbf{client Git} locale. \\
-		\smallskip
-		Usato in \emph{PineSU GC}, esso permette l'esecuzione di
-		comandi in maniera \textbf{asincrona}. \\
-	\end{columns}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Altri moduli}
-	\begin{columns}
-		\column{0.3\textwidth}
+		\bigskip
+		\column{0.35\textwidth}
 		\centering
+		\bigskip\bigskip\bigskip
 		\begin{figure}
-			\includegraphics[width=0.75\textwidth]{figures/inquirer.png}
-		\end{figure} 
-		\column{0.7\textwidth}
-		\textbf{Inquirer.js} è un \textbf{modulo npm} che facilita
-		la creazione di \textbf{interfacce utente} tramite menù testuali. \\
-		\smallskip
-		In \emph{PineSU CLI} viene usato per \textbf{interagire}
-		con l'utente ponendogli \textbf{domande} dalla risposta chiusa o aperta. \\
-	\end{columns}
-	\medskip
-	\begin{columns}
-		\column{0.72\textwidth}
-		\textbf{ADM-ZIP} è un \textbf{modulo npm} che consente di
-		creare \textbf{cartelle compresse} in formato ZIP.\\
-		\smallskip
-		\emph{PineSU BEL} lo utilizza per \textbf{esportare sottoinsiemi} di
-		SU mantenendo la \textbf{struttura gerarchica} originale. \\
-		\column{0.28\textwidth}
-		\centering
+			\includegraphics[width=0.5\textwidth]{figures/inquirer.png}
+		\end{figure}
+		\bigskip\bigskip
 		\begin{figure}
-			\includegraphics[width=0.88\textwidth]{figures/zip.png}
+			\includegraphics[width=0.7\textwidth]{figures/chalk.png}
 		\end{figure} 
 	\end{columns}
 \end{frame}
@@ -781,7 +758,15 @@ sicuro combinando Git e Blockchain}
 % tuttavia potrebbe essere semplificato migliorato e velocizzato
 % nella blockchain salvando solo
 % gli hash riduciamo al minimo l'esposizione di dati
-\section{Sviluppi futuri}
+\section{Conclusioni e Sviluppi futuri}
+\begin{frame}
+	\frametitle{Conclusioni}
+	\textbf{PineSU}, sfruttando saggiamente l'interazione tra \textbf{Git} e \textbf{blockchain}
+	assicura \textbf{facilità} d'utilizzo e \textbf{minima esposizione} dei propri dati.\\
+	L'implementazione attuale è però solo un \textbf{punto di partenza} che, dato il potenziale,
+	con ulteriori sviluppi che lo \textbf{migliorino} e \textbf{velocizzino}, potrebbe diventare un'importante risorsa.
+\end{frame}
+
 \begin{frame}
 	\frametitle{Sviluppi futuri}
 	\begin{enumerate}
@@ -886,6 +871,92 @@ sicuro combinando Git e Blockchain}
 		\begin{figure}
 			\includegraphics[width=\textwidth]{figures/sg1.pdf}
 			\caption{Uno Storage Group}
+		\end{figure} 
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Node.js}
+	\begin{columns}
+		\column{0.7\textwidth}
+		\textbf{Node.js} è un \textbf{ambiente di run-time},
+		che permette di eseguire codice \textbf{Javascript}.
+		\smallskip \\
+		Esso ha come obiettivi chiave l'\textbf{efficienza} 
+		e la \textbf{scalabilità}, può infatti eseguire
+		velocemente codice Javascript sia \textbf{server-side}
+		che \textbf{client-side}.\\
+		\smallskip
+		Parte fondamentale di Node sono
+		i suoi numerosi \textbf{moduli}: librerie e framework
+		realizzati dalla comunità e installabili con facilità
+		tramite il package manager \textbf{npm}
+		\column{0.3\textwidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=\textwidth]{figures/node.png}
+		\end{figure} 
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Moduli dei connettori}
+	\begin{columns}
+		\column{0.7\textwidth}
+		\textbf{web3.js} è un \textbf{modulo npm} che permette di
+		interagire con \textbf{nodi Ethereum} locali e remoti.\\
+		\smallskip
+		\emph{PineSU EC} lo utilizza per effettuare le \textbf{transazioni} con i
+		suoi wallet e per comunicare con lo \textbf{Smart Contract}. \\
+		\column{0.3\textwidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=\textwidth]{figures/web3.jpg}
+		\end{figure} 
+	\end{columns}
+	\medskip
+	\begin{columns}
+		\column{0.3\textwidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=0.75\textwidth]{figures/gitfw.png}
+		\end{figure} 
+		\column{0.7\textwidth}
+		\textbf{Simple Git} è un \textbf{modulo npm} che permette di
+		comunicare con il \textbf{client Git} locale. \\
+		\smallskip
+		Usato in \emph{PineSU GC}, esso permette l'esecuzione di
+		comandi in maniera \textbf{asincrona}. \\
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Altri moduli}
+	\begin{columns}
+		\column{0.3\textwidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=0.75\textwidth]{figures/inquirer.png}
+		\end{figure} 
+		\column{0.7\textwidth}
+		\textbf{Inquirer.js} è un \textbf{modulo npm} che facilita
+		la creazione di \textbf{interfacce utente} tramite menù testuali. \\
+		\smallskip
+		In \emph{PineSU CLI} viene usato per \textbf{interagire}
+		con l'utente ponendogli \textbf{domande} dalla risposta chiusa o aperta. \\
+	\end{columns}
+	\medskip
+	\begin{columns}
+		\column{0.72\textwidth}
+		\textbf{ADM-ZIP} è un \textbf{modulo npm} che consente di
+		creare \textbf{cartelle compresse} in formato ZIP.\\
+		\smallskip
+		\emph{PineSU BEL} lo utilizza per \textbf{esportare sottoinsiemi} di
+		SU mantenendo la \textbf{struttura gerarchica} originale. \\
+		\column{0.28\textwidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=0.88\textwidth]{figures/zip.png}
 		\end{figure} 
 	\end{columns}
 \end{frame}
