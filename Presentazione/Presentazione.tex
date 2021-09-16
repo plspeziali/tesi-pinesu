@@ -240,7 +240,7 @@ sicuro combinando Git e Blockchain}
 \begin{frame}
 	\frametitle{Blockchain}
 	La \textbf{blockchain} è un registro di
-	contenitori immutabili chiamati \textbf{\emph{blocchi}}, collegati l'uno all'altro come in una
+	contenitori immutabili chiamati \textbf{blocchi}, collegati l'uno all'altro come in una
 	\textbf{catena} grazie a \textbf{metodi crittografici}.
 	Essa è:
 	\begin{itemize}
@@ -297,13 +297,15 @@ sicuro combinando Git e Blockchain}
 	\begin{columns}
 		\column{0.5\textwidth}
 		\begin{figure}
-			\includegraphics[width=0.7\textwidth]{figures/hashsaving.pdf}
+			\includegraphics[width=\textwidth]{figures/hashsaving2.pdf}
 		\end{figure}
 		\column{0.5\textwidth}
 		\begin{enumerate}
 			\item Calcolo \textbf{impronta digitale} del documento tramite una \textbf{funzione crittografica di hashing}.
-			\item Registrazione dell'impronta su un \textbf{blocco} della blockchain.
-			\item Acquisizione dell'\textbf{impronta digitale della transazione} e del \textbf{timestamp}.
+			\item Registrazione impronta su \textbf{blockchain}.
+			\item Calcolo \textbf{impronta digitale} del documento da verificare.
+			\item Reperimento dell'\textbf{impronta} da blockchain.
+			\item \textbf{Confronto delle impronte}.
 		\end{enumerate}
 	\end{columns}
 \end{frame}
