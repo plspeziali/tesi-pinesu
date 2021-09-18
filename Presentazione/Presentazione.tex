@@ -378,12 +378,33 @@ sicuro combinando Git e Blockchain}
 	\end{columns}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
 	\frametitle{Storage Unit}
-	\centering
-	\begin{figure}
-		\includegraphics[width=0.8\textwidth]{figures/repo.pdf}
-	\end{figure}
+	\begin{columns}
+		\column{0.59\textwidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=\textwidth]{figures/repo.pdf}
+		\end{figure}
+		\column{0.41\textwidth}
+		\vspace{0.9cm}
+		\centering
+		\begin{lstlisting}[language=JavaScript, numbers=none]
+		|\color{blue}"name"|: "sample",
+		|\color{blue}"remote"|: "github.com/
+			plspeziali/sample",
+		|\color{blue}"description"|: "example",
+		|\color{blue}"visibility"|: "public",
+		|\color{blue}"date"|: "2021-08-18",
+		|\color{blue}"owner"|: "0xCF2[...]66",
+		|\color{blue}"hash"|: "3837e[...]53",
+		|\color{blue}"filelist"|: [
+			|\textcolor{cyan}{"b/astar.js:e09[...]9b6"}|,
+			|\textcolor{cyan}{"c/graph.js:539[...]1cc"}|,
+			[...]],
+		|\color{blue}"closed"|: false
+		\end{lstlisting}
+	\end{columns}
 \end{frame}
 
 
