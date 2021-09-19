@@ -558,6 +558,37 @@ sicuro combinando Git e Blockchain}
 \end{frame}
 
 \begin{frame}[fragile]
+	\frametitle{Visualizzazione post-registrazione}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[width=\textwidth]{figures/blocks.png}
+		\end{figure}
+		\column{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[width=\textwidth]{figures/block.png}
+		\end{figure}
+	\end{columns}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[width=\textwidth]{figures/block2.png}
+		\end{figure}
+		\bigskip
+		\column{0.5\textwidth}
+		\begin{lstlisting}[language=JavaScript, numbers=none]
+			|\color{blue}"path"|:
+				"D:/sample",
+			|\color{blue}"root"|:
+				"e67006f15ecd3[...]e6
+				8d3a3242e1be8b",
+			|\color{blue}"transHash"|:
+				"0xc563030328e[...]69eb497e2dc87d2e"
+		\end{lstlisting}
+	\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
 	\frametitle{PineSU SM}
 	\begin{lstlisting}[language=Solidity, numbers=none]
 		contract SURegistry {
@@ -663,37 +694,6 @@ sicuro combinando Git e Blockchain}
 	\hspace{-0.4cm}
 	{\scriptsize La \textbf{registrazione} equivale qui alla \textbf{sincronizzazione}.}
 	% registrazione = sincronizzazione
-\end{frame}
-
-\begin{frame}[fragile]
-	\frametitle{Visualizzazione post-registrazione}
-	\begin{columns}
-		\column{0.5\textwidth}
-		\begin{figure}
-			\includegraphics[width=\textwidth]{figures/blocks.png}
-		\end{figure}
-		\column{0.5\textwidth}
-		\begin{figure}
-			\includegraphics[width=\textwidth]{figures/block.png}
-		\end{figure}
-	\end{columns}
-	\begin{columns}
-		\column{0.5\textwidth}
-		\begin{figure}
-			\includegraphics[width=\textwidth]{figures/block2.png}
-		\end{figure}
-		\bigskip
-		\column{0.5\textwidth}
-		\begin{lstlisting}[language=JavaScript, numbers=none]
-			|\color{blue}"path"|:
-				"D:/sample",
-			|\color{blue}"root"|:
-				"e67006f15ecd3[...]e6
-				8d3a3242e1be8b",
-			|\color{blue}"transHash"|:
-				"0xc563030328e[...]69eb497e2dc87d2e"
-		\end{lstlisting}
-	\end{columns}
 \end{frame}
 
 \begin{frame}
